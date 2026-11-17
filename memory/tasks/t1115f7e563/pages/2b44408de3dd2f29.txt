@@ -1,0 +1,208 @@
+ElevenLabs launched its public beta in January 2023 with English text-to-speech and voice cloning. Early releases introduced multilingual speech models, faster voice generation, AI dubbing, and tools for long-form audio production.
+The company later introduced sound effects, conversational voice agents, Scribe transcription models, and AI music generation. This timeline documents major model and product releases from the first public beta onward, including research previews, API launches, general availability, and significant platform changes.
+Last updated: November 12, 2026.
+
+## ElevenLabs release timeline
+Table Of Contents
+- 2026
+- 2025
+- 2024
+- 2023
+- When did ElevenLabs first launch?
+- When was Eleven v3 released?
+- How do ElevenLabs speech model versions differ from Voice Design versions?
+- Is ElevenAgents a single speech-to-speech model?
+- How does ElevenMusic differ from the Eleven Music models?
+
+## 2026
+Date
+Milestone
+Nov. 12, 2026
+Voice restoration expands to music . People with permanent voice loss can get free ElevenMusic access to compose and release songs in their own voices. NYU Langone Health joins 1 Million Voices, and ElevenLabs announces a partnership with Wounded Warrior Project.
+Nov. 11, 2026
+ElevenAI opens for free early access . The app uses Scribe v3 for dictation and meeting notes. It can capture conversations with participant consent and provide summaries and action items.
+Nov. 11, 2026
+Interaction Engine, Memory, and Routines are previewed . Interaction Engine handles turn-taking, interruptions, and language model selection. Memory will recall details from earlier conversations with authenticated customers. Routines will automate tasks before, during, or after a conversation. ElevenLabs also previews custom model fine-tuning for businesses.
+Nov. 11, 2026
+ElevenLabs Marketplace opens . Businesses can browse partner-built AI applications and contact vendors. Purchasing through existing ElevenLabs spending commitments is planned for 2027.
+Nov. 11, 2026
+NVIDIA Nemotron 3.5 Super VL becomes available in ElevenAgents . ElevenLabs and NVIDIA also announce plans for an on-premises voice agent for the Polish national e-health platform.
+Nov. 10, 2026
+Scribe v3 and Scribe v3 Live launch for recorded and realtime transcription through ElevenAPI and the ElevenLabs app. Scribe v3 improves speaker labeling and adds number-format controls and prompting with up to 1,000 keyterms. Scribe v3 Live adds realtime speaker diarization, context-aware turn detection, and multilingual mode, with availability in ElevenAgents.
+Nov. 9, 2026
+ElevenAgents adds workflows as code . The Python and JavaScript SDKs add a workflow builder in v2.77.0. Developers can define steps and routing in code, track changes in version control, and edit the same workflows in the visual editor.
+Nov. 9, 2026
+ElevenAgents Campaign Manager launches for outbound campaigns across phone calls, WhatsApp voice, and WhatsApp messaging, with scheduled follow-ups, context across interactions, calling windows, and attempt limits.
+Nov. 6, 2026
+ElevenMusic adds SoundCloud publishing . Creators can link a SoundCloud account and upload original tracks directly from ElevenMusic.
+Nov. 6, 2026
+Ads Engine adds human review . Linguists can check translated copy and dubbed audio, and creative specialists can review ad variants against brand guidelines.
+Nov. 5, 2026
+ElevenAgents Unity SDK launches for voice conversations with game characters, spatial audio, and agent-triggered game actions. Editor, desktop, and WebGL builds are supported. iOS, Android, and XR support is in beta.
+Nov. 4, 2026
+Native contact center integrations connect ElevenAgents to NiCE CXone, Genesys Cloud, Amazon Connect, and Five9, with call context and handoffs through existing contact center systems.
+Nov. 2, 2026
+Eleven Realtime rollout completes across all workspaces. Professional Voice Clone fine-tuning for Eleven v4 and Eleven v4 Turbo also becomes available to every workspace.
+Oct. 29, 2026
+SFX v3 launches in ElevenCreative and ElevenAPI with improved handling of multiple sounds in one prompt, music and vocals, and cleaner sound generation. Availability expands to every workspace on November 2.
+Oct. 21, 2026
+Eleven Realtime Translation launches in alpha for ElevenAPI enterprise customers, with live speech translation in more than 90 languages and a consistent chosen voice across the session.
+Oct. 20, 2026
+Eleven Realtime released. This is a new class of Speech to Speech models for building voice agents that sound natural.
+Oct. 15, 2026
+Video To Music released to generate background music from one or more video files. Videos are combined in order. Optional description and style tags influence the generated music.
+Oct. 6, 2026
+ElevenAgents Architect launches as an agent-building and improvement assistant that can review configurations and suggest changes through chat.
+Sep. 28, 2026
+Eleven v4 and Eleven v4 Turbo launch in ElevenAgents, ElevenCreative, and the API. The models improve expressive speech and voice consistency, with a low-latency Turbo variant for live conversations.
+Sep. 26, 2026
+Image, Video, and Template APIs launch, opening ElevenCreative image and video generation and reusable Flows templates to developers.
+Sep. 21, 2026
+Studio 4.0 launches in ElevenCreative, expanding Studio into an editor for video, images, speech, music, and sound effects with generative editing on the timeline.
+Sep. 11, 2026
+Music v2.5 launches in ElevenMusic, ElevenCreative, and the API with improved instrumentation and more detailed arrangements.
+Sep. 11, 2026
+Scribe v2 Medical becomes generally available through the API for batch transcription of clinical speech and specialized medical terminology.
+Aug. 6, 2026
+Dubbing v2 API becomes available for integrating multilingual dubbing, with transcript and translation editing and segment-level regeneration.
+Jul. 22, 2026
+Finetunes Music API launches, letting developers offer private music-model fine-tuning on their customers’ authorized tracks.
+Jun. 15, 2026
+Music v2 API becomes available with chunk-based composition plans for controlling song sections, timing, and arrangement.
+May 28, 2026
+Dubbing v2 launches in ElevenCreative and ElevenProductions, using the original speaker’s audio performance to retain tone and pacing across more than 90 languages.
+May 26, 2026
+Music v2 launches with improved vocals, instrumentation, multilingual lyrics, and section-level composition controls.
+Apr. 29, 2026
+ElevenMusic launches as a music listening, remixing, and creation platform built with artists, labels, and publishers.
+Mar. 12, 2026
+Music Finetunes launches in ElevenCreative, enabling creators to train custom music-model variants on their own authorized recordings.
+Feb. 10, 2026
+Expressive Mode launches for ElevenAgents with Eleven v3 Conversational and an updated turn-taking system for live voice conversations.
+Feb. 2, 2026
+Eleven v3 general availability ends the alpha phase with improvements to speech stability and the pronunciation of numbers, symbols, and technical notation.
+Jan. 9, 2026
+Scribe v2 launches for batch transcription of long recordings, with keyterm prompting and entity detection.
+
+## 2025
+Date
+Milestone
+Nov. 17, 2025
+Image & Video beta introduces third-party image and video models alongside ElevenLabs voice, music, and sound-effects creation.
+Nov. 11, 2025
+Scribe v2 Realtime launches via the API and agents platform for streaming speech recognition, live captions, and voice-agent input.
+Oct. 6, 2025
+Agent Workflows launches in ElevenLabs Agents with a flow editor for specialized subagents, decision steps, and human handoffs.
+Sep. 3, 2025
+ElevenLabs Agents becomes the new name for Conversational AI, reflecting the platform’s voice, chat, actions, and deployment features.
+Sep. 2, 2025
+SFX v2 launches with seamless looping, up to 30-second sound effects, 48 kHz output, and an expanded sound library.
+Aug. 20, 2025
+Eleven v3 alpha API opens publicly, including the Text to Dialogue endpoint for expressive multi-speaker audio.
+Aug. 18, 2025
+Eleven Music API launches for text-prompted vocal and instrumental music generation in developer applications.
+Aug. 5, 2025
+Eleven Music launches on the website for generating songs and instrumentals with genre, language, and section controls.
+Jun. 25, 2025
+Voice Design v3 launches with text-prompted voice creation, realistic and character modes, and more detailed accent control.
+Jun. 3, 2025
+Eleven v3 alpha is introduced as an expressive speech research preview with audio tags, multi-speaker dialogue, and more than 70 languages.
+May 30, 2025
+Conversational AI 2.0 launches with improved turn-taking, knowledge retrieval, language detection, and voice-and-text conversations.
+Feb. 26, 2025
+Scribe launches as ElevenLabs’ first speech-to-text model, transcribing 99 languages with timestamps and speaker labels.
+Feb. 6, 2025
+Studio opens to free users. The long-form editor was introduced in 2023 under the name Projects.
+
+## 2024
+Date
+Milestone
+Dec. 18, 2024
+Eleven Flash v2 and v2.5 launch for low-latency speech synthesis in the API and Conversational AI, supporting English and 32 languages respectively.
+Nov. 29, 2024
+Conversational AI general availability opens the agents platform to all customers, with APIs and SDKs for developers.
+Nov. 27, 2024
+GenFM launches in ElevenReader, converting documents and articles into AI-hosted podcast-style conversations.
+Nov. 11, 2024
+Conversational AI is announced as a real-time voice-agent platform with customizable voices, LLM connections, and knowledge bases.
+Oct. 20, 2024
+Voice Design beta enters beta for an updated voice creation experience.
+Jul. 19, 2024
+Eleven Turbo v2.5 launches, extending low-latency text-to-speech synthesis to 32 languages.
+Jul. 10, 2024
+Voice Isolator API launches to remove background noise and isolate speech from audio recordings.
+Jun. 25, 2024
+ElevenLabs Reader App launches for listening to text content, including articles, PDFs, and e-books, on mobile devices.
+May 31, 2024
+Sound Effects launches publicly, generating effects and ambient sounds from written prompts.
+Jan. 22, 2024
+Dubbing Studio and Voice Library marketplace are announced. The planned dubbing editor adds transcript and translation controls, while Voice Library expands verified voice sharing and creator compensation.
+
+## 2023
+Date
+Milestone
+Nov. 22, 2023
+Speech-to-Speech (now Voice Changer) launches, transforming a recorded performance into another voice while preserving timing and expression.
+Nov. 9, 2023
+Eleven Turbo v2 launches as an English speech model optimized for lower latency.
+Oct. 10, 2023
+AI Dubbing launches to translate and revoice recordings and video into other languages while retaining speaker identity.
+Sep. 2023
+Projects launches as a long-form audio editor with multi-speaker narration, passage regeneration, and document imports. It is later renamed Studio.
+Aug. 22, 2023
+Eleven Multilingual v2 launches with speech synthesis in nearly 30 languages as ElevenLabs exits beta.
+Aug. 2023
+Professional Voice Cloning expands beyond enterprise access, enabling more creators to train high-fidelity replicas of their own voices.
+Jun. 20, 2023
+AI Speech Classifier launches for checking whether an audio clip contains ElevenLabs-generated speech, with public web access and API access for selected partners.
+Apr. 27, 2023
+Eleven Multilingual v1 launches with seven new languages beyond English and compatibility with cloned and designed voices.
+Feb. 28, 2023
+Voice Design launches for creating synthetic voices by choosing characteristics including age, gender, and accent.
+Jan. 23, 2023
+ElevenLabs public beta launches with English text-to-speech and voice-cloning capabilities, powered by the early speech model later referred to as Eleven Monolingual v1.
+
+## Frequently asked questions
+
+## When did ElevenLabs first launch?
+ElevenLabs launched its public beta on January 23, 2023, introducing text-to-speech and voice-cloning tools. The company was founded in 2022.
+
+## When was Eleven v3 released?
+Eleven v3 debuted as an alpha research preview on June 3, 2025. Public API access followed on August 20, 2025, and the model became generally available on February 2, 2026.
+
+## How do ElevenLabs speech model versions differ from Voice Design versions?
+Speech models generate spoken audio from text. Voice Design generates the voice identity used for that speech. Eleven v3 and Voice Design v3 are different model families.
+
+## Is ElevenAgents a single speech-to-speech model?
+ElevenAgents is a platform for voice and chat agents. It uses speech recognition, language models, speech synthesis, and conversation controls. The platform launched as Conversational AI before becoming ElevenLabs Agents and later ElevenAgents.
+
+## How does ElevenMusic differ from the Eleven Music models?
+Eleven Music refers to the music-generation model family introduced in August 2025. ElevenMusic is the listening and creation platform introduced in April 2026. Music v2 and Music v2.5 are later generations of the music model.
+
+## Related resources
+- AI Model Release Calendar: Latest AI Model Releases by Date
+- Create Royalty-Free Sound Effects with ElevenLabs AI Tool
+- 7 Best Free AI Voice Cloning Tools
+- 10 Best Free AI Audio Transcription Tools
+
+## More Like This
+
+## FLUX Timeline: Black Forest Labs Model Releases & History
+- Free AI Resources
+
+## Kimi Model Timeline: Kimi K3.1 Pro Release Dates and Version History
+- Free AI Resources
+
+## AI Model Release Calendar: Latest AI Model Releases by Date
+- Free AI Resources
+
+## Google AI Timeline: Gemini 4 Hydrogen, Models & Product Releases
+- Free AI Resources
+
+## NVIDIA Nemotron Timeline: Model Release Dates & History
+- Free AI Resources
+
+## Perplexity AI Timeline: Products, Models & APIs
+- Free AI Resources
+
+## Leave a Reply Cancel Reply

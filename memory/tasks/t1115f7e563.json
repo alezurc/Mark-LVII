@@ -1,0 +1,497 @@
+{
+ "id": "t1115f7e563",
+ "agent": "researcher",
+ "title": "Pesquise a história da ElevenLabs, incluindo fundadores, data de fu…",
+ "task": "Pesquise a história da ElevenLabs, incluindo fundadores, data de fundação, missão e principais marcos até 2026.",
+ "origin": "desk",
+ "deliver": "voice",
+ "status": "done",
+ "created": 1794790169.4014523,
+ "started": 1794790169.4568946,
+ "finished": 1794790670.8127549,
+ "not_before": 0.0,
+ "budget": {
+  "minutes": 15,
+  "rounds": 300
+ },
+ "used": {
+  "rounds": 73,
+  "seconds": 501.1
+ },
+ "attempts": 0,
+ "quota_until": 0.0,
+ "wrap_up": false,
+ "notes_in": [],
+ "events": [
+  {
+   "t": 1794790169.4022381,
+   "kind": "state",
+   "text": "queued"
+  },
+  {
+   "t": 1794790169.4593854,
+   "kind": "state",
+   "text": "running"
+  },
+  {
+   "t": 1794790263.8839378,
+   "kind": "progress",
+   "text": "Plan: 5 questions — Quem são os fundadores da ElevenLabs, quando a empresa foi fundada e qual foi a motivação e missão inicial? | Quais foram as primeiras rodadas de investimento e marcos iniciais da ElevenLabs (2022-2023)? | Quais foram os grandes marcos de financiamento, valuation e expansão em 20"
+  },
+  {
+   "t": 1794790263.8864634,
+   "kind": "progress",
+   "text": "Question 1: Quem são os fundadores da ElevenLabs, quando a empresa foi fundada e qual foi a motivação e missão inicial?"
+  },
+  {
+   "t": 1794790306.0993345,
+   "kind": "tool",
+   "text": "search_web ElevenLabs founders Piotr Dabkowski Mati Staniszewski founding date mission background"
+  },
+  {
+   "t": 1794790313.4616795,
+   "kind": "tool",
+   "text": "search_web ElevenLabs founders founding date Mati Staniszewski Piotr Dabkowski"
+  },
+  {
+   "t": 1794790318.8312733,
+   "kind": "tool",
+   "text": "fetch_page https://en.wikipedia.org/wiki/ElevenLabs"
+  },
+  {
+   "t": 1794790321.6602895,
+   "kind": "finding",
+   "text": "[1] ElevenLabs was founded in 2022 by Polish entrepreneurs Piotr Dąbkowski and Mateusz (Mati) Staniszewski."
+  },
+  {
+   "t": 1794790323.3276784,
+   "kind": "finding",
+   "text": "[1] The motivation and initial inspiration for founding ElevenLabs came from growing up in Poland and being frustrated by the terrible, emotionless voice dubbing in American Hollywood movies."
+  },
+  {
+   "t": 1794790325.1672382,
+   "kind": "finding",
+   "text": "[1] The name ElevenLabs derives from the English word eleven, referring to November 11 (Poland's National Independence Day), and Labs referring to its research and development profile."
+  },
+  {
+   "t": 1794790328.6232247,
+   "kind": "tool",
+   "text": "fetch_page https://businesscloud.co.uk/founders/mati-staniszewski-piotr-dabkowski-elevenlabs/"
+  },
+  {
+   "t": 1794790331.8623965,
+   "kind": "finding",
+   "text": "[2] ElevenLabs was co-founded in 2022 in London by childhood friends from Poland Mati Staniszewski (CEO) and Piotr Dąbkowski (CTO)."
+  },
+  {
+   "t": 1794790333.575081,
+   "kind": "progress",
+   "text": "Question 2: Quais foram as primeiras rodadas de investimento e marcos iniciais da ElevenLabs (2022-2023)?"
+  },
+  {
+   "t": 1794790335.0106683,
+   "kind": "tool",
+   "text": "search_web ElevenLabs funding rounds 2022 2023 seed series A investors Andreessen Horowitz"
+  },
+  {
+   "t": 1794790339.1692379,
+   "kind": "tool",
+   "text": "search_web ElevenLabs seed round 2022 amount investors"
+  },
+  {
+   "t": 1794790345.8671455,
+   "kind": "tool",
+   "text": "search_web ElevenLabs seed round 2 million 2022 investors"
+  },
+  {
+   "t": 1794790351.4910934,
+   "kind": "tool",
+   "text": "fetch_page https://elevenlabs.io/blog/elevenlabs-raises-2m-pre-seed-and-announces-ai-speech-platform-promising-to-revolutionize-aud"
+  },
+  {
+   "t": 1794790353.8060448,
+   "kind": "tool",
+   "text": "fetch_page https://elevenlabs.io/blog/elevenlabs-launches-new-generative-voice-ai-products-and-announces-19m-series-a-round-led-by-"
+  },
+  {
+   "t": 1794790356.4801033,
+   "kind": "finding",
+   "text": "[3] ElevenLabs raised a $2 million pre-seed funding round in late 2022 / announced in January 2023, led by Credo Ventures and Concept Ventures, along with several angel investors."
+  },
+  {
+   "t": 1794790358.1835017,
+   "kind": "finding",
+   "text": "[3] ElevenLabs officially launched its Beta platform in January 2023, allowing creators and publishers to convert text to speech using deep learning models and custom voice cloning."
+  },
+  {
+   "t": 1794790359.8677683,
+   "kind": "finding",
+   "text": "[4] In June 2023, ElevenLabs raised a $19 million Series A funding round co-led by Andreessen Horowitz, Nat Friedman, and Daniel Gross, with Andreessen Horowitz taking a board seat."
+  },
+  {
+   "t": 1794790363.6307442,
+   "kind": "finding",
+   "text": "[4] By June 2023, just months after its Beta launch, ElevenLabs had reached over 1 million registered users."
+  },
+  {
+   "t": 1794790365.25806,
+   "kind": "progress",
+   "text": "Question 3: Quais foram os grandes marcos de financiamento, valuation e expansão em 2024 (ex: Series B, status de unicórnio)?"
+  },
+  {
+   "t": 1794790367.8390682,
+   "kind": "tool",
+   "text": "search_web ElevenLabs Series B funding valuation unicorn 2024"
+  },
+  {
+   "t": 1794790373.763387,
+   "kind": "tool",
+   "text": "fetch_page https://techcrunch.com/2024/01/22/voice-cloning-startup-elevenlabs-lands-80m-achieves-unicorn-status/"
+  },
+  {
+   "t": 1794790376.958741,
+   "kind": "finding",
+   "text": "[5] Em 22 de janeiro de 2024, a ElevenLabs levantou US$ 80 milhões em uma rodada de financiamento Série B, alcançando o status de unicórnio com uma avaliação superior a US$ 1 bilhão."
+  },
+  {
+   "t": 1794790378.9781485,
+   "kind": "finding",
+   "text": "[5] A rodada Série B contou com a participação de Andreessen Horowitz (a16z), Nat Friedman, Daniel Gross, Sequoia Capital, Smash Capital, SV Angel, BroadLight Capital e Credo Ventures, elevando o total captado pela empresa para US$ 101 milhões."
+  },
+  {
+   "t": 1794790380.9742875,
+   "kind": "finding",
+   "text": "[5] Até janeiro de 2024, a plataforma da ElevenLabs já era utilizada por funcionários de 41% das empresas da Fortune 500 e a equipe planejava expandir de 40 para 100 funcionários até o final do ano."
+  },
+  {
+   "t": 1794790382.5458176,
+   "kind": "tool",
+   "text": "search_web ElevenLabs partnerships announcements expansion 2024 HarperCollins Time"
+  },
+  {
+   "t": 1794790388.8394606,
+   "kind": "tool",
+   "text": "search_web ElevenLabs announcements partnerships 2024"
+  },
+  {
+   "t": 1794790394.4623604,
+   "kind": "tool",
+   "text": "search_web ElevenLabs 2024 expansion partnership"
+  },
+  {
+   "t": 1794790399.4577336,
+   "kind": "tool",
+   "text": "search_web ElevenLabs 2024 news blog announcement"
+  },
+  {
+   "t": 1794790405.622765,
+   "kind": "tool",
+   "text": "search_web \"ElevenLabs\" \"Series B\" valuation \"1.1 billion\""
+  },
+  {
+   "t": 1794790412.1307087,
+   "kind": "tool",
+   "text": "search_web site:elevenlabs.io \"Series B\""
+  },
+  {
+   "t": 1794790417.1234112,
+   "kind": "tool",
+   "text": "fetch_page https://elevenlabs.io/blog/series-b"
+  },
+  {
+   "t": 1794790440.7519581,
+   "kind": "finding",
+   "text": "[6] No anúncio da Série B em janeiro de 2024, a ElevenLabs revelou parcerias comerciais com grandes players em setores como publicação (Storytel, The Washington Post, Curio), jogos (Paradox Interactive, NetEase, Inworld AI), mídia (Wondershare Filmora, Futuri Media) e IA conversacional (FlowGPT)."
+  },
+  {
+   "t": 1794790444.7651637,
+   "kind": "finding",
+   "text": "[6] Ao alcançar o status de unicórnio em janeiro de 2024, a ElevenLabs havia expandido sua equipe de 5 para 40 funcionários e seus usuários já haviam gerado o equivalente a mais de 100 anos de áudio."
+  },
+  {
+   "t": 1794790447.4594278,
+   "kind": "progress",
+   "text": "Question 4: Quais são os principais produtos, modelos de IA e inovações tecnológicas lançados pela ElevenLabs até hoje?"
+  },
+  {
+   "t": 1794790449.2510195,
+   "kind": "tool",
+   "text": "search_web ElevenLabs products timeline models voice cloning AI Dubbing Reader app Sound Effects"
+  },
+  {
+   "t": 1794790455.112899,
+   "kind": "tool",
+   "text": "search_web ElevenLabs product releases AI voice models timeline"
+  },
+  {
+   "t": 1794790460.7114584,
+   "kind": "tool",
+   "text": "search_web ElevenLabs products"
+  },
+  {
+   "t": 1794790466.9230673,
+   "kind": "tool",
+   "text": "fetch_page https://en.wikipedia.org/wiki/ElevenLabs"
+  },
+  {
+   "t": 1794790471.3595166,
+   "kind": "finding",
+   "text": "[1] Em janeiro de 2023, a ElevenLabs lançou publicamente sua plataforma beta de síntese de fala e clonagem de voz, permitindo aos usuários gerar áudio realista e clonar vozes a partir de amostras."
+  },
+  {
+   "t": 1794790473.8630939,
+   "kind": "finding",
+   "text": "[1] Em junho de 2023, a ElevenLabs lançou o AI Speech Classifier, ferramenta criada para identificar se um arquivo de áudio foi gerado pela tecnologia de IA da própria empresa."
+  },
+  {
+   "t": 1794790511.3694448,
+   "kind": "finding",
+   "text": "[1] Em 2023, a ElevenLabs lançou o ferramenta Projects (julho/setembro) para conteúdos de longo formato como audiolivros, expandiu para 28 idiomas em agosto saindo da fase beta, e em outubro lançou o AI Dubbing para traduzir falas em mais de 20 idiomas mantendo a voz e emoção originais."
+  },
+  {
+   "t": 1794790533.9886599,
+   "kind": "finding",
+   "text": "[1] Em 2024, a ElevenLabs lançou o Voice Marketplace e AI Dubbing Studio (janeiro), o aplicativo ElevenReader/ElevenLabs Reader App para ouvir textos em iOS/Android (junho/agosto), o Voice Isolator para remoção de ruído (julho) e a plataforma Conversational AI para agentes de voz interativos (novemb"
+  },
+  {
+   "t": 1794790553.7392447,
+   "kind": "finding",
+   "text": "[1] Em 2025 e 2026, a ElevenLabs lançou o modelo de transcrição Scribe (fevereiro de 2025), o modelo Eleven v3 com suporte a mais de 70 idiomas e tags de áudio emocionais (junho de 2025), o gerador de música Eleven Music (agosto de 2025) e o Expressive Mode no ElevenAgents (fevereiro de 2026)."
+  },
+  {
+   "t": 1794790562.117507,
+   "kind": "tool",
+   "text": "fetch_page https://builtin.com/articles/what-is-elevenlabs"
+  },
+  {
+   "t": 1794790570.453428,
+   "kind": "finding",
+   "text": "[7] Em 2026, a plataforma ElevenLabs é estruturada em três famílias de produtos: ElevenCreative (ferramentas de geração e edição para criadores), ElevenAgents (plataforma de agentes conversacionais de atendimento) e ElevenAPI (para desenvolvedores integrarem recursos de áudio IA)."
+  },
+  {
+   "t": 1794790572.3492615,
+   "kind": "progress",
+   "text": "Question 5: Quais foram os desenvolvimentos, marcos corporativos, rodadas adicionais e produtos lançados entre 2025 e 2026?"
+  },
+  {
+   "t": 1794790573.609189,
+   "kind": "tool",
+   "text": "search_web ElevenLabs milestones, products, funding news 2025 2026"
+  },
+  {
+   "t": 1794790580.3016803,
+   "kind": "tool",
+   "text": "search_web ElevenLabs notícias 2025 2026 produtos lançamentos"
+  },
+  {
+   "t": 1794790585.7006772,
+   "kind": "tool",
+   "text": "fetch_page https://pricingrank.org/pt-br/elevenlabs-13-new-products-scribe-v3-elevenai-november-2026/"
+  },
+  {
+   "t": 1794790589.4646583,
+   "kind": "tool",
+   "text": "fetch_page https://elevenlabs.io/blog"
+  },
+  {
+   "t": 1794790592.2609124,
+   "kind": "tool",
+   "text": "fetch_page https://www.scriptbyai.com/elevenlabs-timeline/"
+  },
+  {
+   "t": 1794790595.2169948,
+   "kind": "finding",
+   "text": "[10] Entre 2025 e 2026, a ElevenLabs expandiu significativamente seu portfólio de IA, evoluindo de uma plataforma de voz para uma solução completa de IA generativa (áudio, música, transcrição, agentes de voz e vídeo)."
+  },
+  {
+   "t": 1794790597.148768,
+   "kind": "finding",
+   "text": "[10] A ElevenLabs expandiu seu portfólio de 2025 a 2026, lançando produtos como ElevenMusic, Scribe, ElevenAgents e a série de modelos Eleven v4."
+  },
+  {
+   "t": 1794790598.872872,
+   "kind": "finding",
+   "text": "[10] A ElevenLabs lançou o ElevenMusic, Scribe e novos modelos de voz entre 2025 e 2026."
+  },
+  {
+   "t": 1794790602.9737144,
+   "kind": "tool",
+   "text": "fetch_page https://elevenlabs.io/blog/elevenlabs-summit-nyc"
+  },
+  {
+   "t": 1794790605.0479991,
+   "kind": "tool",
+   "text": "search_web ElevenLabs Summit NYC 2026 announcements"
+  },
+  {
+   "t": 1794790610.5130398,
+   "kind": "tool",
+   "text": "search_web ElevenLabs \"November 11, 2026\" summit"
+  },
+  {
+   "t": 1794790616.4044492,
+   "kind": "tool",
+   "text": "fetch_page https://elevenlabs.io/blog/nyc-summit"
+  },
+  {
+   "t": 1794790622.607592,
+   "kind": "progress",
+   "text": "Review: 1 gap(s) to close — Confirmação independente sobre os lançamentos de produtos e eventos específicos mencionados como ocorridos em 2026 (ex: 'NYC Summit' em 11 de novembro de 2026 e o lançamento dos modelos Eleven v4)."
+  },
+  {
+   "t": 1794790622.6116676,
+   "kind": "progress",
+   "text": "Question 6: Confirmação independente sobre os lançamentos de produtos e eventos específicos mencionados como ocorridos em 2026 (ex: 'NYC Summit' em 11 de novembro de 2026 e o lançamento dos modelos Eleven v4)."
+  },
+  {
+   "t": 1794790624.0347767,
+   "kind": "tool",
+   "text": "search_web ElevenLabs NYC Summit November 11 2026"
+  },
+  {
+   "t": 1794790629.010401,
+   "kind": "tool",
+   "text": "search_web ElevenLabs Eleven v4 model release 2026"
+  },
+  {
+   "t": 1794790633.786904,
+   "kind": "tool",
+   "text": "search_web ElevenLabs company news 2026"
+  },
+  {
+   "t": 1794790637.4989557,
+   "kind": "tool",
+   "text": "fetch_page https://elevenlabs.io/blog/tender-22bn"
+  },
+  {
+   "t": 1794790640.4883687,
+   "kind": "finding",
+   "text": "[12] A ElevenLabs lançou os modelos de Text to Speech 'Eleven v4' e 'Eleven v4 Turbo' em 2026."
+  },
+  {
+   "t": 1794790644.5836275,
+   "kind": "tool",
+   "text": "fetch_page https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b/"
+  },
+  {
+   "t": 1794790647.1835153,
+   "kind": "finding",
+   "text": "[12] A ElevenLabs confirmou o lançamento dos modelos Eleven v4 e v4 Turbo em setembro de 2026."
+  },
+  {
+   "t": 1794790650.5334432,
+   "kind": "progress",
+   "text": "Review: the evidence covers the question"
+  },
+  {
+   "t": 1794790670.809003,
+   "kind": "progress",
+   "text": "Verified: 2 statement(s) corrected"
+  },
+  {
+   "t": 1794790670.8211195,
+   "kind": "state",
+   "text": "done"
+  }
+ ],
+ "files": [],
+ "result": "Aqui está o resumo da trajetória da ElevenLabs, compilado com base nas informações pesquisadas até novembro de 2026.\n\n### Resumo\nA ElevenLabs é uma empresa líder em IA generativa de áudio, fundada em 2022 em Londres pelos poloneses Mati Staniszewski e Piotr Dąbkowski. Motivados pela insatisfação com a dublagem de filmes estrangeiros em seu país natal, os fundadores criaram a empresa para democratizar a síntese de voz realista. Em apenas quatro anos, a startup evoluiu de uma ferramenta de clonagem de voz para uma plataforma de infraestrutura de IA completa, alcançando o status de unicórnio em janeiro de 2024 com uma avaliação superior a US$ 1 bilhão [2, 5].\n\n---\n\n### História e Evolução da Empresa\n\n#### Origem e Motivação\nA ElevenLabs foi fundada em 2022 por Mati Staniszewski (CEO) e Piotr Dąbkowski (CTO), amigos de infância que possuem trajetórias em engenharia de aprendizado de máquina e estratégia tecnológica [1, 2]. O nome da empresa faz referência ao dia 11 de novembro, data do Dia da Independência da Polônia [1]. A missão inicial era superar a qualidade das dublagens tradicionais de Hollywood, desenvolvendo ferramentas capazes de converter fala entre idiomas mantendo a emoção e a voz original [1, 3].\n\n#### Marcos de Financiamento e Crescimento\n*   **2022–2023:** A empresa levantou US$ 2 milhões em uma rodada *pre-seed* anunciada em janeiro de 2023 e, em junho do mesmo ano, captou US$ 19 milhões em uma Série A liderada por Andreessen Horowitz, Nat Friedman e Daniel Gross [3, 4].\n*   **2024:** Em janeiro, a empresa captou US$ 80 milhões em uma Série B, alcançando o status de unicórnio com uma avaliação superior a US$ 1 bilhão [5].\n\n#### Produtos e Ecossistema (2023–2026)\nA ElevenLabs estruturou sua oferta em três famílias principais [7]:\n1.  **ElevenCreative:** Ferramentas sem código para geração e edição de áudio (incluindo *Projects*, *AI Dubbing* e o *Reader App*) [1, 7].\n2.  **ElevenAgents:** Plataforma para construção de agentes de voz interativos e conversacionais [1, 7].\n3.  **ElevenAPI:** Ferramentas para desenvolvedores integrarem recursos de IA em aplicações externas [7].\n\nA evolução tecnológica foi marcada pelo lançamento do *AI Speech Classifier* (2023), das ferramentas *Projects* e *AI Dubbing* (2023), do *Reader App* e *Voice Isolator* (2024), do modelo de transcrição *Scribe* e do gerador *Eleven Music* (2025) e, em 2026, pela introdução dos modelos *Eleven v4* e *Eleven v4 Turbo*, considerados os mais rápidos e expressivos desenvolvidos pela empresa até o momento [1, 5, 9].\n\n---\n\n### Divergências e Incertezas\n*   **Eventos de Lançamento:** Embora fontes indiquem lançamentos de produtos significativos em 2026, não foi possível confirmar a existência de um evento denominado \"NYC Summit\" em 11 de novembro de 2026 [8]. Informações associadas a este evento específico foram consideradas não verificáveis ou sem comprovação independente [8].\n*   **Avaliação e Dados Financeiros (2026):** Embora a empresa tenha mencionado alcançar uma nova avaliação em 2026 coincidindo com o lançamento dos modelos *v4*, os detalhes específicos de uma avaliação de US$ 22 bilhões ou de um *tender* de ações de US$ 300 milhões em 30 de setembro de 2026 carecem de confirmação em fontes primárias ou independentes no material analisado [9].\n*   **Volume de Lançamentos:** A cronologia detalhada de 13 produtos lançados simultaneamente no final de 2026 também carece de verificação independente robusta [8].\n\n## Sources\n\n1. ElevenLabs - Wikipedia — https://en.wikipedia.org/wiki/ElevenLabs\n2. Mati Staniszewski & Piotr Dąbkowski - ElevenLabs - BusinessCloud — https://businesscloud.co.uk/founders/mati-staniszewski-piotr-dabkowski-elevenlabs/\n3. ElevenLabs Raises $2M and Announces AI Speech Platform — https://elevenlabs.io/blog/elevenlabs-raises-2m-pre-seed-and-announces-ai-speech-platform-promising-to-revolutionize-audio-storytelling\n4. ElevenLabs — ElevenLabs Announces $19m Series A Round — https://elevenlabs.io/blog/elevenlabs-launches-new-generative-voice-ai-products-and-announces-19m-series-a-round-led-by-nat-friedman-daniel-gross-and-andreessen-horowitz\n5. Voice cloning startup ElevenLabs lands $80M, achieves unicorn status | TechCrunch — https://techcrunch.com/2024/01/22/voice-cloning-startup-elevenlabs-lands-80m-achieves-unicorn-status/\n6. ElevenLabs Releases New AI Products and Raises $80M Series B — https://elevenlabs.io/blog/series-b\n7. What Is ElevenLabs? The AI Voice Platform, Explained | Built In — https://builtin.com/articles/what-is-elevenlabs\n8. ElevenLabs Timeline: Model & Product Release Dates — https://www.scriptbyai.com/elevenlabs-timeline/\n9. ElevenLabs reaches $22bn valuation after employee tender — https://elevenlabs.io/blog/tender-22bn\n\n## Method\n\n24 findings from 9 sources (9 read in full); 22 of 24 quotes verified against the page; 2 review cycle(s).\n\n- Quem são os fundadores da ElevenLabs, quando a empresa foi fundada e qual foi a motivação e missão inicial? · high\n- Quais foram as primeiras rodadas de investimento e marcos iniciais da ElevenLabs (2022-2023)? · high\n- Quais foram os grandes marcos de financiamento, valuation e expansão em 2024 (ex: Series B, status de unicórnio)? · high\n- Quais são os principais produtos, modelos de IA e inovações tecnológicas lançados pela ElevenLabs até hoje? · high\n- Quais foram os desenvolvimentos, marcos corporativos, rodadas adicionais e produtos lançados entre 2025 e 2026?\n- Confirmação independente sobre os lançamentos de produtos e eventos específicos mencionados como ocorridos em 2026 (ex: 'NYC Summit' em 11 de novembro de 2026 e o lançamento dos modelos Eleven v4). · high",
+ "report": "D:\\Trabalho_Pessoal\\Mark-LVII\\reports\\2026-11-15-pesquise-a-história-da-elevenlabs-inclui-t1115f7e563.md",
+ "error": "",
+ "research": {
+  "phase": "done",
+  "plan": {
+   "goal": "Apresentar a história detalhada da ElevenLabs, cobrindo fundadores, data de fundação, missão, modelo de negócios e principais marcos e lançamentos até 2026.",
+   "language": "pt-BR",
+   "complete": "Um relatório completo e estruturado contendo a história de fundação da ElevenLabs (data, local e motivação), biografias resumidas dos fundadores (Piotr Dabkowski e Mati Staniszewski), a missão oficial da empresa, rodadas de investimento (financiamento, valuation e investidores-chave como Andreessen Horowitz, Sequoia, etc.), lançamentos tecnológicos marcantes (modelos de voz, Voice Design, dublagem, sound effects, leitor de áudio, marketplace de vozes) e marcos estratégicos até 2026.",
+   "subqs": [
+    {
+     "id": 1,
+     "q": "Quem são os fundadores da ElevenLabs, quando a empresa foi fundada e qual foi a motivação e missão inicial?",
+     "queries": [
+      "ElevenLabs founders founding date Piotr Dabkowski Mati Staniszewski background story",
+      "ElevenLabs mission statement why founded history"
+     ],
+     "status": "done",
+     "rounds": 10,
+     "summary": "A ElevenLabs foi fundada em 2022 em Londres por dois amigos de infância poloneses: Mati Staniszewski (CEO) e Piotr Dąbkowski (CTO). A motivação inicial veio da insatisfação com as dublagens sem emoção de filmes de Hollywood assistidos na Polônia na infância, e o nome homenageia o 11 de novembro (Dia da Independência polonesa).",
+     "confidence": "high",
+     "nudged": true,
+     "gap": false
+    },
+    {
+     "id": 2,
+     "q": "Quais foram as primeiras rodadas de investimento e marcos iniciais da ElevenLabs (2022-2023)?",
+     "queries": [
+      "ElevenLabs funding rounds 2022 2023 seed series A investors Andreessen Horowitz",
+      "ElevenLabs launch beta 2022 2023 milestones"
+     ],
+     "status": "done",
+     "rounds": 10,
+     "summary": "A ElevenLabs levantou US$ 2 milhões em uma rodada pre-seed anunciada em janeiro de 2023 (liderada pela Credo Ventures e Concept Ventures) e US$ 19 milhões em uma rodada Series A em junho de 2023 (liderada por Andreessen Horowitz, Nat Friedman e Daniel Gross). O marco inicial de 2023 foi o lançamento da plataforma Beta, que rapidamente alcançou mais de 1 milhão de usuários registrados.",
+     "confidence": "high",
+     "nudged": false,
+     "gap": false
+    },
+    {
+     "id": 3,
+     "q": "Quais foram os grandes marcos de financiamento, valuation e expansão em 2024 (ex: Series B, status de unicórnio)?",
+     "queries": [
+      "ElevenLabs Series B valuation unicorn 2024 funding",
+      "ElevenLabs major announcements partnerships 2024"
+     ],
+     "status": "done",
+     "rounds": 15,
+     "summary": "Em janeiro de 2024, a ElevenLabs anunciou a captação de US$ 80 milhões em sua rodada Série B (co-liderada por Andreessen Horowitz, Nat Friedman e Daniel Gross), atingindo uma avaliação de US$ 1,1 bilhão e o status de unicórnio. Essa fase foi acompanhada pela consolidação de grandes parcerias B2B (ex: The Washington Post, Storytel, Paradox Interactive, NetEase) e expansão da equipe para cerca de 4…",
+     "confidence": "high",
+     "nudged": false,
+     "gap": false
+    },
+    {
+     "id": 4,
+     "q": "Quais são os principais produtos, modelos de IA e inovações tecnológicas lançados pela ElevenLabs até hoje?",
+     "queries": [
+      "ElevenLabs product releases timeline voice cloning dubbing sound effects Reader app",
+      "ElevenLabs AI audio models history versions features"
+     ],
+     "status": "done",
+     "rounds": 13,
+     "summary": "A ElevenLabs evoluiu de uma plataforma beta de síntese de fala e clonagem de voz em 2023 para um ecossistema de áudio IA abrangente em 2026, dividido em três linhas principais: ElevenCreative (ferramentas para criadores), ElevenAgents (agentes conversacionais para empresas) e ElevenAPI (integração para desenvolvedores). Entre seus marcos tecnológicos, destacam-se o lançamento do AI Speech Classif…",
+     "confidence": "high",
+     "nudged": true,
+     "gap": false
+    },
+    {
+     "id": 5,
+     "q": "Quais foram os desenvolvimentos, marcos corporativos, rodadas adicionais e produtos lançados entre 2025 e 2026?",
+     "queries": [
+      "ElevenLabs funding announcements 2025 2026",
+      "ElevenLabs latest milestones news 2025 2026"
+     ],
+     "status": "done",
+     "rounds": 13,
+     "summary": "A ElevenLabs manteve um ritmo intenso de inovação e expansão entre 2025 e 2026, transformando-se de uma startup especializada em síntese de voz em uma plataforma completa de infraestrutura de IA para empresas (\"interaction layer for AI\"). Principais desenvolvimentos e marcos corporativos (2025-2026): Evolução da Plataforma: A empresa consolidou suas soluções de voz e conversação sob o ecossistema…",
+     "confidence": "",
+     "nudged": true,
+     "gap": false
+    },
+    {
+     "id": 6,
+     "q": "Confirmação independente sobre os lançamentos de produtos e eventos específicos mencionados como ocorridos em 2026 (ex: 'NYC Summit' em 11 de novembro de 2026 e o lançamento dos modelos Eleven v4).",
+     "queries": [
+      "ElevenLabs NYC Summit November 11 2026",
+      "ElevenLabs Eleven v4 model release",
+      "ElevenLabs company news 2026"
+     ],
+     "status": "done",
+     "rounds": 7,
+     "summary": "A ElevenLabs confirmou oficialmente o lançamento dos modelos Eleven v4 e Eleven v4 Turbo em 2026. A empresa alcançou um valuation de 22 bilhões de dólares após um tender de funcionários de 300 milhões em 30 de setembro de 2026. Não foi encontrada evidência pública ou confirmação independente sobre um evento específico chamado 'NYC Summit' em 11 de novembro de 2026.",
+     "confidence": "high",
+     "nudged": true,
+     "gap": true
+    }
+   ]
+  },
+  "cycle": 2
+ }
+}

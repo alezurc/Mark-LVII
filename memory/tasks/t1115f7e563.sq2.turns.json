@@ -1,0 +1,263 @@
+[
+ {
+  "role": "user",
+  "text": "[RESEARCH GOAL] Apresentar a história detalhada da ElevenLabs, cobrindo fundadores, data de fundação, missão, modelo de negócios e principais marcos e lançamentos até 2026.\n[THE PLAN]\n  1. Quem são os fundadores da ElevenLabs, quando a empresa foi fundada e qual foi a motivação e missão inicial?  (done)\n  2. Quais foram as primeiras rodadas de investimento e marcos iniciais da ElevenLabs (2022-2023)?\n  3. Quais foram os grandes marcos de financiamento, valuation e expansão em 2024 (ex: Series B, status de unicórnio)?\n  4. Quais são os principais produtos, modelos de IA e inovações tecnológicas lançados pela ElevenLabs até hoje?\n  5. Quais foram os desenvolvimentos, marcos corporativos, rodadas adicionais e produtos lançados entre 2025 e 2026?\n\n[NOW: QUESTION 2] Quais foram as primeiras rodadas de investimento e marcos iniciais da ElevenLabs (2022-2023)?\nSuggested searches: ElevenLabs funding rounds 2022 2023 seed series A investors Andreessen Horowitz; ElevenLabs launch beta 2022 2023 milestones\nTime for this question: about 2.3 minutes, 30 rounds."
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_3893227163973296398",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs funding rounds 2022 2023 seed series A investors Andreessen Horowitz"
+    },
+    "sig": "EmAKXgFpFH0T8T09FympZpQz3NeN0W1fRUawCDstZDlX3bju6IupdHL/Eg3XNj+ebcNYNPb4W0zTvZVoMdg1huaaKsaIJv3xc3mVEI/imTvfIXnW7I8GSzl6fjneWRF0Zao="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_3893227163973296398",
+    "name": "search_web",
+    "result": "<<<UNTRUSTED source=web>>>\nResults for: ElevenLabs funding rounds 2022 2023 seed series A investors Andreessen Horowitz\n1. ElevenLabs - Wikipedia\n   https://en.wikipedia.org/wiki/ElevenLabs\n   In June 2023, ElevenLabs raised a $19 million Series A funding round at a valuation of about $100 million. [12][13][9] The funding round was co-led by the venture capital firm Andreessen Horowitz, former GitHub CEO Nat Friedman, and entrepreneur Daniel Gross.\n2. ElevenLabs Funding Rounds | Seedtable\n   https://seedtable.com/companies/elevenlabs/funding-rounds\n   Sep 30, 2026 · ElevenLabs raised $180M in Series C funding co-led by Andreessen Horowitz and ICONIQ Growth at a $3.3B valuation, tripling its valuation in a year. TechCrunch reports ElevenLabs closed a Series C led by ICONIQ Growth valuing the voice AI startup north of $3 billion.\n3. ElevenLabs — ElevenLabs Announces $19m Series A Round\n   https://elevenlabs.io/blog/elevenlabs-launches-new-generative-voice-ai-products-and-announces-19m-series-a-round-led-by-nat-friedman-daniel-gross-and-andreessen-horowitz\n   Jun 20, 2023 · Andreessen Horowitz is taking a board seat. This investment will be used to continue building ElevenLabs' cutting-edge research hub for Voice AI and to launch a range of additional products to support specific market verticals such as publishing, gaming, entertainment, and conversatio\n4. ElevenLabs: AI Startup Raises $19 Million Series a From A16z ...ElevenLabs funding history · $781M raised · fobiConfirmed: Andreessen Horowitz leads $19 million Series A ...Voice-generating platform ElevenLabs raises $19M, launches ...\n   https://www.businessinsider.com/elevenlabs-ai-startup-raises-19-million-series-a-from-a16z-2023-6\n   Jun 20, 2023 · ElevenLabs' Series A round was co-led by venture capital firm Andreessen Horowitz, ex-GitHub CEO Nat Friedman, and entrepreneur Daniel Gross, confirming previous Insider reporting. Every disclosed funding round for ElevenLabs: stage, amount, lead investors, valuation. Sourced from the\n5. ElevenLabs funding history · $781M raised · fobi\n   https://www.fobi.com/voice/companies/elevenlabs/funding\n   Every disclosed funding round for ElevenLabs: stage, amount, lead investors, valuation. Sourced from the FOBI roster.\n6. Confirmed: Andreessen Horowitz leads $19 million Series A ...\n   https://tech.eu/2023/06/20/confirmed-andreessen-horowitz-leads-19-million-series-a-round-in-text-to-speech-ai-platform-elevenlabs/\n   Jun 20, 2023 · London/New York-based voice AI startup ElevenLabs has raised $19 million in a Series A funding round. A self-titled voice technology research lab, the company intends to use the $19 million to press forward with voice AI research projects and additional product deployments.\n7. Voice-generating platform ElevenLabs raises $19M, launches ...\n   https://techcrunch.com/2023/06/20/voice-generating-platform-elevenlabs-raises-19m-launches-detection-tool/\n   Jun 20, 2023 · ElevenLabs, the viral AI-powered platform for creating synthetic voices, has raised a new round of cash. Today, the startup announced the closure of a $19 million Series A round co-led by...\n8. Venture Capital for Biotech - Drug Development Funding\n   https://www.bing.com/aclick?ld=e8T9Al1qSXRQSIgyoDYNYecTVUCUwFR0yKgAznCt51_NxaenNtsw16Wu_60syxtalFj8VhtI_RmQPM9RpBhqdPtamNgvfwvfFDxucKdoPg1JZvapRDKYMSVuHdEClxRxfw-8d6B8AxJEjfeMWs8TR6MFLBBPaTOKKczzML_OTdlXwE1OvfPdUusNu3FJW9-lZmmk7SrLt-5HcfHlqDLYRl8c-75Z8&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4NDUwMTc2ODQyMyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwOTE0NDQ3NzM1NCUyNmRzX2FfY2lkJTNkNDAwODc5NTk3JTI2ZHNfYV9jYWlkJTNkMjA4NjczMjYwNjMlMjZkc19hX2FnaWQlM2QxOTgxNDA3MjM5NDElMjZkc19hX2xpZCUzZGt3ZC00MjM5ODUyNjgyOTUlMjYlMjZkc19lX2FkaWQlM2Q4MTAyMDQxMjE3NjM0MiUyNmRzX2VfdGFyZ2V0X2lkJTNka3dkLTgxMDIwNzE0MDUyNDYwJTNhbG9jLTIwJTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cuZXhlZC5oYnMuZWR1JTJmc3RyYXRlZ2ljLWZpbmFuY2luZy1saWZlLXNjaWVuY2VzJTNmdXRtX2NhbXBhaWduJTNkSEJTLWV4ZWQtX0hhcnZhcmQlMmJCdXNpbmVzcyUyYlNjaG9vbF9TRU1fQmluZ19Ob24tQnJhbmRfUHJvZ3JhbV9IZWFsdGhjYXJlX0dsb2JhbF9Ob25lX0NvbWJvX0Nyb3NzJTJiRGV2aWNlX0FsbCUyNnV0bV9tZWRpdW0lM2RTRU0lMjZ1dG1fc291cmNlJTNkTUlDUk9TT0ZUJTI2dXRtX3Rlcm0lM2RiaW90ZWNobm9sb2d5JTJiZnVuZGluZyUyNmdjbGlkJTNkOTU2ZjViYzYzNzEwMWE2YTNkNWUzMTNjNjRkMDI1MTUlMjZnY2xzcmMlM2QzcC5kcyUyNiUyNm1zY2xraWQlM2Q5NTZmNWJjNjM3MTAxYTZhM2Q1ZTMxM2M2NGQwMjUxNQ&rlid=956f5bc637101a6a3d5e313c64d02515\n   Designed For C-Suite Leaders Driving Biotech & Life Sciences Growth. Enroll Today. Join Senior Life Sciences Leaders for an Executive Financing Program. Apply Now. Broad Range of Topics · Renowned HBS Faculty · Global Network of Peers\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_3824197902448646004",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs seed round 2022 amount investors"
+    },
+    "sig": "EmAKXgFpFH0Tt9uHSCsaIvJ+6huP200hPZfcDmxrYUM+7sf/PR0NX7vP0EgnuyCz3m3CW5B535k6vqdkdsex+AVya8BpHPRg2tfkR0gX97TPdqREW/U5cVUhBT6zVU0Fs6E="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_3824197902448646004",
+    "name": "search_web",
+    "result": "<<<UNTRUSTED source=web>>>\nResults for: ElevenLabs seed round 2022 amount investors\n1. ElevenLabs Funding Rounds | Seedtable\n   https://seedtable.com/companies/elevenlabs/funding-rounds\n   Sep 30, 2026 · ElevenLabs has raised 781.0M USD across 6 funding rounds — latest: Other in Jun 2026. Full history with stages, dates, investors and valuations on Seedtable.\n2. ElevenLabs: Valuation, Funding & Metrics | Sterling\n   https://sterlingcharts.com/companies/elevenlabs\n   Explore ElevenLabs funding, investors, valuation, revenue estimates, and key business metrics. Private company data and analysis on Sterling.\n3. ElevenLabs funding history · $781M raised · fobi\n   https://www.fobi.com/voice/companies/elevenlabs/funding\n   Every disclosed funding round for ElevenLabs: stage, amount, lead investors, valuation. Sourced from the FOBI roster.\n4. ElevenLabs Seed — $2M | NeuronFeed\n   https://neuronfeed.com/funding/95\n   ElevenLabs raised $2M in its Seed round on Sep 1, 2022.\n5. ElevenLabs - 2026 Funding Rounds & List of Investors - Tracxn\n   https://tracxn.com/d/companies/elevenlabs/__Tvkv2vcQvT5RiO80KqXicawZyFtA-r7-J533YWuiDrM/funding-and-investors\n   Jun 17, 2026 · Explore ElevenLabs' funding history with round-wise details, lead investors, post-money valuations, and complete investor list.\n6. ElevenLabs 2026 Company Profile: Valuation, Funding ...\n   https://pitchbook.com/profiles/company/509315-23\n   Information on valuation, funding, cap tables, investors, and executives for ElevenLabs. Use the PitchBook Platform to explore the full profile.\n7. ElevenLabs: funding rounds, valuation, investors and revenue\n   https://ai.lounge.ai/companies/elevenlabs\n   ElevenLabs develops artificial intelligence software focused on speech synthesis and voice generation. It provides text-to-speech models that convert written content into audio using machine learning systems.\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_10595388036845819916",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs seed round 2 million 2022 investors"
+    },
+    "sig": "EmAKXgFpFH0TsIYL8fEYUiYsJ/2IBzrZd11uQNSf/OEWo0C29mPerqi+zOitdRKJWuHpQc9tfFBIJSafLX5vse9WCK/QwDwv5UnN4loyle0Cn/e+araFxs/gnQnL8r8ybRo="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_10595388036845819916",
+    "name": "search_web",
+    "result": "<<<UNTRUSTED source=web>>>\nResults for: ElevenLabs seed round 2 million 2022 investors\n1. ElevenLabs - Wikipedia\n   https://en.wikipedia.org/wiki/ElevenLabs\n   In January 2023 they revealed having secured a $2 million pre-seed round. The startup's specialization in AI voice intelligence, a still-emerging field in Europe, played a significant role in attracting investors. The pre-seed funding was primarily led by Credo Ventures, and joined by Concept Ventur\n2. AI voice startup ElevenLabs doubles valuation to $22B\n   https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b/\n   Sep 30, 2026 · The company previously held a $100 million tender at a $6.6 billion valuation in September 2025. Founded in 2022, the company is known for generating ultra-realistic human voices and sound effects.\n3. ElevenLabs Seed — $2M | NeuronFeed\n   https://neuronfeed.com/funding/95\n   ElevenLabs raised $2M in its Seed round on Sep 1, 2022.\n4. ElevenLabs 2026 Company Profile: Valuation, Funding ...ElevenLabs Raises $2M and Announces AI Speech PlatformElevenLabs - WikipediaElevenLabs Funding Rounds | SeedtableElevenLabs Funding Rounds & Investors — $850.4M Raised ...\n   https://pitchbook.com/profiles/company/509315-23\n   Information on valuation, funding, cap tables, investors, and executives for ElevenLabs. Use the PitchBook Platform to explore the full profile. Jan 23, 2023 · ElevenLabs launches Beta platform allowing creators and publishers to narrate their long-form content The pre-seed funding round was led by \n5. ElevenLabs Raises $2M and Announces AI Speech Platform\n   https://elevenlabs.io/blog/elevenlabs-raises-2m-pre-seed-and-announces-ai-speech-platform-promising-to-revolutionize-audio-storytelling\n   Jan 23, 2023 · ElevenLabs launches Beta platform allowing creators and publishers to narrate their long-form content The pre-seed funding round was led by Credo Ventures, with Concept Ventures and individual investors also participating Capital will fuel research and development of the AI dubbing ai\n6. ElevenLabs Funding Rounds | Seedtable\n   https://seedtable.com/companies/elevenlabs/funding-rounds\n   Sep 30, 2026 · London-based speech-AI startup ElevenLabs raised $2M in a pre-seed round led by Credo Ventures, with Concept Ventures and angels Peter Czaban and Tytus Cytowski, and launched a beta text-to-speech platform for English and Polish.\n7. ElevenLabs Funding Rounds & Investors — $850.4M Raised ...\n   https://www.premieralts.com/companies/elevenlabs/funding-rounds\n   ElevenLabs is based in New York, NY and was founded in 2022. It was valued at $11 billion at its later-stage round in Feb 2026, the last priced event on record. It has raised $850 million across 2 recorded rounds; the latest was a $250 million Series C in Feb 2025.\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_4868319734176029917",
+    "name": "fetch_page",
+    "args": {
+     "url": "https://elevenlabs.io/blog/elevenlabs-raises-2m-pre-seed-and-announces-ai-speech-platform-promising-to-revolutionize-audio-storytelling"
+    },
+    "sig": "EmAKXgFpFH0T77myf2n0i/SazTGYSwpSxen1UBzXm8/poOyUctHdliGNGoYKmLYUmA5HvZDBBU46ZZjzY+LFfds21I49odF6yfF196ieBOJSPNYEyaxYgt7f4jOG9HMmv2k="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_4868319734176029917",
+    "name": "fetch_page",
+    "result": "<<<UNTRUSTED source=web>>>\nURL: https://elevenlabs.io/blog/elevenlabs-raises-2m-pre-seed-and-announces-ai-speech-platform-promising-to-revolutionize-audio-storytelling\nTITLE: ElevenLabs Raises $2M and Announces AI Speech Platform\n\n- ElevenLabs launches Beta platform allowing creators and publishers to narrate their long-form content\n- The pre-seed funding round was led by Credo Ventures, with Concept Ventures and individual investors also participating\n- Capital will fuel research and development of the AI dubbing aimed for release later this year\n2023-01-23, London, UK | ElevenLabs, an AI voice technology startup, is building lifelike speech synthesis tools with the long-term goal of instantly converting spoken audio between languages. Today, they announced launching their Beta platform after raising $2 million in a pre-seed funding round led by Credo Ventures, with Concept Ventures and other individual investors also participating.\nThe company’s platform lets creators and publishers narrate long-form content and expand into the audio format. Its features are powered by an in-house developed deep learning model for speech synthesis which realistically renders human intonation and inflections, and can adjust delivery based on context. ElevenLabs also offers a suite of tools for voice cloning and designing synthetic voices, aimed at providing users with new creative outlets. The company is currently working with selected publishers on a dedicated workstation for voiceover editing which will be added to the platform in early February. ElevenLabs seeks to become the first AI narrator providing the quality necessary for voicing news and audiobooks at scale.\nLeaps in capability require innovation, which is why ElevenLabs considers itself first and foremost a research company. Much of this research to date focused on developing new text-to-speech models which rely on high compression and context understanding to render human speech ultra-realistically. The company also built a new model for voice cloning which achieves high output similarity with no training (no fine-tuning), on samples as short as 5 seconds - a feat previously unheard of. Developers can access all these features via API.\nThis research powers the platform’s current features but it also contributes to realizing the company’s ultimate goal of instantly converting spoken audio between languages. Their AI dubbing tool, aimed for release later this year, will let users automatically re-voice any audio or video in a different language, all while preserving the original speaker's voice. ElevenLabs initially hopes to attract clients in the education arena, while its long-term goal is to make on-demand multilingual audio support a reality across streaming, audiobooks , gaming, movies, and even real-time conversation.\nThe company’s speech synthesis and dubbing tools are as complementary as they are well-timed: both promise to bring audio and video to wider audiences and both come at a time when the audio space is booming. An early group of testers, among them YouTube creators, publishers and developers, already use the platform daily to voice videos, stories and characters, and the company expects the sphere of potential applications for generative speech will only expand. News publishers have already found that growing their audio presence is a great way of engaging and retaining subscribers. But contracting voice actors is expensive, as is having reporters read their stories. Book and newsletter authors, and even game developers, face similar challenges: the former increasingly turn to narrating their own work and the latter need to decide whether a particular character justifies recording costs. Those who use existing text-to-speech software save money but pay a different price by compromising on quality. ElevenLabs insists there is no longer a need to compromise as they prepare to equip creators and publishers with the most advanced and versatile AI storytelling tools.\n“The platform we’re launching now is all about turning text into top-quality spoken audio. We want to let people enjoy their favorite book or newsletter by giving a voice to all the authors, creators and developers who couldn’t afford one” - says Mati Staniszewski, a co-founder. “Our ultimate goal is to let people enjoy any content they find relevant and interesting, regardless of what language they speak” - adds Piotr Dabkowski, also a co-founder.\nAt Credo Ventures we seek to work with smart and ambitious founders from the CEE region. We saw the hunger and spark in Mati’s and Piotr’s eyes at our very first meeting. A few months later they’re becoming an OpenAI-grade speech technology research hub overcoming the biggest challenges in artificial audio. Their synthesized voices are already indistinguishable from real ones and this breakthrough has not only massively lowered the barriers to generating content in unprecedented quality and fidelity, but soon enough it will also let creators radically expand their audiences by going multilingual. – says Maciek Gnutek, General Partner at Credo Ventures.\nDespite being commonplace across entertainment & business alike, audio has been relatively neglected by recent advancements in research. We couldn't be more excited to be backing Mati & Piotr during this golden era for generative AI, and believe ElevenLabs are the team to bring this technology to the masses, one voice at a time - says Oliver Kicks, Principal at Concept Ventures.\nAbout ElevenLabs: ElevenLabs is a research company developing AI voice synthesis software for creators and publishers. The company’s tools render remarkably lifelike speech and can adjust intonation and inflections based either on context or user instruction. The company’s platform seeks to provide the necessary quality and versatility to become a one-stop-shop for voicing news, newsletters, books and videos. Key features include: text-based speech generation, voice cloning, voice design and, soon, project workflow for narration editing. ElevenLabs was founded in 2022 by Piotr, an ex-Google machine learning engineer, and Mati, an ex-Palantir deployment strategist. The company’s long-term goal is to make spoken content universally accessible in any language and voice.\nVenture capital provided by Credo Ventures and Concept Ventures . Individual investors include Peter Czaban, Tytus Cytowski, Talfan Evans, Dr Fatima Godall, Tomasz Karwatka, Piotr Karwatka, Akhil Paul, Bartek Pucek, Marta Pyrzyk, Carles Reina, Parin Shah, Charlie Songhurst and Harry Songhurst.\nContact press@elevenlabs.io\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_9418923106745545436",
+    "name": "fetch_page",
+    "args": {
+     "url": "https://elevenlabs.io/blog/elevenlabs-launches-new-generative-voice-ai-products-and-announces-19m-series-a-round-led-by-nat-friedman-daniel-gross-and-andreessen-horowitz"
+    },
+    "sig": "EmAKXgFpFH0T6svUegSzgQ2eG5tN4cugROxfYPCsHK1/7DFUIgVSGGRxzUlJ+giDbqGT5Zuy+2nP3pH1x6EksBo29Cl98KRZjMMKLUhFlOAe1h738yh+goBrPvw2GsxTTaA="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_9418923106745545436",
+    "name": "fetch_page",
+    "result": "<<<UNTRUSTED source=web>>>\nURL: https://elevenlabs.io/blog/elevenlabs-launches-new-generative-voice-ai-products-and-announces-19m-series-a-round-led-by-nat-friedman-daniel-gross-and-andreessen-horowitz\nTITLE: ElevenLabs — ElevenLabs Announces $19m Series A Round\n\n- AI platform ElevenLabs , which launched in Beta in January 2023, has now attracted over 1 million registered users across creative, entertainment and publishing spaces\n- The company has raised a $19m Series A round led by Nat Friedman, Daniel Gross, and Andreessen Horowitz to accelerate its voice AI research\n- ElevenLabs today launches a set of new product developments, enabling anyone to create an entire audiobook on the platform in a matter of minutes, and an AI speech detection model\n2023-06-20, London / New York - ElevenLabs, a voice technology research company and world leader in audio AI software, has raised a $19m Series A to continue its voice AI research and product deployment - part of its mission to make all content universally accessible.\nElevenLabs unveiled its Beta platform in January 2023, after spending 2022 developing audio AI models that could create the most versatile and contextually-aware AI voices . Since launch, ElevenLabs has amassed over 1 million registered users who have generated over 10 years worth of audio content.\nElevenLabs tools can turn any text into speech using synthetic voices, cloned voices, or by creating entirely new artificial voices that can be tailored according to gender, age, and accent preferences. Through its research, ElevenLabs has been able to achieve a new level of speech quality that is almost indistinguishable from a real human with sub-1 second latency.\nTheir platform has already been embraced across multiple creative verticals and sectors, from independent authors creating audiobooks , developers voicing characters in video games, supporting the visually impaired to access online written content, and powering the world’s first AI radio channel. ElevenLabs has also launched a range of B2B partnerships, including with one of the world largest audiobook publishers Storytel, leading global content creator platform TheSoul Publishing, incredible game developers like Embark Studios and Paradox Interactive, and the creative media platform MNTN.\nElevenLabs is announcing today that it has raised a $19m Series A round co-led by Nat Friedman , Daniel Gross , and Andreessen Horowitz , with further participation from Credo Ventures , Concept Ventures , and an array of strategic angel investors including Instagram co-founder Mike Krieger, Oculus VR co-founder Brendan Iribe, Ubiquity6 co-founder Anjney Midha, Deepmind & Inflection co-founder Mustafa Suleyman, Runway co-founder Siqi Chen, Inkitt co-founder Ali Albazaz, Reface co-founder Dima Shvets, Perplexity AI co-founder Aravind Srinivas, Vercel founder Guillermo Rauch, O’Reilly Media founder Tim O’Reilly, Creator Ventures and SV Angel. Embark Studios, Storytel and TheSoul Publishing also join this round as investors. Andreessen Horowitz is taking a board seat.\nThis investment will be used to continue building ElevenLabs' cutting-edge research hub for Voice AI and to launch a range of additional products to support specific market verticals such as publishing, gaming, entertainment, and conversational applications.\nMati Staniszewski, CEO and co-founder of ElevenLabs, comments: “Over the last five months, we’ve seen our technology embraced by millions of creators, companies, and curious minds. We are right at the beginning of this journey and now with Nat, Daniel, and Andreessen Horowitz joining, we have the best partners as we continue on the ambitious path forward.”\nPiotr Dabkowski, CTO and co-founder of ElevenLabs, adds: “Since our inception in April 2022 we have focused on assembling a great team - one of the key factors for long-term success - and have built a unique team of talented, passionate and hard working people. With such a wonderful set of colleagues and partners, we are well on our way to realizing our ambition of completely breaking down language barriers with technology.”\nThe company is taking an integrated approach to developing voice AI research and products. In response to user demand, ElevenLabs is also announcing Studio - a highly sought-after production workflow for editing and creating dynamic, long-form spoken content.\nStudio will give content creators, such as publishers and independent authors, access to a hitherto unavailable level of control over their AI-generated audio content. It builds on the company’s research into long-form speech synthesis and audio ‘infilling’ to provide users with the ability to seamlessly generate entire dialogue segments, news articles, and even audiobooks without leaving the platform. Studio aims to provide a ‘Google Docs’ level of simplicity and user-friendliness to audio creation.\nStudio joins the ElevenLabs suite of products, which includes Speech Synthesis , a text-to-speech platform that leverages pre-existing synthetic voices and VoiceLab , a workflow for creating a unique voice or digital version of an existing one. The platform has also recently released access to Eleven Multilingual - a speech synthesis model, which can be used across major European languages. The platform is available for all at: elevenlabs.io .\nThese recent product developments are stepping stones towards developing an AI dubbing tool aimed for release later this year. This will enable any video to be dubbed into any language in an engaging, effective, and scalable way, all while maintaining the original speaker’s voice. The company is already conducting a number of tests with industry partners to enable AI dubbing at scale.\nElevenLabs is also unveiling its AI Speech Classifier . This tool will enable anyone to upload an audio sample and find out whether the clip contains AI-generated audio from ElevenLabs. This product is the first of its kind in the generative audio space. It is now available to the public and to selected partners as an API. The release of the AI Speech Classifier is the latest step in the company’s push for transparency, and it is a cornerstone of their commitment to creating a safe generative media landscape.\nMati Staniszewski adds: \"Our mission is to be the ultimate tool for storytelling, dissolving language barriers and putting all audiences in the reach of all content creators in a safe and responsible way. With an incredible, growing team and these exceptional investors, ElevenLabs is now ever closer to realizing its long-term goal of making all content universally accessible in any language and in any voice.”\nAbout ElevenLabs: Established in 2022, ElevenLabs is a voice technology research company developing world-leading text-to-speech software for publishers and creators. Our mission is to make content universally accessible.\nThe company was founded by childhood friends Mati Staniszewski and Piotr Dabkowski. Inspired by the poor voiceovers of American movies they watched growing up in their native Poland, the pair set about designing a platform that could eliminate the linguistic barriers of content.  ElevenLabs is incorporated in the United States and has a global remote presence.\nContact press@elevenlabs.io\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_14948976164533872408",
+    "name": "record_finding",
+    "args": {
+     "claim": "ElevenLabs raised a $2 million pre-seed funding round in late 2022 / announced in January 2023, led by Credo Ventures and Concept Ventures, along with several angel investors.",
+     "source_title": "ElevenLabs Raises $2M and Announces AI Speech Platform",
+     "stance": "supports",
+     "source_url": "https://elevenlabs.io/blog/elevenlabs-raises-2m-pre-seed-and-announces-ai-speech-platform-promising-to-revolutionize-audio-storytelling",
+     "quote": "Today, they announced launching their Beta platform after raising $2 million in a pre-seed funding round led by Credo Ventures, with Concept Ventures and other individual investors also participating."
+    },
+    "sig": "EmAKXgFpFH0T3hHbEosSfxEhAoffbKxsaA09xZtndUU81okWIVn/3GGI11psyOVre8wBm58QhM+MNYdOmP07X3gLspwRls08u0oAB6J8NhEMwPosoXDJrBVT7UcFV5tjySg="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_14948976164533872408",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=3 quote_check=exact"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_10108648707880192847",
+    "name": "record_finding",
+    "args": {
+     "source_title": "ElevenLabs Raises $2M and Announces AI Speech Platform",
+     "quote": "ElevenLabs, an AI voice technology startup, is building lifelike speech synthesis tools with the long-term goal of instantly converting spoken audio between languages. Today, they announced launching their Beta platform after raising $2 million in a pre-seed funding round...",
+     "claim": "ElevenLabs officially launched its Beta platform in January 2023, allowing creators and publishers to convert text to speech using deep learning models and custom voice cloning.",
+     "stance": "supports",
+     "source_url": "https://elevenlabs.io/blog/elevenlabs-raises-2m-pre-seed-and-announces-ai-speech-platform-promising-to-revolutionize-audio-storytelling"
+    },
+    "sig": "EmAKXgFpFH0TyCsAUBbM7Oft2uec+DcbXseVZhMB57ieFjI3mSFiA8CEcdMr5qfp8jmcTzlNutnWqkGrNFxhzBR7lKIZP3FM9u8eYvaXHxefxR7UuwKPwGN+358+Hz5a9EQ="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_10108648707880192847",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=3 quote_check=exact"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_7407349288270477822",
+    "name": "record_finding",
+    "args": {
+     "source_title": "ElevenLabs — ElevenLabs Announces $19m Series A Round",
+     "stance": "supports",
+     "quote": "ElevenLabs is announcing today that it has raised a $19m Series A round co-led by Nat Friedman, Daniel Gross, and Andreessen Horowitz, with further participation from Credo Ventures, Concept Ventures, and an array of strategic angel investors... Andreessen Horowitz is taking a board seat.",
+     "source_url": "https://elevenlabs.io/blog/elevenlabs-launches-new-generative-voice-ai-products-and-announces-19m-series-a-round-led-by-nat-friedman-daniel-gross-and-andreessen-horowitz",
+     "claim": "In June 2023, ElevenLabs raised a $19 million Series A funding round co-led by Andreessen Horowitz, Nat Friedman, and Daniel Gross, with Andreessen Horowitz taking a board seat."
+    },
+    "sig": "EmAKXgFpFH0T2isgvsUQ66AGRXt0np63N8E4ezkdpl18MfWmcPC05QvkM3tOTKBr8e1XDaEnwzi7dNYuMSfjjs2d4p7J3NeylOQAiym1R9KdPMh0INyjUmImd68+25eUrq4="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_7407349288270477822",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=4 quote_check=partial"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_10651701170492194531",
+    "name": "record_finding",
+    "args": {
+     "source_url": "https://elevenlabs.io/blog/elevenlabs-launches-new-generative-voice-ai-products-and-announces-19m-series-a-round-led-by-nat-friedman-daniel-gross-and-andreessen-horowitz",
+     "claim": "By June 2023, just months after its Beta launch, ElevenLabs had reached over 1 million registered users.",
+     "source_title": "ElevenLabs — ElevenLabs Announces $19m Series A Round",
+     "stance": "supports",
+     "quote": "AI platform ElevenLabs, which launched in Beta in January 2023, has now attracted over 1 million registered users across creative, entertainment and publishing spaces"
+    },
+    "sig": "EnMKcQFpFH0TY2dS16IeJUI6Ddis55xUmfwP4aRw5f+j1/YBKlvJ43LieSBxDCRPiHxYvG+oNp6icQHFOPjsN0FiXRx0Ztgo382rKYoIba3L8ChaVa8xYnWyfIR5RyUoxQBd181rzpA1JFoMwxRxTFUaUzGP"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_10651701170492194531",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=4 quote_check=exact"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_15775299023032492231",
+    "name": "subquestion_done",
+    "args": {
+     "summary": "A ElevenLabs levantou US$ 2 milhões em uma rodada pre-seed anunciada em janeiro de 2023 (liderada pela Credo Ventures e Concept Ventures) e US$ 19 milhões em uma rodada Series A em junho de 2023 (liderada por Andreessen Horowitz, Nat Friedman e Daniel Gross). O marco inicial de 2023 foi o lançamento da plataforma Beta, que rapidamente alcançou mais de 1 milhão de usuários registrados.",
+     "confidence": "high"
+    },
+    "sig": "EnMKcQFpFH0TOSD1twHAJw6IZjPsg1xL2KF4L/Dbe8/cPLG8T0VshJr3uWTIa8EonZ9FVNotkj9MzSnoFK103YhDepa5uq4RpEXJb47KdI8MNBFIQL5JYZ+bka9xw1TtKkX1a3akcXponv8/AWuzQYBFjEhI"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_15775299023032492231",
+    "name": "subquestion_done",
+    "result": "status=done action=subquestion_done question=2"
+   }
+  ]
+ }
+]

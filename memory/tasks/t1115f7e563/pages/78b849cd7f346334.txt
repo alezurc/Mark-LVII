@@ -1,0 +1,758 @@
+ElevenLabs Inc.
+ElevenLabs New York headquarters on Madison Avenue
+Type
+Private
+Industry
+Software development Speech synthesis Artificial intelligence
+- Software development
+- Speech synthesis
+- Artificial intelligence
+Founded
+2022 ; 4 years ago ( 2022 )
+Founders
+Piotr Dąbkowski (CTO) Mati Staniszewski (CEO)
+- Piotr Dąbkowski (CTO)
+- Mati Staniszewski (CEO)
+Headquarters
+London [ 1 ] New York City
+Products
+ElevenAgents ElevenCreative ElevenAPI Eleven v3 Eleven Music Scribe v2 Realtime Agent Workflows Productions 11ai
+- ElevenAgents
+- ElevenCreative
+- ElevenAPI
+- Eleven v3
+- Eleven Music
+- Scribe v2 Realtime
+- Agent Workflows
+- Productions
+- 11ai
+Services
+Speech processing Software agent Virtual assistant
+- Speech processing
+- Software agent
+- Virtual assistant
+Number of employees
+400 (2026) [ 2 ]
+Website
+elevenlabs .io
+ElevenLabs Inc. is a software company that specializes in developing natural-sounding speech synthesis software using deep learning . It was founded in 2022 by Polish entrepreneurs Piotr Dąbkowski and Mateusz Staniszewski . [ 3 ] ElevenLabs is legally incorporated in the US. [ 4 ] It is based in London and also has offices in New York City , Warsaw and San Francisco . [ 5 ]
+
+## Name etymology
+The name ElevenLabs derives from the English word eleven . The number refers to November 11, the date of Poland’s National Independence Day (the eleventh day of the eleventh month). [ 6 ] The element Labs refers to the English word laboratories and indicates the company’s research and development profile.
+
+## History
+ElevenLabs was co-founded in 2022 by Piotr Dąbkowski , an ex- Google machine learning engineer and Mati Staniszewski , an ex- Palantir deployment strategist. [ 7 ] Both were raised in Poland , and their inspiration for founding ElevenLabs reportedly came from watching inadequately dubbed American films. [ 8 ] [ 9 ]
+Dąbkowski and Staniszewski initially considered different funding options, including the possibility of collaborating with a startup accelerator. In January 2023 they revealed having secured a $2 million pre-seed round. The startup's specialization in AI voice intelligence, a still-emerging field in Europe , played a significant role in attracting investors. The pre-seed funding was primarily led by Credo Ventures , and joined by Concept Ventures. [ 10 ]
+In January 2023, ElevenLabs publicly released its beta platform . [ 11 ]
+In June 2023, ElevenLabs raised a $19 million Series A funding round at a valuation of about $100 million. [ 12 ] [ 13 ] [ 9 ] The funding round was co-led by the venture capital firm Andreessen Horowitz , former GitHub CEO Nat Friedman , and entrepreneur Daniel Gross . It also saw participation from prominent individuals such as SV Angel , Mike Krieger (co-founder of Instagram), Brendan Iribe (co-founder of Oculus ), Mustafa Suleyman (co-founder of Deepmind ), and Tim O'Reilly (founder of O'Reilly Media ). It was also announced that Andreessen Horowitz would be joining ElevenLabs' board. [ 8 ]
+On January 22, 2024, ElevenLabs raised an additional $80 million in Series B funding raising the total valuation of the company to $1.1 billion. The funding round was led by Andreessen Horowitz , Friedman , Gross, and Sequoia Capital . Additionally, the company announced a series of new products, including their Voice Marketplace, AI Dubbing Studio, and mobile app. [ 14 ]
+In the lead-up to the January 2024 New Hampshire Democratic primary , AI-generated robocalls purportedly from Joe Biden encouraging voters to skip voting on the day of the primary were sent to thousands of residents. The New Hampshire attorney general's office launched an investigation into the incident and linked it to a company based in Texas, with audio experts concluding the call was made using ElevenLabs. In response to the incident, CEO Mati Staniszewski stated that the company was “dedicated to preventing the misuse of audio AI tools” but provided no comment on specific incidents. [ 15 ]
+On January 30, 2025, ElevenLabs announced their $180 million Series C funding raising the total valuation of the company to $3.3 billion. The round was co-led by a16z and ICONIQ Growth with additional new investors NEA, World Innovation Lab (WiL), Valor, Endeavor Catalyst Fund and Lunate and brought on strategic investors including Deutsche Telekom, LG Technology Ventures, HubSpot Ventures, NTT Docomo Ventures, and RingCentral Ventures. [ 16 ]
+In September 2025, ElevenLabs opened an employee tender offer , allowing staff who had worked at the company for at least a year to sell shares at a $6.6 billion valuation. [ 17 ] It completed another tender offer for staff at a $22B valuation in September 2026. [ 18 ]
+On February 4, 2026, ElevenLabs announced that it raised $500 million at an $11 billion valuation, as it eyes a potential IPO . [ 19 ]
+In March 2026, ElevenLabs pledged to committing $1 billion in free restoration voice technology to 1 million people living with permanent voice loss. [ 20 ]
+
+## Products
+ElevenLabs is primarily known for its browser-based , AI-assisted text-to-speech software, Speech Synthesis, which can produce lifelike speech by synthesizing vocal emotion and intonation , and now Conversational AI, a developer platform for launching interactive voice agents. [ 21 ] The company states that its models are trained to interpret the context in the text, and adjust the intonation and pacing accordingly. [ 22 ] It uses advanced algorithms to analyze the contextual aspects of text, aiming to detect emotions like anger, sadness, happiness, or alarm, which enables the system to understand the user's sentiment, [ 23 ] resulting in achieving a more realistic and human-like inflection. The startup is in the process of patenting this technology. [ 10 ] On its beta site, users can submit text and generate audio files from a selection of default voices. Paying users are given the ability to upload custom voice samples to create new vocal styles using the company's voice cloning tool. [ 24 ]
+
+## Voice Library
+Voice Library is the company's feature for sharing unique voice profiles created using their Voice Design technology. These pre-designed voice profiles allow users to select a voice that best suits their needs, rather than creating one from scratch. [ 25 ] There are now more than 1,000 community-created voices in the library. Another tool called VoiceLab allows users to clone voices from just a few short snippets of audio and can create entirely new synthetic voices. [ 8 ]
+
+## AI Speech Classifier
+On June 20, 2023, ElevenLabs released an AI recognition tool called the AI Speech Classifier, which it claims is the first of its kind. [ 8 ] The tool is accessible through an API and designed to determine if an uploaded audio sample originates from ElevenLabs' proprietary AI technology. [ 9 ] The company has expressed its intention to collaborate with other AI developers in creating a universal detection system that could be adopted industry-wide. [ 26 ]
+
+## Projects
+In July 2023, ElevenLabs announced "Projects", a tool for creating long-form spoken content such as audiobooks and dialogue segments with contextually-aware synthetic or custom voices. [ 9 ] [ 27 ] The tool was released in September. In August, ElevenLabs expanded its voice generation capabilities to 28 languages. Using an in-house AI model, it automatically detects languages like Korean , Dutch , and Vietnamese , allowing for "emotionally rich" multilingual speech generation. The company also announced that its technology had officially exited its beta phase . [ 28 ] [ 29 ]
+
+## ElevenReader
+In August 2024, ElevenLabs released ElevenReader, an app that converts textual content (such as PDFs, eBooks or articles) to audio. The app was made available on iOS, Android, and the web. [ 30 ]
+
+## AI Dubbing and voice products
+In October 2023, ElevenLabs presented "AI Dubbing", a tool that is able to translate speech into more than 20 languages. The feature is capable of preserving the speaker's original voice, emotions, and intonation, by employing proprietary methods to handle tasks like noise removal, speaker differentiation, transcription, and synchronization of translated speech with the original audio. [ 31 ]
+In May 2024, ElevenLabs shared samples from their text-to-music model, which became available for public use in July 2025. [ 32 ] In June 2024, ElevenLabs released the ElevenLabs Reader App on iOS and Android which allows users to listen to articles, PDFs, and ePubs with AI Voices on their phone. In July 2024, ElevenLabs released "Voice Isolator" which removes background noise from audio. [ 33 ] In November 2024, they released Conversational AI, a developer platform for launching interactive voice agents. [ 34 ] In February 2025, the company introduced a new platform that enables authors to create and publish AI-generated audiobooks directly on its Reader app. [ 35 ] Later that month, the company released Scribe, a speech-to-text model that transcribes audio with character-level timestamps and speaker diarization [ 36 ] with industry-leading word error rate according to internal benchmarks and third party tests from Artificial Analysis. [ 37 ]
+In June 2025, ElevenLabs released Eleven v3, a new text-to-speech model that supports more than 70 languages, natural multi-speaker dialogue, and audio tags like [excited], [whispers], and [sighs]. [ 38 ]
+
+## Eleven Music
+In August 2025, ElevenLabs launched Eleven Music, an AI music generator that enables users to generate studio-grade music from natural language prompts. [ 39 ] The platform was developed in collaboration with record labels, publishers, and artists, and is cleared for commercial use across various applications including film, television, podcasts, social media videos, advertisements, and gaming. Eleven Music provides control over genre, style, and structure, allowing users to create tracks with or without vocals in multiple languages including English, Spanish, German, and Japanese. The platform features advanced editing capabilities that enable users to modify individual sections of songs or entire compositions. Built with a proprietary AI music model developed by ElevenLabs, the system can generate real-time music with seamless genre and instrument blending while closely following complex, multi-layered prompts for lyrics, key, and tempo specifications. [ 40 ]
+
+## ElevenAgents
+In February 2026, ElevenLabs released Expressive Mode in ElevenAgents. Expressive Mode combines two updates: Eleven v3 Conversational - a new emotionally intelligent, context-aware text-to-speech model, built on Eleven v3 and optimized for real-time dialogue and a new turn-taking system for better-timed responses with fewer interruptions. [ 41 ]
+
+## Reception
+Following its launch in January 2023, ElevenLabs gained rapid momentum and was commended for its voice output quality, fast generation times, and a "generous free tier". It has also been praised for its ability to accurately pronounce names with unique or uncommon pronunciations, addressing a common shortcoming in similar tools that often cater primarily to Western names. [ 42 ] The company reached over one million registered users between its launch and June 2023. [ 8 ] [ 9 ] [ 43 ]
+In April 2025, ElevenLabs was featured in the Forbes AI 50 list. [ 44 ]
+ElevenLabs was criticized after users were able to abuse its software to generate controversial statements in the vocal style of celebrities, public officials, and other famous individuals, [ 45 ] [ 46 ] [ 47 ] particularly attracting attention after users on 4chan used the tool to share hateful messages. [ 48 ] [ 49 ] [ 26 ]
+
+## Culture
+ElevenLabs’ culture includes involvement in media and creative projects alongside its core technology development. [ 50 ] The company released the album The Next , a project built around AI-generated vocals, which involved collaborations with artists, producers, and developers working with synthetic voice tools. The album contains songs with varying levels of AI and human input, and the earnings from its streams go back to all participating artists. [ 51 ]
+In addition to music, ElevenLabs produced the documentary series 11 Voices , which premiered at SXSW in 2026 [ 52 ] and features interviews with individuals working across artificial intelligence, audio production, and related fields, addressing topics such as voice synthesis, ethics, and creative practice. [ 53 ] [ 54 ]
+
+## See also
+- 15.ai , a research project using AI for text-to-speech using voices of popular fictional characters
+- Respeecher , a company performing speech-to-speech voice conversion
+- Speechify , an app and browser extension for text-to-speech conversion
+
+## References
+- ↑ Dharampal-Hornby, Maya (February 4, 2026). "Founder Stories - ElevenLabs" .
+- ↑ Dharampal-Hornby, Maya (February 4, 2026). "ElevenLabs raises $500m Series D led by Sequoia" . Sifted .
+- ↑ Martin, Iain (December 1, 2025). "How A Tiny Polish Startup Became The Multi-Billion-Dollar Voice Of AI" . Forbes . Retrieved June 12, 2026 .
+- ↑ "Eleven Labs Inc. – LEI: 254900MCM69TO5IDN844" . Bloomberg LEI . Retrieved August 8, 2026 .
+- ↑ Browne, Ryan (July 3, 2025). "AI voice startup ElevenLabs pushes global expansion as it gears up for an IPO" . CNBC . Retrieved August 5, 2026 .
+- ↑ Clark, Kate (February 4, 2026). "Exclusive | Voice AI Startup ElevenLabs Raises $500 Million" . The Wall Street Journal . Retrieved May 12, 2026 .
+- ↑ Kanetkar, Riddhi. "This startup, founded by ex-Google and Palantir staffers, uses AI to generate realistic voiceovers. Here's the 14-slide pitch deck ElevenLabs used to raise $2 million" . Business Insider . Retrieved February 9, 2023 .
+- 1 2 3 4 5 "Now hear this: Voice cloning AI startup ElevenLabs nabs $19M from a16z and other heavy hitters" . VentureBeat . June 20, 2023. Archived from the original on July 27, 2023 . Retrieved July 25, 2023 .
+- 1 2 3 4 5 Wiggers, Kyle (June 20, 2023). "Voice-generating platform ElevenLabs raises $19M, launches detection tool" . TechCrunch . Retrieved July 25, 2023 .
+- 1 2 Kanetkar, Riddhi. "Hot AI startup ElevenLabs, founded by ex-Google and Palantir staff, is set to raise $18 million at a $100 million valuation. Check out the 14-slide pitch deck it used for its $2 million pre-seed" . Business Insider . Retrieved July 25, 2023 .
+- ↑ Moon, Mariella. "A new AI voice tool is already being abused to make deepfake celebrity audio clips" . Engadget . Retrieved February 3, 2023 .
+- ↑ "The trials and tribulations of AI voice tech" . Financial Times . June 21, 2023 . Retrieved July 25, 2023 .
+- ↑ Hunt, Simon (June 20, 2023). "AI firm ElevenLabs achieves $100 million valuation within months of launch" . Evening Standard . Retrieved July 25, 2023 .
+- ↑ "ElevenLabs Releases New Voice AI Products and Raises $80M Series B" . January 22, 2024.
+- ↑ Knibbs, Kate. "Researchers Say the Deepfake Biden Robocall Was Likely Made With Tools From AI Startup ElevenLabs" . Wired . ISSN 1059-1028 . Retrieved February 15, 2024 .
+- ↑ "ElevenLabs triples valuation to $3.3BN, after confirming $180M funding round" . tech.eu . January 30, 2025.
+- ↑ "ElevenLabs to Let Staff Sell Shares at $6.6 Billion Valuation" . Bloomberg . September 8, 2025 . Retrieved June 10, 2026 .
+- ↑ "ElevenLabs' valuation doubles to $22 billion on surging AI voice-agent demand" . Reuters . September 30, 2026 . Retrieved October 2, 2026 .
+- ↑ Nicol-Schwarz, Kai (February 4, 2026). "Nvidia-backed AI voice startup ElevenLabs hits $11 billion valuation in fresh fundraise, as it eyes IPO" . CNBC . Retrieved February 5, 2026 .
+- ↑ Werth, Timothy Beck (March 14, 2026). "ElevenLabs pledges to restore 1 million voices with AI at SXSW 2026" . Mashable . Retrieved March 14, 2026 .
+- ↑ "Generative AI comes for cinema dubbing: Audio AI startup ElevenLabs raises pre-seed" . Sifted . January 23, 2023 . Retrieved February 3, 2023 .
+- ↑ Ashworth, Boone (April 12, 2023). "AI Can Clone Your Favorite Podcast Host's Voice" . Wired . Retrieved April 25, 2023 .
+- ↑ "This Podcast Is Not Hosted by AI Voice Clones. We Swear" . Wired . ISSN 1059-1028 . Retrieved July 25, 2023 .
+- ↑ Frauenfelder, Mark (January 12, 2023). "Software lets you design new synthetic voices from scratch" . Boing Boing . Retrieved February 3, 2023 .
+- ↑ "As Generative AI booms, this British startup secures $2M to imitate human voices" . Tech Funding News . January 25, 2023 . Retrieved February 5, 2023 .
+- 1 2 Thompson, Stuart A. (March 12, 2023). "Making Deepfakes Gets Cheaper and Easier Thanks to A.I." The New York Times . ISSN 0362-4331 . Retrieved July 25, 2023 .
+- ↑ Bonk, Lawrence. "ElevenLabs' Powerful New AI Tool Lets You Make a Full Audiobook in Minutes" . Lifewire . Retrieved July 25, 2023 .
+- ↑ "ElevenLabs' AI Voice Generator Can Now Fake Your Voice in 30 Languages" . Gizmodo . August 22, 2023 . Retrieved September 25, 2023 .
+- ↑ Wiggers, Kyle (August 22, 2023). "ElevenLabs' voice-generating tools launch out of beta" . TechCrunch . Retrieved September 25, 2023 .
+- ↑ Mehta, Ivan (August 19, 2024). "ElevenLabs' text-to-speech app Reader is now available globally" . TechCrunch . Retrieved October 9, 2026 .
+- ↑ Sharma, Shubham (October 10, 2023). "ElevenLabs introduces AI Dubbing, translating video and audio into 20 languages" . VentureBeat . Archived from the original on October 16, 2023 . Retrieved November 28, 2023 .
+- ↑ Morrison, Ryan (May 10, 2024). "ElevenLabs is launching a new AI music generator — and you have to hear these clips to appreciate it" . Tom's Guide . Retrieved May 14, 2024 .
+- ↑ Sharma, Shubham (July 4, 2024). "ElevenLabs launches free AI voice isolator to take on Adobe" . VentureBeat . Retrieved July 24, 2024 .
+- ↑ Mehta, Ivan (November 18, 2024). "ElevenLabs now offers ability to build conversational AI agents" . TechCrunch . Retrieved May 18, 2025 .
+- ↑ Mehta, Ivan (February 26, 2025). "ElevenLabs now lets authors create and publish audiobooks on its own platform" . TechCrunch . Retrieved February 26, 2025 .
+- ↑ Schnieder, Flavio (February 26, 2025). "Meet Scribe" . ElevenLabs . Retrieved May 18, 2025 .
+- ↑ "Speech to Text AI Model & Provider Leaderboard" . Artificial Analysis . February 26, 2025 . Retrieved May 18, 2025 .
+- ↑ "Introducing Eleven v3 (alpha) – the most expressive Text to Speech model" . ElevenLabs . June 3, 2025 . Retrieved June 10, 2025 .
+- ↑ Silberling, Amanda (August 5, 2025). "ElevenLabs launches an AI music generator, which it claims is cleared for commercial use" . TechCrunch . Retrieved August 9, 2025 .
+- ↑ "Eleven Music is Here" . ElevenLabs . August 5, 2025 . Retrieved August 8, 2025 .
+- ↑ Verma, Deepanker (August 5, 2025). "ElevenLabs Launches Expressive Mode for Voice AI Agents as Voice AI Market Grows" . TechloMedia . Retrieved February 10, 2026 .
+- ↑ Desai, Saahil (July 17, 2023). "A Voicebot Just Left Me Speechless" . The Atlantic . Retrieved September 25, 2023 .
+- ↑ "Your AI Clone Can Fool Family, Your Bank, But Not Your Video Meeting - Tech News Briefing - WSJ Podcasts" . WSJ . Retrieved July 25, 2023 .
+- ↑ "Forbes 2025 AI 50 List – Top Artificial Intelligence Companies Ranked" . Forbes . April 10, 2025 . Retrieved January 8, 2026 .
+- ↑ "People Are Still Terrible: AI Voice-Cloning Tool Misused for Deepfake Celeb Clips" . PCMag Middle East . January 31, 2023 . Retrieved July 25, 2023 .
+- ↑ Kahn, Jeremy (January 31, 2023). "Generative A.I. is about to upend enterprise software – and cybersecurity" . Fortune . Retrieved February 3, 2023 .
+- ↑ Milmo, Dan; Hern, Alex (May 20, 2023). "Elections in UK and US at risk from AI-driven disinformation, say experts" . The Guardian . ISSN 0261-3077 . Retrieved July 25, 2023 .
+- ↑ "AI hustlers stole women's faces to put in ads. The law can't help them" . The Washington Post . March 28, 2024. ISSN 0190-8286 . Retrieved March 5, 2026 .
+- ↑ Vincent, James (January 31, 2023). "4chan users embrace AI voice clone tool to generate celebrity hatespeech" . The Verge . Retrieved February 3, 2023 .
+- ↑ Robinson, Kristin (January 21, 2026). "Liza Minnelli, Art Garfunkel & More Partner With ElevenLabs for AI Music Album" . Billboard . Retrieved April 14, 2026 .
+- ↑ Robinson, Kristin (January 29, 2026). "Who Is Building the Future of AI Music? Start With These 11 Companies" . Billboard . Retrieved April 14, 2026 .
+- ↑ "Hello Again: Restoring Voices with AI" . SXSW 2026 Schedule . Retrieved April 14, 2026 .
+- ↑ Roastbrief (March 14, 2026). "ElevenLabs Restores Eric Dane's Voice and Launches Global Accessibility Initiative at SXSW 2026" . Roastbrief US . Retrieved April 14, 2026 .
+- ↑ Werth, Timothy Beck (March 14, 2026). "ElevenLabs pledges to restore 1 million voices with AI at SXSW 2026" . Mashable . Retrieved April 14, 2026 .
+
+## External links
+- Official website
+v t e Speech synthesis
+- v
+- t
+- e
+Free software
+Speaking eSpeak / eSpeakNG Gnopernicus Gnuspeech Orca Festival Speech Synthesis System / Flite FreeTTS Automatik Text Reader Retrieval-based Voice Conversion Singing eCantorix Lyricos / Flinger Sinsy Retrieval-based Voice Conversion
+Speaking
+eSpeak / eSpeakNG Gnopernicus Gnuspeech Orca Festival Speech Synthesis System / Flite FreeTTS Automatik Text Reader Retrieval-based Voice Conversion
+- eSpeak / eSpeakNG
+- Gnopernicus
+- Gnuspeech
+- Orca
+- Festival Speech Synthesis System / Flite
+- FreeTTS
+- Automatik Text Reader
+- Retrieval-based Voice Conversion
+Singing
+eCantorix Lyricos / Flinger Sinsy Retrieval-based Voice Conversion
+- eCantorix
+- Lyricos / Flinger
+- Sinsy
+- Retrieval-based Voice Conversion
+Proprietary software
+Speaking Amazon Polly DECtalk Software Automatic Mouth Talk It! Microsoft Agent Microsoft Speech API Microsoft text-to-speech voices Readspeaker Voice browser CoolSpeech IVONA Loquendo CereProc CeVIO Creative Studio Voiceroid LaLaVoice 15.ai ElevenLabs Singing Alter/Ego Cantor CeVIO Creative Studio Chipspeech NIAONiao Virtual Singer PPG Phonem Symphonic Choirs Synthesizer V UTAU Vocalina Vocaloid Xiaoice
+Speaking
+Amazon Polly DECtalk Software Automatic Mouth Talk It! Microsoft Agent Microsoft Speech API Microsoft text-to-speech voices Readspeaker Voice browser CoolSpeech IVONA Loquendo CereProc CeVIO Creative Studio Voiceroid LaLaVoice 15.ai ElevenLabs
+- Amazon Polly
+- DECtalk
+- Software Automatic Mouth
+- Talk It!
+- Microsoft Agent
+- Microsoft Speech API
+- Microsoft text-to-speech voices
+- Readspeaker
+- Voice browser
+- CoolSpeech
+- IVONA
+- Loquendo
+- CereProc
+- CeVIO Creative Studio
+- Voiceroid
+- LaLaVoice
+- 15.ai
+- ElevenLabs
+Singing
+Alter/Ego Cantor CeVIO Creative Studio Chipspeech NIAONiao Virtual Singer PPG Phonem Symphonic Choirs Synthesizer V UTAU Vocalina Vocaloid Xiaoice
+- Alter/Ego
+- Cantor
+- CeVIO Creative Studio
+- Chipspeech
+- NIAONiao Virtual Singer
+- PPG Phonem
+- Symphonic Choirs
+- Synthesizer V
+- UTAU
+- Vocalina
+- Vocaloid
+- Xiaoice
+Machine
+Echo II Mockingboard Pattern playback RIAS Texas Instruments LPC Speech Chips General Instrument SP0256 TuVox
+- Echo II
+- Mockingboard
+- Pattern playback
+- RIAS
+- Texas Instruments LPC Speech Chips
+- General Instrument SP0256
+- TuVox
+Applications
+AOLbyPhone DialogOS Dr. Sbaitso MBROLA Windows Narrator Microsoft Speech Server PlainTalk Voice font
+- AOLbyPhone
+- DialogOS
+- Dr. Sbaitso
+- MBROLA
+- Windows Narrator
+- Microsoft Speech Server
+- PlainTalk
+- Voice font
+Protocols
+Speech Synthesis Markup Language SABLE VoiceXML
+- Speech Synthesis Markup Language
+- SABLE
+- VoiceXML
+Developers/ Researchers
+15 Alan W. Black Catherine Browman Franklin Seaney Cooper Gunnar Fant Haskins Laboratories Wolfgang von Kempelen Ignatius Mattingly Philip Rubin Yamaha
+- 15
+- Alan W. Black
+- Catherine Browman
+- Franklin Seaney Cooper
+- Gunnar Fant
+- Haskins Laboratories
+- Wolfgang von Kempelen
+- Ignatius Mattingly
+- Philip Rubin
+- Yamaha
+Process
+Articulatory synthesis Concatenative synthesis Currah Inverse filter PSOLA Phase vocoder Self-voicing Voice cloning
+- Articulatory synthesis
+- Concatenative synthesis
+- Currah
+- Inverse filter
+- PSOLA
+- Phase vocoder
+- Self-voicing
+- Voice cloning
+Controversies
+Voiceverse NFT plagiarism scandal
+- Voiceverse NFT plagiarism scandal
+v t e Generative AI
+- v
+- t
+- e
+Concepts
+Autoencoder Deep learning Fine-tuning Foundation model Generative adversarial network Generative pre-trained transformer Large language model Model Context Protocol Neural network Prompt engineering Reinforcement learning from human feedback Retrieval-augmented generation Self-supervised learning Stochastic parrot Synthetic data Top-p sampling Transformer Variational autoencoder Vibe coding Vision transformer Word embedding
+- Autoencoder
+- Deep learning
+- Fine-tuning
+- Foundation model
+- Generative adversarial network
+- Generative pre-trained transformer
+- Large language model
+- Model Context Protocol
+- Neural network
+- Prompt engineering
+- Reinforcement learning from human feedback
+- Retrieval-augmented generation
+- Self-supervised learning
+- Stochastic parrot
+- Synthetic data
+- Top-p sampling
+- Transformer
+- Variational autoencoder
+- Vibe coding
+- Vision transformer
+- Word embedding
+Models
+Text Amazon Nova Baichuan Character.ai Claude Command DeepSeek Doubao Ernie EXAONE Gemini Gemma GLM GPT ChatGPT Grok IBM Granite Kimi MAI Microsoft Copilot Mistral MiniMax Muse Spark Nemotron Perplexity Solar Poe HKChat Qwen Tencent Hy Xiaomi MiMo You.com 01.AI Image Adobe Firefly Flux GPT Image Ideogram Midjourney Nano Banana Recraft Seedream Stable Diffusion Video Dream Machine Genie world model MiniMax H3 Kling AI LTX Runway Gen Seedance Sora Veo Speech 15.ai Eleven Gemini Speech MiniMax Speech Music Eleven Music Endel MiniMax Music Riffusion Suno Udio
+Text
+Amazon Nova Baichuan Character.ai Claude Command DeepSeek Doubao Ernie EXAONE Gemini Gemma GLM GPT ChatGPT Grok IBM Granite Kimi MAI Microsoft Copilot Mistral MiniMax Muse Spark Nemotron Perplexity Solar Poe HKChat Qwen Tencent Hy Xiaomi MiMo You.com 01.AI
+- Amazon Nova
+- Baichuan
+- Character.ai
+- Claude
+- Command
+- DeepSeek
+- Doubao
+- Ernie
+- EXAONE
+- Gemini
+- Gemma
+- GLM
+- GPT ChatGPT
+- ChatGPT
+- Grok
+- IBM Granite
+- Kimi
+- MAI
+- Microsoft Copilot
+- Mistral
+- MiniMax
+- Muse Spark
+- Nemotron
+- Perplexity
+- Solar
+- Poe
+- HKChat
+- Qwen
+- Tencent Hy
+- Xiaomi MiMo
+- You.com
+- 01.AI
+Image
+Adobe Firefly Flux GPT Image Ideogram Midjourney Nano Banana Recraft Seedream Stable Diffusion
+- Adobe Firefly
+- Flux
+- GPT Image
+- Ideogram
+- Midjourney
+- Nano Banana
+- Recraft
+- Seedream
+- Stable Diffusion
+Video
+Dream Machine Genie world model MiniMax H3 Kling AI LTX Runway Gen Seedance Sora Veo
+- Dream Machine
+- Genie world model
+- world model
+- MiniMax H3
+- Kling AI
+- LTX
+- Runway Gen
+- Seedance
+- Sora
+- Veo
+Speech
+15.ai Eleven Gemini Speech MiniMax Speech
+- 15.ai
+- Eleven
+- Gemini Speech
+- MiniMax Speech
+Music
+Eleven Music Endel MiniMax Music Riffusion Suno Udio
+- Eleven Music
+- Endel
+- MiniMax Music
+- Riffusion
+- Suno
+- Udio
+Products
+Coding tools Claude Code Codex Cursor Devin AI GitHub Copilot Google Antigravity Replit Agents AutoGPT ChatGPT agent Claude Cowork Gemini Spark Manus MiniMax Agent OpenClaw
+Coding tools
+Claude Code Codex Cursor Devin AI GitHub Copilot Google Antigravity Replit
+- Claude Code
+- Codex
+- Cursor
+- Devin AI
+- GitHub Copilot
+- Google Antigravity
+- Replit
+Agents
+AutoGPT ChatGPT agent Claude Cowork Gemini Spark Manus MiniMax Agent OpenClaw
+- AutoGPT
+- ChatGPT agent
+- Claude Cowork
+- Gemini Spark
+- Manus
+- MiniMax Agent
+- OpenClaw
+Applications
+AI-generated content in American politics Deepfake audio Slop slopaganda
+- AI-generated content in American politics
+- Deepfake audio
+- audio
+- Slop slopaganda
+- slopaganda
+Companies
+Aleph Alpha Anthropic Anysphere Baichuan Canva Cognition AI Cohere Contextual AI DeepSeek DeepL EleutherAI ElevenLabs Google AI DeepMind HeyGen Hugging Face Inflection AI Invisible Technologies Kuaishou Lightricks Lovable Luma Labs Meta AI Meta Superintelligence Labs Microsoft AI MiniMax Mistral AI Moonshot AI OpenAI Perplexity AI Runway Safe Superintelligence Sakana AI Salesforce Scale AI SoundHound AI SpaceXAI Stability AI StepFun Synthesia Thinking Machines Lab Upstage Xiaomi Z.ai
+- Aleph Alpha
+- Anthropic
+- Anysphere
+- Baichuan
+- Canva
+- Cognition AI
+- Cohere
+- Contextual AI
+- DeepSeek
+- DeepL
+- EleutherAI
+- ElevenLabs
+- Google AI DeepMind
+- AI
+- DeepMind
+- HeyGen
+- Hugging Face
+- Inflection AI
+- Invisible Technologies
+- Kuaishou
+- Lightricks
+- Lovable
+- Luma Labs
+- Meta AI
+- Meta Superintelligence Labs
+- Microsoft AI
+- MiniMax
+- Mistral AI
+- Moonshot AI
+- OpenAI
+- Perplexity AI
+- Runway
+- Safe Superintelligence
+- Sakana AI
+- Salesforce
+- Scale AI
+- SoundHound AI
+- SpaceXAI
+- Stability AI
+- StepFun
+- Synthesia
+- Thinking Machines Lab
+- Upstage
+- Xiaomi
+- Z.ai
+Controversies
+Generative AI pornography Deepfake pornography on Grok of Taylor Swift Pause Giant AI Experiments Removal of Sam Altman from OpenAI Statement on AI Risk Tay (chatbot) Théâtre D'opéra Spatial Voiceverse NFT plagiarism
+- Generative AI pornography Deepfake pornography on Grok of Taylor Swift
+- Deepfake pornography on Grok of Taylor Swift
+- on Grok
+- of Taylor Swift
+- Pause Giant AI Experiments
+- Removal of Sam Altman from OpenAI
+- Statement on AI Risk
+- Tay (chatbot)
+- Théâtre D'opéra Spatial
+- Voiceverse NFT plagiarism
+Category Commons
+- Category
+- Commons
+v t e Artificial intelligence (AI)
+- v
+- t
+- e
+History timeline Glossary Lists Algorithms Companies Institutions Projects Software Open-source Proprietary
+- History timeline
+- timeline
+- Glossary
+- Lists Algorithms Companies Institutions Projects Software Open-source Proprietary
+- Algorithms
+- Companies
+- Institutions
+- Projects
+- Software Open-source Proprietary
+- Open-source
+- Proprietary
+Concepts
+Automated reasoning Automated planning Constraint satisfaction Knowledge representation Parameter Hyperparameter Loss functions Regression Bias–variance tradeoff Double descent Overfitting Clustering Gradient descent SGD Quasi-Newton method Conjugate gradient method Backpropagation Attention Convolution Normalization Batchnorm Activation Softmax Sigmoid Rectifier Gating Weight initialization Regularization Datasets Augmentation Prompt engineering Reinforcement learning Q-learning SARSA Imitation Policy gradient Diffusion Latent diffusion model Autoregression Adversary RAG Uncanny valley LLM post-training RLHF Self-supervised learning Reflection Recursive self-improvement Hallucination Word embedding Vibe coding Blended AI Open-source AI Sovereign AI Symbolic AI Neuro-symbolic AI Situated approach Actor-critic algorithm
+- Automated reasoning
+- Automated planning
+- Constraint satisfaction
+- Knowledge representation
+- Parameter Hyperparameter
+- Hyperparameter
+- Loss functions
+- Regression Bias–variance tradeoff Double descent Overfitting
+- Bias–variance tradeoff
+- Double descent
+- Overfitting
+- Clustering
+- Gradient descent SGD Quasi-Newton method Conjugate gradient method
+- SGD
+- Quasi-Newton method
+- Conjugate gradient method
+- Backpropagation
+- Attention
+- Convolution
+- Normalization Batchnorm
+- Batchnorm
+- Activation Softmax Sigmoid Rectifier
+- Softmax
+- Sigmoid
+- Rectifier
+- Gating
+- Weight initialization
+- Regularization
+- Datasets Augmentation
+- Augmentation
+- Prompt engineering
+- Reinforcement learning Q-learning SARSA Imitation Policy gradient
+- Q-learning
+- SARSA
+- Imitation
+- Policy gradient
+- Diffusion
+- Latent diffusion model
+- Autoregression
+- Adversary
+- RAG
+- Uncanny valley
+- LLM post-training
+- RLHF
+- Self-supervised learning
+- Reflection
+- Recursive self-improvement
+- Hallucination
+- Word embedding
+- Vibe coding
+- Blended AI
+- Open-source AI
+- Sovereign AI
+- Symbolic AI
+- Neuro-symbolic AI
+- Situated approach
+- Actor-critic algorithm
+Applications
+Automated theorem proving General game playing Machine learning In-context learning Artificial neural network Deep learning Language model Large NMT Reasoning Model Context Protocol Intelligent agent AI agent Artificial human companion Humanity's Last Exam Lethal autonomous weapons (LAWs) Generative AI Weak AI Hypothetical Artificial general intelligence (AGI) Artificial superintelligence (ASI) Agent2Agent protocol
+- Automated theorem proving
+- General game playing
+- Machine learning In-context learning
+- In-context learning
+- Artificial neural network Deep learning
+- Deep learning
+- Language model Large NMT Reasoning
+- Large
+- NMT
+- Reasoning
+- Model Context Protocol
+- Intelligent agent AI agent
+- AI agent
+- Artificial human companion
+- Humanity's Last Exam
+- Lethal autonomous weapons (LAWs)
+- Generative AI
+- Weak AI
+- Hypothetical Artificial general intelligence (AGI) Artificial superintelligence (ASI)
+- Artificial general intelligence (AGI)
+- Artificial superintelligence (ASI)
+- Agent2Agent protocol
+Implementations
+Audio–visual AlexNet WaveNet Human image synthesis HWR OCR Computer vision R-CNN Speech synthesis 15.ai ElevenLabs Speech recognition Whisper Facial recognition AlphaFold Text-to-image models Aurora DALL-E Firefly Flux GPT Image Ideogram Imagen Midjourney Recraft Stable Diffusion Text-to-video models Dream Machine Runway Gen Hailuo AI Kling Sora Seedance Veo Music generation Riffusion Suno Udio World models Genie Oasis Text List of large language models Project Debater IBM Watson IBM Watsonx Decisional AlphaGo AlphaZero OpenAI Five Self-driving car MuZero Action selection AutoGPT Robot control Reasoning systems Deductive classifiers Expert systems Inference engines Knowledge-based systems Logic programs Procedural reasoning systems Semantic reasoners Rule-based systems Cognitive architectures ACT-R Soar CLARION LIDA OpenCog Knowledge bases ConceptNet Wikidata DBpedia YAGO
+Audio–visual
+AlexNet WaveNet Human image synthesis HWR OCR Computer vision R-CNN Speech synthesis 15.ai ElevenLabs Speech recognition Whisper Facial recognition AlphaFold Text-to-image models Aurora DALL-E Firefly Flux GPT Image Ideogram Imagen Midjourney Recraft Stable Diffusion Text-to-video models Dream Machine Runway Gen Hailuo AI Kling Sora Seedance Veo Music generation Riffusion Suno Udio World models Genie Oasis
+- AlexNet
+- WaveNet
+- Human image synthesis
+- HWR
+- OCR
+- Computer vision R-CNN
+- R-CNN
+- Speech synthesis 15.ai ElevenLabs
+- 15.ai
+- ElevenLabs
+- Speech recognition Whisper
+- Whisper
+- Facial recognition
+- AlphaFold
+- Text-to-image models Aurora DALL-E Firefly Flux GPT Image Ideogram Imagen Midjourney Recraft Stable Diffusion
+- Aurora
+- DALL-E
+- Firefly
+- Flux
+- GPT Image
+- Ideogram
+- Imagen
+- Midjourney
+- Recraft
+- Stable Diffusion
+- Text-to-video models Dream Machine Runway Gen Hailuo AI Kling Sora Seedance Veo
+- Dream Machine
+- Runway Gen
+- Hailuo AI
+- Kling
+- Sora
+- Seedance
+- Veo
+- Music generation Riffusion Suno Udio
+- Riffusion
+- Suno
+- Udio
+- World models Genie Oasis
+- Genie
+- Oasis
+Text
+List of large language models Project Debater IBM Watson IBM Watsonx
+- List of large language models
+- Project Debater
+- IBM Watson IBM Watsonx
+- IBM Watsonx
+Decisional
+AlphaGo AlphaZero OpenAI Five Self-driving car MuZero Action selection AutoGPT Robot control
+- AlphaGo
+- AlphaZero
+- OpenAI Five
+- Self-driving car
+- MuZero
+- Action selection AutoGPT
+- AutoGPT
+- Robot control
+Reasoning systems
+Deductive classifiers Expert systems Inference engines Knowledge-based systems Logic programs Procedural reasoning systems Semantic reasoners Rule-based systems
+- Deductive classifiers
+- Expert systems
+- Inference engines
+- Knowledge-based systems
+- Logic programs
+- Procedural reasoning systems
+- Semantic reasoners
+- Rule-based systems
+Cognitive architectures
+ACT-R Soar CLARION LIDA OpenCog
+- ACT-R
+- Soar
+- CLARION
+- LIDA
+- OpenCog
+Knowledge bases
+ConceptNet Wikidata DBpedia YAGO
+- ConceptNet
+- Wikidata
+- DBpedia
+- YAGO
+People
+Alan Turing Warren Sturgis McCulloch Walter Pitts John von Neumann Christopher D. Manning Claude Shannon Shun'ichi Amari Kunihiko Fukushima Takeo Kanade Marvin Minsky John McCarthy Nathaniel Rochester Allen Newell Cliff Shaw Herbert A. Simon Oliver Selfridge Frank Rosenblatt Bernard Widrow Joseph Weizenbaum Seymour Papert Seppo Linnainmaa Paul Werbos Geoffrey Hinton John Hopfield Jürgen Schmidhuber Yann LeCun Yoshua Bengio Lotfi A. Zadeh Stephen Grossberg Alex Graves James Goodnight Andrew Ng Fei-Fei Li Alex Krizhevsky Ilya Sutskever Oriol Vinyals Quoc V. Le Ian Goodfellow Demis Hassabis David Silver Andrej Karpathy Ashish Vaswani Noam Shazeer Aidan Gomez John Schulman Mustafa Suleyman Jan Leike Daniel Kokotajlo François Chollet
+- Alan Turing
+- Warren Sturgis McCulloch
+- Walter Pitts
+- John von Neumann
+- Christopher D. Manning
+- Claude Shannon
+- Shun'ichi Amari
+- Kunihiko Fukushima
+- Takeo Kanade
+- Marvin Minsky
+- John McCarthy
+- Nathaniel Rochester
+- Allen Newell
+- Cliff Shaw
+- Herbert A. Simon
+- Oliver Selfridge
+- Frank Rosenblatt
+- Bernard Widrow
+- Joseph Weizenbaum
+- Seymour Papert
+- Seppo Linnainmaa
+- Paul Werbos
+- Geoffrey Hinton
+- John Hopfield
+- Jürgen Schmidhuber
+- Yann LeCun
+- Yoshua Bengio
+- Lotfi A. Zadeh
+- Stephen Grossberg
+- Alex Graves
+- James Goodnight
+- Andrew Ng
+- Fei-Fei Li
+- Alex Krizhevsky
+- Ilya Sutskever
+- Oriol Vinyals
+- Quoc V. Le
+- Ian Goodfellow
+- Demis Hassabis
+- David Silver
+- Andrej Karpathy
+- Ashish Vaswani
+- Noam Shazeer
+- Aidan Gomez
+- John Schulman
+- Mustafa Suleyman
+- Jan Leike
+- Daniel Kokotajlo
+- François Chollet
+Neural network architectures
+Neural Turing machine Differentiable neural computer Transformer Vision transformer (ViT) Recurrent neural network (RNN) Long short-term memory (LSTM) Gated recurrent unit (GRU) Echo state network Multilayer perceptron (MLP) Convolutional neural network (CNN) Residual neural network (RNN) Highway network Mamba Autoencoder Variational autoencoder (VAE) Generative adversarial network (GAN) Graph neural network (GNN)
+- Neural Turing machine
+- Differentiable neural computer
+- Transformer Vision transformer (ViT)
+- Vision transformer (ViT)
+- Recurrent neural network (RNN)
+- Long short-term memory (LSTM)
+- Gated recurrent unit (GRU)
+- Echo state network
+- Multilayer perceptron (MLP)
+- Convolutional neural network (CNN)
+- Residual neural network (RNN)
+- Highway network
+- Mamba
+- Autoencoder
+- Variational autoencoder (VAE)
+- Generative adversarial network (GAN)
+- Graph neural network (GNN)
+Political
+AI Cold War AI in government AI safety ( Alignment ) AI takeover Elections Ethics of AI EU AI Act Nationalism Precautionary principle Regulation of AI US Virtual politician Propaganda Opposition to AI data centers
+- AI Cold War
+- AI in government
+- AI safety ( Alignment )
+- AI takeover
+- Elections
+- Ethics of AI
+- EU AI Act
+- Nationalism
+- Precautionary principle
+- Regulation of AI US
+- US
+- Virtual politician
+- Propaganda
+- Opposition to AI data centers
+Social and economic
+AI boom AI bubble AI data center AI effect AI infrastructure AI literacy AI slop AI winter Anthropomorphism Arms race Competition Environmental impact Explainable AI Generative engine optimization In architecture In education In fiction In healthcare psychosis In marketing In video games In visual art Military applications AI warfare Workplace impact
+- AI boom
+- AI bubble
+- AI data center
+- AI effect
+- AI infrastructure
+- AI literacy
+- AI slop
+- AI winter
+- Anthropomorphism
+- Arms race
+- Competition
+- Environmental impact
+- Explainable AI
+- Generative engine optimization
+- In architecture
+- In education
+- In fiction
+- In healthcare psychosis
+- psychosis
+- In marketing
+- In video games
+- In visual art
+- Military applications AI warfare
+- AI warfare
+- Workplace impact
+Category
+- Category
+- 2022 establishments in New York City
+- American companies established in 2022
+- Artificial intelligence companies
+- Artificial intelligence laboratories
+- Software companies based in New York City
+- Software companies established in 2022
+- Software companies of the United States
+- Speech synthesis
+- 2022 in artificial intelligence
+- Artificial intelligence in music
+- Articles with short description
+- Short description is different from Wikidata
+- Use mdy dates from October 2026

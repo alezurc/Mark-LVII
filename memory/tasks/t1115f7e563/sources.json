@@ -1,0 +1,93 @@
+{
+ "https://en.wikipedia.org/wiki/ElevenLabs": {
+  "n": 1,
+  "url": "https://en.wikipedia.org/wiki/ElevenLabs",
+  "title": "ElevenLabs - Wikipedia",
+  "read": true,
+  "page": "78b849cd7f346334.txt"
+ },
+ "https://businesscloud.co.uk/founders/mati-staniszewski-piotr-dabkowski-elevenlabs": {
+  "n": 2,
+  "url": "https://businesscloud.co.uk/founders/mati-staniszewski-piotr-dabkowski-elevenlabs/",
+  "title": "Mati Staniszewski & Piotr Dąbkowski - ElevenLabs - BusinessCloud",
+  "read": true,
+  "page": "c801f71a0bc27fd7.txt"
+ },
+ "https://elevenlabs.io/blog/elevenlabs-raises-2m-pre-seed-and-announces-ai-speech-platform-promising-to-revolutionize-audio-storytelling": {
+  "n": 3,
+  "url": "https://elevenlabs.io/blog/elevenlabs-raises-2m-pre-seed-and-announces-ai-speech-platform-promising-to-revolutionize-audio-storytelling",
+  "title": "ElevenLabs Raises $2M and Announces AI Speech Platform",
+  "read": true,
+  "page": "42c815d8c38e45f0.txt"
+ },
+ "https://elevenlabs.io/blog/elevenlabs-launches-new-generative-voice-ai-products-and-announces-19m-series-a-round-led-by-nat-friedman-daniel-gross-and-andreessen-horowitz": {
+  "n": 4,
+  "url": "https://elevenlabs.io/blog/elevenlabs-launches-new-generative-voice-ai-products-and-announces-19m-series-a-round-led-by-nat-friedman-daniel-gross-and-andreessen-horowitz",
+  "title": "ElevenLabs — ElevenLabs Announces $19m Series A Round",
+  "read": true,
+  "page": "148860a1f15b673e.txt"
+ },
+ "https://techcrunch.com/2024/01/22/voice-cloning-startup-elevenlabs-lands-80m-achieves-unicorn-status": {
+  "n": 5,
+  "url": "https://techcrunch.com/2024/01/22/voice-cloning-startup-elevenlabs-lands-80m-achieves-unicorn-status/",
+  "title": "Voice cloning startup ElevenLabs lands $80M, achieves unicorn status | TechCrunch",
+  "read": true,
+  "page": "8cae390c76dd2b0b.txt"
+ },
+ "https://elevenlabs.io/blog/series-b": {
+  "n": 6,
+  "url": "https://elevenlabs.io/blog/series-b",
+  "title": "ElevenLabs Releases New AI Products and Raises $80M Series B",
+  "read": true,
+  "page": "f1e793179cda2f28.txt"
+ },
+ "https://builtin.com/articles/what-is-elevenlabs": {
+  "n": 7,
+  "url": "https://builtin.com/articles/what-is-elevenlabs",
+  "title": "What Is ElevenLabs? The AI Voice Platform, Explained | Built In",
+  "read": true,
+  "page": "d99836c18749ce3c.txt"
+ },
+ "https://pricingrank.org/pt-br/elevenlabs-13-new-products-scribe-v3-elevenai-november-2026": {
+  "n": 8,
+  "url": "https://pricingrank.org/pt-br/elevenlabs-13-new-products-scribe-v3-elevenai-november-2026/",
+  "title": "One moment, please...",
+  "read": true,
+  "page": "97d327d5eae1a97e.txt"
+ },
+ "https://elevenlabs.io/blog": {
+  "n": 9,
+  "url": "https://elevenlabs.io/blog",
+  "title": "ElevenLabs Blog - Company, Research & Product Updates",
+  "read": true,
+  "page": "f4568dea2e56afd4.txt"
+ },
+ "https://www.scriptbyai.com/elevenlabs-timeline": {
+  "n": 10,
+  "url": "https://www.scriptbyai.com/elevenlabs-timeline/",
+  "title": "ElevenLabs Timeline: Model & Product Release Dates",
+  "read": true,
+  "page": "2b44408de3dd2f29.txt"
+ },
+ "https://elevenlabs.io/blog/nyc-summit": {
+  "n": 11,
+  "url": "https://elevenlabs.io/blog/nyc-summit",
+  "title": "ElevenLabs Summit NYC: The Interaction Layer for AI",
+  "read": true,
+  "page": "a5c3d321385253fd.txt"
+ },
+ "https://elevenlabs.io/blog/tender-22bn": {
+  "n": 12,
+  "url": "https://elevenlabs.io/blog/tender-22bn",
+  "title": "ElevenLabs reaches $22bn valuation after employee tender",
+  "read": true,
+  "page": "8b5f9c73f57db0d2.txt"
+ },
+ "https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b": {
+  "n": 13,
+  "url": "https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b/",
+  "title": "AI voice startup ElevenLabs doubles valuation to $22B | TechCrunch",
+  "read": true,
+  "page": "b93ab270a51b2e02.txt"
+ }
+}

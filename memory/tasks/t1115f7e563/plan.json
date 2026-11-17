@@ -1,0 +1,77 @@
+{
+ "goal": "Apresentar a história detalhada da ElevenLabs, cobrindo fundadores, data de fundação, missão, modelo de negócios e principais marcos e lançamentos até 2026.",
+ "language": "pt-BR",
+ "complete": "Um relatório completo e estruturado contendo a história de fundação da ElevenLabs (data, local e motivação), biografias resumidas dos fundadores (Piotr Dabkowski e Mati Staniszewski), a missão oficial da empresa, rodadas de investimento (financiamento, valuation e investidores-chave como Andreessen Horowitz, Sequoia, etc.), lançamentos tecnológicos marcantes (modelos de voz, Voice Design, dublagem, sound effects, leitor de áudio, marketplace de vozes) e marcos estratégicos até 2026.",
+ "subqs": [
+  {
+   "id": 1,
+   "q": "Quem são os fundadores da ElevenLabs, quando a empresa foi fundada e qual foi a motivação e missão inicial?",
+   "queries": [
+    "ElevenLabs founders founding date Piotr Dabkowski Mati Staniszewski background story",
+    "ElevenLabs mission statement why founded history"
+   ],
+   "status": "pending",
+   "rounds": 0,
+   "summary": "",
+   "confidence": "",
+   "nudged": false,
+   "gap": false
+  },
+  {
+   "id": 2,
+   "q": "Quais foram as primeiras rodadas de investimento e marcos iniciais da ElevenLabs (2022-2023)?",
+   "queries": [
+    "ElevenLabs funding rounds 2022 2023 seed series A investors Andreessen Horowitz",
+    "ElevenLabs launch beta 2022 2023 milestones"
+   ],
+   "status": "pending",
+   "rounds": 0,
+   "summary": "",
+   "confidence": "",
+   "nudged": false,
+   "gap": false
+  },
+  {
+   "id": 3,
+   "q": "Quais foram os grandes marcos de financiamento, valuation e expansão em 2024 (ex: Series B, status de unicórnio)?",
+   "queries": [
+    "ElevenLabs Series B valuation unicorn 2024 funding",
+    "ElevenLabs major announcements partnerships 2024"
+   ],
+   "status": "pending",
+   "rounds": 0,
+   "summary": "",
+   "confidence": "",
+   "nudged": false,
+   "gap": false
+  },
+  {
+   "id": 4,
+   "q": "Quais são os principais produtos, modelos de IA e inovações tecnológicas lançados pela ElevenLabs até hoje?",
+   "queries": [
+    "ElevenLabs product releases timeline voice cloning dubbing sound effects Reader app",
+    "ElevenLabs AI audio models history versions features"
+   ],
+   "status": "pending",
+   "rounds": 0,
+   "summary": "",
+   "confidence": "",
+   "nudged": false,
+   "gap": false
+  },
+  {
+   "id": 5,
+   "q": "Quais foram os desenvolvimentos, marcos corporativos, rodadas adicionais e produtos lançados entre 2025 e 2026?",
+   "queries": [
+    "ElevenLabs funding announcements 2025 2026",
+    "ElevenLabs latest milestones news 2025 2026"
+   ],
+   "status": "pending",
+   "rounds": 0,
+   "summary": "",
+   "confidence": "",
+   "nudged": false,
+   "gap": false
+  }
+ ]
+}

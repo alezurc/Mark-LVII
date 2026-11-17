@@ -1,0 +1,62 @@
+There’s a lot of money in voice cloning.
+Case in point: ElevenLabs , a startup developing AI-powered tools to create and edit synthetic voices, today announced that it closed an $80 million Series B round co-led by prominent investors, including Andreessen Horowitz, former GitHub CEO Nat Friedman and entrepreneur Daniel Gross.
+The round, which also had participation from Sequoia Capital, Smash Capital, SV Angel, BroadLight Capital and Credo Ventures, brings ElevenLabs’ total raised to $101 million and values the company at over $1 billion (up from ~$100 million last June ). CEO Mati Staniszewski says the new cash will be put toward product development, expanding ElevenLabs’ infrastructure and team, AI research and “enhancing safety measures to ensure responsible and ethical development of AI technology.”
+“We raised the new money to cement ElevenLabs’ position as the global leader in voice AI research and product deployment,” Staniszewski told TechCrunch in an email interview.
+Co-founded in 2022 by Piotr Dabkowski, an ex-Google machine learning engineer, and Staniszewski, a former Palantir deployment strategist, ElevenLabs launched in beta around a year ago. Staniszewski says that he and Dabkowski, who grew up in Poland, were inspired to create voice cloning tools by poorly dubbed American films. AI could do better, they thought.
+Today, ElevenLabs is perhaps best known for its browser-based speech generation app that can create lifelike voices with adjustable toggles for intonation, emotion, cadence and other key vocal characteristics. For free, users can enter text and get a recording of that text read aloud by one of several default voices. Paying customers can upload voice samples to craft new styles using ElevenLabs’ voice cloning.
+Increasingly, ElevenLabs is investing in versions of its speech-generating tech aimed at creating audiobooks and dubbing films and TV shows, as well as generating character voices for games and marketing activations.
+Last year, the company released a “speech to speech” tool that attempts to preserve a speaker’s voice, prosody and intonation while automatically removing background noise, and — in the case of movies and TV shows — translates and synchronizes speech with the source material. On the roadmap for the coming weeks is a new dubbing studio workflow with tools to generate and edit transcripts and translations and a subscription-based mobile app that narrates web pages and text using ElevenLabs voices.
+ElevenLabs’ innovations have won the startup customers in Paradox Interactive (the game developer whose recent projects include Cities: Skylines II and Stellaris) and The Washington Post — among other publishing, media and entertainment companies. Staniszewski claims that ElevenLab users have generated the equivalent of more than 100 years of audio and that the platform is being used by employees at 41% of Fortune 500 companies.
+But the publicity hasn’t been totally positive.
+The infamous message board 4chan, known for its conspiratorial content, used ElevenLabs’ tools to share hateful messages mimicking celebrities like actress Emma Watson. The Verge’s James Vincent was able to tap ElevenLabs to maliciously clone voices in a matter of seconds, generating samples containing everything from threats of violence to racist and transphobic remarks. And over at Vice, reporter Joseph Cox documented generating a clone convincing enough to fool a bank’s authentication system.
+In response, ElevenLabs has attempted to root out users repeatedly violating its terms of service, which prohibits abuse, and rolled out a tool to detect speech created by its platform. This year, ElevenLabs plans to improve the detection tool to flag audio from other voice-generating AI models and partner with unnamed “distribution players” to make the tool available on third-party platforms, Staniszewski says.
+ElevenLabs has also faced criticism from voice actors who claim that the company uses samples of their voices without their consent — samples that could be leveraged to promote content they don’t endorse or spread mis- and dis-information. In a recent Vice article, victims recount how ElevenLabs was used in harassment campaigns against them, in one example to share an actor’s private information — their home address — using a cloned voice.
+Then there’s the elephant in the room: the existential threat platforms like ElevenLabs pose to the voice acting industry.
+Motherboard writes about how voice actors are increasingly being asked to sign away rights to their voices so that clients can use AI to generate synthetic versions that could eventually replace them — sometimes without commensurate compensation. The fear is that voice work — particularly cheap, entry-level work — will eventually be replaced by AI-generated vocals and that actors will have no recourse.
+Some platforms are trying to strike a balance. Earlier this month, Replica Studios, an ElevenLabs competitor, signed a deal with SAG-AFTRA to create and license digital replicas of the media artist union members’ voices. In a press release, the organizations said that the arrangement established “fair” and “ethical” terms and conditions to ensure performer consent — and negotiating terms for uses of digital voice doubles in new works.
+Even this didn’t please some voice actors, however — including SAG-AFTRA’s own members .
+ElevenLabs’ solution is a marketplace for voices. Currently in alpha and set to become more widely available in the next several weeks, the marketplace allows users to create a voice, verify and share it. When others use a voice, the original creators receive compensation, Staniszewski says.
+“Users always retain control over their voice’s availability and compensation terms,” he added. “The marketplace is designed as a step towards harmonizing AI advancements with established industry practices, while also bringing a diverse set of voices to ElevenLabs’ platform.”
+Voice actors may take issue with the fact that ElevenLabs isn’t paying in cash, though — at least not at present. The current setup has creators receiving credit toward ElevenLabs’ premium services (which some find ironic, I’d wager).
+Perhaps that’ll change in the future as ElevenLabs — which is now among the best-funded synthetic voice startups — attempts to beat back upstart competition like Papercup, Deepdub, Acapela, Respeecher and Voice.ai as well as Big Tech incumbents such as Amazon, Microsoft and Google. In any case, ElevenLabs, which plans to grow its headcount from 40 people to 100 by the end of the year, intends on sticking around — and making waves — in the fast-growing synthetic voice market.
+Topics
+When you purchase through links in our articles, we may earn a small commission . This doesn’t affect our editorial independence.
+AI Editor
+Get an Early Peek at the Next TechCrunch Disrupt Disrupt, Startup Battlefield, and more will return next year, and you can be at the front of the line. Sign up for our waitlist
+
+## Most Popular
+- Where was Nvidia’s security team? Connie Loizos
+
+## Where was Nvidia’s security team?
+Where was Nvidia’s security team?
+- Connie Loizos
+- Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang Anthony Ha
+
+## Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang
+Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang
+- Anthony Ha
+- Microsoft’s latest email outage turned into a full-blown global cloud crisis Zack Whittaker
+
+## Microsoft’s latest email outage turned into a full-blown global cloud crisis
+Microsoft’s latest email outage turned into a full-blown global cloud crisis
+- Zack Whittaker
+- Jensen Huang didn’t show confidence in his successor, report says Ivan Mehta
+
+## Jensen Huang didn’t show confidence in his successor, report says
+Jensen Huang didn’t show confidence in his successor, report says
+- Ivan Mehta
+- Jensen Huang was having a third affair, Reuters reports Russell Brandom
+
+## Jensen Huang was having a third affair, Reuters reports
+Jensen Huang was having a third affair, Reuters reports
+- Russell Brandom
+- Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks Aisha Malik
+
+## Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks
+Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks
+- Aisha Malik
+- Musk says Tesla will refund some Cybertruck deposits, defends decision to end production Kirsten Korosec
+
+## Musk says Tesla will refund some Cybertruck deposits, defends decision to end production
+Musk says Tesla will refund some Cybertruck deposits, defends decision to end production
+- Kirsten Korosec

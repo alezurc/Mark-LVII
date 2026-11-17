@@ -1,0 +1,350 @@
+[
+ {
+  "role": "user",
+  "text": "[RESEARCH GOAL] Apresentar a história detalhada da ElevenLabs, cobrindo fundadores, data de fundação, missão, modelo de negócios e principais marcos e lançamentos até 2026.\n[THE PLAN]\n  1. Quem são os fundadores da ElevenLabs, quando a empresa foi fundada e qual foi a motivação e missão inicial?  (done)\n  2. Quais foram as primeiras rodadas de investimento e marcos iniciais da ElevenLabs (2022-2023)?  (done)\n  3. Quais foram os grandes marcos de financiamento, valuation e expansão em 2024 (ex: Series B, status de unicórnio)?  (done)\n  4. Quais são os principais produtos, modelos de IA e inovações tecnológicas lançados pela ElevenLabs até hoje?\n  5. Quais foram os desenvolvimentos, marcos corporativos, rodadas adicionais e produtos lançados entre 2025 e 2026?\n\n[NOW: QUESTION 4] Quais são os principais produtos, modelos de IA e inovações tecnológicas lançados pela ElevenLabs até hoje?\nSuggested searches: ElevenLabs product releases timeline voice cloning dubbing sound effects Reader app; ElevenLabs AI audio models history versions features\nTime for this question: about 3.7 minutes, 30 rounds."
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_14599985181464493193",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs products timeline models voice cloning AI Dubbing Reader app Sound Effects"
+    },
+    "sig": "Et0DCtoDAWkUfRMXJmdi5bhg8A0FUjbsoKa84l6oHfusdhTsEbfEocQZV6pIIUWBGyuGtVTo4yUrE+TTgFelxnkJD0QlbJqfqWSxHllD4kejUnmaxc+t4cHhT256kcJO/i5XvuZRNdSjX03VkITbxKWe/OpqQ+NA79Rhm8VCy10KvhtRSTj9KJksnaIwJgZzd7h8iPqO1x6ZUgb9r0ijhTWLkXGWc4ufb3FgKKUBzSFRlnodkS5zjrEGkQdEgKDc1liTWyQgxjCaIJoOHAFsbUEBj5i6tPla88HxqDX2pfVaZBKbt94hlOdJ9e3Z2zFa2k0lQcKx2TJ4dH69PXDAFWTIsPzTQ+AHQC7S8gPahk+kIAg6RqmJ3HRM3+lixEOAeO9wV38keDPvYScIu2tRjX1it6PgawJeeaTRGWEnQBl9GWTaTmKWOGLEFIyyx/ZaNGeGB7QJ2MlBVeQOr8wjAS1dQksM5TDP270q1dVjhOTC+qijvjR5ddw2BAVUcF3YVT8iTulrXqtQD6xgpyw8X1Ja+uaFi+jVyKBH4TPfpNMC6dTU8qgxrJnHYLFV0nRHGr0mHwO1L+DcC8MupREKaz1gDGHhdaBCtueFOu3iQynsYQlVN2ZpA9ECFZd3+xeK"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_14599985181464493193",
+    "name": "search_web",
+    "result": "status=failed action=search_web query=\"ElevenLabs products timeline models voice cloning AI Dubbing Reader app Sound Effects\" reason=\"no results — try other words or another language\" -- This did NOT happen. Tell the user so in their own language, with the reason. Do not claim any part of it succeeded."
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_9026691749294080254",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs product releases AI voice models timeline"
+    },
+    "sig": "EooBCocBAWkUfRM63RdJ9jhtKYWiJnyXdtKUeAM5S6NgZbkOTyPYsB3zVUlonIMTjqlFciYlQs6SrT5rlvrNJsSFFvX/994CUzkgGXTdSM7pUoE76gzWQgiWKK9QgtybSzxOV7wS3QL8aH6cOnf7EJnD/CNc0Er1jLZ/LlHEA+rvwVl185yU2VJKr1oe"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_9026691749294080254",
+    "name": "search_web",
+    "result": "status=failed action=search_web query=\"ElevenLabs product releases AI voice models timeline\" reason=\"no results — try other words or another language\" -- This did NOT happen. Tell the user so in their own language, with the reason. Do not claim any part of it succeeded."
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_8318437537391637796",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs products"
+    },
+    "sig": "EoUCCoICAWkUfRNmkbPjFDeP/TRgq1+1BahV8/GBuQeMmk9gZ9QxbucNlgL1a40K6aVp5RIRyOYLhyR0Gg2ztqlXzdkYo9U+vpk+WbbQgx710QpeVvOvRh2UwXmMokf648N3ZB45jo2aVKXfrafpLlBDiquiQX/xH7ghDbFPVJJ5JBmaSvGK/MMFwoA6uVA4lyW+xD+u5xj7Ezecv3KgNObYiVIIzVv8xJ1l1NYuhkUuhIov2TlT+WuEILuKnARHOGzjTp8rNNfXikto95ieHQ/MKCdGYeMheqLwHcwx0HBkiyIIOGbHrjjEbbntHhIDaaSQSc+fdA9BdBMv5KYJ1HP3cQaxLfww"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_8318437537391637796",
+    "name": "search_web",
+    "result": "<<<UNTRUSTED source=web>>>\nResults for: ElevenLabs products\n1. ElevenLabs - Wikipedia\n   https://en.wikipedia.org/wiki/ElevenLabs\n   In June 2024, ElevenLabs released the ElevenLabs Reader App on iOS and Android which allows users to listen to articles, PDFs, and ePubs with AI Voices on their phone.\n2. ElevenLabs Agents - Multilingual Voice Agents\n   https://www.bing.com/aclick?ld=e8aYXUwMlf90tZXnVHiKPCCDVUCUyQjjxlWFtdYi60RMfAHorLEv3fA39IQZ9BeGr2maLQnY2OFVDgVpPN26mPYm23wJdpY6VtQ0bGmR6Pv03a9-Ge9kfB-d_Yd4vFO-gbSE-pKodvsakDcEy52y0fiY2KurQpCqGCcJZh-YSWf1PnRJQruq9YzzL_gz2s1x7Zdf6SqpqIsp3RVHDqZ4UgNrt6vAE&u=aHR0cHMlM2ElMmYlMmZlbGV2ZW5sYWJzLmlvJTJmYWdlbnRzJTNmdXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkbWVhX2JyYW5kc2VhcmNoX2VudGVycHJpc2VfZW5nbGlzaCUyNnV0bV9pZCUzZDU3MDc3MDIxNSUyNnV0bV90ZXJtJTNkZWxldmVubGFicyUyNTIwYWklMjUyMGFnZW50cyUyNnV0bV9jb250ZW50JTNkYnJhbmRfLV9lbGV2ZW5sYWJzX2FnZW50cyUyNm1zY2xraWQlM2RmOTY5NGNjMjllMjAxYjgyNmQwYzI2MzhjYTFmZWIyOQ&rlid=f9694cc29e201b826d0c2638ca1feb29\n   Increase customer satisfaction, lower support costs, & deliver faster resolutions at scale. Emotionally expressive, multilingual ElevenLabs agents built for enterprise scale. Types: Text to Speech, Voice Cloning, Voice Changer, Voice Library, Sound Effects\n3. Free AI Voice Generator & Voice Agents Platform | ElevenLabs\n   https://elevenlabs.io/\n   Bringing ElevenLabs' AI voice agents to the customer service of Europe’s largest Telco\n4. What Is ElevenLabs? Every Product Explained (2026)\n   https://mrktcorrect.com/blog/elevenlabs-products-explained\n   Aug 20, 2026 · ElevenLabs is three products wearing one name. ElevenCreative makes and edits audio and video, ElevenAgents answers your business calls, and ElevenAPI gives developers the raw models. Most people only need one of them, and picking the right one starts with knowing the split exists.\n5. What Is ElevenLabs? The AI Voice Platform, Explained | Built In\n   https://builtin.com/articles/what-is-elevenlabs\n   Oct 15, 2026 · ElevenLabs is best known for its AI voice-generation technology, which converts written text into natural-sounding speech. It also offers voice cloning, speech-to-text transcription, AI dubbing, music generation, sound effects and conversational AI tools.\n6. ElevenLabs Reviews (2026) | Product Hunt\n   https://www.producthunt.com/products/elevenlabs/reviews\n   Read reviews and experiences from users of ElevenLabs. Get comprehensive feedback about features, pros, cons, and alternatives.\n7. ElevenCreative | ElevenLabs Documentation\n   https://elevenlabs.io/docs/eleven-creative/overview\n   From audiobooks to ads, podcasts to games, create professional voice content at scale with intuitive tools for creators, producers, and developers. Test and experiment with text-to-speech, voice changing, and sound effects in real-time.\n8. ElevenLabs UI | ElevenLabs UI\n   https://ui.elevenlabs.io/\n   A collection of Open Source agent and audio components that you can customize and extend.\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_3818874240755450797",
+    "name": "fetch_page",
+    "args": {
+     "url": "https://en.wikipedia.org/wiki/ElevenLabs"
+    },
+    "sig": "EpECCo4CAWkUfRND5TAZuXmQM4oLBsdhw7qrZAOew9DUn+AMdFuu5m1l5hhjDcjgXozJlc/lsT5foye0UtbhJu1qJAD37drRV2ooeEyPsFnorU/90OOtE5t7dwrwfu2R+ffzYKWdEoxLlTI0vNL7YePor68wKvMViSWZVzCnYz3RnIwEs3apYY+hpuBTBuGiAIy37iG93iNwu/FMUC55uEgHReGLflnIfFsFgIL8G9X24GROXn9gJS6GiBgl9jaet0dDFgzXQFcs3aJ20HyOOKUPM+RVX8WA2n04/usoSw5tLHWFn6D7QqMQ1/PAeMd/vocywShaPOjiZhDpb7LtF+HkWJw/AchD5J6SAhSdi6BuusTq"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_3818874240755450797",
+    "name": "fetch_page",
+    "result": "<<<UNTRUSTED source=web>>>\nURL: https://en.wikipedia.org/wiki/ElevenLabs\nTITLE: ElevenLabs - Wikipedia\n\nElevenLabs Inc.\nElevenLabs New York headquarters on Madison Avenue\nType\nPrivate\nIndustry\nSoftware development Speech synthesis Artificial intelligence\n- Software development\n- Speech synthesis\n- Artificial intelligence\nFounded\n2022 ; 4 years ago ( 2022 )\nFounders\nPiotr Dąbkowski (CTO) Mati Staniszewski (CEO)\n- Piotr Dąbkowski (CTO)\n- Mati Staniszewski (CEO)\nHeadquarters\nLondon [ 1 ] New York City\nProducts\nElevenAgents ElevenCreative ElevenAPI Eleven v3 Eleven Music Scribe v2 Realtime Agent Workflows Productions 11ai\n- ElevenAgents\n- ElevenCreative\n- ElevenAPI\n- Eleven v3\n- Eleven Music\n- Scribe v2 Realtime\n- Agent Workflows\n- Productions\n- 11ai\nServices\nSpeech processing Software agent Virtual assistant\n- Speech processing\n- Software agent\n- Virtual assistant\nNumber of employees\n400 (2026) [ 2 ]\nWebsite\nelevenlabs .io\nElevenLabs Inc. is a software company that specializes in developing natural-sounding speech synthesis software using deep learning . It was founded in 2022 by Polish entrepreneurs Piotr Dąbkowski and Mateusz Staniszewski . [ 3 ] ElevenLabs is legally incorporated in the US. [ 4 ] It is based in London and also has offices in New York City , Warsaw and San Francisco . [ 5 ]\n\n## Name etymology\nThe name ElevenLabs derives from the English word eleven . The number refers to November 11, the date of Poland’s National Independence Day (the eleventh day of the eleventh month). [ 6 ] The element Labs refers to the English word laboratories and indicates the company’s research and development profile.\n\n## History\nElevenLabs was co-founded in 2022 by Piotr Dąbkowski , an ex- Google machine learning engineer and Mati Staniszewski , an ex- Palantir deployment strategist. [ 7 ] Both were raised in Poland , and their inspiration for founding ElevenLabs reportedly came from watching inadequately dubbed American films. [ 8 ] [ 9 ]\nDąbkowski and Staniszewski initially considered different funding options, including the possibility of collaborating with a startup accelerator. In January 2023 they revealed having secured a $2 million pre-seed round. The startup's specialization in AI voice intelligence, a still-emerging field in Europe , played a significant role in attracting investors. The pre-seed funding was primarily led by Credo Ventures , and joined by Concept Ventures. [ 10 ]\nIn January 2023, ElevenLabs publicly released its beta platform . [ 11 ]\nIn June 2023, ElevenLabs raised a $19 million Series A funding round at a valuation of about $100 million. [ 12 ] [ 13 ] [ 9 ] The funding round was co-led by the venture capital firm Andreessen Horowitz , former GitHub CEO Nat Friedman , and entrepreneur Daniel Gross . It also saw participation from prominent individuals such as SV Angel , Mike Krieger (co-founder of Instagram), Brendan Iribe (co-founder of Oculus ), Mustafa Suleyman (co-founder of Deepmind ), and Tim O'Reilly (founder of O'Reilly Media ). It was also announced that Andreessen Horowitz would be joining ElevenLabs' board. [ 8 ]\nOn January 22, 2024, ElevenLabs raised an additional $80 million in Series B funding raising the total valuation of the company to $1.1 billion. The funding round was led by Andreessen Horowitz , Friedman , Gross, and Sequoia Capital . Additionally, the company announced a series of new products, including their Voice Marketplace, AI Dubbing Studio, and mobile app. [ 14 ]\nIn the lead-up to the January 2024 New Hampshire Democratic primary , AI-generated robocalls purportedly from Joe Biden encouraging voters to skip voting on the day of the primary were sent to thousands of residents. The New Hampshire attorney general's office launched an investigation into the incident and linked it to a company based in Texas, with audio experts concluding the call was made using ElevenLabs. In response to the incident, CEO Mati Staniszewski stated that the company was “dedicated to preventing the misuse of audio AI tools” but provided no comment on specific incidents. [ 15 ]\nOn January 30, 2025, ElevenLabs announced their $180 million Series C funding raising the total valuation of the company to $3.3 billion. The round was co-led by a16z and ICONIQ Growth with additional new investors NEA, World Innovation Lab (WiL), Valor, Endeavor Catalyst Fund and Lunate and brought on strategic investors including Deutsche Telekom, LG Technology Ventures, HubSpot Ventures, NTT Docomo Ventures, and RingCentral Ventures. [ 16 ]\nIn September 2025, ElevenLabs opened an employee tender offer , allowing staff who had worked at the company for at least a year to sell shares at a $6.6 billion valuation. [ 17 ] It completed another tender offer for staff at a $22B valuation in September 2026. [ 18 ]\nOn February 4, 2026, ElevenLabs announced that it raised $500 million at an $11 billion valuation, as it eyes a potential IPO . [ 19 ]\nIn March 2026, ElevenLabs pledged to committing $1 billion in free restoration voice technology to 1 million people living with permanent voice loss. [ 20 ]\n\n## Products\nElevenLabs is primarily known for its browser-based , AI-assisted text-to-speech software, Speech Synthesis, which can produce lifelike speech by synthesizing vocal emotion and intonation , and now Conversational AI, a developer platform for launching interactive voice agents. [ 21 ] The company states that its models are trained to interpret the context in the text, and adjust the intonation and pacing accordingly. [ 22 ] It uses advanced algorithms to analyze the contextual aspects of text, aiming to detect emotions like anger, sadness, happiness, or alarm, which enables the system to understand the user's sentiment, [ 23 ] resulting in achieving a more realistic and human-like inflection. The startup is in the process of patenting this technology. [ 10 ] On its beta site, users can submit text and generate audio files from a selection of default voices. Paying users are given the ability to upload custom voice samples to create new vocal styles using the company's voice cloning tool. [ 24 ]\n\n## Voice Library\nVoice Library is the company's feature for sharing unique voice profiles created using their Voice Design technology. These pre-designed voice profiles allow users to select a voice that best suits their needs, rather than creating one from scratch. [ 25 ] There are now more than 1,000 community-created voices in the library. Another tool called VoiceLab allows users to clone voices from just a few short snippets of audio and can create entirely new synthetic voices. [ 8 ]\n\n## AI Speech Classifier\nOn June 20, 2023, ElevenLabs released an AI recognition tool called the AI Speech Classifier, which it claims is the first of its kind. [ 8 ] The tool is accessible through an API and designed to determine if an uploaded audio sample originates from ElevenLabs' proprietary AI technology. [ 9 ] The company has expressed its intention to collaborate with other AI developers in creating a universal detection system that could be adopted industry-wide. [ 26 ]\n\n## Projects\nIn July 2023, ElevenLabs announced \"Projects\", a tool for creating long-form spoken content such as audiobooks and dialogue segments with contextually-aware synthetic or custom voices. [ 9 ] [ 27 ] The tool was released in September. In August, ElevenLabs expanded its voice generation capabilities to 28 languages. Using an in-house AI model, it automatically detects languages like Korean , Dutch , and Vietnamese , allowing for \"emotionally rich\" multilingual speech generation. The company also announced that its technology had officially exited its beta phase . [ 28 ] [ 29 ]\n\n## ElevenReader\nIn August 2024, ElevenLabs released ElevenReader, an app that converts textual content (such as PDFs, eBooks or articles) to audio. The app was made available on iOS, Android, and the web. [ 30 ]\n\n## AI Dubbing and voice products\nIn October 2023, ElevenLabs presented \"AI Dubbing\", a tool that is able to translate speech into more than 20 languages. The feature is capable of preserving the speaker's original voice, emotions, and intonation, by employing proprietary methods to handle tasks like noise removal, speaker differentiation, transcription, and synchronization of translated speech with the original audio. [ 31 ]\nIn May 2024, ElevenLabs shared samples from their text-to-music model, which became available for public use in July 2025. [ 32 ] In June 2024, ElevenLabs released the ElevenLabs Reader App on iOS and Android which allows users to listen to articles, PDFs, and ePubs with AI Voices on their phone. In July 2024, ElevenLabs released \"Voice Isolator\" which removes background noise from audio. [ 33 ] In November 2024, they released Conversational AI, a developer platform for launching interactive voice agents. [ 34 ] In February 2025, the company introduced a new platform that enables authors to create and publish AI-generated audiobooks directly on its Reader app. [ 35 ] Later that month, the company released Scribe, a speech-to-text model that transcribes audio with character-level timestamps and speaker diarization [ 36 ] with industry-leading word error rate according to internal benchmarks and third party tests from Artificial Analysis. [ 37 ]\nIn June 2025, ElevenLabs released Eleven v3, a new text-to-speech model that supports more than 70 languages, natural multi-speaker dialogue, and audio tags like [excited], [whispers], and [sighs]. [ 38 ]\n\n## Eleven Music\nIn August 2025, ElevenLabs launched Eleven Music, an AI music generator that enables users to generate studio-grade music from natural language prompts. [ 39 ] The platform was developed in collaboration with record labels, publishers, and artists, and is cleared for commercial use across various applications including film, television, podcasts, social media videos, advertisements, and gaming. Eleven Music provides control over genre, style, and structure, allowing users to create tracks with or without vocals in multiple languages including English, Spanish, German, and Japanese. The platform features advanced editing capabilities that enable users to modify individual sections of songs or entire compositions. Built with a proprietary AI music model developed by ElevenLabs, the system can generate real-time music with seamless genre and instrument blending while closely following complex, multi-layered prompts for lyrics, key, and tempo specifications. [ 40 ]\n\n## ElevenAgents\nIn February 2026, ElevenLabs released Expressive Mode in ElevenAgents. Expressive Mode combines two updates: Eleven v3 Conversational - a new emotionally intelligent, context-aware text-to-speech model, built on Eleven v3 and optimized for real-time dialogue and a new turn-taking system for better-timed responses with fewer interruptions. [ 41 ]\n\n## Reception\nFollowing its launch in January 2023, ElevenLabs gained rapid momentum and was commended for its voice output quality, fast generation times, and a \"generous free tier\". It has also been praised for its ability to accurately pronounce names with unique or uncommon pronunciations, addressing a common shortcoming in similar tools that often cater primarily to Western names. [ 42 ] The company reached over one million registered users between its launch and June 2023. [ 8 ] [ 9 ] [ 43 ]\nIn April 2025, ElevenLabs was featured in the Forbes AI 50 list. [ 44 ]\nElevenLabs was criticized after users were able to abuse its software to generate controversial statements in the vocal style of celebrities, public officials, and other famous individuals, [ 45 ] [ 46 ] [ 47 ] particularly attracting attention after users on 4chan used the tool to share hateful messages. [ 48 ] [ 49 ] [ 26 ]\n\n## Culture\nElevenLabs’ culture includes involvement in media and creative projects alongside its core technology development. [ 50 ] The company released the album The Next , a project built around AI-generated vocals, which involved collaborations with artists, producers, and developers working with synthetic voice tools. The album contains songs with varying levels of AI and human input, and the earnings from its streams go back to all participating artists. [ 51 ]\nIn addition to music, ElevenLabs produced the documentary series 11 Voices , which premiered at SXSW in 2026 [ 52 ] and features interviews with individuals working across artificial intelligence, audio production, and related fields, addressing topics such as voice synthesis, ethics, and creative practice. [ 53 ] [ 54 ]\n\n## See also\n- 15.ai , a research project using AI for text-to-speech using voices of popular fictional characters\n- Respeecher , a company performing speech-to-speech voice conversion\n- Speechify , an app and browser extension for text-to-speech conversion\n\n## References\n- ↑ Dharampal-Hornby, Maya (February 4, 2026). \"Founder Stories - ElevenLabs\" .\n- ↑ Dharampal-Hornby, Maya (February 4, 2026). \"ElevenLabs raises $500m Series D led by Sequoia\" . Sifted .\n- ↑ Martin, Iain (December 1, 2025). \"How A Tiny Polish Startup Became The Multi-Billion-Dollar Voice Of AI\" . Forbes . Retrieved June 12, 2026 .\n- ↑ \"Eleven Labs Inc. – LEI: 254900MCM69TO5IDN844\" . Bloomberg LEI . Retrieved August 8, 2026 .\n- ↑ Browne, Ryan (July 3, 2025). \"AI voice startup ElevenLabs pushes global expansion as it gears up for an IPO\" . CNBC . Retrieved August 5, 2026 .\n- ↑ Clark, Kate (February 4, 2026). \"Exclusive | Voice AI Startup ElevenLabs Raises $500 Million\" . The Wall Street Journal . Retrieved May 12, 2026 .\n- ↑ Kanetkar, Riddhi. \"This startup, founded by ex-Google and Palantir staffers, uses AI to generate realistic voiceovers. Here's the 14-slide pitch deck ElevenLabs used to raise $2 million\" . Business Insider . Retrieved February 9, 2023 .\n- 1 2 3 4 5 \"Now hear this: Voice cloning AI startup ElevenLabs nabs $19M from a16z and other heavy hitters\" . VentureBeat . June 20, 2023. Archived from the original on July 27, 2023 . Retrieved July 25, 2023 .\n- 1 2 3 4 5 Wiggers, Kyle (June 20, 2023). \"Voice-generating platform ElevenLabs raises $19M, launches detection tool\" . TechCrunch . Retrieved July 25, 2023 .\n- 1 2 Kanetkar, Riddhi. \"Hot AI startup ElevenLabs, founded by ex-Google and Palantir staff, is set to raise $18 million at a $100 million valuation. Check out the 14-slide pitch deck it used for its $2 million pre-seed\" . Business Insider . Retrieved July 25, 2023 .\n- ↑ Moon, Mariella. \"A new AI voice tool is already being abused to make deepfake celebrity audio clips\" . Engadget . Retrieved February 3, 2023 .\n- ↑ \"The trials and tribulations of AI voice tech\" . Financial Times . June 21, 2023 . Retrieved July 25, 2023 .\n- ↑ Hunt, Simon (June 20, 2023). \"AI firm ElevenLabs achieves $100 million valuation within months of launch\" . Evening Standard . Retrieved July 25, 2023 .\n- ↑ \"ElevenLabs Releases New Voice AI Products and Raises $80M Series B\" . January 22, 2024.\n- ↑ Knibbs, Kate. \"Researchers Say the Deepfake Biden Robocall Was Likely Made With Tools From AI Startup ElevenLabs\" . Wired . ISSN 1059-1028 . Retrieved Februar\n\n[page truncated at 15000 of 39854 characters]\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_6754436496160857157",
+    "name": "record_finding",
+    "args": {
+     "source_title": "ElevenLabs - Wikipedia",
+     "source_url": "https://en.wikipedia.org/wiki/ElevenLabs",
+     "date": "jan/2023",
+     "claim": "Em janeiro de 2023, a ElevenLabs lançou publicamente sua plataforma beta de síntese de fala e clonagem de voz, permitindo aos usuários gerar áudio realista e clonar vozes a partir de amostras.",
+     "stance": "supports",
+     "quote": "In January 2023, ElevenLabs publicly released its beta platform . [...] Paying users are given the ability to upload custom voice samples to create new vocal styles using the company's voice cloning tool."
+    },
+    "sig": "Ep8MCpwMAWkUfRPir/45wxm0ac5Trwndo9jcnSjxEaMRIW0wAb4dr3zTcbrI3yehWmF93x6UHa1fbeLduVBin0e01go5ZIEHm7tdugL66pBZwIRwD3hlR8vSha5sa1e3kiJNOANwtf/a1PlLnNQ93SEPnvSp+XyntExLk0TsTyYWLY1vEHhp2m9EZvMesX0GGgQKwb6tCxaOp4/W8yTtthySHvDOYJRpdylZAElEqagw3yS7eYzLt/QvwAJCyNXNfvHQIOLMBMZgeKkt2E6ibCqcrie8oageKnlCM7+nHlLYnTqXO/cRKIRH8pWvL406DeNFaq4UzQ1AyphnXwQiLIWxEFFKaQ37F96yz7vW+eEs7GEOGK6gNnzCPePWIkmtUTbml3GeI1F9xsLTDs70UdE2FjQ5dgh4L/brUbEWP1jm/6h+9eo2Mh1OjxPi2IyILR53SsmA6EYyQAD1Oghm1ibcnQtt13uM+Ie0dYQhAdb4oNg4TGQxEAs2R1yoRb9b4u+Egr762wJJ5JsuKGwaVRSttBVXw1QakcRpCiRxJdQLRd+0UBTJXnyFHKWeEfS9YRpHh2p0hz7EFG3DXc2TMv8sNg4APjCgun0btqrnyzx3Aq8btaULHPACG5qK2S3B9Sw1oV2AhqQFx6KP2WSWKgdgUdF9izoaz0LrVinpKmfMn/eHwg0zJ863hAD36FVp6ivmcSpEqNlnOgYSANsWgUviq4LlJvxYIeV/oX8BVHs68VBChsJsxnfIM4MxDpoaBtIKodeYeCCHVoam1wDutQ4lQW5bHd7nzNyE3bXzFSDAjmoKy9ZgTpjBjHuAlzzWA8lhekS90pk+es8PEmR4Kl3AjSvRfAPB6P3NtqHHmsOouhexeNdQsx0B5djOWbBgcXB6YMQ62ykfOCImg0uBakN0xvYEDz3EcASjAQVLDexGj1W+QNaoC6cS2grLY5u6kVbovqLAvJiQ9Ab2TAaejLNvSd4eYlvKHdEWt8eGkwB2XGIDSP3JmNYPX77lrXBZzz93UAywIdh6PHbKCjWSlgcC25+rd+JRL34duVRGv9dCTE/XC1ejWnARTn7dy+ZdtVYdO8PpuQ2lAq72lH9TnOSLjGQ9CciJFMpIKvgaRGlqJCrqVblUUI7fblxH0CXuxCYlERM0vxHF7yFN9W17p2VPItbuThN5Xi/WbHotwDojEmfjRz5keOg84rj1AYJhRdo2bdurvG3Gyf7xtTzsAYZy0POsigBek8s8WCLysdNrLNH0RY08pLBoZ/F1t6vlTcVv7FcW52IW2DyUunIuBpV1+CkcGWxOb8f7f5P7lMi17kk3BkKdEyDmTOOEUa8GM6POPZUAJyNEyrYRwCGDlUOnWrrLqUevwO/1ECpSNMeGd9zOADaZ8jxE82E9IyLH7lNMQW8/ssRm4+Lm08cwvvISNYXJe96A9TcmcggyPva+AvYOAVmurt4TsKemHmusrM6lmBrLBlSaR4P+yLNcMZYWuWDfrvvygRCfsWOZ30vaJxKTNB/wPj3YZT47CQx00EEdXC/Z8jszQYVLJ6QFWEugjo7WB6iAGoIZxB/+PEooQvkcHmGzjkndPR5v9ljcsmSWfgWhQaqYSqJOlwO7SHKlRnyKwBxjGAAu0uQjw+lKVrDKrqw9XJnNPGHRuqwP58m7W+bY2FlcChzayHW/NAKYw93wiaNL0Zpx/8eHvLwbu1EIH0zlGkMsFwo3XUqpLouujPukn0tbo4wJh/T1TzQrgSRUqQ8jw2A0XDl0lLEfRNyr+K9SbzfN5kv5VZAhV+3s0ks+Alhka62S6v0qsgBcuCJoDvJ53BAmkQ9sSCL/lzVc+9cgQAvWUhUMUHaP/5A4Wtma1+nZIdCRsOgt1OV0DyW8Jra4M1xnurypFkIWHcfxSBR0ovB1xdGOadlkTEmn+JQnBmDxbPJPrrGomA/NiUckp4qMCgZqgDQdxKnq4zzvXYeyL0Uq2oradKRmeKVGSRt3T5awIWgFwWzauwBLcFvsnCShLJYrpre91nXIubwN1SDm1soz00SBzg4OSTwh/6Dr3hCZ7HLO5HXUgd10MiRKj0CBPB3QNwsfc4RkCA=="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_6754436496160857157",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=1 quote_check=partial"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_9049490167990352877",
+    "name": "record_finding",
+    "args": {
+     "source_url": "https://en.wikipedia.org/wiki/ElevenLabs",
+     "source_title": "ElevenLabs - Wikipedia",
+     "claim": "Em junho de 2023, a ElevenLabs lançou o AI Speech Classifier, ferramenta criada para identificar se um arquivo de áudio foi gerado pela tecnologia de IA da própria empresa.",
+     "stance": "supports",
+     "date": "20/06/2023",
+     "quote": "On June 20, 2023, ElevenLabs released an AI recognition tool called the AI Speech Classifier, which it claims is the first of its kind. [...] designed to determine if an uploaded audio sample originates from ElevenLabs' proprietary AI technology."
+    },
+    "sig": "EpABCo0BAWkUfRNUlLVxqzyRv7L2LK4sCeJ12k6QjVSqC7jJxsVzdD5g885IQM3xe+XPXKv3BSd/CCkQUWxr8x0LBEnXFTGtHgOmKTfp1aYb74Ii86BCociIR6Z0aRBg9eUOEiW/90w8OfmUjEA1SeXAGem+OWZhn5qklmDjS2bkKFlZGblLze83q+sZLH5sHD5S"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_9049490167990352877",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=1 quote_check=partial"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_14919982232838035289",
+    "name": "record_finding",
+    "args": {
+     "date": "2023",
+     "claim": "Em 2023, a ElevenLabs lançou o ferramenta Projects (julho/setembro) para conteúdos de longo formato como audiolivros, expandiu para 28 idiomas em agosto saindo da fase beta, e em outubro lançou o AI Dubbing para traduzir falas em mais de 20 idiomas mantendo a voz e emoção originais.",
+     "source_title": "ElevenLabs - Wikipedia",
+     "source_url": "https://en.wikipedia.org/wiki/ElevenLabs",
+     "stance": "supports",
+     "quote": "In July 2023, ElevenLabs announced \"Projects\", a tool for creating long-form spoken content such as audiobooks and dialogue segments with contextually-aware synthetic or custom voices. [...] In August, ElevenLabs expanded its voice generation capabilities to 28 languages. [...] In October 2023, ElevenLabs presented \"AI Dubbing\", a tool that is able to translate speech into more than 20 languages."
+    },
+    "sig": "ErMBCrABAWkUfRNriCJZ475+UV46S3xL34+1rtXYFxIx/ULPXWJhumpJzcrP90qtffeRJhQ7XGMLona7TrH/rnpPgbTvpz1KGDXt90k5mqfVSg5kxCxFuATxBOttSDEleCA41yXvShmDsselmBCnbyuhSow9S1uaNnsqRczovbzeH/qPLWGuhiJCXHNrZgQVDP5+u3ltVUBEzuruytm148I2JLPF2ZyMyn6K6Vl4ghrTY0NIGuo="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_14919982232838035289",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=1 quote_check=partial"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_15484298620227661627",
+    "name": "record_finding",
+    "args": {
+     "date": "2024",
+     "source_url": "https://en.wikipedia.org/wiki/ElevenLabs",
+     "source_title": "ElevenLabs - Wikipedia",
+     "claim": "Em 2024, a ElevenLabs lançou o Voice Marketplace e AI Dubbing Studio (janeiro), o aplicativo ElevenReader/ElevenLabs Reader App para ouvir textos em iOS/Android (junho/agosto), o Voice Isolator para remoção de ruído (julho) e a plataforma Conversational AI para agentes de voz interativos (novembro).",
+     "stance": "supports",
+     "quote": "Additionally, the company announced a series of new products, including their Voice Marketplace, AI Dubbing Studio, and mobile app. [...] In June 2024, ElevenLabs released the ElevenLabs Reader App on iOS and Android which allows users to listen to articles, PDFs, and ePubs with AI Voices on their phone. In July 2024, ElevenLabs released \"Voice Isolator\" which removes background noise from audio. In November 2024, they released Conversational AI, a developer platform for launching interactive voice agents."
+    },
+    "sig": "Et0BCtoBAWkUfROOZS1kDl2XS7y4o+gwqnQCh9hwCt0c8z4DfwhsL86X5On5cqkYnSuac5XtTzOoQTTahDbonjgRKm5FndJcirYAHA4lu56eVkoD2Jnm0vJvIMB/EfPDu+mqC/6xIPFZJq460uUE4YfnKv7ChuUJDpLisOf7M6gwCjNHPUuhMxROJSvRWnux3Suudm7Rxk5PMzVbuRaQWkxQWHj/erYgSRt67l1N0Al0m0h4qGAIldW5TSo9pB65NJbu+D/5CJM/s2ZyWbz0QvFxEt3zLf3LnZgbO4VqjIY="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_15484298620227661627",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=1 quote_check=partial"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_7911285335636001890",
+    "name": "record_finding",
+    "args": {
+     "source_title": "ElevenLabs - Wikipedia",
+     "claim": "Em 2025 e 2026, a ElevenLabs lançou o modelo de transcrição Scribe (fevereiro de 2025), o modelo Eleven v3 com suporte a mais de 70 idiomas e tags de áudio emocionais (junho de 2025), o gerador de música Eleven Music (agosto de 2025) e o Expressive Mode no ElevenAgents (fevereiro de 2026).",
+     "stance": "supports",
+     "quote": "Later that month, the company released Scribe, a speech-to-text model that transcribes audio with character-level timestamps and speaker diarization [...] In June 2025, ElevenLabs released Eleven v3, a new text-to-speech model that supports more than 70 languages, natural multi-speaker dialogue, and audio tags like [excited], [whispers], and [sighs]. [...] In August 2025, ElevenLabs launched Eleven Music, an AI music generator that enables users to generate studio-grade music from natural language prompts. [...] In February 2026, ElevenLabs released Expressive Mode in ElevenAgents.",
+     "source_url": "https://en.wikipedia.org/wiki/ElevenLabs",
+     "date": "2025-2026"
+    },
+    "sig": "EtcBCtQBAWkUfROC3RNp3zQ/p8BK80n2xU3zDea8TCedpc3O/wltyNcpPOxZg+1Jf9eij25QcemuYqR3H5pMmS2EzZN1Sv40OmGpxkFryK2+MM33k9hkfv4QgY1n7Lk2nw8XUtijDvLJDIVG/EeEHPzUBfUmxZdrymubYT6wRkNa/RnHikgfRJu90njet2H/B9gGmvynJ/994ncOc4xhCqSLs0C0PWOdSO7q7xMeRvGOIo0q66QiCl9EtM8Yy51NhotW7rA/Rd1gi67gp8XNYWrGFlWyCkIlnzY="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_7911285335636001890",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=1 quote_check=partial"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_8765295783735153245",
+    "name": "fetch_page",
+    "args": {
+     "url": "https://builtin.com/articles/what-is-elevenlabs"
+    },
+    "sig": "EqMDCqADAWkUfRNxgFnjErkU79n+hto0rfeDqG3jPZLz4E3N9lWmnU9EQYlNHfChwGEGt4UL1/DK6CtyssyFnRBoRGJas5xJ6cn5dq40riFXoBVap924Hx6TNPMBIZDAkLDLWBchI+6RRLVBmUj9Kc0Vl0Sr0oH/jW82le57RJxLfRWbm+eqEYwk4Yf62gXNCq0dIc99aWZCAgt4YOIKUlhmhyDEMo78ODrBoKpSzxJAfbi7VFxzhEZs3Txb3o+qU/CPKi6suK7SpPv+pBBUWNPFU8VaPuHgHmWWL5u0b/dpGMK2uRINTIlTnRv3TLUKL5PGMc4EpJd90caDpOufAh+YadaW9R9SJ2tyOerMr117mlIda90dzO7jCTLs9JdwjFmT52eciZ888ULjxqzUELfeJ1Sr+m9JYbbOHYFdhXsGzgrueGkUAPEY107IcBOq8JkqFsuKFzd1qsXfN3rKNIkxtk3mFnbhzyS22Pc8f7UubNDJ4fWP9CITx0QUkSJxx2D+SBGFWFWcWsVy2bxX5uz14Fa8mc2KYPidc0ysGDdK0f0KtqI="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_8765295783735153245",
+    "name": "fetch_page",
+    "result": "<<<UNTRUSTED source=web>>>\nURL: https://builtin.com/articles/what-is-elevenlabs\nTITLE: What Is ElevenLabs? The AI Voice Platform, Explained | Built In\n\nArtificial intelligence can now generate speech that could easily be confused with a human voice. ElevenLabs is at the forefront of developing generative AI models that can speak with natural-sounding pauses, emotional inflection and distinctive accents.\n\n## What Is ElevenLabs?\nElevenLabs is an AI audio platform that generates realistic speech, clones authorized voices, translates and transcribes audio and creates music and sound effects. Creators use it for videos, podcasts and audiobooks, and businesses use its conversational AI agents to handle customer inquiries.\nCreators can use its tools to narrate a video, create an audiobook or create voices for characters in a podcast. Businesses, meanwhile, can use its technology to handle routine customer service inquiries, translate marketing materials for international audiences or incorporate voice AI into their own software products.\nHowever, realistic AI-generated speech also raises questions about privacy, consent, fraud and the future of voice-related creative work. Understanding the nuances of ElevenLabs’ technology and its policies can help individuals and organizations determine whether it's the right tool for their needs.\nLearn More From Built In’s Reporting Team Flock Cameras Are Everywhere. Here’s What They Actually Do.\n\n## What Is ElevenLabs?\nElevenLabs is a London-based company that develops voice and audio generation technology. It builds AI models that generate natural-sounding speech, recognize spoken language, reproduce voices, translate audio and create other forms of audio content.\nThe company was founded in 2022 by Piotr Dąbkowski, a former Google machine learning engineer, and Mateusz Staniszewski, an ex-Palantir strategist. The Polish co-founders initially set out to improve the quality of film dubbing, which led them to develop the backbone of their audio AI models. The company is best known for developing text-to-speech technology that generates natural-sounding speech, complete with pauses and emotional expression. It has since broadened its offerings to include voice cloning, conversational AI agents, music, sound effects and speech transcription. Its models can now speak, listen and translate in more than 90 languages.\nElevenLabs’ technology was initially popular with creators, but it has become increasingly popular with enterprise customers, which now make up about 55 percent of its roughly $600 million in annual recurring revenue . ElevenLabs’ conversational agents handle more than 15 million conversations per week, disbursing refunds, renewing insurance policies and upgrading phone plans on behalf of the world’s largest tech, insurance and telecom companies. The company announced in September 2026 that it is valued at $22 billion, and it has been reported the company aims to go public in 2028.\nAI on Built In Why Is Everyone Freaking Out About Recursive Self-Improvement?\n\n## What Are ElevenLabs’ Products?\nElevenLabs’ offerings can be understood through three main product families, each designed for a different type of user or workflow.\n\n## ElevenCreative\nElevenCreative provides no-code tools for generating, editing and localizing audio and visual content. It’s designed primarily for creators, producers, marketing teams and media companies that need to produce content without managing separate tools for every task.\nIts capabilities include:\n- Text-to-speech: Converts scripts and other written material into spoken audio using a range of different vocal styles, accents and deliveries.\nText-to-speech: Converts scripts and other written material into spoken audio using a range of different vocal styles, accents and deliveries.\n- Voice cloning: Reproduces a user’s voice with AI or generates a new voice based on a written description.\nVoice cloning: Reproduces a user’s voice with AI or generates a new voice based on a written description.\n- AI dubbing: Translates audio and video into more than 90 languages.\nAI dubbing: Translates audio and video into more than 90 languages.\n- Music and sound effects: Generates original audio for videos, games, advertisements and other projects.\nMusic and sound effects: Generates original audio for videos, games, advertisements and other projects.\n- Image and video generation: Creates visual assets and videos using integrated generative AI models.\nImage and video generation: Creates visual assets and videos using integrated generative AI models.\n- Voice changing and audio editing: Transforms existing recordings with a different voice or refines audio by clearing up any imperfections.\nVoice changing and audio editing: Transforms existing recordings with a different voice or refines audio by clearing up any imperfections.\nElevenCreative also includes Studio, a browser-based production workspace that allows users to transform voice, music, sound effects, captions and video into finished assets.\n\n## ElevenAgents\nElevenAgents is a platform for building, deploying and managing conversational AI agents that can provide customer support and other tasks. An AI agent could, for example, answer customer questions, schedule appointments or help process routine service requests, escalating more complex tasks to a human employee.\nBusinesses can configure agents with instructions, connect them to external tools and software, and establish guardrails to influence how they respond. The company says its agents can handle interruptions, manage conversational turn-taking and ground responses in a knowledge base specific to that company.\nElevenLabs also offers Reception AI, a purpose-built, ready-to-deploy agent that can handle many of the duties of a phone receptionist, such as fielding incoming calls and other routine administrative tasks.\n\n## ElevenAPI\nElevenAPI allows software developers to integrate text-to-speech, transcription and other generative audio capabilities into their own applications via API . This gives developers the technical control, flexibility and customization they need to create a specific software product.\nFor example, a developer building a language learning app could integrate ElevenLabs’ API to let users listen to vocabulary, lessons and example conversations in natural-sounding voices. The app could also use speech-to-text to transcribe the language learner’s spoken responses. Both features would work directly within the app’s existing interface, with ElevenLabs providing the underlying audio technology through its API.\nMore From Jeff Rumage Meta Wants AI Everywhere. Its New Devices Show How.\n\n## What Is ElevenLabs Used For?\nElevenLabs has applications across customer service, content creation, software development and other industries.\n\n## Customer Service and Business Operations\nBusinesses can deploy conversational AI agents to answer calls, respond to common questions, schedule appointments and help customers navigate routine workflows. These applications can be particularly useful for providing service outside business hours or answering commonly asked questions, freeing up customer service representatives to handle more complex inquiries.\n\n## Video Production and Social Media\nCreators can use ElevenLabs to generate narration for YouTube videos, social media posts, advertisements and educational content. Instead of recording every voiceover themselves, they can produce speech from scripts and make revisions by editing text. Creators can also use ElevenLabs’ tools to generate sound effects or translate materials into different languages.\n\n## Audiobooks and Podcasts\nPublishers and independent authors can use text-to-speech tools to produce audiobooks at minimal expense. With ElevenReader, the company’s subscription-based audiobook app, users can create narrations for their own documents and access audiobooks read aloud by AI narrators, some of which can be customized to meet the listeners’ preferences. Podcasters can also use ElevenLabs’ tools to transform recorded voices or create localized versions of their shows.\n\n## Software Development\nDevelopers can integrate ElevenLabs’ capabilities into applications using its APIs and software development tools. Developers can use these tools to incorporate voice-enabled interfaces, transcription features and real-time conversational agents into a software application. Rather than building every audio-processing component from scratch, developers can use the company's existing infrastructure and configure it for their needs.\n\n## Music Creation\nElevenLabs is experimenting with a foray into the music world. The company announced in September 2026 that it will partner with Universal Music Group to launch an AI-powered music creation platform, giving fans a way to remix and mashup music from participating artists. The two companies also plan to collaborate in the development of AI audio products for artists.\n\n## Global Communications\nCompanies producing training materials, marketing videos or educational resources for international audiences can use AI dubbing to create materials in multiple languages without arranging separate recording sessions for every market. Of course, companies should still review the content for accuracy, particularly in situations involving specialized terminology, culturally specific references or legally significant information.\n\n## Accessibility and Voice Restoration\nSpeech generation tools can provide spoken access to written material for people who are blind or have low vision. AI voice generation can also help people communicate when illness or injury has affected their ability to speak. By synthesizing recordings taken before they lost their voice, these individuals can communicate with a more authentic, personalized voice instead of a generic computer-generated voice.\nKeep Reading Who Is Jeff Bezos? Inside Amazon, Blue Origin and His New AI Venture\n\n## Benefits of ElevenLabs\nOne of ElevenLabs’ biggest advantages is the range of audio-related tasks it supports within a single platform. A creator or business can generate speech, edit voices, transcribe recordings and translate content without necessarily relying on separate providers for every step.\nEfficiency is another major benefit. Generating narration from a script can be faster than coordinating recording sessions, especially when a project requires many revisions, multiple speakers or different languages. AI voice agents can also respond to routine business inquiries without requiring a human employee to handle every interaction.\nThe technology offers considerable flexibility. Users can select an existing voice, create a custom voice or clone a voice with appropriate authorization. Different models are optimized for different needs, including expressive narration and lower-latency conversational applications. This gives creators and developers options for balancing authenticity, speed and cost.\n\n## Concerns About ElevenLabs’ Voice AI\nDespites its technological innovation and business benefits, ElevenLabs' voice AI  technology has drawn scrutiny over its potential for fraud and misinformation, its data privacy practices and its impact on working voice actors.\n\n## Fraud and Misinformation\nVoice cloning can create an audio recording of someone saying something they never actually said, which could be used to facilitate fraud or spread misinformation.\nIn 2024, ElevenLabs came under fire when a political consultant cloned then-President Joe Biden’s voice for a robocall campaign that discouraged New Hampshire voters from voting in the presidential primary . The Federal Communications Commission imposed a $6 million fine on the political consultant responsible. ElevenLabs, meanwhile, has restricted clones of certain public figures’ voices and required consent confirmation for voice cloning. It’s also developed an AI Speech Classifier for checking whether audio may have been generated using its technology.\nElected officials have publicly questioned what ElevenLabs and other AI voice companies are doing to prevent scammers from cloning someone’s voice, like a friend or family member, to obtain money or gain access to sensitive information.\n\n## Privacy and Data Handling\nBy default, ElevenLabs retains voice recordings and other personal data to train its AI models. The company says it does not use data from enterprise customers for AI training, and on some products, it offers a “Zero Retention Mode” that deletes data once the request is completed. The company also gives non-enterprise users the option to opt out of sharing their data for AI training.\nSimilar to other AI companies, ElevenLabs uses publicly available or third-party information to train its models, which has raised concerns about unauthorized usage. In May 2026, a group of Chicago journalists, podcasters and voice actors sued ElevenLabs and eight other big tech companies for allegedly using their voices to train AI models. Filing their lawsuit in Illinois, which has the strongest biometric privacy laws in the country, the plaintiffs claimed ElevenLabs and other tech companies stole their “voiceprint,” which they say is a mathematical representation of their unique voice.\n\n## Undermining Artists\nWhen actor Michael Caine agreed to have his voice cloned for an audiobook retelling of Homer’s “The Odyssey,” some in the media industry began to wonder if AI audiobooks would become a trend that would undermine the value of working voice actors.\nBut AI audiobooks haven't reduced the demand for voice actors yet, as many still find actors to be more emotive than even ElevenLabs’ most advanced models. Only 16 percent of audiobook listeners have reported listening to an AI-voiced audiobook, according to an Audio Publishers Association survey , and AI audiobooks made up less than half of a percent of the audiobook industry’s revenue in 2025.\nTech News on Built In Tesla’s Cybercab Is Finally Here. Now Comes the Hard Part.\n\n## Is ElevenLabs Safe to Use?\nElevenLabs can be used safely for many legitimate creative and business purposes, but safety depends on how the technology is used and what information users provide.\nPerhaps the biggest area of concern is data privacy. ElevenLabs says that the company may retain and train its AI on user data unless users have opted out or are using an enterprise-level subscription. Users should be mindful of these policies, particularly if they are submitting confidential business information or personal details. Businesses handling regulated information should verify that their chosen product and contractual arrangements meet their security and compliance requirements.\n\n## Notable ElevenLabs Developments\nSince its inception, ElevenLabs has moved quickly — establishing itself as one of the best known synthetic speech companies, expanding from voice cloning into broader audio generation and scaling rapidly into an enterprise business. Below is a timeline of the company’s most significant developments.\n\n## ElevenLabs Enables SoundCloud Publishing (November 2026)\nElevenLabs rolled out an integration with So\n\n[page truncated at 15000 of 19413 characters]\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_11663833981733705789",
+    "name": "subquestion_done",
+    "args": {
+     "summary": "A ElevenLabs evoluiu de uma plataforma beta de síntese de fala e clonagem de voz em 2023 para um ecossistema de áudio IA abrangente em 2026, dividido em três linhas principais: ElevenCreative (ferramentas para criadores), ElevenAgents (agentes conversacionais para empresas) e ElevenAPI (integração para desenvolvedores). Entre seus marcos tecnológicos, destacam-se o lançamento do AI Speech Classifier, dublagem em diversos idiomas, ElevenReader, Scribe, modelos Eleven v3, Eleven Music e a plataforma de agentes de voz interativos.",
+     "confidence": "high"
+    },
+    "sig": "EsYDCsMDAWkUfRNG50i3ZVP+wPhhTu8rOe498UXyjCqWT4gMX6n69qPs0LNSUrYOtGG+e84IgQ3YXt8F4IWuFUGbzcI9muts5KiR5gSsbUxwgmGA4pMF7Z/BRcGPE1T3fGKvh7z+imrE/9UAyNoZjsEXQMdqISg/WS0K8fK8tM2AuOKBF5tHYFS7cY/F6c3CuLW+uKli9tD+FsAfZdHKicbJUR6Tj5X0c86BZ43d7J3IBF8isaTIn7Ibc0ChURBoPMqDDv0wkU2Ez/hIZCL9OqSLRmehHvSDAYAIe/kZXLsQzqRXhMPe9HWTOuQFP5BWYRAcvDNUpBlUSsMkQSwi6og/lNiqsMHcvylo0PSuCJN4xgYHQfWGWM+MHd7nxAKwfN4qVmbIfohHqMRycFLuxTAwWysFBIaKBK/HylNFFmtC68ePAlXE036ClDJfJ10K+tFeBbijQ5/PeivyMLHbPIehT6aLaYHRzwVQmwZcSQCd+BcJUWQE0JKu64I8hEBcd4d1prqJFis+Rh2e036ErOF4CLo2jvK1gRLHChLb6c3aDOiAvRdpHT5RphBYPxYUtOaLXy9ZBZp07k6Tvsmltk60SChSUPuVeg=="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_11663833981733705789",
+    "name": "subquestion_done",
+    "result": "status=failed action=subquestion_done reason=\"not yet: findings for this question come from 1 page(s) read in full. Read at least 1 more independent source(s) with fetch_page and record what they say — unless you have searched and there are none; then call this again and say so.\" -- This did NOT happen. Tell the user so in their own language, with the reason. Do not claim any part of it succeeded."
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_12335410565650746290",
+    "name": "record_finding",
+    "args": {
+     "claim": "Em 2026, a plataforma ElevenLabs é estruturada em três famílias de produtos: ElevenCreative (ferramentas de geração e edição para criadores), ElevenAgents (plataforma de agentes conversacionais de atendimento) e ElevenAPI (para desenvolvedores integrarem recursos de áudio IA).",
+     "source_title": "What Is ElevenLabs? The AI Voice Platform, Explained | Built In",
+     "stance": "supports",
+     "source_url": "https://builtin.com/articles/what-is-elevenlabs",
+     "quote": "ElevenLabs’ offerings can be understood through three main product families, each designed for a different type of user or workflow. ElevenCreative provides no-code tools for generating, editing and localizing audio and visual content. [...] ElevenAgents is a platform for building, deploying and managing conversational AI agents [...] ElevenAPI allows software developers to integrate text-to-speech, transcription and other generative audio capabilities into their own applications via API .",
+     "date": "2026"
+    },
+    "sig": "EtMECtAEAWkUfRMsPu85QcvSqLT++wBU9oVPPOXWa4X2KogfC3YLkicSEJKoMZhbzME54orAd/wFrI1HStoICHNGytxahaBPTqBqVq+lbzyaNZ7ulHf7Cp8lXuCBoIrJvp41tO+fXOJj+XQI4VIeF6oJRYK2HLe9VFshzyINQ0FZbPJcIoAN3Jzg/8x6hJHjjEImJR4U1FMdO1A30n9jpqLWbNFcmk7v/zClKW/+rMTwgWkfIrDTo507hRKHYet4YEHqR4MEgW+FXv/tugVkS3nxOg6RTO26pNytIp/CMLsIptgIjS2/GgsrgFVXqSeAl6Y+9l9ZGnkeIiNMB9a6mUZjlsfaJb/DSjnr6aSOJzwTErKHneCv28wqHkO9YqGr9J3QKwkbL+yulyNQWVVZvVygdudiXz9jpvMZZDsDvZ96VrLEL+Z+2fLmg9z3rX126n9nRSueSWkPEvzOOrvnuqNpPsCB60ue1aWP5i09FqlvzZtcqzYKqcQppwP0JrEZ/UmzxHjPxmO4OPPx9XIsZNOhgb63fqird2421yrx/+0PQVtaUnZ/X3HiL4aCPJMmy6VdirPjYbhwsaPfRaxsVCTK/dntU75D6Lrz+WQMA0UmrBV2XJlPQ5iaron2DV+4oq3rsmsi5o4fDzHrdCeU8udR1ks9W6CSdnTKQhiszmo0Lhn6KPG+2U8ex/AT39PoQPSU49iNmQC84gPHMBxk4Ej7iKtNtwNhdh5actiutjkbn+cLjDy6JqouWIKENQojk95h2Ky9+eBC6w39fC/3FZXQ9x+ogw=="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_12335410565650746290",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=7 quote_check=partial"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_5712442236386428629",
+    "name": "subquestion_done",
+    "args": {
+     "summary": "A ElevenLabs evoluiu de uma plataforma beta de síntese de fala e clonagem de voz em 2023 para um ecossistema de áudio IA abrangente em 2026, dividido em três linhas principais: ElevenCreative (ferramentas para criadores), ElevenAgents (agentes conversacionais para empresas) e ElevenAPI (integração para desenvolvedores). Entre seus marcos tecnológicos, destacam-se o lançamento do AI Speech Classifier, dublagem em diversos idiomas, ElevenReader, Scribe, modelos Eleven v3, Eleven Music e a plataforma de agentes de voz interativos.",
+     "confidence": "high"
+    },
+    "sig": "EroBCrcBAWkUfROR9aAmyaUhQ/vmwpGEBGFJ4sfVPAiGARLJRAYnbN8w/fWuDe4/FiMR5qVvW+MzoNJz1eKT+pA6whdlv1GAT62xZ+4xF2jEZKF3wJqEq03AEAGpZc48QQ4Bpo+bHtQkBUsPPhnMQLiVA5adxcd96z32pDK+XQv1eQaQhDW55/Ew/92AnoLIQfVeavhnl7crTmQJtnCqbPkRsvpIMDduwkCDcCuV33ICPOwXHff97lhE6Zmj"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_5712442236386428629",
+    "name": "subquestion_done",
+    "result": "status=done action=subquestion_done question=4"
+   }
+  ]
+ }
+]

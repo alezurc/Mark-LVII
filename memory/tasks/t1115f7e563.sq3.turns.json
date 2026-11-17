@@ -1,0 +1,382 @@
+[
+ {
+  "role": "user",
+  "text": "[RESEARCH GOAL] Apresentar a história detalhada da ElevenLabs, cobrindo fundadores, data de fundação, missão, modelo de negócios e principais marcos e lançamentos até 2026.\n[THE PLAN]\n  1. Quem são os fundadores da ElevenLabs, quando a empresa foi fundada e qual foi a motivação e missão inicial?  (done)\n  2. Quais foram as primeiras rodadas de investimento e marcos iniciais da ElevenLabs (2022-2023)?  (done)\n  3. Quais foram os grandes marcos de financiamento, valuation e expansão em 2024 (ex: Series B, status de unicórnio)?\n  4. Quais são os principais produtos, modelos de IA e inovações tecnológicas lançados pela ElevenLabs até hoje?\n  5. Quais foram os desenvolvimentos, marcos corporativos, rodadas adicionais e produtos lançados entre 2025 e 2026?\n\n[NOW: QUESTION 3] Quais foram os grandes marcos de financiamento, valuation e expansão em 2024 (ex: Series B, status de unicórnio)?\nSuggested searches: ElevenLabs Series B valuation unicorn 2024 funding; ElevenLabs major announcements partnerships 2024\nTime for this question: about 2.9 minutes, 30 rounds."
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_17687881195209221295",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs Series B funding valuation unicorn 2024"
+    },
+    "sig": "EnMKcQFpFH0T+wt0miT9RDm51fm4w3Jcnl9xgQUG6KFzGdzj+XiAz1+i28vpLYqttZMc/bql5ZK4rVgFVexIJxPLHGX9v0SsudUb3owWw4kmySmZs3z329YVf/aFqg/LTp0qjNfrjmSoCS38LEsSndJcVVCS"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_17687881195209221295",
+    "name": "search_web",
+    "result": "<<<UNTRUSTED source=web>>>\nResults for: ElevenLabs Series B funding valuation unicorn 2024\n1. ElevenLabs’ $80M Series B: Investors, Plans and What Happened ...\n   https://www.cloudspress.com/elevenlabs-80-million-series-b-what-it-funded-and-what-happened-next/\n   Sep 28, 2026 · ElevenLabs announced the Series B on January 22, 2024. The company said it raised $80 million and reached an approximately $1.1 billion valuation, making it a unicorn by the conventional venture-capital definition of a privately held company valued at $1 billion or more.\n2. Voice cloning startup ElevenLabs lands $80M, achieves unicorn ...\n   https://techcrunch.com/2024/01/22/voice-cloning-startup-elevenlabs-lands-80m-achieves-unicorn-status/\n   Jan 22, 2024 · ElevenLabs, a startup creating AI-powered tools to generate voices, has raised a fresh round of capital and achieved unicorn status.\n3. ElevenLabs's $80 million Series B creates AI unicorn, source ...\n   https://fortune.com/2024/01/22/ai-unicorn-andreesen-horowitz-eleven-labs-venture-capital-series-b-tech/\n   Jan 22, 2024 · ElevenLabs, a startup that uses AI technology to create voice imitations, has achieved unicorn status, a person familiar with the matter said. Its $80 million Series B funding round has...\n4. ElevenLabs Becomes First Voice AI Unicorn With $80 Million ...\n   https://www.maginative.com/article/elevenlabs-becomes-first-voice-ai-unicorn-with-80-million-series-b/\n   Jan 22, 2024 · London-based voice AI startup ElevenLabs announced today it has raised $80 million in a Series B funding round. This brings the total amount raised so far to $101M and puts its valuation at an impressive $1.1 billion.\n5. ElevenLabs $80M Series B: Voice AI's First Unicorn\n   https://khaby.ai/deals/elevenlabs-series-b-2024/\n   Jan 22, 2024 · In January 2024, ElevenLabs closed an $80 million Series B round led by Andreessen Horowitz (a16z), with participation from Nat Friedman, Daniel Gross, Sequoia Capital, Smash Capital, and SV Angel.\n6. ElevenLabs Series B — $80M | NeuronFeed\n   https://neuronfeed.com/funding/97\n   ElevenLabs raised $80M in its Series B round on Jan 22, 2024, led by Andreessen Horowitz.\n7. Voice AI Startup ElevenLabs Emerges as a Unicorn After Latest ...\n   https://www.blockchain-council.org/news/elevenlabs-emerges-as-a-unicorn-after-latest-round-of-fundraising/\n   Jan 25, 2024 · This achievement catapulted the company into the elusive unicorn club, signifying a valuation of over $1 billion, as confirmed on Monday, January 22, 2024. BREAKING: AI Startup ElevenLabs reaches unicorn status (up from $100M) with an $80M Series B co-led by Andreessen Horowitz, Nat F\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_8428753838031930544",
+    "name": "fetch_page",
+    "args": {
+     "url": "https://techcrunch.com/2024/01/22/voice-cloning-startup-elevenlabs-lands-80m-achieves-unicorn-status/"
+    },
+    "sig": "EnMKcQFpFH0TNK1QZqvE6SGdWSBJs+Mee+B0kREwGtEsmoi0cWHZaI+8iYZZmJxwHvep7X9Z/DSS67Jeeey6QgorNdf0acQcQB4C3ElBJeVqjNrqaCNJoQsBtf6M/3mbxbQohvf4lVli1/S5DO7K4ulLogsG"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_8428753838031930544",
+    "name": "fetch_page",
+    "result": "<<<UNTRUSTED source=web>>>\nURL: https://techcrunch.com/2024/01/22/voice-cloning-startup-elevenlabs-lands-80m-achieves-unicorn-status/\nTITLE: Voice cloning startup ElevenLabs lands $80M, achieves unicorn status | TechCrunch\n\nThere’s a lot of money in voice cloning.\nCase in point: ElevenLabs , a startup developing AI-powered tools to create and edit synthetic voices, today announced that it closed an $80 million Series B round co-led by prominent investors, including Andreessen Horowitz, former GitHub CEO Nat Friedman and entrepreneur Daniel Gross.\nThe round, which also had participation from Sequoia Capital, Smash Capital, SV Angel, BroadLight Capital and Credo Ventures, brings ElevenLabs’ total raised to $101 million and values the company at over $1 billion (up from ~$100 million last June ). CEO Mati Staniszewski says the new cash will be put toward product development, expanding ElevenLabs’ infrastructure and team, AI research and “enhancing safety measures to ensure responsible and ethical development of AI technology.”\n“We raised the new money to cement ElevenLabs’ position as the global leader in voice AI research and product deployment,” Staniszewski told TechCrunch in an email interview.\nCo-founded in 2022 by Piotr Dabkowski, an ex-Google machine learning engineer, and Staniszewski, a former Palantir deployment strategist, ElevenLabs launched in beta around a year ago. Staniszewski says that he and Dabkowski, who grew up in Poland, were inspired to create voice cloning tools by poorly dubbed American films. AI could do better, they thought.\nToday, ElevenLabs is perhaps best known for its browser-based speech generation app that can create lifelike voices with adjustable toggles for intonation, emotion, cadence and other key vocal characteristics. For free, users can enter text and get a recording of that text read aloud by one of several default voices. Paying customers can upload voice samples to craft new styles using ElevenLabs’ voice cloning.\nIncreasingly, ElevenLabs is investing in versions of its speech-generating tech aimed at creating audiobooks and dubbing films and TV shows, as well as generating character voices for games and marketing activations.\nLast year, the company released a “speech to speech” tool that attempts to preserve a speaker’s voice, prosody and intonation while automatically removing background noise, and — in the case of movies and TV shows — translates and synchronizes speech with the source material. On the roadmap for the coming weeks is a new dubbing studio workflow with tools to generate and edit transcripts and translations and a subscription-based mobile app that narrates web pages and text using ElevenLabs voices.\nElevenLabs’ innovations have won the startup customers in Paradox Interactive (the game developer whose recent projects include Cities: Skylines II and Stellaris) and The Washington Post — among other publishing, media and entertainment companies. Staniszewski claims that ElevenLab users have generated the equivalent of more than 100 years of audio and that the platform is being used by employees at 41% of Fortune 500 companies.\nBut the publicity hasn’t been totally positive.\nThe infamous message board 4chan, known for its conspiratorial content, used ElevenLabs’ tools to share hateful messages mimicking celebrities like actress Emma Watson. The Verge’s James Vincent was able to tap ElevenLabs to maliciously clone voices in a matter of seconds, generating samples containing everything from threats of violence to racist and transphobic remarks. And over at Vice, reporter Joseph Cox documented generating a clone convincing enough to fool a bank’s authentication system.\nIn response, ElevenLabs has attempted to root out users repeatedly violating its terms of service, which prohibits abuse, and rolled out a tool to detect speech created by its platform. This year, ElevenLabs plans to improve the detection tool to flag audio from other voice-generating AI models and partner with unnamed “distribution players” to make the tool available on third-party platforms, Staniszewski says.\nElevenLabs has also faced criticism from voice actors who claim that the company uses samples of their voices without their consent — samples that could be leveraged to promote content they don’t endorse or spread mis- and dis-information. In a recent Vice article, victims recount how ElevenLabs was used in harassment campaigns against them, in one example to share an actor’s private information — their home address — using a cloned voice.\nThen there’s the elephant in the room: the existential threat platforms like ElevenLabs pose to the voice acting industry.\nMotherboard writes about how voice actors are increasingly being asked to sign away rights to their voices so that clients can use AI to generate synthetic versions that could eventually replace them — sometimes without commensurate compensation. The fear is that voice work — particularly cheap, entry-level work — will eventually be replaced by AI-generated vocals and that actors will have no recourse.\nSome platforms are trying to strike a balance. Earlier this month, Replica Studios, an ElevenLabs competitor, signed a deal with SAG-AFTRA to create and license digital replicas of the media artist union members’ voices. In a press release, the organizations said that the arrangement established “fair” and “ethical” terms and conditions to ensure performer consent — and negotiating terms for uses of digital voice doubles in new works.\nEven this didn’t please some voice actors, however — including SAG-AFTRA’s own members .\nElevenLabs’ solution is a marketplace for voices. Currently in alpha and set to become more widely available in the next several weeks, the marketplace allows users to create a voice, verify and share it. When others use a voice, the original creators receive compensation, Staniszewski says.\n“Users always retain control over their voice’s availability and compensation terms,” he added. “The marketplace is designed as a step towards harmonizing AI advancements with established industry practices, while also bringing a diverse set of voices to ElevenLabs’ platform.”\nVoice actors may take issue with the fact that ElevenLabs isn’t paying in cash, though — at least not at present. The current setup has creators receiving credit toward ElevenLabs’ premium services (which some find ironic, I’d wager).\nPerhaps that’ll change in the future as ElevenLabs — which is now among the best-funded synthetic voice startups — attempts to beat back upstart competition like Papercup, Deepdub, Acapela, Respeecher and Voice.ai as well as Big Tech incumbents such as Amazon, Microsoft and Google. In any case, ElevenLabs, which plans to grow its headcount from 40 people to 100 by the end of the year, intends on sticking around — and making waves — in the fast-growing synthetic voice market.\nTopics\nWhen you purchase through links in our articles, we may earn a small commission . This doesn’t affect our editorial independence.\nAI Editor\nGet an Early Peek at the Next TechCrunch Disrupt Disrupt, Startup Battlefield, and more will return next year, and you can be at the front of the line. Sign up for our waitlist\n\n## Most Popular\n- Where was Nvidia’s security team? Connie Loizos\n\n## Where was Nvidia’s security team?\nWhere was Nvidia’s security team?\n- Connie Loizos\n- Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang Anthony Ha\n\n## Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang\nElon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang\n- Anthony Ha\n- Microsoft’s latest email outage turned into a full-blown global cloud crisis Zack Whittaker\n\n## Microsoft’s latest email outage turned into a full-blown global cloud crisis\nMicrosoft’s latest email outage turned into a full-blown global cloud crisis\n- Zack Whittaker\n- Jensen Huang didn’t show confidence in his successor, report says Ivan Mehta\n\n## Jensen Huang didn’t show confidence in his successor, report says\nJensen Huang didn’t show confidence in his successor, report says\n- Ivan Mehta\n- Jensen Huang was having a third affair, Reuters reports Russell Brandom\n\n## Jensen Huang was having a third affair, Reuters reports\nJensen Huang was having a third affair, Reuters reports\n- Russell Brandom\n- Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks Aisha Malik\n\n## Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks\nAnthropic launches Claude Meetings to turn workplace discussions into plans and tasks\n- Aisha Malik\n- Musk says Tesla will refund some Cybertruck deposits, defends decision to end production Kirsten Korosec\n\n## Musk says Tesla will refund some Cybertruck deposits, defends decision to end production\nMusk says Tesla will refund some Cybertruck deposits, defends decision to end production\n- Kirsten Korosec\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_18248375683935608208",
+    "name": "record_finding",
+    "args": {
+     "claim": "Em 22 de janeiro de 2024, a ElevenLabs levantou US$ 80 milhões em uma rodada de financiamento Série B, alcançando o status de unicórnio com uma avaliação superior a US$ 1 bilhão.",
+     "source_url": "https://techcrunch.com/2024/01/22/voice-cloning-startup-elevenlabs-lands-80m-achieves-unicorn-status/",
+     "quote": "ElevenLabs, a startup developing AI-powered tools to create and edit synthetic voices, today announced that it closed an $80 million Series B round co-led by prominent investors, including Andreessen Horowitz, former GitHub CEO Nat Friedman and entrepreneur Daniel Gross... brings ElevenLabs’ total raised to $101 million and values the company at over $1 billion",
+     "source_title": "Voice cloning startup ElevenLabs lands $80M, achieves unicorn status | TechCrunch"
+    },
+    "sig": "EnMKcQFpFH0Tc+plrdQEWe9SL1ibfgSL+rJFW12VP8Nc9B1MO2tBM3l8kcQIB5tiRSoV+T08gAn0QprGzHxH6FjoZLl7y9hU7zWXd5qe28lOoeqHuaQeFnt6HJA8aMO3DWob6VijlXWDsYcs/4HeVd+hBiat"
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_18248375683935608208",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=5 quote_check=partial"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_6323407563202334758",
+    "name": "record_finding",
+    "args": {
+     "quote": "co-led by prominent investors, including Andreessen Horowitz, former GitHub CEO Nat Friedman and entrepreneur Daniel Gross. The round, which also had participation from Sequoia Capital, Smash Capital, SV Angel, BroadLight Capital and Credo Ventures, brings ElevenLabs’ total raised to $101 million",
+     "source_title": "Voice cloning startup ElevenLabs lands $80M, achieves unicorn status | TechCrunch",
+     "source_url": "https://techcrunch.com/2024/01/22/voice-cloning-startup-elevenlabs-lands-80m-achieves-unicorn-status/",
+     "claim": "A rodada Série B contou com a participação de Andreessen Horowitz (a16z), Nat Friedman, Daniel Gross, Sequoia Capital, Smash Capital, SV Angel, BroadLight Capital e Credo Ventures, elevando o total captado pela empresa para US$ 101 milhões."
+    },
+    "sig": "EmkKZwFpFH0TqgDRi0cQ3sHKcNurGcDv/jMByuxAtxk5S/pdx/LalKGCwvfrB3OiIaYuuYaqblrBfsjIoYRxvdObHG/KNeu6SDl3M9SefwE8E105fnkG6oekWZ9Pp6KJo8qr4cNWZ47CvCU="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_6323407563202334758",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=5 quote_check=exact"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_3348734851330456131",
+    "name": "record_finding",
+    "args": {
+     "quote": "Staniszewski claims that ElevenLab users have generated the equivalent of more than 100 years of audio and that the platform is being used by employees at 41% of Fortune 500 companies.",
+     "source_title": "Voice cloning startup ElevenLabs lands $80M, achieves unicorn status | TechCrunch",
+     "source_url": "https://techcrunch.com/2024/01/22/voice-cloning-startup-elevenlabs-lands-80m-achieves-unicorn-status/",
+     "claim": "Até janeiro de 2024, a plataforma da ElevenLabs já era utilizada por funcionários de 41% das empresas da Fortune 500 e a equipe planejava expandir de 40 para 100 funcionários até o final do ano."
+    },
+    "sig": "EmkKZwFpFH0Ty538BU5o/5w3hNWhjNwcKkimRvBZ9bpUW1PHcSl5It4NrwAfYUFHPuJwWKPZetbCU7JjZQM9zeM3ypP6b4jhOVAFxMAEbXdZ71F+YC4ztnLrYTEMsNTfgpoV4jotocEw65k="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_3348734851330456131",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=5 quote_check=exact"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_2841789446166308348",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs partnerships announcements expansion 2024 HarperCollins Time"
+    },
+    "sig": "EmkKZwFpFH0TOlPFP940fnRv8L6gAt+9g8aoSKoEiDkgIfGO3pMIzrfaXX9HR7eTqZc18PK1/2VjFpxoDIMtbG1B5MzCHT3RW10jqtY+pCik6AKBX0gCljY5OKILbdPj95FpWpMiL6K0ggg="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_2841789446166308348",
+    "name": "search_web",
+    "result": "status=failed action=search_web query=\"ElevenLabs partnerships announcements expansion 2024 HarperCollins Time\" reason=\"no results — try other words or another language\" -- This did NOT happen. Tell the user so in their own language, with the reason. Do not claim any part of it succeeded."
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_7744732615548398139",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs announcements partnerships 2024"
+    },
+    "sig": "EmkKZwFpFH0TAmttbiORo7lgB+7N03zySxmsG5moK6aWuO+8oh62RVf2ONSj4s9jvr/Bh5MLkGbAnfwmxkRXwtjHhnEaqYUSBoxYsnJQSUAeOURogmvWKZ4PUsr/9nyoGqNWlHxBFH1sngI="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_7744732615548398139",
+    "name": "search_web",
+    "result": "status=failed action=search_web query=\"ElevenLabs announcements partnerships 2024\" reason=\"no results — try other words or another language\" -- This did NOT happen. Tell the user so in their own language, with the reason. Do not claim any part of it succeeded."
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_17353461037472446095",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs 2024 expansion partnership"
+    },
+    "sig": "EmkKZwFpFH0T0ryNHOD/QKEsq3CFfGKj4wiCsN8XltrpJ0tX9e5WOCzqs9avsxbeaqQHU/gw8fZhtgNiLSPbZaQAeJAriWDvYs9OXJ4mHaPekhTng6QJVPgQtjEvnVO+7QiQ/PQDXwqcodY="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_17353461037472446095",
+    "name": "search_web",
+    "result": "<<<UNTRUSTED source=web>>>\nResults for: ElevenLabs 2024 expansion partnership\n1. ElevenLabs Partner Program: Deploy AI Agents Faster\n   https://elevenlabs.io/blog/partner-program\n   5 days ago · “We’re strengthening our ecosystem and launching the new ElevenLabs Partner Program, with 550+ integrators and partners who are ready to help you get into production,” said Mati Staniszewski, CEO and co-founder of ElevenLabs.\n2. ElevenLabs Partner Program\n   https://elevenlabs.io/commercial-partner-program\n   Build the future of conversational AI, together. Join the system integrators, technology companies, hyperscalers, cloud providers and investors bringing ElevenLabs to enterprises worldwide. See how partners earn, get certified and apply, and start bringing ElevenLabs to customers.\n3. Sia Announces Partnership With ElevenLabs\n   https://www.sia-partners.com/en/about-us/corporate-news/sia-announces-partnership-with-elevenlabs\n   Sep 21, 2026 · Together with ElevenLabs, Sia is positioned to support clients across the full lifecycle of Voice AI adoption, from initial exploration to enterprise-wide deployment.\n4. ElevenLabs’ $80M Series B: Investors, Plans and What Happened ...\n   https://www.cloudspress.com/elevenlabs-80-million-series-b-what-it-funded-and-what-happened-next/\n   Sep 28, 2026 · ElevenLabs announced an $80 million Series B on January 22, 2024, at an approximately $1.1 billion valuation. The round helped fund the company’s expansion from AI voice generation into dubbing, voice discovery, mobile listening, and safety work. It is a historical milestone, not Elev\n5. ElevenLabs Partners with Google Cloud for Cloud Services and ...\n   https://www.prnewswire.com/news-releases/elevenlabs-partners-with-google-cloud-for-cloud-services-and-the-latest-nvidia-blackwell-gpus-302697853.html\n   Feb 26, 2026 · Ultimately, ElevenLabs' deepening partnership with Google Cloud will allow the company to bring AI voice and conversational agent solutions to more global customers, including large enterprises.\n6. Announcing our partnership with ElevenLabs for text-to-speech ...\n   https://www.synthesia.io/post/announcing-our-partnership-with-elevenlabs-for-texttospeech-and-voice-api-a17f0\n   We are pleased to announce our partnership with ElevenLabs, a leading provider of advanced text-to-speech (TTS) and voice API technology. This collaboration represents a step forward in our ongoing efforts to add more innovative features to our generative AI video platform.\n7. ElevenLabs raises $500M from Sequoia at an $11 billion ...\n   https://techcrunch.com/2026/02/04/elevenlabs-raises-500m-from-sequioia-at-a-11-billion-valuation/\n   Feb 4, 2026 · It said that it will use the funding for research and product development, along with expansion in international markets like India, Japan, Singapore, Brazil, and Mexico.\n8. Deploy Voice AI in Minutes - Scalable Voice AI for Devs\n   https://www.bing.com/aclick?ld=e8fPbN2eROPGUGNajBUHSLwDVUCUyQsTSvAzmDY9bBgswLYQbFlIj1AVPTyzpUsohLI6CZGuDEBogOUxDqNQqho0iwgBKc8XG91R7vjd1LlRfsqLIwpon_68tWrqOb6oBNjGVOggYxmiuxBt8cIidqcZFCFc-nsJsZb0RFwiOocVOUO6FNkfDJJP9Yvl2Ww4bSxZ1aOs-_Z2_76gSQesZGqZkX85Y&u=aHR0cHMlM2ElMmYlMmZqb2luLmVsZXZlbmxhYnMuaW8lMmZhcGklMmZkZXZlbG9wZXItYXBpJTNmdXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkbWVhX2JyYW5kc2VhcmNoX2VudGVycHJpc2VfZW5nbGlzaCUyNnV0bV9pZCUzZDU3MDc3MDIxNSUyNnV0bV90ZXJtJTNkZWxldmVubGFicyUyNTIwYXBpJTI1MjB2b2ljZXMlMjZ1dG1fY29udGVudCUzZGJyYW5kXy1fZGV2ZWxvcGVyJTI2bXNjbGtpZCUzZGE3OGNlYWFjZTFlYzE5OTkwZjA1ODA1NmIyMTZjNjkw&rlid=a78ceaace1ec19990f058056b216c690\n   Build with ElevenLabs: Voice AI APIs, low latency, real-time streaming. Developer-ready SDKs for text to speech, speech to text & more. LLM Integrations · Powerful SDK · GDPR Compliant · EU Data Residency\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_272303479375406335",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs 2024 news blog announcement"
+    },
+    "sig": "EmkKZwFpFH0TD4Qo/apDGdrrdfiufF2ze3pop83vjxoSyDcZvUgWWUWgLlOtNZm4ESzmXdKF2k4+wVcY5OnCoEoUXgiJ9qCIyl0rPZ2NHX7Mq984MLEqYudtCiObAXvjiW9piYbdbQ6AV9U="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_272303479375406335",
+    "name": "search_web",
+    "result": "status=failed action=search_web query=\"ElevenLabs 2024 news blog announcement\" reason=\"no results — try other words or another language\" -- This did NOT happen. Tell the user so in their own language, with the reason. Do not claim any part of it succeeded."
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_12900057851427987453",
+    "name": "search_web",
+    "args": {
+     "query": "\"ElevenLabs\" \"Series B\" valuation \"1.1 billion\""
+    },
+    "sig": "EmkKZwFpFH0Tfis7OUn004DzBjBnV0utE5IPX2ePaw6G0IbkahLlV0E5o5s8jibw9Oeq9ZLXPWWvNQ2SHZsmsrPVDcoumEISwkYgJHOO7Wl10UcME+WBFa2+X+TZV+mSoBrJzxkbpsA0zms="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_12900057851427987453",
+    "name": "search_web",
+    "result": "status=failed action=search_web query=\"'ElevenLabs' 'Series B' valuation '1.1 billion'\" reason=\"no results — try other words or another language\" -- This did NOT happen. Tell the user so in their own language, with the reason. Do not claim any part of it succeeded."
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_9199027103433237072",
+    "name": "search_web",
+    "args": {
+     "query": "site:elevenlabs.io \"Series B\""
+    },
+    "sig": "EmkKZwFpFH0TVo+JXZFEA4AXdpv0m0sbySUw+Qpk7LCLCsO3ZrNiYBq416efLCfX4VvUrI/f/sk6KJrIjX/Ll/BwyAs5N2NiE8vjsKKMkOKeOuddvljWQwtwG3H876/cjGWFggLytH9n1yo="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_9199027103433237072",
+    "name": "search_web",
+    "result": "<<<UNTRUSTED source=web>>>\nResults for: site:elevenlabs.io \"Series B\"\n1. ElevenLabs Releases New AI Products and Raises $80M Series B\n   https://elevenlabs.io/blog/series-b\n   Jan 22, 2024 · ElevenLabs has raised an $80m Series B round co-led by Andreessen Horowitz, Nat Friedman, Daniel Gross, and joined by Sequoia Capital, Smash Capital, SV Angel, BroadLight Capital and Credo Ventures to strengthen its position as the leader in voice AI.\n2. ElevenLabs raises $500M Series D at $11B valuation\n   https://elevenlabs.io/blog/series-d\n   Feb 4, 2026 · ElevenLabs closed 2025 with over $330 million in ARR, driven by rapid enterprise adoption by companies like Deutsche Telekom, Square, the Ukrainian Government, and Revolut for customer support, conversational commerce, citizen engagement, internal training, and inbound sales. This $500\n3. Company Operations Lead | ElevenLabs careers\n   https://elevenlabs.io/careers/4aaebda4-53be-424c-8246-cde77ff853bb/company-operations-lead\n   Proven experience building and leading a Strategy & Operations or BizOps function at a high-growth technology company - ideally through a meaningful scaling inflection (Series B–D trajectory or equivalent).\n4. Announcing an Employee Tender Offer at $6.6B valuation\n   https://elevenlabs.io/blog/announcing-an-employee-tender\n   Sep 8, 2025 · This week, we are launching a tender offer to give our ElevenLabs teammates an opportunity for liquidity. We’re conducting the $100 million tender at a valuation of $6.6 billion - double our Series C valuation from just nine months ago. The tender is led by existing investors Sequoia a\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_17412847914876730124",
+    "name": "fetch_page",
+    "args": {
+     "url": "https://elevenlabs.io/blog/series-b"
+    },
+    "sig": "EmkKZwFpFH0TteGiek5hwd0DS7g2+JHJKMbwA4QYC0m8reMJmTveshHc6+XvhjbxB700IdiMZPJyzdct160GQADExmmvLk5agQ21tbYfzn9lgydRvseTRpUyNdn+K6MxZZw9nnJFgdl3sUQ="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_17412847914876730124",
+    "name": "fetch_page",
+    "result": "<<<UNTRUSTED source=web>>>\nURL: https://elevenlabs.io/blog/series-b\nTITLE: ElevenLabs Releases New AI Products and Raises $80M Series B\n\n- ElevenLabs has raised an $80m Series B round co-led by Andreessen Horowitz , Nat Friedman , Daniel Gross , and joined by Sequoia Capital , Smash Capital , SV Angel , BroadLight Capital and Credo Ventures to strengthen its position as the leader in voice AI.\n- The company is also today revealing a set of new products, including Dubbing Studio , Voice Library marketplace, an early-preview of a Mobile Reader App , and new models with improved speed and language coverage.\n- Since its launch, ElevenLabs technology has improved content accessibility globally across sectors such as the creator economy, publishing, conversational AI , entertainment, education, and accessibility, with its adoption by millions leading the company to unicorn status .\n22nd January / Global - ElevenLabs , a voice technology research company, has raised an $80m Series B round co-led by Andreessen Horowitz , Nat Friedman , Daniel Gross , and joined by Sequoia Capital , SV Angel , Smash Capital , BroadLight Capital and Credo Ventures , to cement its position as the global leader in voice AI research and product deployment.\nSince its public launch, ElevenLabs has led the industry in natural speech synthesis, enabling users to create and design AI voices across a vast swathe of languages and accents, with the ability to deliver a wide range of emotions and intonations. Since launch, ElevenLabs’ users have generated over 100 years of audio, while the firm grew from 5 to 40 employees . Today, ElevenLabs technology is being used by employees at 41% of Fortune 500 companies.\nElevenLabs’ technology has been adopted across numerous verticals. It has empowered creators to enhance audience experiences with voiceovers and AI dubbing, broadened access to education, and provided innovative solutions in audiobook publishing, entertainment, and personal use, including improving accessibility. This funding will be used to further refine the company’s product offering whilst ensuring the safe deployment of AI technology.\nIn addition to today’s Series B announcement, ElevenLabs is also unveiling several new product developments, which will go live over the coming weeks:\n- A new Dubbing Studio workflow enables users to dub entire movies, as well as generate and edit their transcripts, translations, and timecodes, providing additional control over content production. These capabilities supplement the already existing AI dubbing feature which enables automated, end-to-end video localization across 29 languages.\n- A Voice Library marketplace which will provide a secure platform for users to earn from AI versions of their own voices. Users can create their professional AI voice replica, verify it, and share it via Voice Library. When others use these verified voices, the original creators receive compensation. Users always retain control over their voice’s availability and compensation terms. The marketplace is already generating income for a small group of alpha-users.\n- An early-preview of the Mobile App reader that enables instant conversion of text and URLs into audio, making it easier for users to access content in another medium while on the move. As an introductory trial, the app will be available free of charge for the first three months and users will be able to register for early access through a waiting list.\nThroughout 2023, ElevenLabs has also expanded its presence in multiple sectors, including publishing, gaming, media, and conversational verticals, as well as forging B2B partnerships with major media houses, among them:\n- Publishing : Storytel, The Washington Post, Rheinische Post, Curio\n- Conversational AI : FlowGPT, SimpleTalk AI, Ollang, VoiceDrop, Vana\n- Media & Entertainment : Wondershare Filmora, Futuri Media, TheSoul Publishing\n- Gaming : Paradox Interactive, NetEase, Inworld AI\nThese latest product launches and partnerships follow a period in which ElevenLabs has continuously expanded its suite of tools, all developed from in-house research. Releases have included: Speech Synthesis for lifelike text-to-speech conversion, along with a Turbo model optimized for latency; Voice Design and Voice Cloning for creating bespoke voices; Speech to Speech for transforming one voice into another. The company also released its industry-leading AI Dubbing tool, capable of automatically translating audio and video into 29 languages whilst preserving the original speaker’s voice and emotions. The company will also soon be expanding the Turbo and Speech to Speech models, which are currently available in English, to a wider set of languages.\nBuilding on top of the research powering these features, ElevenLabs has also worked on developing advanced tools for more complex workflows, like Studio for publishing, and the Dubbing Studio for video localization. Studio streamlines editing, structuring, navigating and generating long-form content for publishers, and Dubbing Studio helps prepare content for worldwide audiences by providing hands-on control over transcript, translation, and sequence timing.\nThe company has also developed community-oriented products like Voice Library - an environment for sharing AI-generated voices. Previously limited to sharing artificial voices created with the Voice Design tool, Voice Library now allows users to share their own verified voice replicas made with Professional Voice Cloning as part of the newly introduced Voice Library marketplace, and earn money when others use them. To ensure the safety and integrity of the marketplace, ElevenLabs uses its Professional Voice Cloning technology to create high-fidelity voice replicas. Before sharing a voice, users must pass a Voice Captcha verification by reading a text prompt within a specific timeframe to confirm their voice matches the training samples. This process, along with ElevenLabs team's moderation and manual approval, ensures authentic, user-verified voices are shared and monetized, creating a more secure and trustworthy environment.\nA core priority for ElevenLabs is the safe and responsible development of AI, with a focus on enabling detection to ensure all AI-generated content is clearly identifiable. The company launched an AI Speech Classifier last year; a tool which can verify if an audio sample contains ElevenLabs generated content. This year, the company will work on enhancing the Classifier’s capabilities to cover more voice AI models, as well as partner with other distribution platforms for wider implementation. ElevenLabs is actively developing additional safeguards to enhance safety in the public domain.\nWith this Series B investment, ElevenLabs intends to cement its position as the global leader in voice AI research and product deployment. The capital will be put into advancing research, expanding infrastructure, developing new products for specific verticals, and enhancing safety measures to ensure responsible and ethical development of AI technology.\nPiotr Dąbkowski, CTO of ElevenLabs, adds:\n“Our team’s dedication has already made a lasting impact on voice AI. This new funding enables us to take on even bigger challenges and focus on maintaining our competitive edge in research and product development.”\nMati Staniszewski concludes:\n“Our ambition remains the same – to transform how we interact with content by breaking down language and communication barriers. We're building cutting-edge technology to make content accessible across languages - and voices - to enable everyone to connect with information and stories that matter. Our progress so far is a testament to our dedicated team and investors, and while it’s still only the beginning of our journey, together we’re helping shape the future of accessibility and communication.”\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_13914937434995897017",
+    "name": "record_finding",
+    "args": {
+     "source_url": "https://elevenlabs.io/blog/series-b",
+     "source_title": "ElevenLabs Releases New AI Products and Raises $80M Series B",
+     "quote": "Throughout 2023, ElevenLabs has also expanded its presence in multiple sectors, including publishing, gaming, media, and conversational verticals, as well as forging B2B partnerships with major media houses, among them:\n- Publishing : Storytel, The Washington Post, Rheinische Post, Curio\n- Conversational AI : FlowGPT, SimpleTalk AI, Ollang, VoiceDrop, Vana\n- Media & Entertainment : Wondershare Filmora, Futuri Media, TheSoul Publishing\n- Gaming : Paradox Interactive, NetEase, Inworld AI",
+     "claim": "No anúncio da Série B em janeiro de 2024, a ElevenLabs revelou parcerias comerciais com grandes players em setores como publicação (Storytel, The Washington Post, Curio), jogos (Paradox Interactive, NetEase, Inworld AI), mídia (Wondershare Filmora, Futuri Media) e IA conversacional (FlowGPT)."
+    },
+    "sig": "EmkKZwFpFH0T1V9PsoPZ6Vu0gm0JMnEILdGzABwbT0WIXo15taM3qWZmldoRWASaYTOOS7s7fvzeC4x3q16q975jyZsmaTqAEKXOT1oAqSQrdbLmlMDj5dqaYTNzRuRhw7hdG3B5ovcVbTw="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_13914937434995897017",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=6 quote_check=exact"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_1122567165630141952",
+    "name": "record_finding",
+    "args": {
+     "claim": "Ao alcançar o status de unicórnio em janeiro de 2024, a ElevenLabs havia expandido sua equipe de 5 para 40 funcionários e seus usuários já haviam gerado o equivalente a mais de 100 anos de áudio.",
+     "source_url": "https://elevenlabs.io/blog/series-b",
+     "source_title": "ElevenLabs Releases New AI Products and Raises $80M Series B",
+     "quote": "Since launch, ElevenLabs’ users have generated over 100 years of audio, while the firm grew from 5 to 40 employees . Today, ElevenLabs technology is being used by employees at 41% of Fortune 500 companies."
+    },
+    "sig": "EmkKZwFpFH0TodxUQgSr69my1g3ezd5kx/mcacYy8k7QOjtwWH30Y2AEZh+aJdgl/eRuLb94XTNxWVVG995e2pvPz08nBP+SwgC8r4mhXd9yooyIMBxC0JGD46Ymwz10UqMMfp/gnQ2rp5k="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_1122567165630141952",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=6 quote_check=exact"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_11123655277357908884",
+    "name": "subquestion_done",
+    "args": {
+     "summary": "Em janeiro de 2024, a ElevenLabs anunciou a captação de US$ 80 milhões em sua rodada Série B (co-liderada por Andreessen Horowitz, Nat Friedman e Daniel Gross), atingindo uma avaliação de US$ 1,1 bilhão e o status de unicórnio. Essa fase foi acompanhada pela consolidação de grandes parcerias B2B (ex: The Washington Post, Storytel, Paradox Interactive, NetEase) e expansão da equipe para cerca de 40 funcionários, cobrindo 41% das empresas Fortune 500.",
+     "confidence": "high"
+    },
+    "sig": "EmkKZwFpFH0Th+MDTk0l8roGGu3WvKk+gNqHErwhEafdKemjV7ALtqGqKl69uBNoNVJcvr133sWssLQSyt3vGtPi1UobbX2/yT9ytUqzqBbaHG0APOT4GFieWHpSYGqp3wHgpBt8wipOlb0="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_11123655277357908884",
+    "name": "subquestion_done",
+    "result": "status=done action=subquestion_done question=3"
+   }
+  ]
+ }
+]

@@ -1,0 +1,264 @@
+[
+ {
+  "role": "user",
+  "text": "[RESEARCH GOAL] Apresentar a história detalhada da ElevenLabs, cobrindo fundadores, data de fundação, missão, modelo de negócios e principais marcos e lançamentos até 2026.\n[THE PLAN]\n  1. Quem são os fundadores da ElevenLabs, quando a empresa foi fundada e qual foi a motivação e missão inicial?\n  2. Quais foram as primeiras rodadas de investimento e marcos iniciais da ElevenLabs (2022-2023)?\n  3. Quais foram os grandes marcos de financiamento, valuation e expansão em 2024 (ex: Series B, status de unicórnio)?\n  4. Quais são os principais produtos, modelos de IA e inovações tecnológicas lançados pela ElevenLabs até hoje?\n  5. Quais foram os desenvolvimentos, marcos corporativos, rodadas adicionais e produtos lançados entre 2025 e 2026?\n\n[NOW: QUESTION 1] Quem são os fundadores da ElevenLabs, quando a empresa foi fundada e qual foi a motivação e missão inicial?\nSuggested searches: ElevenLabs founders founding date Piotr Dabkowski Mati Staniszewski background story; ElevenLabs mission statement why founded history\nTime for this question: about 2.1 minutes, 30 rounds."
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_18211488779797526172",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs founders Piotr Dabkowski Mati Staniszewski founding date mission background"
+    },
+    "sig": "EuoCCucCAWkUfRN+/B90xVqjgfu0J4TSSVTXNmzG2zz5J9oOJNNECV9XZOH8fdvwm1JBtSfliaQrg91zFwTiTl37dP9NbvxTPIUiay6ZC/EAtVRUeml7eX/Vvh935TT0Z9ZpTqkPN6c8vZPSnyrvg/eGt+WUmeuMvV0eTeS0v2HRBfPh6mMfO78V+KxgJ1AoKv8Jqn/DpX/mMvGMYxO/f1nsqkGgCqwfz9DM8wZfQY8v7mgQQ/ORh/M7wp1K37mVogOeWBHLxFbbaDBnh5yR4bBZ+OJOnyOHB5gNULWBmd5yVN7vZ2y37IY/RPQgu412ZuBVAVPxyq2TSJKsULuVNAawsWvQ+aks0tDQKc1irbHEzr7kyd+9FEdnln5l/w5egG0pTJlffnb3NHDIPkMs/jjyIQAagh9mm9a+2OSyWKTMQ0i+FOUboxwQOZLgUmk8GMLsgeAkX2gofB+GZxmSofLYvDZMcuo1ksKwjt4="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_18211488779797526172",
+    "name": "search_web",
+    "result": "status=failed action=search_web query=\"ElevenLabs founders Piotr Dabkowski Mati Staniszewski founding date mission background\" reason=\"no results — try other words or another language\" -- This did NOT happen. Tell the user so in their own language, with the reason. Do not claim any part of it succeeded."
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_13002156274356905215",
+    "name": "search_web",
+    "args": {
+     "query": "ElevenLabs founders founding date Mati Staniszewski Piotr Dabkowski"
+    },
+    "sig": "EmAKXgFpFH0TmkFWv5b0WFMXGs0wnNenYr2QqH05bvMUOTONg6VmeNDTh2V3AG2JPm9D8FSX55RTGH161ppjezhfOAn5shk5EPDcwVizx1fbxAebbNz1GEYzt1/q/G1HsxM="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_13002156274356905215",
+    "name": "search_web",
+    "result": "<<<UNTRUSTED source=web>>>\nResults for: ElevenLabs founders founding date Mati Staniszewski Piotr Dabkowski\n1. ElevenLabs - Wikipedia\n   https://en.wikipedia.org/wiki/ElevenLabs\n   ElevenLabs Inc. is a software company that specializes in developing natural-sounding speech synthesis software using deep learning. It was founded in 2022 by Polish entrepreneurs Piotr Dąbkowski and Mateusz Staniszewski. [3]\n2. Mati Staniszewski - Wikipedia\n   https://en.wikipedia.org/wiki/Mati_Staniszewski\n   In May 2022 he and his high school friend Piotr Dabkowski co-founded ElevenLabs, a company that specializes in developing natural-sounding speech synthesis software using deep learning.\n3. ElevenLabs History: Founded 2022, Full Timeline\n   https://corpdigest.com/company/elevenlabs/company-history\n   Sep 30, 2026 · ElevenLabs was founded in 2022 by Mati Staniszewski and Piotr Dąbkowski. Growing up in Poland, they were incredibly frustrated by the terrible, emotionless voice dubbing in American Hollywood movies.\n4. Mati Staniszewski & Piotr Dąbkowski - ElevenLabs - BusinessCloud\n   https://businesscloud.co.uk/founders/mati-staniszewski-piotr-dabkowski-elevenlabs/\n   ElevenLabs is an AI research and product company transforming how we interact with technology. It was co-founded in 2022 in London by childhood friends from Poland Mati Staniszewski (CEO) and Piotr Dąbkowski (CTO).\n5. Who founded ElevenLabs? Mati Staniszewski, Mati Staniszewski ...\n   https://founders.io/company/elevenlabs\n   ElevenLabs was founded in 2022 in London, UK by Mati Staniszewski, Mati Staniszewski Piotr Dabkowski and Piotr Dąbkowski. It is an Artificial Intelligence company.\n6. ElevenLabs Founders: Mati Staniszewski and Piotr Dabkowski\n   https://corpdigest.com/company/elevenlabs/founders\n   ElevenLabs was founded in 2022 by Polish-born technologists Mati Staniszewski (former Palantir strategist) and Piotr Dabkowski (former Google machine learning engineer), who have been best friends since childhood.\n7. ElevenLabs - Forbes\n   https://www.forbes.com/profile/elevenlabs/\n   3 days ago · Mati Staniszewski and Piotr Dabkowski, childhood friends from Poland, founded London-based ElevenLabs in 2022. Its technology creates human-like AI voices, converts text to speech and dubs audio...\n8. Deploy Voice AI in Minutes - Scalable Voice AI for Devs\n   https://www.bing.com/aclick?ld=e8j8HxzeWUm4wB6J-_lXhmajVUCUx_aaetkgHwvNMcqNWW0QggrJStru642L09yAHHx9u4d2i0JZGzs4tkgKlvnBfz8jPcWfsi4RYOAV9ZAECg6240lE8_a2jS5J4r9hBC3-zwGFKQWZWmJOopPEBLhYGj68BtWGZ82bnkRcMNkIe1VUsEwZ7TNZJhbGO3AbzEPz_FOpklFwl2aguvIYRe3pkifz4&u=aHR0cHMlM2ElMmYlMmZqb2luLmVsZXZlbmxhYnMuaW8lMmZhcGklMmZkZXZlbG9wZXItYXBpJTNmdXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkbWVhX2JyYW5kc2VhcmNoX2VudGVycHJpc2VfZW5nbGlzaCUyNnV0bV9pZCUzZDU3MDc3MDIxNSUyNnV0bV90ZXJtJTNkZWxldmVubGFicyUyNTIwdGV4dCUyNTIwdG8lMjUyMHNwZWVjaCUyNTIwYXBpJTI2dXRtX2NvbnRlbnQlM2RicmFuZF8tX2RldmVsb3BlciUyNm1zY2xraWQlM2RiNDYxNDUxNjFkN2QxN2MxMmZkMjJmZWM0ZWQxMjgxMw&rlid=b46145161d7d17c12fd22fec4ed12813\n   Developer-ready SDKs for text to speech, speech to text & more. Build with ElevenLabs: Voice AI APIs, low latency, real-time streaming. Types: Text to Speech, Voice Cloning, Voice Changer, Voice Library, Sound Effects\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_3753257928184685297",
+    "name": "fetch_page",
+    "args": {
+     "url": "https://en.wikipedia.org/wiki/ElevenLabs"
+    },
+    "sig": "EmAKXgFpFH0Tr3fVsMJtWaXtuTJzY7Tp/WD+DZ18mjJxN4jYfJNCTc1s9Ew8en54UiYa4HbzT8hPeFUZz6JZV1Pi2bsDDSn8ah3sVItgyQaynoJnwj5goypPZTZMOnQzem0="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_3753257928184685297",
+    "name": "fetch_page",
+    "result": "<<<UNTRUSTED source=web>>>\nURL: https://en.wikipedia.org/wiki/ElevenLabs\nTITLE: ElevenLabs - Wikipedia\n\nElevenLabs Inc.\nElevenLabs New York headquarters on Madison Avenue\nType\nPrivate\nIndustry\nSoftware development Speech synthesis Artificial intelligence\n- Software development\n- Speech synthesis\n- Artificial intelligence\nFounded\n2022 ; 4 years ago ( 2022 )\nFounders\nPiotr Dąbkowski (CTO) Mati Staniszewski (CEO)\n- Piotr Dąbkowski (CTO)\n- Mati Staniszewski (CEO)\nHeadquarters\nLondon [ 1 ] New York City\nProducts\nElevenAgents ElevenCreative ElevenAPI Eleven v3 Eleven Music Scribe v2 Realtime Agent Workflows Productions 11ai\n- ElevenAgents\n- ElevenCreative\n- ElevenAPI\n- Eleven v3\n- Eleven Music\n- Scribe v2 Realtime\n- Agent Workflows\n- Productions\n- 11ai\nServices\nSpeech processing Software agent Virtual assistant\n- Speech processing\n- Software agent\n- Virtual assistant\nNumber of employees\n400 (2026) [ 2 ]\nWebsite\nelevenlabs .io\nElevenLabs Inc. is a software company that specializes in developing natural-sounding speech synthesis software using deep learning . It was founded in 2022 by Polish entrepreneurs Piotr Dąbkowski and Mateusz Staniszewski . [ 3 ] ElevenLabs is legally incorporated in the US. [ 4 ] It is based in London and also has offices in New York City , Warsaw and San Francisco . [ 5 ]\n\n## Name etymology\nThe name ElevenLabs derives from the English word eleven . The number refers to November 11, the date of Poland’s National Independence Day (the eleventh day of the eleventh month). [ 6 ] The element Labs refers to the English word laboratories and indicates the company’s research and development profile.\n\n## History\nElevenLabs was co-founded in 2022 by Piotr Dąbkowski , an ex- Google machine learning engineer and Mati Staniszewski , an ex- Palantir deployment strategist. [ 7 ] Both were raised in Poland , and their inspiration for founding ElevenLabs reportedly came from watching inadequately dubbed American films. [ 8 ] [ 9 ]\nDąbkowski and Staniszewski initially considered different funding options, including the possibility of collaborating with a startup accelerator. In January 2023 they revealed having secured a $2 million pre-seed round. The startup's specialization in AI voice intelligence, a still-emerging field in Europe , played a significant role in attracting investors. The pre-seed funding was primarily led by Credo Ventures , and joined by Concept Ventures. [ 10 ]\nIn January 2023, ElevenLabs publicly released its beta platform . [ 11 ]\nIn June 2023, ElevenLabs raised a $19 million Series A funding round at a valuation of about $100 million. [ 12 ] [ 13 ] [ 9 ] The funding round was co-led by the venture capital firm Andreessen Horowitz , former GitHub CEO Nat Friedman , and entrepreneur Daniel Gross . It also saw participation from prominent individuals such as SV Angel , Mike Krieger (co-founder of Instagram), Brendan Iribe (co-founder of Oculus ), Mustafa Suleyman (co-founder of Deepmind ), and Tim O'Reilly (founder of O'Reilly Media ). It was also announced that Andreessen Horowitz would be joining ElevenLabs' board. [ 8 ]\nOn January 22, 2024, ElevenLabs raised an additional $80 million in Series B funding raising the total valuation of the company to $1.1 billion. The funding round was led by Andreessen Horowitz , Friedman , Gross, and Sequoia Capital . Additionally, the company announced a series of new products, including their Voice Marketplace, AI Dubbing Studio, and mobile app. [ 14 ]\nIn the lead-up to the January 2024 New Hampshire Democratic primary , AI-generated robocalls purportedly from Joe Biden encouraging voters to skip voting on the day of the primary were sent to thousands of residents. The New Hampshire attorney general's office launched an investigation into the incident and linked it to a company based in Texas, with audio experts concluding the call was made using ElevenLabs. In response to the incident, CEO Mati Staniszewski stated that the company was “dedicated to preventing the misuse of audio AI tools” but provided no comment on specific incidents. [ 15 ]\nOn January 30, 2025, ElevenLabs announced their $180 million Series C funding raising the total valuation of the company to $3.3 billion. The round was co-led by a16z and ICONIQ Growth with additional new investors NEA, World Innovation Lab (WiL), Valor, Endeavor Catalyst Fund and Lunate and brought on strategic investors including Deutsche Telekom, LG Technology Ventures, HubSpot Ventures, NTT Docomo Ventures, and RingCentral Ventures. [ 16 ]\nIn September 2025, ElevenLabs opened an employee tender offer , allowing staff who had worked at the company for at least a year to sell shares at a $6.6 billion valuation. [ 17 ] It completed another tender offer for staff at a $22B valuation in September 2026. [ 18 ]\nOn February 4, 2026, ElevenLabs announced that it raised $500 million at an $11 billion valuation, as it eyes a potential IPO . [ 19 ]\nIn March 2026, ElevenLabs pledged to committing $1 billion in free restoration voice technology to 1 million people living with permanent voice loss. [ 20 ]\n\n## Products\nElevenLabs is primarily known for its browser-based , AI-assisted text-to-speech software, Speech Synthesis, which can produce lifelike speech by synthesizing vocal emotion and intonation , and now Conversational AI, a developer platform for launching interactive voice agents. [ 21 ] The company states that its models are trained to interpret the context in the text, and adjust the intonation and pacing accordingly. [ 22 ] It uses advanced algorithms to analyze the contextual aspects of text, aiming to detect emotions like anger, sadness, happiness, or alarm, which enables the system to understand the user's sentiment, [ 23 ] resulting in achieving a more realistic and human-like inflection. The startup is in the process of patenting this technology. [ 10 ] On its beta site, users can submit text and generate audio files from a selection of default voices. Paying users are given the ability to upload custom voice samples to create new vocal styles using the company's voice cloning tool. [ 24 ]\n\n## Voice Library\nVoice Library is the company's feature for sharing unique voice profiles created using their Voice Design technology. These pre-designed voice profiles allow users to select a voice that best suits their needs, rather than creating one from scratch. [ 25 ] There are now more than 1,000 community-created voices in the library. Another tool called VoiceLab allows users to clone voices from just a few short snippets of audio and can create entirely new synthetic voices. [ 8 ]\n\n## AI Speech Classifier\nOn June 20, 2023, ElevenLabs released an AI recognition tool called the AI Speech Classifier, which it claims is the first of its kind. [ 8 ] The tool is accessible through an API and designed to determine if an uploaded audio sample originates from ElevenLabs' proprietary AI technology. [ 9 ] The company has expressed its intention to collaborate with other AI developers in creating a universal detection system that could be adopted industry-wide. [ 26 ]\n\n## Projects\nIn July 2023, ElevenLabs announced \"Projects\", a tool for creating long-form spoken content such as audiobooks and dialogue segments with contextually-aware synthetic or custom voices. [ 9 ] [ 27 ] The tool was released in September. In August, ElevenLabs expanded its voice generation capabilities to 28 languages. Using an in-house AI model, it automatically detects languages like Korean , Dutch , and Vietnamese , allowing for \"emotionally rich\" multilingual speech generation. The company also announced that its technology had officially exited its beta phase . [ 28 ] [ 29 ]\n\n## ElevenReader\nIn August 2024, ElevenLabs released ElevenReader, an app that converts textual content (such as PDFs, eBooks or articles) to audio. The app was made available on iOS, Android, and the web. [ 30 ]\n\n## AI Dubbing and voice products\nIn October 2023, ElevenLabs presented \"AI Dubbing\", a tool that is able to translate speech into more than 20 languages. The feature is capable of preserving the speaker's original voice, emotions, and intonation, by employing proprietary methods to handle tasks like noise removal, speaker differentiation, transcription, and synchronization of translated speech with the original audio. [ 31 ]\nIn May 2024, ElevenLabs shared samples from their text-to-music model, which became available for public use in July 2025. [ 32 ] In June 2024, ElevenLabs released the ElevenLabs Reader App on iOS and Android which allows users to listen to articles, PDFs, and ePubs with AI Voices on their phone. In July 2024, ElevenLabs released \"Voice Isolator\" which removes background noise from audio. [ 33 ] In November 2024, they released Conversational AI, a developer platform for launching interactive voice agents. [ 34 ] In February 2025, the company introduced a new platform that enables authors to create and publish AI-generated audiobooks directly on its Reader app. [ 35 ] Later that month, the company released Scribe, a speech-to-text model that transcribes audio with character-level timestamps and speaker diarization [ 36 ] with industry-leading word error rate according to internal benchmarks and third party tests from Artificial Analysis. [ 37 ]\nIn June 2025, ElevenLabs released Eleven v3, a new text-to-speech model that supports more than 70 languages, natural multi-speaker dialogue, and audio tags like [excited], [whispers], and [sighs]. [ 38 ]\n\n## Eleven Music\nIn August 2025, ElevenLabs launched Eleven Music, an AI music generator that enables users to generate studio-grade music from natural language prompts. [ 39 ] The platform was developed in collaboration with record labels, publishers, and artists, and is cleared for commercial use across various applications including film, television, podcasts, social media videos, advertisements, and gaming. Eleven Music provides control over genre, style, and structure, allowing users to create tracks with or without vocals in multiple languages including English, Spanish, German, and Japanese. The platform features advanced editing capabilities that enable users to modify individual sections of songs or entire compositions. Built with a proprietary AI music model developed by ElevenLabs, the system can generate real-time music with seamless genre and instrument blending while closely following complex, multi-layered prompts for lyrics, key, and tempo specifications. [ 40 ]\n\n## ElevenAgents\nIn February 2026, ElevenLabs released Expressive Mode in ElevenAgents. Expressive Mode combines two updates: Eleven v3 Conversational - a new emotionally intelligent, context-aware text-to-speech model, built on Eleven v3 and optimized for real-time dialogue and a new turn-taking system for better-timed responses with fewer interruptions. [ 41 ]\n\n## Reception\nFollowing its launch in January 2023, ElevenLabs gained rapid momentum and was commended for its voice output quality, fast generation times, and a \"generous free tier\". It has also been praised for its ability to accurately pronounce names with unique or uncommon pronunciations, addressing a common shortcoming in similar tools that often cater primarily to Western names. [ 42 ] The company reached over one million registered users between its launch and June 2023. [ 8 ] [ 9 ] [ 43 ]\nIn April 2025, ElevenLabs was featured in the Forbes AI 50 list. [ 44 ]\nElevenLabs was criticized after users were able to abuse its software to generate controversial statements in the vocal style of celebrities, public officials, and other famous individuals, [ 45 ] [ 46 ] [ 47 ] particularly attracting attention after users on 4chan used the tool to share hateful messages. [ 48 ] [ 49 ] [ 26 ]\n\n## Culture\nElevenLabs’ culture includes involvement in media and creative projects alongside its core technology development. [ 50 ] The company released the album The Next , a project built around AI-generated vocals, which involved collaborations with artists, producers, and developers working with synthetic voice tools. The album contains songs with varying levels of AI and human input, and the earnings from its streams go back to all participating artists. [ 51 ]\nIn addition to music, ElevenLabs produced the documentary series 11 Voices , which premiered at SXSW in 2026 [ 52 ] and features interviews with individuals working across artificial intelligence, audio production, and related fields, addressing topics such as voice synthesis, ethics, and creative practice. [ 53 ] [ 54 ]\n\n## See also\n- 15.ai , a research project using AI for text-to-speech using voices of popular fictional characters\n- Respeecher , a company performing speech-to-speech voice conversion\n- Speechify , an app and browser extension for text-to-speech conversion\n\n## References\n- ↑ Dharampal-Hornby, Maya (February 4, 2026). \"Founder Stories - ElevenLabs\" .\n- ↑ Dharampal-Hornby, Maya (February 4, 2026). \"ElevenLabs raises $500m Series D led by Sequoia\" . Sifted .\n- ↑ Martin, Iain (December 1, 2025). \"How A Tiny Polish Startup Became The Multi-Billion-Dollar Voice Of AI\" . Forbes . Retrieved June 12, 2026 .\n- ↑ \"Eleven Labs Inc. – LEI: 254900MCM69TO5IDN844\" . Bloomberg LEI . Retrieved August 8, 2026 .\n- ↑ Browne, Ryan (July 3, 2025). \"AI voice startup ElevenLabs pushes global expansion as it gears up for an IPO\" . CNBC . Retrieved August 5, 2026 .\n- ↑ Clark, Kate (February 4, 2026). \"Exclusive | Voice AI Startup ElevenLabs Raises $500 Million\" . The Wall Street Journal . Retrieved May 12, 2026 .\n- ↑ Kanetkar, Riddhi. \"This startup, founded by ex-Google and Palantir staffers, uses AI to generate realistic voiceovers. Here's the 14-slide pitch deck ElevenLabs used to raise $2 million\" . Business Insider . Retrieved February 9, 2023 .\n- 1 2 3 4 5 \"Now hear this: Voice cloning AI startup ElevenLabs nabs $19M from a16z and other heavy hitters\" . VentureBeat . June 20, 2023. Archived from the original on July 27, 2023 . Retrieved July 25, 2023 .\n- 1 2 3 4 5 Wiggers, Kyle (June 20, 2023). \"Voice-generating platform ElevenLabs raises $19M, launches detection tool\" . TechCrunch . Retrieved July 25, 2023 .\n- 1 2 Kanetkar, Riddhi. \"Hot AI startup ElevenLabs, founded by ex-Google and Palantir staff, is set to raise $18 million at a $100 million valuation. Check out the 14-slide pitch deck it used for its $2 million pre-seed\" . Business Insider . Retrieved July 25, 2023 .\n- ↑ Moon, Mariella. \"A new AI voice tool is already being abused to make deepfake celebrity audio clips\" . Engadget . Retrieved February 3, 2023 .\n- ↑ \"The trials and tribulations of AI voice tech\" . Financial Times . June 21, 2023 . Retrieved July 25, 2023 .\n- ↑ Hunt, Simon (June 20, 2023). \"AI firm ElevenLabs achieves $100 million valuation within months of launch\" . Evening Standard . Retrieved July 25, 2023 .\n- ↑ \"ElevenLabs Releases New Voice AI Products and Raises $80M Series B\" . January 22, 2024.\n- ↑ Knibbs, Kate. \"Researchers Say the Deepfake Biden Robocall Was Likely Made With Tools From AI Startup ElevenLabs\" . Wired . ISSN 1059-1028 . Retrieved Februar\n\n[page truncated at 15000 of 39854 characters]\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_7573218504594237935",
+    "name": "record_finding",
+    "args": {
+     "claim": "ElevenLabs was founded in 2022 by Polish entrepreneurs Piotr Dąbkowski and Mateusz (Mati) Staniszewski.",
+     "quote": "It was founded in 2022 by Polish entrepreneurs Piotr Dąbkowski and Mateusz Staniszewski. ... ElevenLabs was co-founded in 2022 by Piotr Dąbkowski, an ex-Google machine learning engineer and Mati Staniszewski, an ex-Palantir deployment strategist.",
+     "source_title": "ElevenLabs - Wikipedia",
+     "stance": "supports",
+     "source_url": "https://en.wikipedia.org/wiki/ElevenLabs"
+    },
+    "sig": "EmAKXgFpFH0TiiDdKLnEy5lev67hgo/YRoKhNkehCQvYkvxaaHvY/FHoblecaKmdHOfL++dsGFX0SPnxmc/uyrU2crs3Wl/GnFz4ibTHbDBYyHuyqVs9425aKxki+GPfHzk="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_7573218504594237935",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=1 quote_check=partial"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_2406922151003517225",
+    "name": "record_finding",
+    "args": {
+     "stance": "supports",
+     "source_title": "ElevenLabs - Wikipedia",
+     "claim": "The motivation and initial inspiration for founding ElevenLabs came from growing up in Poland and being frustrated by the terrible, emotionless voice dubbing in American Hollywood movies.",
+     "quote": "Both were raised in Poland, and their inspiration for founding ElevenLabs reportedly came from watching inadequately dubbed American films.",
+     "source_url": "https://en.wikipedia.org/wiki/ElevenLabs"
+    },
+    "sig": "EmAKXgFpFH0Trs2ESvrc2U6PMUa5c3R+B8mejuvmcstrl/qL+4AEDuArx0unEeoCpHQcSKT1PqXzGeOOyr6UUJAZJeZKsxiRp0fkO1CQnM5yFrhmfo98gSSc35g7XSpFYnc="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_2406922151003517225",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=1 quote_check=exact"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_3536062239555263927",
+    "name": "record_finding",
+    "args": {
+     "source_title": "ElevenLabs - Wikipedia",
+     "source_url": "https://en.wikipedia.org/wiki/ElevenLabs",
+     "stance": "supports",
+     "claim": "The name ElevenLabs derives from the English word eleven, referring to November 11 (Poland's National Independence Day), and Labs referring to its research and development profile.",
+     "quote": "The name ElevenLabs derives from the English word eleven. The number refers to November 11, the date of Poland’s National Independence Day (the eleventh day of the eleventh month). The element Labs refers to the English word laboratories and indicates the company’s research and development profile."
+    },
+    "sig": "EmAKXgFpFH0TzVo2Cfkjg30SFnH7jq23Z/5Tp+Z3+Kr209Hyaeulu9qteZ6j1/atXMntnKvGML5tBWX1ZKMm6n+F1WBL6LvMYJjPu964TR+aEPHYiiHScMjjSjEwtQJNVvs="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_3536062239555263927",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=1 quote_check=partial"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_11108289889480275155",
+    "name": "subquestion_done",
+    "args": {
+     "summary": "A ElevenLabs foi fundada em 2022 pelos empreendedores poloneses Piotr Dąbkowski (ex-engenheiro de machine learning do Google) e Mateusz 'Mati' Staniszewski (ex-estrategista da Palantir). A motivação inicial surgiu da frustração de infância com a má qualidade e a falta de emoção nas dublagens de filmes de Hollywood na Polônia. O nome 'ElevenLabs' faz referência a 11 de novembro (Dia da Independência da Polônia) e 'Labs' aos laboratórios de pesquisa e desenvolvimento.",
+     "confidence": "high"
+    },
+    "sig": "EmAKXgFpFH0ThltDS/XPPSFK8/i6RkWAMRWfNY18xSEchECUMiwBbZAEMbyvCF4NCAiZMX22Odi4X81L0IAWMspQn5o9HSD8ROtIwtjFSIv3GgK4qeMGuc4nuUD4mu8N8nw="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_11108289889480275155",
+    "name": "subquestion_done",
+    "result": "status=failed action=subquestion_done reason=\"not yet: findings for this question come from 1 page(s) read in full. Read at least 1 more independent source(s) with fetch_page and record what they say — unless you have searched and there are none; then call this again and say so.\" -- This did NOT happen. Tell the user so in their own language, with the reason. Do not claim any part of it succeeded."
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_7986546546478848412",
+    "name": "fetch_page",
+    "args": {
+     "url": "https://businesscloud.co.uk/founders/mati-staniszewski-piotr-dabkowski-elevenlabs/"
+    },
+    "sig": "EmAKXgFpFH0T3OVl3eZYv14P8lER5YkzrIrA4ahD4Ut0H/BFzr4FkyeZ0Q23m0rAmx/4t0xZ+gAKurZdGxpztNFYOU2bxNA8DXHEDNbUDJnnkMmZ469Jq/RvbnHnDVDEst8="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_7986546546478848412",
+    "name": "fetch_page",
+    "result": "<<<UNTRUSTED source=web>>>\nURL: https://businesscloud.co.uk/founders/mati-staniszewski-piotr-dabkowski-elevenlabs/\nTITLE: Mati Staniszewski & Piotr Dąbkowski - ElevenLabs - BusinessCloud\n\n## Mati Staniszewski & Piotr Dąbkowski – ElevenLabs\n- founded 2022\n- HQ London\n- Sector AI\n- Region Greater London\nElevenLabs is an AI research and product company transforming how we interact with technology. It was co-founded in 2022 in London by childhood friends from Poland Mati Staniszewski (CEO) and Piotr Dąbkowski (CTO). ElevenLabs is reported to be in early talks with investors about a secondary share sale that could value the company at around $22bn.\nSubscribe to our newsletter\n<<<END UNTRUSTED>>>"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_18368346073606320390",
+    "name": "record_finding",
+    "args": {
+     "source_url": "https://businesscloud.co.uk/founders/mati-staniszewski-piotr-dabkowski-elevenlabs/",
+     "stance": "supports",
+     "source_title": "Mati Staniszewski & Piotr Dąbkowski - ElevenLabs - BusinessCloud",
+     "quote": "It was co-founded in 2022 in London by childhood friends from Poland Mati Staniszewski (CEO) and Piotr Dąbkowski (CTO).",
+     "claim": "ElevenLabs was co-founded in 2022 in London by childhood friends from Poland Mati Staniszewski (CEO) and Piotr Dąbkowski (CTO)."
+    },
+    "sig": "EmAKXgFpFH0TiyONBiMxmIW0NReab3xJvPJ0MGGrbiY4Ip/tYxG7yeTON3zA8ne19NlQg3OCtpVKfjMg2bZTwyJi2zOFg5UNITacc7IpKKBy2i6D2bo5+sqeYrIwSPQeuwQ="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_18368346073606320390",
+    "name": "record_finding",
+    "result": "status=done action=record_finding source=2 quote_check=exact"
+   }
+  ]
+ },
+ {
+  "role": "model",
+  "text": "",
+  "calls": [
+   {
+    "id": "call_5027795617901436844",
+    "name": "subquestion_done",
+    "args": {
+     "confidence": "high",
+     "summary": "A ElevenLabs foi fundada em 2022 em Londres por dois amigos de infância poloneses: Mati Staniszewski (CEO) e Piotr Dąbkowski (CTO). A motivação inicial veio da insatisfação com as dublagens sem emoção de filmes de Hollywood assistidos na Polônia na infância, e o nome homenageia o 11 de novembro (Dia da Independência polonesa)."
+    },
+    "sig": "EmAKXgFpFH0Td++uVLToBn8osmHuOhNsnZ+B7ZvrbbZztzGoL9qHJflWYO5Ur+WKU2+fEOmd1V3yQzJkuY8wrMNFWl+D5cUnPlP88H08itQKqY0MZEcCDSx3LWd0XClHIPs="
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "results": [
+   {
+    "id": "call_5027795617901436844",
+    "name": "subquestion_done",
+    "result": "status=done action=subquestion_done question=1"
+   }
+  ]
+ }
+]
