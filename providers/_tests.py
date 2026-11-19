@@ -32,16 +32,104 @@ WHAT IT IS FOR
 from __future__ import annotations
 
 import asyncio
+from contextlib import contextmanager
 import json
+import os
+import shutil
+import subprocess
 import sys
+import tempfile
 import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-_ok = _fail = 0
+_ok = _fail = _skip = 0
 _failures: list[str] = []
+_servers = []
+
+
+def skip(name: str, reason: str) -> None:
+    global _skip
+    _skip += 1
+    print(f"  SKIP  {name}: {reason}")
+
+
+@contextmanager
+def isolated_project():
+    """Copy code only, before any product import. Never copy personal data."""
+    source = Path(__file__).resolve().parent.parent
+    with tempfile.TemporaryDirectory(prefix="jarvis-provider-tests-") as folder:
+        root = Path(folder)
+        for package in ("providers", "gui", "core", "memory"):
+            (root / package).mkdir()
+            for path in (source / package).glob("*.py"):
+                if package == "memory" and path.name not in ("__init__.py", "config_manager.py"):
+                    continue
+                if path.is_symlink():
+                    raise RuntimeError(f"Refusing linked source: {path.name}")
+                shutil.copyfile(path, root / package / path.name)
+        shutil.copyfile(source / "ui.py", root / "ui.py")
+        # Both platform caches and tempfile children stay in the disposable tree.
+        env = dict(os.environ)
+        for name in ("HOME", "USERPROFILE", "LOCALAPPDATA", "APPDATA",
+                     "XDG_CACHE_HOME", "XDG_DATA_HOME", "TMP", "TEMP", "TMPDIR"):
+            dest = root / "runtime" / name
+            dest.mkdir(parents=True)
+            env[name] = str(dest)
+        env.update(QT_QPA_PLATFORM="offscreen", PYTHONUTF8="1",
+                   PYTHONIOENCODING="utf-8", PYTHONDONTWRITEBYTECODE="1",
+                   PYTHONPATH=str(root), JARVIS_TEST_ROOT=str(root))
+        yield root, env
+
+
+@contextmanager
+def synthetic_voices():
+    """Called only in the disposable child, before panel imports."""
+    from unittest.mock import patch
+    from providers import tts_piper, tts_system
+    voices = ("en_US-lessac-medium", "tr_TR-dfki-medium")
+    with tempfile.TemporaryDirectory(prefix="voices-") as folder:
+        root = Path(folder)
+        for voice in voices:
+            (root / (voice + ".onnx")).write_bytes(b"synthetic fixture; not a model")
+        with patch.object(tts_piper, "_VOICE_DIR", root), \
+             patch.object(tts_piper, "_catalog", {}), \
+             patch.object(tts_piper, "download", side_effect=AssertionError("Download forbidden")), \
+             patch.object(tts_piper.PiperTTS, "_synth", side_effect=AssertionError("Synthesis forbidden")), \
+             patch.object(tts_system, "_voice_cache", ["synthetic voice"]):
+            yield
+
+
+def install_child_guard(root: Path) -> list[str]:
+    """Test guard, not a security sandbox. Block writes outside the fixture tree."""
+    import socket
+    violations = []
+    root = root.resolve()
+
+    def audit(event, args):
+        if event == "socket.connect":
+            address = args[1]
+            if not isinstance(address, tuple) or address[0] not in ("127.0.0.1", "::1"):
+                violations.append("non-loopback connection")
+                raise RuntimeError(violations[-1])
+        elif event == "socket.getaddrinfo" and args[0] not in ("127.0.0.1", "::1", "localhost"):
+            violations.append("external DNS")
+            raise RuntimeError(violations[-1])
+        elif event in ("open", "os.mkdir", "os.remove", "os.rmdir", "os.rename"):
+            paths = args[:2] if event == "os.rename" else args[:1]
+            if event == "open":
+                mode, flags = args[1:3]
+                if not ((mode and any(c in mode for c in "wax+")) or
+                        (flags and flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT | os.O_TRUNC))):
+                    return
+            for path in paths:
+                if isinstance(path, (str, bytes, os.PathLike)) and not Path(os.fsdecode(path)).resolve().is_relative_to(root):
+                    violations.append("write outside disposable project")
+                    raise RuntimeError(violations[-1])
+    sys.addaudithook(audit)
+    return violations
 
 
 def check(name: str, cond, detail: str = "") -> None:
@@ -125,8 +213,20 @@ class _MockServer(BaseHTTPRequestHandler):
 
 def start_server():
     srv = HTTPServer(("127.0.0.1", 0), _MockServer)
-    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    thread = threading.Thread(target=srv.serve_forever, daemon=True)
+    thread.start()
+    _servers.append((srv, thread))
     return srv
+
+
+def close_servers():
+    while _servers:
+        srv, thread = _servers.pop()
+        srv.shutdown()
+        srv.server_close()
+        thread.join(timeout=2)
+        if thread.is_alive():
+            raise RuntimeError("Mock HTTP server did not stop")
 
 
 class FakeLLM:
@@ -531,18 +631,21 @@ def test_costs_nothing_when_unused():
         # A default install: a config with no providers, in a throwaway file -
         # never the user's own config (this used to rewrite it, and failed on
         # a fresh install that has none yet).
-        "p=pathlib.Path(tempfile.mkdtemp())/'api_keys.json';"
+        "tmp=tempfile.TemporaryDirectory();"
+        "p=pathlib.Path(tmp.name)/'api_keys.json';"
         "p.write_text('{}',encoding='utf-8');"
         "g._KEY_FILE=p;"
         "t=time.perf_counter();"
         "[g._provider_rungs(g.FAST) for _ in range(1000)];"
         "dt=(time.perf_counter()-t)/1000*1e6;"
         "mods=[m for m in sys.modules if m.startswith('providers')];"
-        "print(json.dumps({'us': dt, 'mods': mods}))"
+        "print(json.dumps({'us': dt, 'mods': mods}));"
+        "tmp.cleanup()"
     )
     r = subprocess.run([sys.executable, "-c", code],
                        capture_output=True, text=True,
-                       cwd=str(Path(__file__).resolve().parent.parent))
+                       cwd=str(Path(__file__).resolve().parent.parent), timeout=30)
+    check("unconfigured subprocess exited successfully", r.returncode == 0, r.stderr)
     try:
         data = json.loads(r.stdout.strip().splitlines()[-1])
     except Exception:
@@ -559,7 +662,7 @@ def test_a_chosen_voice_downloads_itself():
 
     section("[15] A chosen voice fetches itself")
     if find_spec("piper") is None:
-        check("piper installed (skipped)", True, "not installed - skipped")
+        skip("Piper dependency", "piper is not installed; synthesis is not validated")
         return
     from providers import tts_piper
 
@@ -575,7 +678,7 @@ def test_a_chosen_voice_downloads_itself():
         check("an already-downloaded voice reports ready without fetching",
               seen and seen[-1][0] is True, str(seen))
     else:
-        check("a voice is downloaded to test with (skipped)", True, "none yet")
+        skip("Piper fixture", "no synthetic voice fixture")
 
     # The failure this replaced: a missing voice used to raise and tell the
     # user to press a button, leaving the assistant mute.
@@ -638,7 +741,7 @@ async def test_it_speaks_before_the_tool_runs():
         async def speak(self, text, voice="", language=""):
             self.said.append(text)
             self.at.append(_t.monotonic())
-            yield b"" * 1000
+            yield b"\x01\x02" * 1000
 
     tts = TTS()
     eng = PipelineEngine(LLM(), tts=tts, config=Cfg(), log=lambda m: None)
@@ -929,7 +1032,7 @@ def test_voices_follow_the_language():
 
     section("[13] The voice follows the language spoken")
     if find_spec("piper") is None:
-        check("piper installed (skipped)", True, "not installed - skipped")
+        skip("Piper dependency", "piper is not installed; language selection not exercised")
         return
     from providers import tts_piper
     from providers.engine_pipeline import _accepts_language
@@ -949,8 +1052,7 @@ def test_voices_follow_the_language():
         check("a language with no voice downloaded falls back",
               voice._pick("ja") == "en_US-lessac-medium", voice._pick("ja"))
     else:
-        check("both test voices downloaded (skipped)", True,
-              f"have {sorted(here)}")
+        skip("Piper language fixtures", f"have {sorted(here)}")
 
     from providers.tts_system import SystemTTS
     check("the system voice is NOT told a language it cannot use",
@@ -983,14 +1085,13 @@ def test_panel_settings_survive():
                                        save_provider_mode,
                                        save_sidecar_provider)
 
-    # The test writes the real config and puts it back. A fresh install has
-    # none yet: then the file it made is removed again afterwards.
-    cfg_file = Path(__file__).resolve().parent.parent / "config" / "api_keys.json"
-    had_config = cfg_file.exists()
-    restore = json.loads(cfg_file.read_text(encoding="utf-8")).get("providers") \
-        if had_config else None
-
-    try:
+    # Never read or restore personal configuration. Every invocation has its
+    # own temporary file, even when this test raises halfway through.
+    from unittest.mock import patch
+    from memory import config_manager as cm
+    with tempfile.TemporaryDirectory(prefix="panel-") as folder, \
+         patch.object(cm, "CONFIG_DIR", Path(folder)), \
+         patch.object(cm, "CONFIG_FILE", Path(folder) / "api_keys.json"):
         save_provider_mode("gemini")
         save_pipeline(stt="", llm="", tts="")
         save_sidecar_provider("")
@@ -1067,38 +1168,43 @@ def test_panel_settings_survive():
         combos = ov2.findChildren(QComboBox)
         check(f"all {len(combos)} boxes ignore the wheel unless focused",
               combos and all(isinstance(c, UI._ScrollSafeCombo) for c in combos))
-    finally:
-        from memory.config_manager import _patch_config
-        _patch_config(providers=restore or {})
-        if not had_config:
-            cfg_file.unlink(missing_ok=True)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-async def main() -> int:
+async def _run_tests(tests=None) -> int:
+    import inspect
+    global _ok, _fail, _skip
+    _ok = _fail = _skip = 0
+    _failures.clear()
     print("providers self-test")
-    await test_real_caller_shapes()
-    await test_taskgroup_and_tool_loop()
-    await test_full_stack_over_http()
-    test_vision_is_asked_not_guessed()
-    test_schema()
-    test_audio()
-    await test_failures_name_the_part()
-    test_addresses()
-    test_costs_nothing_when_unused()
-    await test_it_speaks_before_the_tool_runs()
-    await test_a_tool_is_not_run_twice()
-    await test_injections_are_not_the_user()
-    test_what_reaches_the_voice()
-    test_reasoning_is_not_read_aloud()
-    test_local_models_get_a_smaller_prompt()
-    test_voices_follow_the_language()
-    test_voice_folder_is_writable()
-    test_a_chosen_voice_downloads_itself()
-    test_panel_settings_survive()
+    if tests is None:
+        tests = [test_real_caller_shapes, test_taskgroup_and_tool_loop,
+                 test_full_stack_over_http, test_vision_is_asked_not_guessed,
+                 test_schema, test_audio, test_failures_name_the_part,
+                 test_addresses, test_costs_nothing_when_unused,
+                 test_it_speaks_before_the_tool_runs, test_a_tool_is_not_run_twice,
+                 test_injections_are_not_the_user, test_what_reaches_the_voice,
+                 test_reasoning_is_not_read_aloud, test_local_models_get_a_smaller_prompt,
+                 test_voices_follow_the_language, test_voice_folder_is_writable,
+                 test_a_chosen_voice_downloads_itself, test_panel_settings_survive]
+    for test in tests:
+        before = set(asyncio.all_tasks())
+        try:
+            result = test()
+            if inspect.isawaitable(result):
+                await asyncio.wait_for(result, 45)
+        except Exception as exc:
+            check(test.__name__, False, f"{type(exc).__name__}: {exc}")
+        finally:
+            pending = asyncio.all_tasks() - before
+            for task in pending:
+                task.cancel()
+            if pending:
+                await asyncio.wait_for(asyncio.gather(*pending, return_exceptions=True), 5)
+            close_servers()
 
     print(f"\n{'=' * 56}")
-    print(f"{_ok} passed, {_fail} failed")
+    print(f"{_ok} passed, {_fail} failed, {_skip} skipped")
     if _failures:
         for name in _failures:
             print(f"   - {name}")
@@ -1106,5 +1212,42 @@ async def main() -> int:
     return 1 if _fail else 0
 
 
+async def main() -> int:
+    """Public entry: fresh sources and state for every run, including reentry."""
+    try:
+        with isolated_project() as (root, env):
+            result = await asyncio.to_thread(
+                subprocess.run,
+                [sys.executable, "-m", "providers._tests", "--isolated-child"],
+                cwd=root, env=env, capture_output=True, text=True,
+                encoding="utf-8", errors="replace", timeout=180,
+                creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
+            print(result.stdout, end="")
+            if result.stderr:
+                print(result.stderr, file=sys.stderr, end="")
+            return result.returncode
+    except Exception as exc:
+        print(f"FAIL providers runner: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 1
+
+
+def child_main() -> int:
+    root = Path(__file__).resolve().parent.parent
+    if os.environ.get("JARVIS_TEST_ROOT") != str(root):
+        print("FAIL isolated child must be started by the temporary-project runner", file=sys.stderr)
+        return 1
+    violations = install_child_guard(root)
+    try:
+        with synthetic_voices():
+            result = asyncio.run(_run_tests())
+        if violations:
+            print(f"FAIL isolation guard: {violations}", file=sys.stderr)
+            return 1
+        return result
+    except Exception as exc:
+        print(f"FAIL isolated child: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 1
+
+
 if __name__ == "__main__":
-    sys.exit(asyncio.run(main()))
+    sys.exit(child_main() if sys.argv[1:] == ["--isolated-child"] else asyncio.run(main()))

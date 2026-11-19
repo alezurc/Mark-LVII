@@ -1,0 +1,131 @@
+def _vscode_launchers():
+    """Native argv only; never feed a project path to cmd.exe."""
+    import os
+    candidates = [shutil.which("code")]
+    if sys.platform == "win32":
+        for key, tail in (("LOCALAPPDATA", "Programs/Microsoft VS Code/Code.exe"),
+                          ("ProgramFiles", "Microsoft VS Code/Code.exe")):
+            base = os.environ.get(key)
+            if base:
+                candidates.append(str(Path(base) / tail))
+    seen = set()
+    for candidate in candidates:
+        if not candidate:
+            continue
+        path = Path(candidate)
+        if sys.platform == "win32":
+            # code.cmd normally runs Code.exe as Node with the bundled CLI.
+            # Reproduce that argv without interpreting the .cmd wrapper.
+            home = path.parent.parent if path.suffix.lower() in (".cmd", ".bat") else path.parent
+            exe, cli = home / "Code.exe", home / "resources/app/out/cli.js"
+            if not exe.is_file() or not cli.is_file():
+                continue
+            argv = [str(exe), str(cli)]
+        else:
+            if not path.is_file():
+                continue
+            argv = [str(path)]
+        key = tuple(argv)
+        if key not in seen:
+            seen.add(key)
+            yield argv
+
+
+def _vscode_output(label, value, log):
+    if value:
+        # CLI output is untrusted and may contain project contents or tokens.
+        # Record receipt/size, not arbitrary content in the conversation log.
+        log(f"VS Code {label}: captured {len(value)} bytes/chars (content withheld).")
+
+
+def _vscode_observe(project_dir: Path, timeout: float) -> bool:
+    """Bound the native window/process snapshot in a disposable non-GUI child.
+
+    Only a full-path title field counts. Default basename-only VS Code titles
+    cannot establish which of two homonymous projects is open.
+    """
+    probe = r'''
+import os, re, sys
+from core import appidentity
+target = os.path.normcase(os.path.normpath(sys.argv[1]))
+for match in appidentity.running("visual studio code", include_self=True):
+    if match.name.lower() not in ("code", "code.exe"):
+        continue
+    for title in match.titles:
+        fields = re.split(r"\s+[\u2014\u2013|]\s+|\s+-\s+", title)
+        if any(os.path.normcase(os.path.normpath(f.strip().strip('"'))) == target for f in fields):
+            sys.exit(0)
+sys.exit(1)
+'''
+    result = subprocess.run(
+        [sys.executable, "-c", probe, str(project_dir)], cwd=str(BASE_DIR),
+        capture_output=True, timeout=timeout,
+        creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+    )
+    return result.returncode == 0
+
+
+def _open_vscode(project_dir: Path, log=print) -> bool:
+    """Best effort, eight seconds total; True means a matching window was seen."""
+    import os
+    deadline = time.monotonic() + 8.0
+
+    def remaining():
+        left = deadline - time.monotonic()
+        if left <= 0:
+            raise TimeoutError("VS Code deadline")
+        return left
+
+    try:
+        project_dir = Path(project_dir).resolve(strict=True)
+        if not project_dir.is_dir():
+            raise ValueError("not a project directory")
+        launchers = list(_vscode_launchers())[:3]
+        if not launchers:
+            log("VS Code failed: launcher not found; project files are saved.")
+            return False
+        env = os.environ.copy()
+        if sys.platform == "win32":
+            env["ELECTRON_RUN_AS_NODE"] = "1"
+        for index, argv in enumerate(launchers, 1):
+            try:
+                result = subprocess.run(
+                    argv + ["--folder-uri", project_dir.as_uri()],
+                    shell=False, capture_output=True, timeout=min(3.0, remaining()),
+                    env=env, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+                )
+                _vscode_output("stdout", result.stdout, log)
+                _vscode_output("stderr", result.stderr, log)
+                if result.returncode:
+                    log(f"VS Code candidate {index} failed: exit code {result.returncode}.")
+                    continue
+                break
+            except subprocess.TimeoutExpired as exc:
+                _vscode_output("stdout", exc.output, log)
+                _vscode_output("stderr", exc.stderr, log)
+                log(f"VS Code candidate {index} failed: launcher timeout.")
+            except OSError:
+                log(f"VS Code candidate {index} failed: launcher could not start.")
+        else:
+            log("VS Code failed: no launcher completed; project files are saved.")
+            return False
+        while True:
+            try:
+                if _vscode_observe(project_dir, min(1.0, remaining())):
+                    log("VS Code opened: matching project window verified.")
+                    return True
+            except subprocess.TimeoutExpired:
+                pass
+            except OSError:
+                break
+            time.sleep(min(0.2, remaining()))
+    except (TimeoutError, subprocess.TimeoutExpired):
+        log("VS Code not verified: observation deadline reached; project files are saved.")
+        return False
+    except Exception:
+        log("VS Code failed: opening or observation unavailable; project files are saved.")
+        return False
+    log("VS Code not verified: window observation unavailable; project files are saved.")
+    return False
+
+

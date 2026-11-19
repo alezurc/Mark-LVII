@@ -1,0 +1,182 @@
+   (optional)|   (opcional)
+ under Windows Defender Firewall → Inbound Rules.| no Windows Defender Firewall → Regras de Entrada.
+#00d4ff   (custom hex colour)|#00d4ff   (cor hexadecimal personalizada)
+A 3-D reactor core that turns with the state and moves with your voice. Tap to switch to the animated head.|Um núcleo de reator 3D que gira conforme o estado e se move com sua voz. Clique para exibir o rosto animado.
+ANSWER|RESPONDER
+ASSISTANT NAME|NOME DO ASSISTENTE
+ASSISTANT VOICE|VOZ DO ASSISTENTE
+All three set. SAVE & APPLY reconnects; the conversation is kept.|Os três estão configurados. SALVAR E APLICAR reconecta e mantém a conversa.
+An animated head that speaks your words and shows what JARVIS is doing. Tap to switch to the reactor core.|Um rosto animado que fala e mostra o que JARVIS está fazendo. Clique para exibir o núcleo do reator.
+Applying reconnects the session. Your conversation is kept.|Aplicar reconecta a sessão. Sua conversa é mantida.
+Auto-detected: {v0}|Detectado automaticamente: {v0}
+BRIEFING|RESUMO
+BROKEN|COM ERRO
+CANCEL|CANCELAR
+CLOSE|FECHAR
+COMMAND|COMANDO
+COMMUNICATIONS|COMUNICAÇÕES
+CONNECTED|CONECTADO
+CONTROLS|CONTROLES
+Choose what powers the conversation. Gemini is the default and needs nothing set up here.|Escolha o que alimenta a conversa. Gemini é o padrão e não precisa de configuração aqui.
+Code is written by whatever answers background requests above.|O código é escrito pelo modelo das solicitações em segundo plano acima.
+Configure J.A.R.V.I.S. before first boot.|Configure J.A.R.V.I.S. antes de iniciar.
+Controls — the everyday switches|Controles — opções do dia a dia
+DEFAULT|PADRÃO
+DISMISS|DISPENSAR
+DROP A FILE OR FOLDER  ·  OR CLICK|SOLTE UM ARQUIVO OU PASTA  ·  OU CLIQUE
+Dismiss|Dispensar
+ENGINE|MOTOR
+ERR: Auto-start failed — {v0}|ERR: Falha na inicialização automática — {v0}
+ERR: Config save failed — {v0}|ERR: Falha ao salvar configuração — {v0}
+ERR: Confirmation failed — {v0}|ERR: Falha na confirmação — {v0}
+ERR: Push-to-talk failed — {v0}|ERR: Falha no pressionar para falar — {v0}
+ERR: Shortcut failed — {v0}|ERR: Falha no atalho — {v0}
+FILE: {v0} ({v1}) loaded|FILE: {v0} ({v1}) carregado
+FINISH  →|CONCLUIR  →
+FOLDER: {v0} ({v1} files) loaded|FOLDER: {v0} ({v1} arquivos) carregada
+Forget this|Esquecer este item
+Fullscreen  [F11]|Tela cheia  [F11]
+GEMINI API KEY|CHAVE DE API DO GEMINI
+Gemini Live. Nothing on this panel changes the conversation.|Gemini Live. Este painel não altera a conversa.
+Hold a key to talk instead of streaming the mic continuously.|Segure uma tecla para falar em vez de transmitir o microfone continuamente.
+INPUT|ENTRADA
+INSTALL {v0}|INSTALAR {v0}
+Key expires in  {v0:02d}:{v1:02d}|A chave expira em  {v0:02d}:{v1:02d}
+LIVE|AO VIVO
+LOG|REGISTRO
+Left as it is, these keep using Gemini and stop working when its text quota runs out.|Sem alterações, continuam usando Gemini e param quando a cota de texto acaba.
+Microphone stays closed until you hold the key — nothing is sent while you are not holding it.|O microfone fica fechado até você segurar a tecla — nada é enviado enquanto ela estiver solta.
+Mute or unmute the microphone  [F4]|Silenciar ou ativar o microfone  [F4]
+NETWORK|REDE
+NEW KEY|NOVA CHAVE
+NEXT  →|PRÓXIMA  →
+NO KEY — USE A LOCAL MODEL|SEM CHAVE — USAR MODELO LOCAL
+No background tasks yet.|Ainda não há tarefas em segundo plano.
+No configurable plugins are installed.\nDrop a plugin that needs settings (like the 3D-printer suite) into the plugins folder and it will show up here.|Nenhum plugin configurável instalado.\nColoque um plugin que precise de configuração (como o de impressora 3D) na pasta plugins para exibi-lo aqui.
+No file loaded|Nenhum arquivo carregado
+No plugins found in /plugins.|Nenhum plugin encontrado em /plugins.
+No routines yet. Ask for one by voice — "every weekday at 08:30, tell me the weather".|Ainda não há rotinas. Peça por voz — "todo dia útil às 08:30, diga a previsão do tempo".
+Nothing stored yet.|Ainda não há informações salvas.
+Nothing to set up. Your voice goes to Gemini and comes back as speech over one connection, with the transcript and every tool call on the same wire.|Nada para configurar. Sua voz vai ao Gemini e volta como fala na mesma conexão, com transcrição e chamadas de ferramentas.
+OFF|DESLIGADO
+ON|LIGADO
+OPERATING SYSTEM|SISTEMA OPERACIONAL
+OUTPUT VOLUME|VOLUME DE SAÍDA
+One connection carries your voice, its voice, the transcript and the tools together. The fastest option — about half a second to the first word.|Uma conexão transporta sua voz, a resposta, a transcrição e as ferramentas. A opção mais rápida — cerca de meio segundo até a primeira palavra.
+Only {v0} is missing — it will run, but you will type instead of speak, or read instead of listen.|Falta apenas {v0} — funcionará, mas você digitará em vez de falar ou lerá em vez de ouvir.
+Or enter manually:|Ou digite manualmente:
+PLATFORM|PLATAFORMA
+PROCESSES|PROCESSOS
+Phone connected — JARVIS ready|Celular conectado — JARVIS pronto
+Pick MY OWN SETUP above to run it on your own machine, or through another company's model.|Escolha MINHA CONFIGURAÇÃO acima para executar no seu computador ou com um modelo de outra empresa.
+Playing a tone…|Reproduzindo um tom…
+QUIZ|QUESTIONÁRIO
+QUIZ: {v0} — {v1}/{v2} correct|QUIZ: {v0} — {v1}/{v2} corretas
+RELEASE TO LOAD|SOLTE PARA CARREGAR
+ROUTINES|ROTINAS
+Reading a document, looking at your screen, writing code — the assistant's own requests, not the conversation. These use Gemini's text quota, which runs out before the voice does. Sending them somewhere else keeps them working, and changes nothing you hear.|Ler documentos, ver a tela, escrever código — solicitações do assistente, além da conversa. Usam a cota de texto do Gemini, que acaba antes da de voz. Usar outro provedor mantém essas funções sem alterar o que você ouve.
+SETUP|CONFIGURAÇÃO
+STATUS|ESTADO
+SYS: '{v0}' could not be shown — this Qt build does not read that image format.|SYS: Não foi possível exibir '{v0}' — esta versão do Qt não lê esse formato.
+SYS: Audio devices updated.|SYS: Dispositivos de áudio atualizados.
+SYS: Auto-start {v0}.|SYS: Inicialização automática {v0}.
+SYS: Could not generate remote key.|SYS: Não foi possível gerar a chave remota.
+SYS: Dashboard not running — remote unavailable.|SYS: Painel remoto parado — acesso remoto indisponível.
+SYS: Desktop shortcut created.|SYS: Atalho da área de trabalho criado.
+SYS: Engine settings saved — reconnecting.|SYS: Configuração do motor salva — reconectando.
+SYS: HUD switched to the animated face.|SYS: HUD alterado para o rosto animado.
+SYS: HUD switched to the reactor core.|SYS: HUD alterado para o núcleo do reator.
+SYS: Identity updated — {v0}|SYS: Identidade atualizada — {v0}
+SYS: Initialised. OS={v0}. {v1} online.|SYS: Inicializado. SO={v0}. {v1} conectado.
+SYS: Microphone active.|SYS: Microfone ativo.
+SYS: Microphone muted.|SYS: Microfone silenciado.
+SYS: Provider settings unavailable: {v0}|SYS: Configuração de provedores indisponível: {v0}
+SYS: Remote key generated — manual: {v0}|SYS: Chave remota gerada — acesso manual: {v0}
+SYS: Routine not changed — {v0}|SYS: Rotina não alterada — {v0}
+SYS: The providers folder is not installed — the assistant runs on Gemini Live.|SYS: A pasta providers não está instalada — o assistente usa Gemini Live.
+SYS: The video could not be played{v0}.|SYS: Não foi possível reproduzir o vídeo{v0}.
+SYS: UI colour applied — {v0}|SYS: Cor da interface aplicada — {v0}
+SYS: Video playback is not available in this Qt install.|SYS: A reprodução de vídeo não está disponível nesta instalação do Qt.
+SYS: Voice set — {v0}|SYS: Voz definida — {v0}
+SYSTEMS|SISTEMAS
+Saved ✓|Salvo ✓
+Scan with phone camera to connect instantly|Leia com a câmera do celular para conectar
+Send  [Enter]|Enviar  [Enter]
+Setup — things you set once|Configuração — preferências iniciais
+Speak now…|Fale agora…
+Stop the assistant mid-sentence  [ESC]|Interromper a fala do assistente  [ESC]
+TASKS|TAREFAS
+TEST|TESTAR
+Testing…|Testando…
+The model that plans, writes and fixes projects when you ask the assistant to build something. Saved to Desktop/JarvisProjects.|O modelo que planeja, escreve e corrige projetos quando você pede ao assistente para criar algo. Salvos em Desktop/JarvisProjects.
+Type a command or question…|Digite um comando ou pergunta…
+UI COLOUR  —  drag the handle|COR DA INTERFACE  —  arraste o controle
+UPTIME|TEMPO ATIVO
+Uses the model you chose for ② THINKING.|Usa o modelo escolhido em ② RACIOCÍNIO.
+Uses the settings under BACKGROUND REQUESTS.|Usa as opções de SOLICITAÇÕES EM SEGUNDO PLANO.
+VOICE|VOZ
+VOICE INTERFACE|INTERFACE DE VOZ
+YOUR NAME  (leave blank for default sir / efendim)|SEU NOME  (em branco: sir / efendim)
+Your choice of hearing, thinking and speaking. Can run entirely on this computer, with nothing leaving it. Slower: 1.5 to 4 seconds.|Escolha reconhecimento de voz, raciocínio e fala. Pode funcionar só neste computador, sem enviar dados. Mais lento: 1,5 a 4 segundos.
+e.g.  Tony   (leave blank for auto)|ex.: Tony   (em branco: automático)
+your answer|sua resposta
+{v0}   (optional)|{v0}   (opcional)
+{v0}  {v1}  ·  {v2}  ·  Tell {v3} what to do with it|{v0}  {v1}  ·  {v2}  ·  Diga a {v3} o que fazer com ele
+{v0}  {v1}  ·  {v2} files  ·  Tell {v3} what to change in it|{v0}  {v1}  ·  {v2} arquivos  ·  Diga a {v3} o que alterar
+{v0}  ·  PERSONAL AI SYSTEM|{v0}  ·  SISTEMA PESSOAL DE IA
+{v0} ACTIVE|{v0} ATIVAS
+{v0} ON|{v0} LIGADAS
+{v0} stored facts — newest first. Nothing here is sent anywhere; it lives in memory/long_term.json on this machine.|{v0} informações salvas — mais recentes primeiro. Nada é enviado; os dados ficam em memory/long_term.json neste computador.
+↻ REFRESH|↻ ATUALIZAR
+⊞  CREATE DESKTOP SHORTCUT|⊞  CRIAR ATALHO
+⌃ LESS|⌃ MENOS
+⌄ MORE|⌄ MAIS
+▶  VIDEO|▶  VÍDEO
+▸  APPLY|▸  APLICAR
+▸  APPLY CHANGES|▸  APLICAR ALTERAÇÕES
+▸  CONFIRM|▸  CONFIRMAR
+▸  INITIALISE SYSTEMS|▸  INICIALIZAR SISTEMAS
+▸  SAVE|▸  SALVAR
+▸  SAVE  &&  APPLY|▸  SALVAR  E  APLICAR
+◈  CAMERA FEED|◈  CÂMERA
+◈  CLIPBOARD DETECTED|◈  ÁREA DE TRANSFERÊNCIA
+◈  INITIALISATION REQUIRED|◈  INICIALIZAÇÃO NECESSÁRIA
+◈  REMOTE ACCESS|◈  ACESSO REMOTO
+◈  VISUAL INPUT|◈  ENTRADA VISUAL
+◉  AUTO-START: OFF|◉  INICIAR COM WINDOWS: NÃO
+◉  AUTO-START: ON|◉  INICIAR COM WINDOWS: SIM
+◉  HUD: REACTOR CORE|◉  HUD: NÚCLEO DO REATOR
+◉  REMOTE CONTROL|◉  CONTROLE REMOTO
+☀  MORNING BRIEF: OFF|☀  RESUMO MATINAL: NÃO
+☀  MORNING BRIEF: ON|☀  RESUMO MATINAL: SIM
+⚙  CUSTOMISE ASSISTANT|⚙  PERSONALIZAR ASSISTENTE
+⚙  PLUGIN SETTINGS|⚙  CONFIGURAR PLUGINS
+⚠  CONFIRM|⚠  CONFIRMAÇÃO
+⚠  Windows is blocking incoming connections to this copy of Python, so your phone cannot reach this page. Restart JARVIS and accept the Windows prompt, or remove the rules named |⚠  O Windows bloqueia conexões de entrada deste Python, impedindo o acesso pelo celular. Reinicie JARVIS e aceite a solicitação do Windows ou remova as regras chamadas 
+⚠  ② THINKING is not set — without it the assistant falls back to Gemini Live and says so in the log.|⚠  ② RACIOCÍNIO não configurado — o assistente usará Gemini Live e avisará no registro.
+⚡  BACKGROUND REQUESTS|⚡  SOLICITAÇÕES EM SEGUNDO PLANO
+⛶  FULLSCREEN  [F11]|⛶  TELA CHEIA  [F11]
+✕  CLOSE|✕  FECHAR
+⬇  DOWNLOADING… (one-time)|⬇  BAIXANDO… (uma vez)
+⬇  WAKE WORD: DOWNLOAD|⬇  PALAVRA DE ATIVAÇÃO: BAIXAR
+🎙  WAKE WORD|🎙  PALAVRA DE ATIVAÇÃO
+🎙  WAKE WORD: OFF|🎙  ATIVAÇÃO POR VOZ: NÃO
+🎙  WAKE WORD: ON|🎙  ATIVAÇÃO POR VOZ: SIM
+🎚  PUSH-TO-TALK: OFF|🎚  PRESSIONAR PARA FALAR: NÃO
+🎚  PUSH-TO-TALK: {v0}|🎚  PRESSIONAR PARA FALAR: {v0}
+🎧  AUDIO DEVICES|🎧  DISPOSITIVOS DE ÁUDIO
+👂  WAKE NOW|👂  ATIVAR AGORA
+📁  Choose a folder…  (for coding)|📁  Escolher pasta…  (para programar)
+📄  Choose a file…|📄  Escolher arquivo…
+🔇  SOUND OFF|🔇  SOM DESLIGADO
+🔊  SOUND ON|🔊  SOM LIGADO
+🔌  ENGINE  &  PROVIDERS|🔌  MOTOR  E  PROVEDORES
+🔌  ENGINE && PROVIDERS|🔌  MOTOR E PROVEDORES
+🖥  MY OWN SETUP|🖥  MINHA CONFIGURAÇÃO
+😴  SLEEP NOW|😴  DORMIR AGORA
+🛠  CODING|🛠  PROGRAMAÇÃO
+🧑  HUD: ANIMATED FACE|🧑  HUD: ROSTO ANIMADO
+🧠  MEMORY|🧠  MEMÓRIA
+🧠  WHAT JARVIS REMEMBERS|🧠  O QUE JARVIS LEMBRA
+🧩  PLUGIN MANAGER|🧩  GERENCIAR PLUGINS
+🧩  PLUGINS|🧩  PLUGINS

@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "change_id": "change-004",
+  "project_mode": "EXISTING",
+  "context_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+  "evidence_refs": [
+    ".ai/changes/change-004/CONTEXT.md",
+    ".ai/changes/change-004/REVIEW-REVISION-002.md",
+    ".ai/changes/change-004/REVIEW-REVISION-002-ENCODING-CHECK.json",
+    ".ai/changes/change-004/CLOSE-EVIDENCE.md"
+  ],
+  "unresolved_unknowns": [
+    {
+      "description": "Intenção histórica de encoding, UI interativa em todas as plataformas/resoluções, acessibilidade integral, fallback de fontes/ícones, áudio físico e serviços reais permanecem não demonstrados. A evidência de change-004 é sintética/offscreen e preserva skips opcionais de Piper.",
+      "material": false
+    }
+  ],
+  "unresolved_conflicts": [],
+  "risks": [
+    "NON_ISOLATED_REVIEW aprovada explicitamente pelo humano; sem alegar revisão independente.",
+    "Cobertura offscreen local não demonstra todos os perfis interativos."
+  ],
+  "material_decision_required": false,
+  "proposed_version": null,
+  "versioning": {
+    "status": "EXISTING",
+    "strategy": "KEEP_CURRENT_IDENTIFIER",
+    "strategy_target": "PROJECT-POLICY.md",
+    "evidence_refs": [
+      "PROJECT-POLICY.md"
+    ]
+  },
+  "knowledge": {
+    "impact": "YES",
+    "reason": "Consolidar contratos locais de localização e preservação, evidência de encoding e limites UNKNOWN.",
+    "targets": [],
+    "evidence_refs": [
+      ".ai/changes/change-004/CONTEXT.md",
+      ".ai/changes/change-004/REVIEW-REVISION-002.md",
+      ".ai/changes/change-004/REVIEW-REVISION-002-ENCODING-CHECK.json",
+      ".ai/changes/change-004/CLOSE-EVIDENCE.md"
+    ],
+    "records": [
+      {
+        "id": "KR-change-004-001",
+        "statement": "A interface desktop oferece en padrão e pt-BR persistido por config_manager antes da criação dos widgets. Catálogo e bindings explícitos preservam conteúdo opaco e independência de voz/provedores no perfil testado.",
+        "classification": "CONFIRMED",
+        "evidence_refs": [
+          "gui/i18n.py",
+          "ui.py",
+          "memory/config_manager.py",
+          ".ai/changes/change-004/REVIEW-REVISION-002.md"
+        ],
+        "context_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+        "traceability": {
+          "change_id": "change-004",
+          "requirements": [
+            "AC1",
+            "AC2",
+            "AC3",
+            "AC4",
+            "AC5"
+          ],
+          "review": ".ai/changes/change-004/REVIEW-REVISION-002.md"
+        }
+      },
+      {
+        "id": "KR-change-004-002",
+        "statement": "Retradução plain/code/review usa present=False para preservar apresentação e quiz. Pintura de arquivo/pasta traduz somente rótulos próprios e singular/plural, mantendo nome/extensão e evitando reload; regressões Qt cobrem os dois sentidos.",
+        "classification": "CONFIRMED",
+        "evidence_refs": [
+          "gui/window.py",
+          "gui/widgets.py",
+          "tests/test_ui_language_qt.py",
+          ".ai/changes/change-004/REVIEW-REVISION-002.md"
+        ],
+        "context_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+        "traceability": {
+          "change_id": "change-004",
+          "requirements": [
+            "AC10",
+            "AC11",
+            "AC12",
+            "AC13"
+          ],
+          "review": ".ai/changes/change-004/REVIEW-REVISION-002.md"
+        }
+      },
+      {
+        "id": "KR-change-004-003",
+        "statement": "Os 12 alvos de change-004 preservam UTF-8 sem BOM e finais de linha aprovados; bytes válidos não estabelecem intenção histórica de encoding. A evidência de revisão registra baseline aprovado e hashes por caminho.",
+        "classification": "CONFIRMED",
+        "evidence_refs": [
+          ".ai/changes/change-004/ENCODING-BASELINE.json",
+          ".ai/changes/change-004/REVIEW-REVISION-002-ENCODING-CHECK.json",
+          ".ai/changes/change-004/REVIEW-REVISION-002.md"
+        ],
+        "context_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+        "traceability": {
+          "change_id": "change-004",
+          "requirements": [
+            "AC9"
+          ],
+          "review": ".ai/changes/change-004/REVIEW-REVISION-002.md"
+        }
+      },
+      {
+        "id": "KR-change-004-004",
+        "statement": "Intenção histórica de encoding, UI interativa em todas as plataformas/resoluções, acessibilidade integral, fallback de fontes/ícones, áudio físico e serviços reais permanecem não demonstrados. A evidência de change-004 é sintética/offscreen e preserva skips opcionais de Piper.",
+        "classification": "UNKNOWN",
+        "evidence_refs": [
+          ".ai/changes/change-004/CONTEXT.md",
+          ".ai/changes/change-004/REVIEW-REVISION-002.md",
+          ".ai/changes/change-004/REVIEW-REVISION-002-ENCODING-CHECK.json"
+        ],
+        "context_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+        "traceability": {
+          "change_id": "change-004",
+          "requirements": [
+            "AC6",
+            "AC8",
+            "AC9"
+          ],
+          "review": ".ai/changes/change-004/REVIEW-REVISION-002.md"
+        }
+      }
+    ]
+  },
+  "user_docs": {
+    "impact": "YES",
+    "reason": "README já atualizado e revisado; instruções permanecem corretas, nenhuma nova edição no CLOSE.",
+    "targets": [
+      {
+        "path": "readme.md",
+        "kind": "UPDATE",
+        "change_id": "change-004",
+        "sha256": "371962dfdee1141379b6fc46ff6b3eae418067e55d337554c4e2ce03cb71df1e",
+        "evidence_refs": [
+          ".ai/changes/change-004/REVIEW-REVISION-002.md",
+          "readme.md"
+        ]
+      }
+    ],
+    "evidence_refs": [
+      ".ai/changes/change-004/CONTEXT.md",
+      ".ai/changes/change-004/REVIEW-REVISION-002.md",
+      ".ai/changes/change-004/REVIEW-REVISION-002-ENCODING-CHECK.json",
+      ".ai/changes/change-004/CLOSE-EVIDENCE.md"
+    ]
+  },
+  "changelog": {
+    "impact": "YES",
+    "reason": "Registrar alteração observável, validação e limites conforme política existente e alvo aprovado.",
+    "targets": [
+      {
+        "path": "CHANGELOG.md",
+        "kind": "UPDATE",
+        "change_id": "change-004",
+        "sha256": "fbc38558d897114032c47a59c17b5de81db452c0fb6cdb5fd46f5f49a3598c78",
+        "evidence_refs": [
+          ".ai/changes/change-004/CHANGELOG-PROPOSED.md",
+          ".ai/changes/change-004/REVIEW-REVISION-002.md"
+        ]
+      }
+    ],
+    "evidence_refs": [
+      ".ai/changes/change-004/CONTEXT.md",
+      ".ai/changes/change-004/REVIEW-REVISION-002.md",
+      ".ai/changes/change-004/REVIEW-REVISION-002-ENCODING-CHECK.json",
+      ".ai/changes/change-004/CLOSE-EVIDENCE.md"
+    ],
+    "strategy_target": "PROJECT-POLICY.md"
+  },
+  "project_spec": {
+    "impact": "NO",
+    "reason": "Sem novo requisito ou proposta de especificação material; consolidar somente o CONTEXT aprovado.",
+    "targets": [],
+    "evidence_refs": [
+      ".ai/changes/change-004/CONTEXT.md",
+      ".ai/changes/change-004/REVIEW-REVISION-002.md",
+      ".ai/changes/change-004/REVIEW-REVISION-002-ENCODING-CHECK.json",
+      ".ai/changes/change-004/CLOSE-EVIDENCE.md"
+    ],
+    "material": false
+  },
+  "human_decision_required": false,
+  "close_ready": true,
+  "blockers": []
+}

@@ -1,0 +1,11 @@
+{
+  "migrations": [
+    {
+      "path": "providers/_tests.py",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "reason": "Proposta sujeita à aprovação humana deste CONTEXT: estabelecer UTF-8 sem BOM prospectivamente e substituir somente os controles literais U+0001/U+0002 por escapes Python equivalentes, preservando CRLF e os demais bytes fora das edições localizadas. O encoding histórico permanece UNKNOWN; nenhuma codepage anterior é presumida."
+    }
+  ],
+  "unknown_decisions": []
+}

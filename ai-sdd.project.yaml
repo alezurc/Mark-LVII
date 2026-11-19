@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "ai_sdd": {
+    "version": "v0.2.0"
+  },
+  "project": {
+    "name": "Mark-LVII",
+    "mode": "EXISTING",
+    "components": []
+  },
+  "agents": {
+    "adapters": [
+      {
+        "id": "codex",
+        "enabled": true,
+        "capability_manifest": ".ai-sdd/adapters/codex.capabilities.yaml"
+      }
+    ],
+    "primary_adapter": "codex"
+  },
+  "human_interaction": {
+    "locale": "pt-BR"
+  },
+  "policies": {
+    "context_exclusion": {
+      "profile": "core-default",
+      "categories": [
+        "caches",
+        "custom-project",
+        "dependencies",
+        "generated-build",
+        "local-db",
+        "logs",
+        "media",
+        "secrets",
+        "vcs-internals"
+      ],
+      "additional_paths": []
+    },
+    "review": {
+      "isolation_required": false,
+      "non_isolated_review": "human-gate-required"
+    }
+  },
+  "extensions": []
+}

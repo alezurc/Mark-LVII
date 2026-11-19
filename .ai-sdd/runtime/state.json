@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "active_change_id": null,
+  "resolved_core": null,
+  "last_doctor": {
+    "status": "degraded",
+    "selected_adapter": "codex",
+    "checks": [
+      {
+        "id": "manifest",
+        "status": "healthy",
+        "reasons": []
+      },
+      {
+        "id": "codex_adapter",
+        "status": "healthy",
+        "path": ".codex/skills/ai-sdd",
+        "discovery_ui_verified": false
+      }
+    ],
+    "adapters": {
+      "codex": {
+        "status": "degraded",
+        "selected": true,
+        "capabilities": {
+          "shell.exec": "available",
+          "extension.consume": "available",
+          "context.exclude": "available",
+          "context.isolate": "unavailable",
+          "agent.spawn": "unavailable",
+          "file.read": "available",
+          "test.exec": "available",
+          "hooks.post": "unavailable",
+          "file.write": "available",
+          "hooks.pre": "unavailable"
+        },
+        "context_exclusion": {
+          "status": "degraded",
+          "missing_categories": [],
+          "evidence_complete": false,
+          "gitignore_is_auxiliary": true
+        },
+        "errors": []
+      }
+    },
+    "extensions": [],
+    "authorization_granted": false,
+    "evaluated_at": "2026-11-18T00:02:16.841078+00:00"
+  },
+  "mode_history": [],
+  "created_at": "2026-11-18T00:01:30.716447+00:00"
+}

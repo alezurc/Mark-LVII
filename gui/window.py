@@ -88,6 +88,8 @@ from gui.providers_panel import (
 
 from PyQt6.QtWidgets import QGridLayout
 
+from gui.i18n import tr, render, watch_language, join_messages, QLabel, QPushButton, QLineEdit, QComboBox
+
 from gui.style import DISPLAY_CSS, btn_css, hud_font, px_font, scroll_css
 from gui.widgets import (ArcLogo, CommandFrame, DataRow, HeaderBar, HoloPanel, IconButton,
                          PanelText, RingGauge, RoutineRow, Sparkline, StateChip, StatusStrip,
@@ -121,6 +123,8 @@ class MainWindow(QMainWindow):
     def __init__(self, face_path: str):
         super().__init__()
         self._face_path = face_path
+        self._localized_content = None
+        watch_language(self._refresh_language_content)
 
         # Load customization from config
         _cfg = _read_full_config()
@@ -190,12 +194,12 @@ class MainWindow(QMainWindow):
         _cam_v.setSpacing(0)
         _cam_hdr = QHBoxLayout()
         _cam_hdr.setContentsMargins(8, 5, 8, 5)
-        _cam_title = QLabel("◈  CAMERA FEED")
+        _cam_title = QLabel(tr('◈  CAMERA FEED'))
         _cam_title.setFont(hud_font(8, QFont.Weight.Bold))
         _cam_title.setStyleSheet(f"color: {C.PRI}; background: transparent;")
         _cam_hdr.addWidget(_cam_title)
         _cam_hdr.addStretch()
-        _cam_x = QPushButton("✕  CLOSE")
+        _cam_x = QPushButton(tr('✕  CLOSE'))
         _cam_x.setFont(hud_font(8, QFont.Weight.Bold))
         _cam_x.setCursor(Qt.CursorShape.PointingHandCursor)
         _cam_x.setStyleSheet(f"""
@@ -235,7 +239,7 @@ class MainWindow(QMainWindow):
         _vid_v.setSpacing(4)
 
         _vid_hdr = QHBoxLayout()
-        self._video_title = QLabel("▶  VIDEO")
+        self._video_title = QLabel(tr('▶  VIDEO'))
         self._video_title.setFont(hud_font(9, QFont.Weight.Bold))
         self._video_title.setStyleSheet(f"color: {C.PRI}; background: transparent;")
         _vid_hdr.addWidget(self._video_title)
@@ -257,11 +261,11 @@ class MainWindow(QMainWindow):
         # Muted is the default and the button says so, because a soundtrack
         # talking over JARVIS is the one way this feature could make the
         # assistant worse rather than better.
-        self._video_mute_btn = _vid_btn("🔇  SOUND OFF")
+        self._video_mute_btn = _vid_btn(tr("🔇  SOUND OFF"))
         self._video_mute_btn.clicked.connect(self._toggle_video_mute)
         _vid_hdr.addWidget(self._video_mute_btn)
 
-        _vid_x = _vid_btn("✕  CLOSE")
+        _vid_x = _vid_btn(tr("✕  CLOSE"))
         _vid_x.clicked.connect(self.stop_video)
         _vid_hdr.addWidget(_vid_x)
         _vid_v.addLayout(_vid_hdr)
@@ -520,14 +524,13 @@ class MainWindow(QMainWindow):
     def _on_video_open(self, source: str, title: str, muted: bool,
                        audio_source: str = "") -> None:
         if not HAVE_VIDEO or not self._video_player:
-            self._log.append_log("SYS: Video playback is not available in this Qt "
-                           "install.")
+            self._log.append_log(tr('SYS: Video playback is not available in this Qt install.'))
             return
         # A video and the live camera cannot share the centre of the HUD.
         self._cam_stop.set()
 
         # A video's title is in its own language; left as written (see _show_content).
-        self._video_title.setText(f"▶  {(title[:44] if title else 'VIDEO')}")
+        self._video_title.setText(tr('▶  {v0}', v0=title[:44] if title else tr('VIDEO')))
         self._video_split = bool(audio_source)
         self._video_kind = "video"
         self._video_pos_ms = self._video_dur_ms = 0
@@ -569,8 +572,7 @@ class MainWindow(QMainWindow):
         pixmap = QPixmap(path)
         if pixmap.isNull():
             self._log.append_log(
-                f"SYS: '{Path(path).name}' could not be shown — this Qt build "
-                f"does not read that image format."
+                tr("SYS: '{v0}' could not be shown — this Qt build does not read that image format.", v0=Path(path).name)
             )
             return
 
@@ -592,7 +594,7 @@ class MainWindow(QMainWindow):
             self._video_item.setVisible(False)
         self._image_item.setPixmap(pixmap)
         self._image_item.setVisible(True)
-        self._video_title.setText(f"◧  {(title[:44] if title else 'PICTURE')}")
+        self._video_title.setText(tr('◧  {v0}', v0=title[:44] if title else tr('PICTURE')))
         self._hud_cam_stack.setCurrentIndex(2)
         self._video_on = True
         self._sync_mic_for_video()
@@ -708,7 +710,7 @@ class MainWindow(QMainWindow):
     def _sync_video_mute_btn(self) -> None:
         out = self._video_sound_out if self._video_split else self._video_audio
         muted = bool(out and out.isMuted())
-        self._video_mute_btn.setText("🔇  SOUND OFF" if muted else "🔊  SOUND ON")
+        self._video_mute_btn.setText(tr('🔇  SOUND OFF') if muted else tr('🔊  SOUND ON'))
 
     def _toggle_video_mute(self) -> None:
         out = self._video_sound_out if self._video_split else self._video_audio
@@ -721,7 +723,7 @@ class MainWindow(QMainWindow):
             err = self._video_player.errorString()
         except Exception:
             pass
-        self._log.append_log(f"SYS: The video could not be played{(' — ' + err) if err else ''}.")
+        self._log.append_log(tr('SYS: The video could not be played{v0}.', v0=' — ' + err if err else ''))
         self._on_video_close()
 
     def stop_video(self) -> None:
@@ -1121,9 +1123,9 @@ class MainWindow(QMainWindow):
                 )
                 desk.chmod(desk.stat().st_mode | 0o755)
 
-            self._log.append_log("SYS: Desktop shortcut created.")
+            self._log.append_log(tr('SYS: Desktop shortcut created.'))
         except Exception as e:
-            self._log.append_log(f"ERR: Shortcut failed — {e}")
+            self._log.append_log(tr('ERR: Shortcut failed — {v0}', v0=e))
 
     def _toggle_fullscreen(self):
         if self.isFullScreen():
@@ -1230,7 +1232,7 @@ class MainWindow(QMainWindow):
         self._title_lbl.setStyleSheet(f"color: {C.WHITE}; background: transparent;")
         self._title_lbl.setToolTip(self._subtitle(display))
         name_col.addWidget(self._title_lbl)
-        self._sub_lbl = QLabel(f"{APP_VERSION}  ·  PERSONAL AI SYSTEM")
+        self._sub_lbl = QLabel(tr('{v0}  ·  PERSONAL AI SYSTEM', v0=APP_VERSION))
         self._sub_lbl.setFont(px_font(9, QFont.Weight.DemiBold, spacing=2.2))
         self._sub_lbl.setStyleSheet(f"color: {C.PRI_DIM}; background: transparent;")
         name_col.addWidget(self._sub_lbl)
@@ -1243,12 +1245,12 @@ class MainWindow(QMainWindow):
         # read at a glance.
         self._drawer_btn = IconButton("gear", 32)
         self._drawer_btn.setCheckable(True)
-        self._drawer_btn.setToolTip("Setup — things you set once")
+        self._drawer_btn.setToolTip(tr('Setup — things you set once'))
         self._drawer_btn.clicked.connect(self._toggle_drawer)
         lay.addWidget(self._drawer_btn)
         self._ctrl_btn = IconButton("sliders", 32)
         self._ctrl_btn.setCheckable(True)
-        self._ctrl_btn.setToolTip("Controls — the everyday switches")
+        self._ctrl_btn.setToolTip(tr('Controls — the everyday switches'))
         self._ctrl_btn.clicked.connect(self._toggle_controls)
         lay.addWidget(self._ctrl_btn)
         lay.addStretch()
@@ -1272,19 +1274,22 @@ class MainWindow(QMainWindow):
         lay.addLayout(clock_col)
         lay.addSpacing(4)
         self._fs_btn = IconButton("expand", 32)
-        self._fs_btn.setToolTip("Fullscreen  [F11]")
+        self._fs_btn.setToolTip(tr('Fullscreen  [F11]'))
         self._fs_btn.clicked.connect(self._toggle_fullscreen)
         lay.addWidget(self._fs_btn)
         return w
 
     def _tick_clock(self):
         self._clock_lbl.setText(time.strftime("%H:%M:%S"))
-        self._date_lbl.setText(time.strftime("%a %d %b %Y"))
+        from PyQt6.QtCore import QDateTime, QLocale
+        from gui.i18n import get_language
+        locale = QLocale("pt_BR" if get_language() == "pt-BR" else "en_US")
+        self._date_lbl.setText(locale.toString(QDateTime.currentDateTime(), "ddd dd MMM yyyy"))
 
     @staticmethod
     def _subtitle(display: str) -> str:
         return ("Just A Rather Very Intelligent System"
-                if display.replace(".", "") == "JARVIS" else "Personal AI Assistant")
+                if display.replace(".", "") == "JARVIS" else tr("Personal AI Assistant"))
 
     def _fit_side_columns(self) -> None:
         """Side columns grow with the window, within limits, so the centre keeps
@@ -1318,11 +1323,11 @@ class MainWindow(QMainWindow):
     def _refresh_status_strip(self) -> None:
         if not hasattr(self, "_status_strip"):
             return
-        mic = ("MIC · MUTED", "MUTED_C") if self._muted else ("MIC · LIVE", "GREEN")
+        mic = (tr("MIC · MUTED"), "MUTED_C") if self._muted else (tr("MIC · LIVE"), "GREEN")
         self._status_strip.set_items([
-            (f"ENGINE · {getattr(self, '_engine_label', 'GEMINI LIVE')}", "GREEN"),
+            (tr("ENGINE · {engine}", engine=getattr(self, "_engine_label", "GEMINI LIVE")), "GREEN"),
             mic,
-            (f"PROTOCOL · {APP_PROTOCOL}", "PRI"),
+            (tr("PROTOCOL · {protocol}", protocol=APP_PROTOCOL), "PRI"),
         ])
 
     def _build_left_panel(self) -> QWidget:
@@ -1333,34 +1338,34 @@ class MainWindow(QMainWindow):
         lay.setContentsMargins(0, 0, 0, 0)
         lay.setSpacing(10)
 
-        sysp = HoloPanel("SYSTEMS", "LIVE")
+        sysp = HoloPanel(tr('SYSTEMS'), tr('LIVE'))
         grid_w = QWidget()
         grid_w.setStyleSheet("background: transparent;")
         grid = QGridLayout(grid_w)
         grid.setContentsMargins(0, 0, 0, 0)
         grid.setSpacing(2)
         self._g_cpu = RingGauge("CPU")
-        self._g_mem = RingGauge("MEMORY")
+        self._g_mem = RingGauge(tr("MEMORY"))
         self._g_gpu = RingGauge("GPU")
-        self._g_tmp = RingGauge("TEMP")
+        self._g_tmp = RingGauge(tr("TEMP"))
         for i, g in enumerate((self._g_cpu, self._g_mem, self._g_gpu, self._g_tmp)):
             grid.addWidget(g, i // 2, i % 2)
         sysp.body.addWidget(grid_w)
         lay.addWidget(sysp)
 
-        self._net_panel = HoloPanel("NETWORK", "--")
+        self._net_panel = HoloPanel(tr('NETWORK'), "--")
         self._net_spark = Sparkline(samples=60, floor=0.25)
         self._net_panel.body.addWidget(self._net_spark)
         lay.addWidget(self._net_panel)
 
-        stp = HoloPanel("STATUS", "")
+        stp = HoloPanel(tr('STATUS'), "")
         os_name = {"Windows": "WINDOWS", "Darwin": "MACOS", "Linux": "LINUX"}.get(_OS, _OS.upper())
-        self._row_uptime = DataRow("UPTIME", "--:--", "GREEN")
-        self._row_proc = DataRow("PROCESSES", "--")
-        self._row_net = DataRow("NETWORK", "--")
-        self._row_os = DataRow("PLATFORM", os_name)
-        self._row_engine = DataRow("ENGINE", "--", "PRI")
-        self._row_voice = DataRow("VOICE", "--")
+        self._row_uptime = DataRow(tr('UPTIME'), "--:--", "GREEN")
+        self._row_proc = DataRow(tr('PROCESSES'), "--")
+        self._row_net = DataRow(tr('NETWORK'), "--")
+        self._row_os = DataRow(tr('PLATFORM'), os_name)
+        self._row_engine = DataRow(tr('ENGINE'), "--", "PRI")
+        self._row_voice = DataRow(tr('VOICE'), "--")
         for row in (self._row_uptime, self._row_proc, self._row_net, self._row_os,
                     self._row_engine, self._row_voice):
             stp.body.addWidget(row)
@@ -1368,7 +1373,7 @@ class MainWindow(QMainWindow):
 
         # Background tasks (core/tasks). Read from the engine every two seconds —
         # an in-memory list, no disk — and hidden rows cost nothing to paint.
-        self._tasks_panel = HoloPanel("TASKS", "")
+        self._tasks_panel = HoloPanel(tr('TASKS'), "")
         rows_box = QWidget()
         rows_box.setStyleSheet("background: transparent;")
         rows_lay = QVBoxLayout(rows_box)
@@ -1381,7 +1386,7 @@ class MainWindow(QMainWindow):
             row.hide()
             rows_lay.addWidget(row)
             self._task_rows.append(row)
-        self._tasks_empty = QLabel("No background tasks yet.")
+        self._tasks_empty = QLabel(tr('No background tasks yet.'))
         self._tasks_empty.setFont(px_font(10))
         self._tasks_empty.setWordWrap(True)
         self._tasks_empty.setStyleSheet(f"color: {C.TEXT_DIM}; background: transparent;")
@@ -1416,8 +1421,7 @@ class MainWindow(QMainWindow):
             row.hide()
             r_lay.addWidget(row)
             self._routine_rows.append(row)
-        self._routines_empty = QLabel("No routines yet. Ask for one by voice — "
-                                      "\"every weekday at 08:30, tell me the weather\".")
+        self._routines_empty = QLabel(tr('No routines yet. Ask for one by voice — "every weekday at 08:30, tell me the weather".'))
         self._routines_empty.setFont(px_font(10))
         self._routines_empty.setWordWrap(True)
         self._routines_empty.setStyleSheet(f"color: {C.TEXT_DIM}; background: transparent;")
@@ -1438,7 +1442,7 @@ class MainWindow(QMainWindow):
         self._tasks_stack.addWidget(r_scroll)
         self._tasks_panel.body.addWidget(self._tasks_stack)
 
-        self._panel_switch = QPushButton("ROUTINES")
+        self._panel_switch = QPushButton(tr('ROUTINES'))
         self._panel_switch.setFixedSize(76, 20)
         self._panel_switch.setFont(px_font(9, QFont.Weight.DemiBold))
         self._panel_switch.setCursor(Qt.CursorShape.PointingHandCursor)
@@ -1456,8 +1460,8 @@ class MainWindow(QMainWindow):
     def _flip_tasks_panel(self) -> None:
         to_routines = self._tasks_stack.currentIndex() == 0
         self._tasks_stack.setCurrentIndex(1 if to_routines else 0)
-        self._tasks_panel.set_title("ROUTINES" if to_routines else "TASKS")
-        self._panel_switch.setText("TASKS" if to_routines else "ROUTINES")
+        self._tasks_panel.set_title(tr('ROUTINES') if to_routines else tr('TASKS'))
+        self._panel_switch.setText(tr('TASKS') if to_routines else tr('ROUTINES'))
         self._refresh_tasks()
 
     def _refresh_routines(self) -> None:
@@ -1475,7 +1479,7 @@ class MainWindow(QMainWindow):
             except Exception:
                 text = ""
             if r["trigger"]["type"] == "time" and r.get("next_ts") and r.get("enabled"):
-                text = f"next {_time.strftime('%a %H:%M', _time.localtime(r['next_ts']))} · {text}"
+                text = tr("next {time} · {description}", time=_time.strftime("%a %H:%M", _time.localtime(r["next_ts"])), description=text)
             return text
 
         def order(r: dict):
@@ -1489,7 +1493,7 @@ class MainWindow(QMainWindow):
             row.setVisible(r is not None)
         self._routines_empty.setVisible(not items)
         on = sum(1 for r in items if r.get("enabled"))
-        self._tasks_panel.set_code(f"{on} ON" if items else "")
+        self._tasks_panel.set_code(tr('{v0} ON', v0=on) if items else "")
 
     def _toggle_routine(self, rid: str, enabled: bool) -> None:
         try:
@@ -1503,7 +1507,7 @@ class MainWindow(QMainWindow):
                 desktop.mirror_brief_switch(r["enabled"])
                 self._update_brief_btn(r["enabled"])
         except Exception as e:
-            self._log.append_log(f"SYS: Routine not changed — {e}")
+            self._log.append_log(tr('SYS: Routine not changed — {v0}', v0=e))
         self._refresh_routines()
 
     def _open_routine(self, rid: str) -> None:
@@ -1517,12 +1521,12 @@ class MainWindow(QMainWindow):
         if not r:
             return
         stamp = lambda ts: _time.strftime("%Y-%m-%d %H:%M", _time.localtime(ts))  # noqa: E731
-        lines = [r["name"], "", f"When: {eng.describe(r)}"]
+        lines = [r["name"], "", tr("When: {when}", when=eng.describe(r))]
         if r["trigger"]["type"] == "time" and r.get("next_ts") and r.get("enabled"):
-            lines.append(f"Next: {stamp(r['next_ts'])}")
+            lines.append(tr("Next: {next}", next=stamp(r["next_ts"])))
         what = {"say": "Says", "prompt": "Carries out", "task": "Background task"}.get(r["kind"])
         if what and r.get("text"):
-            lines.append(f"{what}: {r['text']}")
+            lines.append(tr("{what}: {text}", what=tr(what), text=r["text"]))
         for key, value in (r.get("options") or {}).items():
             if isinstance(value, list):
                 lines.append(f"{key}:")
@@ -1530,13 +1534,11 @@ class MainWindow(QMainWindow):
             elif value not in ("", None):
                 lines.append(f"{key}: {value}")
         state = "on" if r.get("enabled") else "off"
-        lines.append(f"State: {state}{' · held back in quiet hours' if r.get('quiet') else ''}"
-                     f" · ran {int(r.get('runs') or 0)} times")
+        lines.append(tr("State: {state}{quiet} · ran {runs} times", state=tr(state), quiet=tr(" · held back in quiet hours") if r.get("quiet") else "", runs=int(r.get("runs") or 0)))
         if r.get("last_run"):
-            lines.append(f"Last: {stamp(r['last_run'])} — {r.get('last_result') or ''}")
-        lines += ["", "Change it by voice — \"move the briefing to 08:30\", "
-                      "\"turn the check-in off\", \"remind me every Friday at 17:00\"."]
-        self._show_content("ROUTINE", "\n".join(lines)[:4000])
+            lines.append(tr("Last: {last} — {result}", last=stamp(r["last_run"]), result=r.get("last_result") or ""))
+        lines += ["", tr('Change it by voice — "move the briefing to 08:30", "turn the check-in off", "remind me every Friday at 17:00".')]
+        self._show_content(tr("ROUTINE"), join_messages("\n", lines))
 
     def _refresh_tasks(self) -> None:
         if getattr(self, "_tasks_stack", None) is not None and self._tasks_stack.currentIndex() == 1:
@@ -1555,7 +1557,7 @@ class MainWindow(QMainWindow):
             row.set_task(task)
             row.setVisible(task is not None)
         self._tasks_empty.setVisible(not shown)
-        self._tasks_panel.set_code(f"{len(active)} ACTIVE" if active else "")
+        self._tasks_panel.set_code(tr('{v0} ACTIVE', v0=len(active)) if active else "")
 
     def _open_task(self, tid: str) -> None:
         try:
@@ -1588,17 +1590,17 @@ class MainWindow(QMainWindow):
         lay.setContentsMargins(0, 0, 0, 0)
         lay.setSpacing(10)
 
-        comm = HoloPanel("COMMUNICATIONS", "LOG")
+        comm = HoloPanel(tr('COMMUNICATIONS'), tr('LOG'))
         self._log = LogWidget()
         comm.body.addWidget(self._log)
         lay.addWidget(comm, stretch=1)
 
-        cmd = HoloPanel("COMMAND", "INPUT")
+        cmd = HoloPanel(tr('COMMAND'), tr('INPUT'))
         self._drop_zone = FileDropZone()
         self._drop_zone.file_selected.connect(self._on_file_selected)
         cmd.body.addWidget(self._drop_zone)
 
-        self._file_hint = QLabel("No file loaded")
+        self._file_hint = QLabel(tr('No file loaded'))
         self._file_hint.setFont(px_font(10))
         self._file_hint.setStyleSheet(f"color: {C.TEXT_DIM}; background: transparent;")
         self._file_hint.setWordWrap(True)
@@ -1608,13 +1610,13 @@ class MainWindow(QMainWindow):
 
         row = QHBoxLayout()
         row.setSpacing(8)
-        self._mute_btn = IconButton("mic", 38, "MIC ACTIVE", "GREEN")
-        self._mute_btn.setToolTip("Mute or unmute the microphone  [F4]")
+        self._mute_btn = IconButton("mic", 38, tr("MIC ACTIVE"), "GREEN")
+        self._mute_btn.setToolTip(tr('Mute or unmute the microphone  [F4]'))
         self._mute_btn.clicked.connect(self._toggle_mute)
         self._style_mute_btn()
         row.addWidget(self._mute_btn, 1)
-        self._interrupt_btn = IconButton("stop", 38, "INTERRUPT", "MUTED_C")
-        self._interrupt_btn.setToolTip("Stop the assistant mid-sentence  [ESC]")
+        self._interrupt_btn = IconButton("stop", 38, tr("INTERRUPT"), "MUTED_C")
+        self._interrupt_btn.setToolTip(tr('Stop the assistant mid-sentence  [ESC]'))
         self._interrupt_btn.clicked.connect(self._do_interrupt)
         row.addWidget(self._interrupt_btn, 1)
         cmd.body.addLayout(row)
@@ -1624,7 +1626,7 @@ class MainWindow(QMainWindow):
     def _build_quick_drawer(self) -> QWidget:
         """Floating panel under the gear: the things you set once."""
         self._BTN_PRI, self._BTN_DIM = btn_css("primary"), btn_css("dim")
-        w = HoloPanel("SETUP", "", parent=self.centralWidget())
+        w = HoloPanel(tr('SETUP'), "", parent=self.centralWidget())
         w.setObjectName("QuickDrawer")
         w.hide()
         lay = w.body
@@ -1640,14 +1642,14 @@ class MainWindow(QMainWindow):
             lay.addWidget(b)
             return b
 
-        _btn("◉  REMOTE CONTROL", self._open_remote, self._BTN_PRI)
-        _btn("⊞  CREATE DESKTOP SHORTCUT", self._create_desktop_shortcut)
-        self._autostart_btn = _btn("◉  AUTO-START: OFF", self._toggle_autostart)
-        _btn("⚙  CUSTOMISE ASSISTANT", self._open_customize)
-        _btn("🎧  AUDIO DEVICES", self._open_audio_devices)
-        _btn("🧠  MEMORY", self._open_memory_panel)
-        _btn("🧩  PLUGINS", self._open_plugin_manager)
-        _btn("⚙  PLUGIN SETTINGS", self._open_plugin_settings)
+        _btn(tr('◉  REMOTE CONTROL'), self._open_remote, self._BTN_PRI)
+        _btn(tr('⊞  CREATE DESKTOP SHORTCUT'), self._create_desktop_shortcut)
+        self._autostart_btn = _btn(tr('◉  AUTO-START: OFF'), self._toggle_autostart)
+        _btn(tr('⚙  CUSTOMISE ASSISTANT'), self._open_customize)
+        _btn(tr('🎧  AUDIO DEVICES'), self._open_audio_devices)
+        _btn(tr('🧠  MEMORY'), self._open_memory_panel)
+        _btn(tr('🧩  PLUGINS'), self._open_plugin_manager)
+        _btn(tr('⚙  PLUGIN SETTINGS'), self._open_plugin_settings)
         # The button is built here with the rest of the drawer; the panel behind
         # it — and the whole providers package — is imported on the click. The
         # drawer used to stutter for a measured 2.104 seconds because a state
@@ -1655,14 +1657,14 @@ class MainWindow(QMainWindow):
         # second thing that does that would undo the fix rather than repeat it.
         # "&&": a single & in a button label is Qt's shortcut marker, and it
         # was being drawn as an underscore — "ENGINE _PROVIDERS".
-        _btn("🔌  ENGINE && PROVIDERS", self._open_providers)
+        _btn(tr('🔌  ENGINE && PROVIDERS'), self._open_providers)
 
         w.adjustSize()
         return w
 
     def _build_controls_drawer(self) -> QWidget:
         """The switches that get flicked every day, in their own panel."""
-        w = HoloPanel("CONTROLS", "", parent=self.centralWidget())
+        w = HoloPanel(tr('CONTROLS'), "", parent=self.centralWidget())
         w.setObjectName("QuickDrawer")
         w.hide()
         lay = w.body
@@ -1677,7 +1679,7 @@ class MainWindow(QMainWindow):
             lay.addWidget(button)
             return button
 
-        fs_btn = _row(QPushButton("⛶  FULLSCREEN  [F11]"), self._BTN_DIM)
+        fs_btn = _row(QPushButton(tr('⛶  FULLSCREEN  [F11]')), self._BTN_DIM)
         fs_btn.clicked.connect(self._toggle_fullscreen)
 
         self._brief_btn = _row(QPushButton())
@@ -1688,7 +1690,7 @@ class MainWindow(QMainWindow):
         self._wake_sleep_btn = _row(QPushButton())
         self._wake_sleep_btn.clicked.connect(self._tap_wake_manual)
         # Neutral until the real state lands from the background warm-up.
-        self._wake_btn.setText("🎙  WAKE WORD")
+        self._wake_btn.setText(tr('🎙  WAKE WORD'))
         self._wake_btn.setStyleSheet(self._BTN_DIM)
         self._wake_sleep_btn.hide()
 
@@ -1753,7 +1755,7 @@ class MainWindow(QMainWindow):
             self._ctrl_btn.setChecked(False)
 
     def _place_drawer(self, drawer, left: int):
-        _W = 250
+        _W = 310
         drawer.setFixedWidth(_W)
         drawer.adjustSize()
         top = self._header.height() + 2 if hasattr(self, "_header") else 60
@@ -1785,7 +1787,7 @@ class MainWindow(QMainWindow):
         row.addWidget(prompt)
 
         self._input = QLineEdit()
-        self._input.setPlaceholderText("Type a command or question…")
+        self._input.setPlaceholderText(tr('Type a command or question…'))
         self._input.setFont(px_font(13))
         self._input.setStyleSheet(f"""
             QLineEdit {{
@@ -1798,7 +1800,7 @@ class MainWindow(QMainWindow):
         row.addWidget(self._input, stretch=1)
 
         send = IconButton("send", 32)
-        send.setToolTip("Send  [Enter]")
+        send.setToolTip(tr('Send  [Enter]'))
         send.clicked.connect(self._send)
         row.addWidget(send)
         return box
@@ -1808,7 +1810,7 @@ class MainWindow(QMainWindow):
         Panel below the HUD — shows search results, news, briefings, reviews.
         Hidden by default; appears when show_content() is called.
         """
-        w = HoloPanel("BRIEFING", "")
+        w = HoloPanel(tr('BRIEFING'), "")
         w.setObjectName("ContentPanel")
         w.hide()
         # The panel paints its own title and time; these stand in for the
@@ -1817,7 +1819,7 @@ class MainWindow(QMainWindow):
         self._content_ts_lbl = PanelText(w, "code")
 
         dismiss = IconButton("close", 22)
-        dismiss.setToolTip("Dismiss")
+        dismiss.setToolTip(tr('Dismiss'))
         dismiss.clicked.connect(w.hide)
         w.add_header_widget(dismiss)
 
@@ -1859,23 +1861,67 @@ class MainWindow(QMainWindow):
         new[idx] = want
         split.setSizes(new)
 
-    def _show_content(self, title: str, text: str):
+    def _refresh_language_content(self):
+        self._tick_clock()
+        payload = self._localized_content
+        if not payload:
+            return
+        display = self._content_display
+        bar = display.verticalScrollBar()
+        scroll = bar.value()
+        cursor = display.textCursor()
+        anchor, position = cursor.anchor(), cursor.position()
+        old_text = display.toPlainText()
+        mode, args = payload
+        if mode == "plain":
+            self._show_content(*args, present=False)
+        elif mode == "review":
+            self._show_review(*args, present=False)
+        else:
+            self._show_code_job(*args, present=False)
+        new_text = display.toPlainText()
+        # Cursor offsets use UTF-16 units in Qt. Map unchanged text across the
+        # translated labels instead of selecting the old numeric offsets.
+        from difflib import SequenceMatcher
+        changes = SequenceMatcher(None, old_text, new_text).get_opcodes()
+
+        def relocated(qt_position):
+            before = old_text.encode("utf-16-le")[:qt_position * 2]
+            old_position = len(before.decode("utf-16-le", errors="ignore"))
+            new_position = len(new_text)
+            for kind, a, b, c, d in changes:
+                if a <= old_position < b:
+                    new_position = c + min(old_position - a, d - c)
+                    break
+            return len(new_text[:new_position].encode("utf-16-le")) // 2
+
+        cursor = display.textCursor()
+        cursor.setPosition(relocated(anchor))
+        cursor.setPosition(relocated(position), cursor.MoveMode.KeepAnchor)
+        display.setTextCursor(cursor)
+        bar.setValue(scroll)
+
+    def _show_content(self, title: str, text: str, *, present: bool = True):
         """Slot — runs on Qt main thread. Updates and shows the content panel."""
         import time as _time
+        self._localized_content = ("plain", (title, text))
         # The panel opens below the head, so the head looks down at it. It is a
         # tiny thing that answers "did that land?" before you read a word.
-        self.hud.glance(0.0, -0.85, hold=1.3)
+        if present:
+            self.hud.glance(0.0, -0.85, hold=1.3)
         # Only the app's own label is upper-cased ("NEWS — …"); what follows the
         # dash is a search or a name in the user's language, and str.upper()
         # applies English rules to it (Turkish "istanbul" -> "ISTANBUL").
-        label, dash, rest = str(title or "").partition(" — ")
+        label, dash, rest = str(render(title) or "").partition(" — ")
         self._content_title_lbl.setText((label.upper() + dash + rest)[:48])
-        self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
-        self._content_display.setPlainText(text)
-        self._content_display.moveCursor(
-            self._content_display.textCursor().MoveOperation.Start
-        )
-        self._reveal_below_hud(self._content_panel, 220)
+        if present:
+            self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
+        self._content_display.setPlainText(render(text))
+        if present:
+            self._content_display.moveCursor(
+                self._content_display.textCursor().MoveOperation.Start)
+        if present:
+            self._reveal_below_hud(self._content_panel, 220)
 
     # ── the coding agent, live ───────────────────────────────────────────────
     # The panel under the head shows a coding job while it runs: what was asked,
@@ -1890,11 +1936,12 @@ class MainWindow(QMainWindow):
     }
     _JOB_PHASES = ("reading", "planning", "writing", "checking", "testing")
 
-    def _show_code_job(self, job: dict):
+    def _show_code_job(self, job: dict, *, present: bool = True):
         """Slot — Qt main thread. Draws the coding agent's progress."""
         import time as _time
         if not job:
             return
+        self._localized_content = ("code", (job,))
         e = self._esc
         col = lambda name: getattr(C, name, C.TEXT)
         status = job.get("status", "")
@@ -1909,26 +1956,26 @@ class MainWindow(QMainWindow):
         for i, ph in enumerate(phases):
             c = C.GREEN if i < here else (C.PRI if i == here else C.TEXT_DIM)
             mark = "●" if i <= here else "○"
-            strip.append(f'<span style="color:{c};">{mark} {ph.upper()}</span>')
+            strip.append(f'<span style="color:{c};">{mark} {e(render(tr(ph.upper())))}</span>')
         if finished:
             fin = C.GREEN if status == "done" else (C.RED if status == "failed" else C.ACC2)
-            strip.append(f'<span style="color:{fin};"><b>● {e(status.upper())}</b></span>')
+            strip.append(f'<span style="color:{fin};"><b>● {e(render(tr(status.upper())))}</b></span>')
 
         parts = [f'<div style="color:{C.TEXT}; font-family:Courier New;">',
                  f'<div style="color:{C.TEXT_DIM};">{"  ".join(strip)}'
                  f'&nbsp;&nbsp;·&nbsp;&nbsp;{took:.0f}s</div>',
                  f'<div style="margin-top:6px;"><span style="color:{C.TEXT_DIM};">'
-                 f'REQUEST&nbsp;</span>{e(job.get("request", ""))}</div>']
+                 f'{e(render(tr("REQUEST")))}&nbsp;</span>{e(job.get("request", ""))}</div>']
         if job.get("summary"):
             parts.append(
                 f'<div style="color:{C.WHITE}; border-left:2px solid {C.PRI};'
                 f' padding-left:8px; margin:8px 0;">{e(job["summary"])}</div>')
         files = job.get("files") or {}
         if files:
-            parts.append(f'<div style="color:{C.TEXT_DIM}; margin-top:4px;">FILES</div>')
+            parts.append(f'<div style="color:{C.TEXT_DIM}; margin-top:4px;">{e(render(tr("FILES")))}</div>')
             for path, f in files.items():
                 cname, mark = self._JOB_STATES.get(f.get("state", ""), ("TEXT_DIM", "·"))
-                verb = "new " if f.get("action") == "create" else ""
+                verb = render(tr("new ")) if f.get("action") == "create" else ""
                 parts.append(
                     f'<div><span style="color:{col(cname)};">{mark}</span>&nbsp;'
                     f'<span style="color:{C.WHITE};">{e(path)}</span>&nbsp;'
@@ -1939,7 +1986,7 @@ class MainWindow(QMainWindow):
         steps = job.get("steps") or []
         if steps:
             parts.append(f'<div style="color:{C.TEXT_DIM}; margin-top:8px;">'
-                         f'STEPS — newest first</div>')
+                         f'{e(render(tr("STEPS — newest first")))}</div>')
             for t, msg in reversed(steps[-14:]):
                 parts.append(f'<div><span style="color:{C.TEXT_DIM};">{float(t):6.1f}s'
                              f'</span>&nbsp;{e(msg)}</div>')
@@ -1947,18 +1994,20 @@ class MainWindow(QMainWindow):
 
         # Only the app's own label is upper-cased — the folder name after the
         # dash is the user's, in their language (see _show_content).
-        title = (f"CODE AGENT — {job.get('folder', '')} · {job.get('model', '')}")[:48]
+        title = (f"{render(tr('CODE AGENT'))} — {job.get('folder', '')} · {job.get('model', '')}")[:48]
         first = self._content_title_lbl.text() != title
         self._content_title_lbl.setText(title)
-        self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
+        if present:
+            self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
         bar = self._content_display.verticalScrollBar()
-        keep = 0 if first else bar.value()
+        keep = 0 if first and present else bar.value()
         self._content_display.setHtml("".join(parts))
         # setHtml jumps to the top; put the reader back where they were.
         bar.setValue(keep)
-        if first:
+        if first and present:
             self.hud.glance(0.0, -0.85, hold=1.3)
-        self._reveal_below_hud(self._content_panel, 260)
+        if present:
+            self._reveal_below_hud(self._content_panel, 260)
 
     # ── document review ──────────────────────────────────────────────────────
     # Rendered as rich text into the content panel that already exists, rather
@@ -1982,7 +2031,8 @@ class MainWindow(QMainWindow):
         return (str(s or "").replace("&", "&amp;").replace("<", "&lt;")
                 .replace(">", "&gt;").replace("\n", "<br>"))
 
-    def _show_review(self, title: str, summary: str, findings, unclear):
+    def _show_review(self, title: str, summary: str, findings, unclear, *, present: bool = True):
+        self._localized_content = ("review", (title, summary, findings, unclear))
         """Slot — Qt main thread. Lays a document review into the content panel."""
         e = self._esc
         parts = [f'<div style="color:{C.TEXT}; font-family:{DISPLAY_CSS}; font-size:13px;">']
@@ -2019,7 +2069,7 @@ class MainWindow(QMainWindow):
             parts.append(
                 f'<div style="margin-top:6px; border-top:1px solid {C.BORDER};'
                 f' padding-top:7px; color:{C.TEXT_MED};">'
-                'The document does not settle:</div>')
+                f'{e(render(tr("The document does not settle:")))}</div>')
             for u in unclear:
                 parts.append(
                     f'<div style="margin-left:12px; color:{C.TEXT_MED};">'
@@ -2027,19 +2077,23 @@ class MainWindow(QMainWindow):
         parts.append('</div>')
 
         import time as _time
-        self.hud.glance(0.0, -0.85, hold=1.3)
+        if present:
+            self.hud.glance(0.0, -0.85, hold=1.3)
         # Left as written, not upper-cased. The other content-panel titles are
         # the app's own English labels, but this one is the document's name in
         # the user's language, and str.upper() applies English casing rules to
         # it: Turkish "Sözleşmesi" comes back "SÖZLEŞMESI", having lost the
         # dotted capital İ. Python has no locale-aware upper to reach for, and
         # imposing one language's rules on all of them is the bug, not the fix.
-        self._content_title_lbl.setText((title or "Document")[:48])
-        self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
+        self._content_title_lbl.setText((title or tr('Document'))[:48])
+        if present:
+            self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
         self._content_display.setHtml("".join(parts))
-        self._content_display.moveCursor(
-            self._content_display.textCursor().MoveOperation.Start)
-        self._reveal_below_hud(self._content_panel, 260)
+        if present:
+            self._content_display.moveCursor(
+                self._content_display.textCursor().MoveOperation.Start)
+        if present:
+            self._reveal_below_hud(self._content_panel, 260)
 
     # ── quiz panel ───────────────────────────────────────────────────────────
     # An interactive twin of the content panel. The plugin only ever hands over
@@ -2059,14 +2113,14 @@ class MainWindow(QMainWindow):
         return b
 
     def _build_quiz_panel(self) -> QWidget:
-        w = HoloPanel("QUIZ", "")
+        w = HoloPanel(tr('QUIZ'), "")
         w.setObjectName("QuizPanel")
         w.hide()
         self._quiz_title_lbl = PanelText(w, "title")
         self._quiz_count_lbl = PanelText(w, "code")
 
         quit_btn = IconButton("close", 22)
-        quit_btn.setToolTip("Dismiss")
+        quit_btn.setToolTip(tr('Dismiss'))
         quit_btn.clicked.connect(self._hide_quiz)
         w.add_header_widget(quit_btn)
 
@@ -2095,7 +2149,7 @@ class MainWindow(QMainWindow):
 
         foot = QHBoxLayout()
         foot.addStretch()
-        self._quiz_next_btn = self._quiz_btn("NEXT  →", primary=True)
+        self._quiz_next_btn = self._quiz_btn(tr('NEXT  →'), primary=True)
         self._quiz_next_btn.setFixedWidth(120)
         self._quiz_next_btn.clicked.connect(self._quiz_next)
         self._quiz_next_btn.hide()
@@ -2137,7 +2191,7 @@ class MainWindow(QMainWindow):
     def _quiz_render(self):
         q = self._quiz["questions"][self._quiz["i"]]
         n, total = self._quiz["i"] + 1, len(self._quiz["questions"])
-        self._quiz_count_lbl.setText(f"{n} / {total}")
+        self._quiz_count_lbl.setText(tr('{v0} / {v1}', v0=n, v1=total))
         self._quiz_q_lbl.setText(q.get("question", ""))
         self._quiz_note_lbl.hide()
         self._quiz_next_btn.hide()
@@ -2155,7 +2209,7 @@ class MainWindow(QMainWindow):
             h = QHBoxLayout(row); h.setContentsMargins(0, 0, 0, 0); h.setSpacing(6)
             field = QLineEdit()
             field.setFont(hud_font(9))
-            field.setPlaceholderText("your answer")
+            field.setPlaceholderText(tr('your answer'))
             field.setStyleSheet(f"""
                 QLineEdit {{
                     background: {C.PANEL2}; color: {C.WHITE};
@@ -2163,8 +2217,8 @@ class MainWindow(QMainWindow):
                 }}
                 QLineEdit:focus {{ border-color: {C.PRI_DIM}; }}
             """)
-            send = self._quiz_btn("ANSWER", primary=True)
-            send.setFixedWidth(90)
+            send = self._quiz_btn(tr('ANSWER'), primary=True)
+            send.setMinimumWidth(110)
             field.returnPressed.connect(lambda: self._quiz_submit(field.text()))
             send.clicked.connect(lambda: self._quiz_submit(field.text()))
             h.addWidget(field, stretch=1)
@@ -2198,20 +2252,20 @@ class MainWindow(QMainWindow):
                 wdg.setEnabled(False)
 
         if verdict is True:
-            mark, colour = "✓  correct", C.GREEN
+            mark, colour = tr("✓  correct"), C.GREEN
         elif verdict is False:
             mark, colour = "✕  " + str(q.get("answer", "")), C.RED
         else:
             # Open answers and near-miss gap-fills are JARVIS's to judge. Saying
             # so is honest; marking it wrong here would be a guess.
-            mark, colour = "…  noted — I'll go over this one with you", C.ACC2
+            mark, colour = tr("…  noted — I'll go over this one with you"), C.ACC2
         note = q.get("note") or ""
         self._quiz_note_lbl.setText(mark + (("\n" + note) if note else ""))
         self._quiz_note_lbl.setStyleSheet(f"color: {colour}; background: transparent;")
         self._quiz_note_lbl.show()
 
         last = self._quiz["i"] >= len(self._quiz["questions"]) - 1
-        self._quiz_next_btn.setText("FINISH  →" if last else "NEXT  →")
+        self._quiz_next_btn.setText(tr('FINISH  →') if last else tr('NEXT  →'))
         self._quiz_next_btn.show()
         self._quiz_next_btn.setFocus()
 
@@ -2235,7 +2289,7 @@ class MainWindow(QMainWindow):
         self._quiz_panel.hide()
         self._quiz = None
 
-        self._log.append_log(f"QUIZ: {topic or 'quiz'} — {right}/{total} correct")
+        self._log.append_log(tr('QUIZ: {v0} — {v1}/{v2} correct', v0=topic or 'quiz', v1=right, v2=total))
 
         # Hand it back to JARVIS as a message, not as a tool return: the tool
         # call ended minutes ago. This is the same channel a dropped file uses.
@@ -2264,7 +2318,7 @@ class MainWindow(QMainWindow):
     def _build_footer(self) -> QWidget:
         self._status_strip = StatusStrip()
         self._status_strip.set_right(
-            "F4 MUTE   ·   F11 FULLSCREEN   ·   ESC INTERRUPT   ·   BY FATIHMAKES")
+            tr("F4 MUTE   ·   F11 FULLSCREEN   ·   ESC INTERRUPT   ·   BY FATIHMAKES"))
         self._refresh_status_strip()
         return self._status_strip
 
@@ -2276,9 +2330,8 @@ class MainWindow(QMainWindow):
         if cat == "folder":
             n = self._drop_zone._folder_files
             self._file_hint.setText(
-                f"{icon}  {p.name}  ·  {n} files  ·  Tell {self._assistant_name} "
-                f"what to change in it")
-            self._log.append_log(f"FOLDER: {p.name} ({n} files) loaded")
+                tr('{v0}  {v1}  ·  {v2} files  ·  Tell {v3} what to change in it', v0=icon, v1=p.name, v2=n, v3=self._assistant_name))
+            self._log.append_log(tr('FOLDER: {v0} ({v1} files) loaded', v0=p.name, v1=n))
             if self.on_text_command:
                 msg = (
                     f"[FOLDER_UPLOADED] path={path} | name={p.name} | files={n} | "
@@ -2292,8 +2345,8 @@ class MainWindow(QMainWindow):
                                  daemon=True).start()
             return
         size = _fmt_size(p.stat().st_size)
-        self._file_hint.setText(f"{icon}  {p.name}  ·  {size}  ·  Tell {self._assistant_name} what to do with it")
-        self._log.append_log(f"FILE: {p.name} ({size}) loaded")
+        self._file_hint.setText(tr('{v0}  {v1}  ·  {v2}  ·  Tell {v3} what to do with it', v0=icon, v1=p.name, v2=size, v3=self._assistant_name))
+        self._log.append_log(tr('FILE: {v0} ({v1}) loaded', v0=p.name, v1=size))
         if self.on_text_command:
             msg = (
                 f"[FILE_UPLOADED] path={path} | name={p.name} | "
@@ -2309,11 +2362,11 @@ class MainWindow(QMainWindow):
 
     def _open_remote(self):
         if not self.on_remote_clicked:
-            self._log.append_log("SYS: Dashboard not running — remote unavailable.")
+            self._log.append_log(tr('SYS: Dashboard not running — remote unavailable.'))
             return
         result = self.on_remote_clicked()
         if not result:
-            self._log.append_log("SYS: Could not generate remote key.")
+            self._log.append_log(tr('SYS: Could not generate remote key.'))
             return
         url    = result[0]
         key    = result[1]
@@ -2336,7 +2389,7 @@ class MainWindow(QMainWindow):
         ov.closed.connect(lambda: setattr(self, '_remote_overlay', None))
         ov.show()
         self._remote_overlay = ov
-        self._log.append_log(f"SYS: Remote key generated — manual: {manual or url}")
+        self._log.append_log(tr('SYS: Remote key generated — manual: {v0}', v0=manual or url))
 
     # ── Auto-start ──────────────────────────────────────────────────────────────
 
@@ -2415,14 +2468,14 @@ class MainWindow(QMainWindow):
             enabled = not currently_on
             self._update_autostart_btn(enabled)
             self._log.append_log(
-                f"SYS: Auto-start {'enabled' if enabled else 'disabled'}.")
+                tr('SYS: Auto-start {v0}.', v0=tr('enabled') if enabled else tr('disabled')))
         except Exception as e:
-            self._log.append_log(f"ERR: Auto-start failed — {e}")
+            self._log.append_log(tr('ERR: Auto-start failed — {v0}', v0=e))
 
     def _update_autostart_btn(self, enabled: bool):
         if not hasattr(self, '_autostart_btn'):
             return
-        self._autostart_btn.setText("◉  AUTO-START: ON" if enabled else "◉  AUTO-START: OFF")
+        self._autostart_btn.setText(tr('◉  AUTO-START: ON') if enabled else tr('◉  AUTO-START: OFF'))
         self._autostart_btn.setStyleSheet(btn_css("on" if enabled else "off"))
 
     def _toggle_brief(self):
@@ -2468,17 +2521,17 @@ class MainWindow(QMainWindow):
         _on, _off = btn_css("on"), btn_css("off")
         self._wake_btn.setEnabled(True)
         if not st["ready"]:
-            self._wake_btn.setText("⬇  WAKE WORD: DOWNLOAD")
+            self._wake_btn.setText(tr('⬇  WAKE WORD: DOWNLOAD'))
             self._wake_btn.setStyleSheet(_off)
             self._wake_sleep_btn.hide()
         elif st["enabled"]:
-            self._wake_btn.setText("🎙  WAKE WORD: ON")
+            self._wake_btn.setText(tr('🎙  WAKE WORD: ON'))
             self._wake_btn.setStyleSheet(_on)
             self._wake_sleep_btn.show()
-            self._wake_sleep_btn.setText("😴  SLEEP NOW" if st["awake"] else "👂  WAKE NOW")
+            self._wake_sleep_btn.setText(tr('😴  SLEEP NOW') if st["awake"] else tr('👂  WAKE NOW'))
             self._wake_sleep_btn.setStyleSheet(_off)
         else:
-            self._wake_btn.setText("🎙  WAKE WORD: OFF")
+            self._wake_btn.setText(tr('🎙  WAKE WORD: OFF'))
             self._wake_btn.setStyleSheet(_off)
             self._wake_sleep_btn.hide()
 
@@ -2490,28 +2543,25 @@ class MainWindow(QMainWindow):
         from memory.config_manager import get_push_to_talk_enabled
 
         ptt = get_push_to_talk_enabled()
-        self._ptt_btn.setText(f"🎚  PUSH-TO-TALK: {chord_label()}" if ptt
-                              else "🎚  PUSH-TO-TALK: OFF")
+        self._ptt_btn.setText(tr('🎚  PUSH-TO-TALK: {v0}', v0=chord_label()) if ptt
+                              else tr('🎚  PUSH-TO-TALK: OFF'))
         self._ptt_btn.setStyleSheet(btn_css("on" if ptt else "off"))
         self._ptt_btn.setToolTip(
-            "Microphone stays closed until you hold the key — nothing is sent "
-            "while you are not holding it." if ptt
-            else "Hold a key to talk instead of streaming the mic continuously.")
+            tr('Microphone stays closed until you hold the key — nothing is sent while you are not holding it.') if ptt
+            else tr('Hold a key to talk instead of streaming the mic continuously.'))
 
     def _refresh_hud_btn(self):
         from memory.config_manager import get_hud_style
         face = get_hud_style() == "face"
         # Neither state is "off", so both read as active — this is a choice
         # between two things, not a switch with a disabled side.
-        self._hud_btn.setText("🧑  HUD: ANIMATED FACE" if face
-                              else "◉  HUD: REACTOR CORE")
+        self._hud_btn.setText(tr('🧑  HUD: ANIMATED FACE') if face
+                              else tr('◉  HUD: REACTOR CORE'))
         self._hud_btn.setStyleSheet(btn_css("choice"))
         self._hud_btn.setToolTip(
-            "An animated head that speaks your words and shows what JARVIS is "
-            "doing. Tap to switch to the reactor core."
+            tr('An animated head that speaks your words and shows what JARVIS is doing. Tap to switch to the reactor core.')
             if face else
-            "A 3-D reactor core that turns with the state and moves with your "
-            "voice. Tap to switch to the animated head.")
+            tr('A 3-D reactor core that turns with the state and moves with your voice. Tap to switch to the animated head.'))
 
     def _toggle_hud_style(self):
         """Swap the centrepiece. Both objects stay in memory, so the change is
@@ -2526,8 +2576,8 @@ class MainWindow(QMainWindow):
             pass
         self._refresh_hud_btn()
         self._log.append_log(
-            "SYS: HUD switched to the animated face." if want == "face"
-            else "SYS: HUD switched to the reactor core.")
+            tr('SYS: HUD switched to the animated face.') if want == "face"
+            else tr('SYS: HUD switched to the reactor core.'))
 
     def _toggle_ptt(self):
         from memory.config_manager import (get_push_to_talk_enabled,
@@ -2539,7 +2589,7 @@ class MainWindow(QMainWindow):
             try:
                 scope = self.on_push_to_talk(want)
             except Exception as e:
-                self._log.append_log(f"ERR: Push-to-talk failed — {e}")
+                self._log.append_log(tr('ERR: Push-to-talk failed — {v0}', v0=e))
                 save_push_to_talk_enabled(False)
                 want = False
         self._apply_ptt_shortcut(want and scope != "global")
@@ -2593,7 +2643,7 @@ class MainWindow(QMainWindow):
         st = self._wake_state()
         if not st["ready"]:
             # First time: download openwakeword + model in a worker thread.
-            self._wake_btn.setText("⬇  DOWNLOADING… (one-time)")
+            self._wake_btn.setText(tr('⬇  DOWNLOADING… (one-time)'))
             self._wake_btn.setEnabled(False)
             def _work():
                 try:
@@ -2633,7 +2683,7 @@ class MainWindow(QMainWindow):
     def _update_brief_btn(self, enabled: bool):
         if not hasattr(self, '_brief_btn'):
             return
-        self._brief_btn.setText("☀  MORNING BRIEF: ON" if enabled else "☀  MORNING BRIEF: OFF")
+        self._brief_btn.setText(tr('☀  MORNING BRIEF: ON') if enabled else tr('☀  MORNING BRIEF: OFF'))
         self._brief_btn.setStyleSheet(btn_css("on" if enabled else "off"))
 
     def _open_customize(self):
@@ -2657,8 +2707,16 @@ class MainWindow(QMainWindow):
         )
         ov.on_preview = self._preview_ui_color
         ov.saved.connect(self._apply_name_update)
+        ov.on_language_save = self._apply_ui_language
         ov.show()
         self._customize_overlay = ov
+
+    def _apply_ui_language(self, language: str):
+        from memory.config_manager import save_ui_language
+        from gui.i18n import set_language
+        # Persist first: a failed write leaves the active language unchanged.
+        save_ui_language(language)
+        set_language(language)
 
     def _preview_ui_color(self, hex_color: str):
         """Live preview — paints the whole interface the new colour (does NOT write to config)."""
@@ -2700,13 +2758,13 @@ class MainWindow(QMainWindow):
             if ui_color:
                 fields["ui_color"] = ui_color.strip().lower()
             update_config(**fields)
-            self._log.append_log(f"SYS: Identity updated — {display}")
+            self._log.append_log(tr('SYS: Identity updated — {v0}', v0=display))
             if color_changed:
-                self._log.append_log(f"SYS: UI colour applied — {ui_color}")
+                self._log.append_log(tr('SYS: UI colour applied — {v0}', v0=ui_color))
             if voice_changed:
-                self._log.append_log(f"SYS: Voice set — {voice}")
+                self._log.append_log(tr('SYS: Voice set — {v0}', v0=voice))
         except Exception as e:
-            self._log.append_log(f"ERR: Config save failed — {e}")
+            self._log.append_log(tr('ERR: Config save failed — {v0}', v0=e))
 
         self._refresh_identity_rows()
 
@@ -2734,7 +2792,7 @@ class MainWindow(QMainWindow):
         self._audio_overlay = ov            # keep a reference so it isn't GC'd
 
     def _on_audio_devices_applied(self):
-        self._log.append_log("SYS: Audio devices updated.")
+        self._log.append_log(tr('SYS: Audio devices updated.'))
         if self.on_audio_device_change:
             self.on_audio_device_change()
 
@@ -2751,11 +2809,10 @@ class MainWindow(QMainWindow):
             ov = ProvidersOverlay(parent=self.centralWidget())
         except ImportError:
             self._log.append_log(
-                "SYS: The providers folder is not installed — "
-                "the assistant runs on Gemini Live.")
+                tr('SYS: The providers folder is not installed — the assistant runs on Gemini Live.'))
             return
         except Exception as e:
-            self._log.append_log(f"SYS: Provider settings unavailable: {e}")
+            self._log.append_log(tr('SYS: Provider settings unavailable: {v0}', v0=e))
             return
         ov.changed.connect(self._on_providers_applied)
         self._centre_overlay(ov)
@@ -2769,7 +2826,7 @@ class MainWindow(QMainWindow):
         transcript across such a rebuild through session resumption, and one
         path that is known to work is better than two that look alike."""
         self._refresh_identity_rows()
-        self._log.append_log("SYS: Engine settings saved — reconnecting.")
+        self._log.append_log(tr('SYS: Engine settings saved — reconnecting.'))
         if self.on_audio_device_change:
             self.on_audio_device_change()
 
@@ -2805,7 +2862,7 @@ class MainWindow(QMainWindow):
             from core.confirm import resolve
             resolve(bool(accepted))
         except Exception as e:
-            self._log.append_log(f"ERR: Confirmation failed — {e}")
+            self._log.append_log(tr('ERR: Confirmation failed — {v0}', v0=e))
 
     def _open_plugin_manager(self):
         plugins = self.get_plugins() if self.get_plugins else []
@@ -2884,16 +2941,16 @@ class MainWindow(QMainWindow):
         self._style_mute_btn()
         if muted:
             self._apply_state("MUTED")
-            self._log.append_log("SYS: Microphone muted." + (f" {note}" if note else ""))
+            self._log.append_log(tr('SYS: Microphone muted.') + (f" {note}" if note else ""))
         else:
             self._apply_state("LISTENING")
-            self._log.append_log("SYS: Microphone active." + (f" {note}" if note else ""))
+            self._log.append_log(tr('SYS: Microphone active.') + (f" {note}" if note else ""))
 
     def _style_mute_btn(self):
         if self._muted:
-            self._mute_btn.set_look("mic_off", "MIC MUTED", "MUTED_C")
+            self._mute_btn.set_look("mic_off", tr("MIC MUTED"), "MUTED_C")
         else:
-            self._mute_btn.set_look("mic", "MIC ACTIVE", "GREEN")
+            self._mute_btn.set_look("mic", tr("MIC ACTIVE"), "GREEN")
         self._refresh_status_strip()
 
     def _send(self):
@@ -2955,6 +3012,6 @@ class MainWindow(QMainWindow):
             self._overlay = None
         self._apply_state("LISTENING")
         self._assistant_name = _read_full_config().get("assistant_name", "JARVIS") or "JARVIS"
-        self._log.append_log(f"SYS: Initialised. OS={os_name.upper()}. {self._assistant_name} online.")
+        self._log.append_log(tr('SYS: Initialised. OS={v0}. {v1} online.', v0=os_name.upper(), v1=self._assistant_name))
 
 

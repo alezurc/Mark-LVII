@@ -1,0 +1,27 @@
+{
+  "change_id": "change-001",
+  "plan_sha256": "05d36088c28c5349f8923d4a9621ba90d023bbe204347854d88724f980289e96",
+  "human_reference": "Autorizo publicar PROJECT-POLICY.md e CHANGELOG.md com os conteúdos e hashes do plano 05d36088c28c5349f8923d4a9621ba90d023bbe204347854d88724f980289e96, mantendo Mark LVII sem nova versão, e concluir CLOSE.",
+  "targets": [
+    {
+      "path": "PROJECT-POLICY.md",
+      "role": "PROJECT_POLICY",
+      "proposal": ".ai/changes/change-001/proposals/PROJECT-POLICY.md",
+      "sha256": "5cd687ff9a76754abf8224df6ebeaccfd2b03faa90f6764a093dcb7fa01b057e",
+      "before_sha256": null
+    },
+    {
+      "path": "CHANGELOG.md",
+      "role": "CHANGELOG",
+      "proposal": ".ai/changes/change-001/proposals/CHANGELOG.md",
+      "sha256": "b8ddd0143d5b73f128ad15d22418b95170491a1742d53c938a1126f9fd201b07",
+      "before_sha256": null
+    }
+  ],
+  "versioning_decision": {
+    "strategy": "KEEP_CURRENT_IDENTIFIER",
+    "current_identifier": "Mark LVII",
+    "proposed_version": null
+  },
+  "status": "PUBLISHED"
+}

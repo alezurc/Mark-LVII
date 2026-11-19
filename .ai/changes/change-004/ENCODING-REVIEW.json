@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "change_id": "change-004",
+  "context_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+  "baseline_sha256": "d7087977fb69c8a593e6c07ad3ae2fc9e11c4f96f308dd4a7f64a115b542968d",
+  "status": "PASS",
+  "changes": [
+    {
+      "path": "CHANGELOG.md",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "gui/i18n.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "gui/widgets.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "gui/window.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "tests/test_ui_language_qt.py",
+      "result": "PRESERVED"
+    }
+  ]
+}

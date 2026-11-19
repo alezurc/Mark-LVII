@@ -1,0 +1,12 @@
+from pathlib import Path
+import ast,pprint
+
+def edit(name,fn):
+ p=Path(name);s=p.read_bytes().decode('utf-8').replace('\r\n','\n');s=fn(s);ast.parse(s);p.write_bytes(s.replace('\n','\r\n').encode('utf-8'))
+edit('gui/widgets.py',lambda s:s.replace('self._label = str(text or "")','self._label = text or ""').replace('self._label = str(text)','self._label = text').replace('return self._label\n','return render(self._label)\n'))
+edit('gui/overlays.py',lambda s:s.replace('b = QPushButton(label)\n            b.setFixedHeight(22)','b = QPushButton(tr(label))\n            b.setFixedHeight(22)').replace('w = QLabel(txt); w.setAlignment(align)\n            w.setFont(hud_font(fs,','w = QLabel(txt); w.setAlignment(align)\n            w.setWordWrap(True)\n            w.setFont(hud_font(fs,'))
+edit('gui/providers_panel.py',lambda s:s.replace('head = self._label(f"{num}  {name}",','head = self._label(tr("{num}  {name}", num=num, name=tr(name)),').replace('("— not set —", "")','(tr("— not set —"), "")').replace('("Gemini only  —  the way it has always been", "")','(tr("Gemini only  —  the way it has always been"), "")').replace('self._first_combo.addItem("Try Gemini first  —  faster",','self._first_combo.addItem(tr("Try Gemini first  —  faster"),').replace('"Try the other one first  —  keeps more on your machine", "before"','tr("Try the other one first  —  keeps more on your machine"), "before"').replace('w.addItem("— default —",','w.addItem(tr("— default —"),').replace('w.addItem("no",','w.addItem(tr("no"),').replace('w.addItem("yes",','w.addItem(tr("yes"),').replace('return f"{mark}  Fall back to {entry[\'label\']}"','return tr("{mark}  Fall back to {name}", mark=mark, name=entry["label"])'))
+p=Path('gui/i18n.py');s=p.read_text(encoding='utf-8');tree=ast.parse(s);n=next(n for n in tree.body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='PT_BR' for t in n.targets));d=ast.literal_eval(n.value)
+d.update({'— not set —':'— não configurado —','— default —':'— padrão —','Gemini only  —  the way it has always been':'Somente Gemini  —  configuração original','no':'não','yes':'sim','{mark}  Fall back to {name}':'{mark}  Usar {name} como alternativa'})
+lines=s.splitlines(keepends=True);a=sum(map(len,lines[:n.lineno-1]));b=sum(map(len,lines[:n.end_lineno]));s=s[:a]+'PT_BR = '+pprint.pformat(d,sort_dicts=True,width=100)+'\n'+s[b:];p.write_text(s,encoding='utf-8',newline='\n')
+print('UI refinements complete')

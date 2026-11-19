@@ -1,0 +1,19 @@
+{
+  "change_id": "change-004",
+  "approval_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+  "paths": [
+    "gui/i18n.py",
+    "gui/window.py",
+    "gui/overlays.py",
+    "gui/providers_panel.py",
+    "gui/widgets.py",
+    "gui/hud.py",
+    "ui.py",
+    "memory/config_manager.py",
+    "tests/test_ui_language.py",
+    "tests/test_ui_language_qt.py",
+    "readme.md",
+    "CHANGELOG.md"
+  ],
+  "encoding_sha256": "d7087977fb69c8a593e6c07ad3ae2fc9e11c4f96f308dd4a7f64a115b542968d"
+}

@@ -102,6 +102,9 @@ class JarvisUI:
         _apply_ui_scale()
         self._app = QApplication.instance() or QApplication(sys.argv)
         self._app.setStyle("Fusion")
+        from memory.config_manager import get_ui_language
+        from gui.i18n import set_language
+        set_language(get_ui_language())
         self._win = MainWindow(face_path)
         self.root = _RootShim(self._app)
         self._win.show()

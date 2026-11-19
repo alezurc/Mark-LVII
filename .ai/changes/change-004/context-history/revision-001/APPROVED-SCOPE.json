@@ -1,0 +1,19 @@
+{
+  "change_id": "change-004",
+  "approval_reference": "Autorizo a execução após analisar o CONTEXT.md",
+  "paths": [
+    "gui/i18n.py",
+    "gui/window.py",
+    "gui/overlays.py",
+    "gui/providers_panel.py",
+    "gui/widgets.py",
+    "gui/hud.py",
+    "ui.py",
+    "memory/config_manager.py",
+    "tests/test_ui_language.py",
+    "tests/test_ui_language_qt.py",
+    "readme.md",
+    "CHANGELOG.md"
+  ],
+  "encoding_sha256": "6e4c5afbb2d659177a40a52ed777989d50f28560cb7e179f4d40c12d40931aab"
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "path": "gui/i18n.py",
+    "status": "MISSING",
+    "planned_encoding": "utf-8",
+    "planned_bom": "NONE",
+    "planned_newlines": "LF"
+  },
+  {
+    "path": "gui/window.py",
+    "sha256": "a92f6ae7697b306c12d3630f01ae5661baad8fc7269ef5e4ee324d999561a254",
+    "utf8_strict": true,
+    "bom_utf8": false,
+    "crlf": 2960,
+    "lf": 0,
+    "historical_intent": "UNKNOWN"
+  },
+  {
+    "path": "gui/overlays.py",
+    "sha256": "124226140a129196c084f2a820bbeb9fda7761ce2f711cbe1312fd878f99a5d5",
+    "utf8_strict": true,
+    "bom_utf8": false,
+    "crlf": 1905,
+    "lf": 0,
+    "historical_intent": "UNKNOWN"
+  },
+  {
+    "path": "gui/providers_panel.py",
+    "sha256": "777c9e51d0cf4816c26f0e3eb3a2be0ef7a472d900508ebee8146947e7676275",
+    "utf8_strict": true,
+    "bom_utf8": false,
+    "crlf": 1182,
+    "lf": 0,
+    "historical_intent": "UNKNOWN"
+  },
+  {
+    "path": "gui/widgets.py",
+    "sha256": "7f8ae0f15577b8031753c2d477a5aeac240a4cd3af26c2602ac85deb0b277c6c",
+    "utf8_strict": true,
+    "bom_utf8": false,
+    "crlf": 1305,
+    "lf": 0,
+    "historical_intent": "UNKNOWN"
+  },
+  {
+    "path": "gui/hud.py",
+    "sha256": "f4175652a88de897375ad53ff2d54dc9b2801cef3899109347c89567dbdd634a",
+    "utf8_strict": true,
+    "bom_utf8": false,
+    "crlf": 687,
+    "lf": 0,
+    "historical_intent": "UNKNOWN"
+  },
+  {
+    "path": "ui.py",
+    "sha256": "c76cee3d2fd0870ed78f8fbb375c7718e78a6e1634726b567b411577b2fc47c4",
+    "utf8_strict": true,
+    "bom_utf8": false,
+    "crlf": 383,
+    "lf": 0,
+    "historical_intent": "UNKNOWN"
+  },
+  {
+    "path": "memory/config_manager.py",
+    "sha256": "e0301bb17b2d733def5d1a15b77a2abd4a2e32986981a4b2e8b196b0fce1d528",
+    "utf8_strict": true,
+    "bom_utf8": false,
+    "crlf": 668,
+    "lf": 0,
+    "historical_intent": "UNKNOWN"
+  },
+  {
+    "path": "tests/test_ui_language.py",
+    "status": "MISSING",
+    "planned_encoding": "utf-8",
+    "planned_bom": "NONE",
+    "planned_newlines": "LF"
+  },
+  {
+    "path": "tests/test_ui_language_qt.py",
+    "status": "MISSING",
+    "planned_encoding": "utf-8",
+    "planned_bom": "NONE",
+    "planned_newlines": "LF"
+  },
+  {
+    "path": "readme.md",
+    "sha256": "24f31ebfee49168a12a1d4331d3b75549f6d5d703911370711d788e6c4462a04",
+    "utf8_strict": true,
+    "bom_utf8": false,
+    "crlf": 1070,
+    "lf": 0,
+    "historical_intent": "UNKNOWN"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "sha256": "bf35b6e884a554329e09c5eb141e7e4e4fc7fb0b68cb1305a44fea33a5cec843",
+    "utf8_strict": true,
+    "bom_utf8": false,
+    "crlf": 0,
+    "lf": 33,
+    "historical_intent": "UNKNOWN"
+  }
+]

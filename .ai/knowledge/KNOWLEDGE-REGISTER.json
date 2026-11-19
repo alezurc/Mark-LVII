@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "knowledge_register": [
+    {
+      "id": "KR-change-001-001",
+      "statement": "O fluxo VS Code confirma sucesso somente após observar janela com caminho completo; captura CLI/probe usa buffers fixos de 65536 bytes por stream, com excesso conservador e cleanup limitado.",
+      "classification": "CONFIRMED",
+      "evidence_refs": [
+        ".ai/changes/change-001/REVIEW-REVISION-002.md",
+        "actions/dev_agent.py",
+        "tests/test_dev_agent_vscode.py"
+      ],
+      "context_reference": "após analise do CONTEXT-REVISION-002.md\\\n&#x20;considero aprovado",
+      "traceability": {
+        "review": ".ai/changes/change-001/REVIEW-REVISION-002.md",
+        "requirements": [
+          "D006",
+          "R001"
+        ],
+        "change_id": "change-001"
+      },
+      "change_id": "change-001",
+      "plan_sha256": "05d36088c28c5349f8923d4a9621ba90d023bbe204347854d88724f980289e96"
+    },
+    {
+      "id": "KR-change-001-002",
+      "statement": "Os alvos desta mudança preservam UTF-8 sem BOM e seus finais de linha; a intenção histórica do encoding sem BOM não foi estabelecida.",
+      "classification": "UNKNOWN",
+      "evidence_refs": [
+        ".ai/changes/change-001/ENCODING-BASELINE.json",
+        ".ai/changes/change-001/ENCODING-REVIEW.json"
+      ],
+      "context_reference": "após analise do CONTEXT-REVISION-002.md\\\n&#x20;considero aprovado",
+      "traceability": {
+        "limitation": "UNKNOWN da intenção histórica; bytes válidos e preservados conforme revisão.",
+        "change_id": "change-001"
+      },
+      "change_id": "change-001",
+      "plan_sha256": "05d36088c28c5349f8923d4a9621ba90d023bbe204347854d88724f980289e96"
+    },
+    {
+      "evidence_refs": [
+        "memory/memory_manager.py",
+        "tests/test_memory_persistence.py",
+        ".ai/changes/change-002/REVIEW.md"
+      ],
+      "traceability": {
+        "review": ".ai/changes/change-002/REVIEW.md",
+        "requirements": [
+          "D008",
+          "AC1",
+          "AC2",
+          "AC3",
+          "AC4"
+        ],
+        "change_id": "change-002"
+      },
+      "id": "KR-change-002-001",
+      "statement": "Memória e sessões publicam JSON completo por temporário exclusivo no mesmo diretório e os.replace após fechamento; mutadores internos serializam leitura/modificação/gravação por RLock dentro do processo.",
+      "classification": "CONFIRMED",
+      "context_reference": "Após analisar o CONTEXT.md eu autorizo a execução.",
+      "change_id": "change-002",
+      "plan_sha256": "fa8675984bb15c033ed2090e9ee19c1a054c900e08cd19da86878796e6c66256"
+    },
+    {
+      "evidence_refs": [
+        ".ai/changes/change-002/CONTEXT.md",
+        ".ai/changes/change-002/REVIEW.md",
+        ".ai/changes/change-002/ENCODING-BASELINE.json",
+        ".ai/changes/change-002/ENCODING-REVIEW.json"
+      ],
+      "traceability": {
+        "change_id": "change-002",
+        "limitation": "Limites preservados sem promover UNKNOWN nem inferir durabilidade física."
+      },
+      "id": "KR-change-002-002",
+      "statement": "Durabilidade física após queda de energia e intenção histórica de encoding sem BOM não foram estabelecidas nesta mudança; preservação de UTF-8/BOM/finais de linha foi validada. Não há garantia entre processos ou recuperação de corrupção anterior.",
+      "classification": "UNKNOWN",
+      "context_reference": "Após analisar o CONTEXT.md eu autorizo a execução.",
+      "change_id": "change-002",
+      "plan_sha256": "fa8675984bb15c033ed2090e9ee19c1a054c900e08cd19da86878796e6c66256"
+    },
+    {
+      "id": "KR-change-003-001",
+      "statement": "providers/_tests.py executa a suíte em cópia temporária de fontes com configuração/cache/vozes sintéticos, separa PASS/FAIL/SKIP e retorna falha quando testes ou subprocessos falham; não é sandbox de segurança.",
+      "classification": "CONFIRMED",
+      "evidence_refs": [
+        "providers/_tests.py",
+        "tests/test_provider_test_isolation.py",
+        ".ai/changes/change-003/REVIEW.md"
+      ],
+      "context_reference": "Aprovo a pós revisar o CONTEXT.md",
+      "traceability": {
+        "change_id": "change-003",
+        "requirements": [
+          "D011",
+          "AC3",
+          "AC4",
+          "AC5",
+          "AC7"
+        ],
+        "review": ".ai/changes/change-003/REVIEW.md"
+      },
+      "change_id": "change-003",
+      "plan_sha256": "3d4c0cb061ff56d38b34035d33b558b3d6c358a0b05aa89fecbc25571f511bc2"
+    },
+    {
+      "id": "KR-change-003-002",
+      "statement": "Os controles literais 0x01/0x02 do áudio sintético foram substituídos por escapes equivalentes sem alterar o PCM; a política prospectiva aprovada estabelece UTF-8 sem BOM nesse arquivo e preserva CRLF.",
+      "classification": "CONFIRMED",
+      "evidence_refs": [
+        "tests/test_source_encoding.py",
+        ".ai/changes/change-003/ENCODING-BASELINE.json",
+        ".ai/changes/change-003/ENCODING-REVIEW.json",
+        ".ai/changes/change-003/REVIEW.md"
+      ],
+      "context_reference": "Aprovo a pós revisar o CONTEXT.md",
+      "traceability": {
+        "change_id": "change-003",
+        "requirements": [
+          "D007",
+          "AC1",
+          "AC2"
+        ],
+        "review": ".ai/changes/change-003/REVIEW.md"
+      },
+      "change_id": "change-003",
+      "plan_sha256": "3d4c0cb061ff56d38b34035d33b558b3d6c358a0b05aa89fecbc25571f511bc2"
+    },
+    {
+      "id": "KR-change-003-003",
+      "statement": "Intenção histórica de encoding sem BOM, áudio físico, UI interativa, serviços reais, recuperação de crash e outras plataformas continuam não demonstrados; evidência de change-003 limita-se a testes sintéticos locais e mantém SKIPs opcionais de Piper.",
+      "classification": "UNKNOWN",
+      "evidence_refs": [
+        ".ai/changes/change-003/CONTEXT.md",
+        ".ai/changes/change-003/REVIEW.md",
+        ".ai/changes/change-003/ENCODING-REVIEW.json"
+      ],
+      "context_reference": "Aprovo a pós revisar o CONTEXT.md",
+      "traceability": {
+        "change_id": "change-003",
+        "requirements": [
+          "D007",
+          "D011"
+        ],
+        "limitation": "Não promover UNKNOWN por validade UTF-8, mocks, testes locais ou decisão humana."
+      },
+      "change_id": "change-003",
+      "plan_sha256": "3d4c0cb061ff56d38b34035d33b558b3d6c358a0b05aa89fecbc25571f511bc2"
+    },
+    {
+      "id": "KR-change-004-001",
+      "statement": "A interface desktop oferece en padrão e pt-BR persistido por config_manager antes da criação dos widgets. Catálogo e bindings explícitos preservam conteúdo opaco e independência de voz/provedores no perfil testado.",
+      "classification": "CONFIRMED",
+      "evidence_refs": [
+        "gui/i18n.py",
+        "ui.py",
+        "memory/config_manager.py",
+        ".ai/changes/change-004/REVIEW-REVISION-002.md"
+      ],
+      "context_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+      "traceability": {
+        "change_id": "change-004",
+        "requirements": [
+          "AC1",
+          "AC2",
+          "AC3",
+          "AC4",
+          "AC5"
+        ],
+        "review": ".ai/changes/change-004/REVIEW-REVISION-002.md"
+      },
+      "change_id": "change-004",
+      "plan_sha256": "31face2bd73fe444eeb3c4c36237ee62444d66807c301db3d713395419c8a681"
+    },
+    {
+      "id": "KR-change-004-002",
+      "statement": "Retradução plain/code/review usa present=False para preservar apresentação e quiz. Pintura de arquivo/pasta traduz somente rótulos próprios e singular/plural, mantendo nome/extensão e evitando reload; regressões Qt cobrem os dois sentidos.",
+      "classification": "CONFIRMED",
+      "evidence_refs": [
+        "gui/window.py",
+        "gui/widgets.py",
+        "tests/test_ui_language_qt.py",
+        ".ai/changes/change-004/REVIEW-REVISION-002.md"
+      ],
+      "context_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+      "traceability": {
+        "change_id": "change-004",
+        "requirements": [
+          "AC10",
+          "AC11",
+          "AC12",
+          "AC13"
+        ],
+        "review": ".ai/changes/change-004/REVIEW-REVISION-002.md"
+      },
+      "change_id": "change-004",
+      "plan_sha256": "31face2bd73fe444eeb3c4c36237ee62444d66807c301db3d713395419c8a681"
+    },
+    {
+      "id": "KR-change-004-003",
+      "statement": "Os 12 alvos de change-004 preservam UTF-8 sem BOM e finais de linha aprovados; bytes válidos não estabelecem intenção histórica de encoding. A evidência de revisão registra baseline aprovado e hashes por caminho.",
+      "classification": "CONFIRMED",
+      "evidence_refs": [
+        ".ai/changes/change-004/ENCODING-BASELINE.json",
+        ".ai/changes/change-004/REVIEW-REVISION-002-ENCODING-CHECK.json",
+        ".ai/changes/change-004/REVIEW-REVISION-002.md"
+      ],
+      "context_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+      "traceability": {
+        "change_id": "change-004",
+        "requirements": [
+          "AC9"
+        ],
+        "review": ".ai/changes/change-004/REVIEW-REVISION-002.md"
+      },
+      "change_id": "change-004",
+      "plan_sha256": "31face2bd73fe444eeb3c4c36237ee62444d66807c301db3d713395419c8a681"
+    },
+    {
+      "id": "KR-change-004-004",
+      "statement": "Intenção histórica de encoding, UI interativa em todas as plataformas/resoluções, acessibilidade integral, fallback de fontes/ícones, áudio físico e serviços reais permanecem não demonstrados. A evidência de change-004 é sintética/offscreen e preserva skips opcionais de Piper.",
+      "classification": "UNKNOWN",
+      "evidence_refs": [
+        ".ai/changes/change-004/CONTEXT.md",
+        ".ai/changes/change-004/REVIEW-REVISION-002.md",
+        ".ai/changes/change-004/REVIEW-REVISION-002-ENCODING-CHECK.json"
+      ],
+      "context_reference": "Aprovo o CONTEXT revisão 002 da change-004",
+      "traceability": {
+        "change_id": "change-004",
+        "requirements": [
+          "AC6",
+          "AC8",
+          "AC9"
+        ],
+        "review": ".ai/changes/change-004/REVIEW-REVISION-002.md"
+      },
+      "change_id": "change-004",
+      "plan_sha256": "31face2bd73fe444eeb3c4c36237ee62444d66807c301db3d713395419c8a681"
+    }
+  ]
+}

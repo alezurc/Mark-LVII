@@ -1,0 +1,3 @@
+{
+  "paths": ["memory/memory_manager.py", "tests/test_memory_persistence.py", "CHANGELOG.md"]
+}

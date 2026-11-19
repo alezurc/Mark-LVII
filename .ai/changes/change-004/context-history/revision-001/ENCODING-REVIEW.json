@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "change_id": "change-004",
+  "context_reference": "Autorizo a execução após analisar o CONTEXT.md",
+  "baseline_sha256": "6e4c5afbb2d659177a40a52ed777989d50f28560cb7e179f4d40c12d40931aab",
+  "status": "PASS",
+  "changes": [
+    {
+      "path": "gui/hud.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "gui/i18n.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "gui/overlays.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "gui/providers_panel.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "gui/widgets.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "gui/window.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "memory/config_manager.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "readme.md",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "tests/test_ui_language.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "tests/test_ui_language_qt.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "ui.py",
+      "result": "PRESERVED"
+    }
+  ]
+}

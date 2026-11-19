@@ -1,0 +1,96 @@
+{
+  "change_id": "change-003",
+  "recorded_at": "2026-11-19T01:41:23.5919901Z",
+  "entries": [
+    {
+      "path": "providers/_tests.py",
+      "sha256": "e62506ed8280670ef58bbe66eea99bf51711a8a24e8d22f8e8537e5f13ad4ca5",
+      "utf8_valid": true,
+      "bom": false,
+      "crlf": 1253,
+      "lf_only": 0,
+      "unexpected_controls": 0
+    },
+    {
+      "path": "README.md",
+      "sha256": "24f31ebfee49168a12a1d4331d3b75549f6d5d703911370711d788e6c4462a04",
+      "utf8_valid": true,
+      "bom": false,
+      "crlf": 1070,
+      "lf_only": 0,
+      "unexpected_controls": 0
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "fdd512f84650edce0d074b9b4debef932d63ef699d23bd4c0b93391ee6fed768",
+      "utf8_valid": true,
+      "bom": false,
+      "crlf": 0,
+      "lf_only": 23,
+      "unexpected_controls": 0
+    },
+    {
+      "path": "tests/test_source_encoding.py",
+      "sha256": "a0cc60f6018cabc7404eebbcfaabe00724e4954d442f4fba941a1a8a536d18a5",
+      "utf8_valid": true,
+      "bom": false,
+      "crlf": 0,
+      "lf_only": 53,
+      "unexpected_controls": 0
+    },
+    {
+      "path": "tests/test_smoke_harness.py",
+      "sha256": "2e7b0e65fdb24229c1db2931aaa4e0624148d29c6c00da570e5eeeab176366d4",
+      "utf8_valid": true,
+      "bom": false,
+      "crlf": 0,
+      "lf_only": 122,
+      "unexpected_controls": 0
+    },
+    {
+      "path": "tests/test_provider_test_isolation.py",
+      "sha256": "ab05cfed8bbfa69c966db843f332588a11d9809f5ce7837b1e712973f19d7dda",
+      "utf8_valid": true,
+      "bom": false,
+      "crlf": 0,
+      "lf_only": 167,
+      "unexpected_controls": 0
+    },
+    {
+      "path": ".ai/changes/change-003/before/providers-tests.py",
+      "sha256": "b4a8a1ea4bc373efb97d036cb61b6c49dae2786758bd9afd4812592edb49fcda",
+      "utf8_valid": true,
+      "bom": false,
+      "crlf": 1110,
+      "lf_only": 0,
+      "unexpected_controls": 2
+    },
+    {
+      "path": ".ai/changes/change-003/before/README.md",
+      "sha256": "2529f75d0fdf6c3805b00828be8a7da65321aee870f10c23752446df51e5dcf4",
+      "utf8_valid": true,
+      "bom": false,
+      "crlf": 1025,
+      "lf_only": 0,
+      "unexpected_controls": 0
+    },
+    {
+      "path": ".ai/changes/change-003/DEVELOP.md",
+      "sha256": "4d44e0a0832669a36b2317a79072ad0b4bd886ad279f5eaf0684893df09852f4",
+      "utf8_valid": true,
+      "bom": false,
+      "crlf": 0,
+      "lf_only": 51,
+      "unexpected_controls": 0
+    },
+    {
+      "path": ".ai/changes/change-003/BOUNDARY-STOP-DEP-001.md",
+      "sha256": "354c26e4a72478106dc1d5aed40f3377765bc05acd51f8ac060cfcec57495e1f",
+      "utf8_valid": true,
+      "bom": false,
+      "crlf": 0,
+      "lf_only": 26,
+      "unexpected_controls": 0
+    }
+  ]
+}

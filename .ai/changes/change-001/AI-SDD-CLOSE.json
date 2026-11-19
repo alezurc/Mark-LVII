@@ -1,0 +1,9 @@
+{
+  "change_id": "change-001",
+  "closed_at": "2026-11-18T22:30:08.090247+00:00",
+  "reviewer_reference": "após analisar o REVIEW-REVISION-002.md aprovo o review",
+  "review_evidence_status": "complete",
+  "review_waiver_reference": null,
+  "plan_sha256": "05d36088c28c5349f8923d4a9621ba90d023bbe204347854d88724f980289e96",
+  "knowledge_sha256": "76b9c63b02edd78f54a63c97461950a1ac217b9928717375bfee3a846ace88f2"
+}

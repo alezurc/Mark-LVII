@@ -1,0 +1,22 @@
+[
+  {
+    "path": "readme.md",
+    "kind": "UPDATE",
+    "change_id": "change-004",
+    "sha256": "371962dfdee1141379b6fc46ff6b3eae418067e55d337554c4e2ce03cb71df1e",
+    "evidence_refs": [
+      ".ai/changes/change-004/REVIEW-REVISION-002.md",
+      "readme.md"
+    ]
+  },
+  {
+    "path": "CHANGELOG.md",
+    "kind": "UPDATE",
+    "change_id": "change-004",
+    "sha256": "fbc38558d897114032c47a59c17b5de81db452c0fb6cdb5fd46f5f49a3598c78",
+    "evidence_refs": [
+      ".ai/changes/change-004/CHANGELOG-PROPOSED.md",
+      ".ai/changes/change-004/REVIEW-REVISION-002.md"
+    ]
+  }
+]

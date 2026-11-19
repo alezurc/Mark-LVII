@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "change_id": "change-001",
+  "project_mode": "EXISTING",
+  "context_reference": "após analise do CONTEXT-REVISION-002.md\\\n&#x20;considero aprovado",
+  "evidence_refs": [
+    ".ai/changes/change-001/CLOSE-EVIDENCE.md",
+    ".ai/changes/change-001/CONTEXT.md",
+    ".ai/changes/change-001/REVIEW-REVISION-002.md",
+    ".ai/changes/change-001/DEVELOP-REVISION-002.md"
+  ],
+  "unresolved_unknowns": [
+    {
+      "description": "Política e destino de changelog não identificados nas fontes locais inspecionadas.",
+      "material": true
+    },
+    {
+      "description": "Estratégia de versionamento do produto não estabelecida por evidência local.",
+      "material": true
+    },
+    {
+      "description": "Intenção histórica de encoding sem BOM não comprovada; preservação de bytes verificada.",
+      "material": false
+    }
+  ],
+  "unresolved_conflicts": [],
+  "risks": [
+    "Sem teste manual do editor ou integração completa; revisão não isolada.",
+    "Títulos sem caminho completo e perfis sem observação permanecem não verificados."
+  ],
+  "material_decision_required": true,
+  "proposed_version": null,
+  "human_decision_required": true,
+  "close_ready": false,
+  "versioning": {
+    "strategy_target": null,
+    "evidence_refs": [
+      ".ai/changes/change-001/CLOSE-EVIDENCE.md",
+      "readme.md",
+      "ai-sdd.project.yaml"
+    ],
+    "status": "DECISION_REQUIRED",
+    "strategy": null
+  },
+  "knowledge": {
+    "reason": "Contratos e limites técnicos duradouros, com evidência de revisão e encoding.",
+    "targets": [],
+    "evidence_refs": [
+      ".ai/changes/change-001/CLOSE-EVIDENCE.md",
+      ".ai/changes/change-001/CONTEXT.md",
+      ".ai/changes/change-001/REVIEW-REVISION-002.md",
+      ".ai/changes/change-001/DEVELOP-REVISION-002.md"
+    ],
+    "records": [
+      {
+        "id": "KR-change-001-001",
+        "statement": "O fluxo VS Code confirma sucesso somente após observar janela com caminho completo; captura CLI/probe usa buffers fixos de 65536 bytes por stream, com excesso conservador e cleanup limitado.",
+        "classification": "CONFIRMED",
+        "evidence_refs": [
+          ".ai/changes/change-001/REVIEW-REVISION-002.md",
+          "actions/dev_agent.py",
+          "tests/test_dev_agent_vscode.py"
+        ],
+        "context_reference": "após analise do CONTEXT-REVISION-002.md\\\n&#x20;considero aprovado",
+        "traceability": {
+          "review": ".ai/changes/change-001/REVIEW-REVISION-002.md",
+          "requirements": [
+            "D006",
+            "R001"
+          ],
+          "change_id": "change-001"
+        }
+      },
+      {
+        "id": "KR-change-001-002",
+        "statement": "Os alvos desta mudança preservam UTF-8 sem BOM e seus finais de linha; a intenção histórica do encoding sem BOM não foi estabelecida.",
+        "classification": "UNKNOWN",
+        "evidence_refs": [
+          ".ai/changes/change-001/ENCODING-BASELINE.json",
+          ".ai/changes/change-001/ENCODING-REVIEW.json"
+        ],
+        "context_reference": "após analise do CONTEXT-REVISION-002.md\\\n&#x20;considero aprovado",
+        "traceability": {
+          "limitation": "UNKNOWN da intenção histórica; bytes válidos e preservados conforme revisão.",
+          "change_id": "change-001"
+        }
+      }
+    ],
+    "impact": "YES"
+  },
+  "user_docs": {
+    "reason": "Correção interna e de diagnóstico do agente; README não descreve este helper e CONTEXT não prevê consolidação adicional de manual.",
+    "targets": [],
+    "evidence_refs": [
+      "readme.md",
+      ".ai/changes/change-001/CONTEXT.md",
+      ".ai/changes/change-001/CLOSE-EVIDENCE.md"
+    ],
+    "impact": "NO"
+  },
+  "changelog": {
+    "strategy_target": null,
+    "reason": "Aplicabilidade e destino dependem de estratégia ainda não evidenciada; não inferir ausência de impacto.",
+    "targets": [],
+    "evidence_refs": [
+      ".ai/changes/change-001/CLOSE-EVIDENCE.md",
+      "readme.md"
+    ],
+    "impact": "UNKNOWN"
+  },
+  "project_spec": {
+    "reason": "Nenhum novo requisito proposto além da correção D006/R001 já aprovada; sem alvo de especificação a alterar em CLOSE.",
+    "targets": [],
+    "evidence_refs": [
+      ".ai/changes/change-001/CONTEXT.md",
+      ".ai/changes/change-001/REVIEW-REVISION-002.md"
+    ],
+    "material": false,
+    "impact": "NO"
+  },
+  "blockers": [
+    "MATERIAL_UNCERTAINTY_REQUIRES_RESOLUTION",
+    "MATERIAL_UNCERTAINTY_REQUIRES_RESOLUTION",
+    "CHANGELOG_IMPACT_UNKNOWN",
+    "VERSIONING_STRATEGY_DECISION_REQUIRED",
+    "HUMAN_APPROVAL_REQUIRED"
+  ]
+}

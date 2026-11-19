@@ -1,0 +1,103 @@
+{
+  "change_id": "change-004",
+  "status": "PASS",
+  "approved_baseline_sha256": "d7087977fb69c8a593e6c07ad3ae2fc9e11c4f96f308dd4a7f64a115b542968d",
+  "checks": [
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "fbc38558d897114032c47a59c17b5de81db452c0fb6cdb5fd46f5f49a3598c78",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "LF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "gui/hud.py",
+      "sha256": "acfd1c0005bce432cbdc782fc695a8cf10b94f0c37d531e29078884583d94030",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "CRLF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "gui/i18n.py",
+      "sha256": "9e84e96bbfa5aa8ca6b2c50497d74cfd5ef37369cd109b4b637bbbf20aec667a",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "LF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "gui/overlays.py",
+      "sha256": "5d2d4d8582ff7dc487801ba4445af8cfb1a7bcf7a10e25732c947b46a1f4b2b2",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "CRLF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "gui/providers_panel.py",
+      "sha256": "ef7e8469b01201b68d852814b2c0c0f552200b51de0b7826194c3394d066d563",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "CRLF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "gui/widgets.py",
+      "sha256": "491a562d48a1d2a251d37d96a4b9de6061f2c0a22d543eca11eaccfd55da7b20",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "CRLF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "gui/window.py",
+      "sha256": "f15fb0c3070cc191dad51b570b7f1d6d8a1db393f704f6f2c648fc42cc251133",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "CRLF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "memory/config_manager.py",
+      "sha256": "7082e9eaea93264435811bc22f4260b6b1d86ab3f912a296a24b5bc46fbda69e",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "CRLF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "readme.md",
+      "sha256": "371962dfdee1141379b6fc46ff6b3eae418067e55d337554c4e2ce03cb71df1e",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "CRLF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "tests/test_ui_language.py",
+      "sha256": "a26df206b38a012c064b702abd215abb9ce9725c75333087b30fae12d24325ba",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "LF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "tests/test_ui_language_qt.py",
+      "sha256": "7adca8fb5a922f43dc2928bc268fce3b9dc1d0a0aa81de7006dd4e7f73328916",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "LF",
+      "historical_intent": "UNKNOWN"
+    },
+    {
+      "path": "ui.py",
+      "sha256": "a4ee2954881343d4aa06da9e0d3cb43219cfa91df8930663fa411e6e66f34294",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "newline": "CRLF",
+      "historical_intent": "UNKNOWN"
+    }
+  ]
+}

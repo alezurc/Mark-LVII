@@ -1,0 +1,87 @@
+def _vscode_read_ready(stream, size):
+    """One nonblocking read, including Python 3.11 Windows anonymous pipes."""
+    import os
+    if sys.platform == "win32":
+        import ctypes
+        from ctypes import wintypes
+        import msvcrt
+        kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+        peek = kernel.PeekNamedPipe
+        peek.argtypes = (wintypes.HANDLE, wintypes.LPVOID, wintypes.DWORD,
+                         ctypes.POINTER(wintypes.DWORD), ctypes.POINTER(wintypes.DWORD),
+                         ctypes.POINTER(wintypes.DWORD))
+        peek.restype = wintypes.BOOL
+        available = wintypes.DWORD()
+        if not peek(msvcrt.get_osfhandle(stream.fileno()), None, 0, None,
+                    ctypes.byref(available), None):
+            error = ctypes.get_last_error()
+            if error in (109, 232, 233):  # broken/closing/disconnected pipe
+                return b""
+            raise ctypes.WinError(error)
+        if not available.value:
+            return None
+        size = min(size, available.value)
+    else:
+        os.set_blocking(stream.fileno(), False)
+    try:
+        return os.read(stream.fileno(), size)
+    except BlockingIOError:
+        return None
+
+
+def _vscode_capture(argv, timeout, **kwargs):
+    """Capture at most 64 KiB per pipe, without reader threads or spooling.
+
+    Fixed buffers also back result/exception views: no full-output copies.
+    Reserve part of the caller's deadline for killing/reaping this child only.
+    """
+    limit = 65_536
+    deadline = time.monotonic() + timeout
+    read_deadline = deadline - min(0.25, timeout / 4)
+    buffers = {name: bytearray(limit) for name in ("stdout", "stderr")}
+    counts = {name: 0 for name in buffers}
+    kwargs.setdefault("shell", False)
+    proc = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                            bufsize=0, **kwargs)
+    streams = {"stdout": proc.stdout, "stderr": proc.stderr}
+
+    def output(name):
+        return memoryview(buffers[name])[:counts[name]]
+
+    try:
+        while streams or proc.poll() is None:
+            if time.monotonic() >= read_deadline:
+                raise subprocess.TimeoutExpired(argv, timeout, output=output("stdout"),
+                                                stderr=output("stderr"))
+            progressed = False
+            for name, stream in list(streams.items()):
+                # At the limit, read one byte to distinguish overflow from EOF.
+                room = limit - counts[name]
+                chunk = _vscode_read_ready(stream, min(8_192, room + 1))
+                if chunk is None:
+                    continue
+                progressed = True
+                if not chunk:
+                    del streams[name]
+                    continue
+                if len(chunk) > room:
+                    error = OverflowError(name)
+                    error.stdout, error.stderr = output("stdout"), output("stderr")
+                    raise error
+                buffers[name][counts[name]:counts[name] + len(chunk)] = chunk
+                counts[name] += len(chunk)
+                del chunk
+            if not progressed:
+                time.sleep(min(0.01, max(0, read_deadline - time.monotonic())))
+        return subprocess.CompletedProcess(argv, proc.returncode,
+                                           output("stdout"), output("stderr"))
+    finally:
+        try:
+            if proc.poll() is None:
+                proc.kill()  # Never kill the editor GUI or an existing instance.
+            proc.wait(timeout=max(0.001, deadline - time.monotonic()))
+        finally:
+            proc.stdout.close()
+            proc.stderr.close()
+
+

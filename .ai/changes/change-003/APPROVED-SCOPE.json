@@ -1,0 +1,13 @@
+{
+  "change_id": "change-003",
+  "approval_reference": "Aprovo a pós revisar o CONTEXT.md",
+  "paths": [
+    "providers/_tests.py",
+    "tests/test_source_encoding.py",
+    "tests/test_smoke_harness.py",
+    "tests/test_provider_test_isolation.py",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "encoding_sha256": "b1e70e27b3ca4456ccbdf448f9e5bc3eae27ce6fba36454db59bf6754c9662fd"
+}

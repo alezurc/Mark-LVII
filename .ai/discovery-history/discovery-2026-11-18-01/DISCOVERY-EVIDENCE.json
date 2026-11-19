@@ -1,0 +1,1067 @@
+{
+  "run_id": "discovery-2026-11-18-01",
+  "revision": "f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+  "entries": [
+    {
+      "path": ".gitignore",
+      "sha256": "4358a2cb0ca9d46ee6997e4e1847ec144c6fdda9ff6c921ed669c9a6001bdf9f",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/background_monitor.py",
+      "sha256": "9602cb39d7557e28575aaaac3c078f10e028212fa98e263d55137f88444f89de",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/background_tasks.py",
+      "sha256": "9e82b11ef6ca53b988b975cbce04973386b8d25ff79de4d5168798673e8c136c",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/browser_control.py",
+      "sha256": "67ad5ecb8a915d9b27fc35c5a24a294b093ae58bb00140bafcede1580acbac63",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/code_helper.py",
+      "sha256": "b56ca59b8342388660aabd663f58ee9cfbe76ed748cdbcfb49a8e754e6755e5e",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/computer_control.py",
+      "sha256": "d75e6ca5b081e05ec1a3257f93f1907069d664bd41283d91225d7920b95fefbd",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/computer_settings.py",
+      "sha256": "046880139576611caeb33e5d41cbcde9b51baea4bcd90a39342f0df49c6210c7",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/desktop.py",
+      "sha256": "6f69b91aea3718980ccde24528e15b97a2d811fb8e351b73e9d2ee72b221a317",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/dev_agent.py",
+      "sha256": "a037c36d50dac943fe18168fe9a3e278f7c94e4d159ae8c0554ee31ace344d8c",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/file_controller.py",
+      "sha256": "e5219b4b4887457637fe7d619ad4e9c7f650f187601b0f1d9cad65e2bc4d84de",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/file_processor.py",
+      "sha256": "519d1271df80d9c125f0931eda5d8220ca9fdf8d69dd47e48b5f046062ac3ffb",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/flight_finder.py",
+      "sha256": "35ae0641b750cfb733f807745a311af2855b6e2be0c4d316ecfd550cf93e38a0",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/game_updater.py",
+      "sha256": "485f7c587ca5eee3d58b4225df03bd828e6800320d2aedf14981c720f710d5df",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/open_app.py",
+      "sha256": "086e7aba68992d47a428116b2837292107a01529e2619ccd209fc797c649e2c2",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/proactive.py",
+      "sha256": "53ec72aca553690227c9557f483cc16df846ede13300538ec01e5f7f3f9fcc60",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/reminder.py",
+      "sha256": "89402297f3a941de55fbf237bba46770fae86fb9eb8345012ce30f2312b36382",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/routines.py",
+      "sha256": "b52808db70cf90dc6d262f2c99647df74e558f361c5c7617727ebb47f90d0103",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/screen_processor.py",
+      "sha256": "80dedb16a1c3e847994bf86c8e7cb05f3e6956bd8409ded010996b9d84946b42",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/send_message.py",
+      "sha256": "260bbb84ad15266c1ee4e23429207ddfb3342284b58e2e0f0775ce3fc0211ff2",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/system_monitor.py",
+      "sha256": "da4a460eaa237f289c9d3469ac800444af1e5f6d2a423aec63298c6a6b542716",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/video_player.py",
+      "sha256": "016f18c4b85c4ddddff29c4fca1ad212042046d3603c14b61437a33e377e6c31",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/weather_report.py",
+      "sha256": "227f116d1156a8c63e9985cd2040b6f2baa0ef5c580a873081aee69c0f63efe5",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/web_search.py",
+      "sha256": "30df2502955443ef0387e398b64434ca10373cab1f324c0b846e2dd3061f13ac",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "actions/youtube_video.py",
+      "sha256": "809ad59db828d989dd92b938c8fb2f76c19e95fa519137f3685ed5e6fa6ad5d1",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "agents/general.md",
+      "sha256": "64062e96c4fc12707bd5e0b4ca999f38d0122df6dd8ec0d713a0a1c4edc6068e",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "agents/researcher.md",
+      "sha256": "b1fdcbb60caf4d8527ae0d685c8d8c62d46ca205a72391b3b4bdcb8b6651be02",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "0769ec15f6c5e080d5943a3651b5f35a39215544e9ed7fe5dbab0e41bef763d8",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "ai-sdd.project.yaml",
+      "sha256": "ad77c131cf5b055738d50b6508036aaf917e842330a028fdd2cec4c3ad25f86d",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "b8ddd0143d5b73f128ad15d22418b95170491a1742d53c938a1126f9fd201b07",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/_smoke_harness.py",
+      "sha256": "25081959d547c3a9dc55227f389e497f87528a038d59e6d99c71948b6c92ac51",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/action_loader.py",
+      "sha256": "a981269b2ff98cc48617f97624d80ee2fb9c6d4f21e3f9a9587de01d7942511f",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/appidentity.py",
+      "sha256": "95a7fc8acaecb79421f11b4cf1ac6c06b0409a7326d9e19a46f924c3da2d9d41",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/audio_devices.py",
+      "sha256": "35dc403b4f5b90cd383f6c62f5f8b6dc610000c55b1252d5e55f0d733d9a09c1",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/avatar.py",
+      "sha256": "e582d3e88913baa69aba4d0f6ff921d23195bc4c5c16ef918f7082b385377fde",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/avatar_mesh.py",
+      "sha256": "305682e6166db50945c91ef9b75207c534c0b6418780d0d97af9035899163c27",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/cloud.py",
+      "sha256": "465c0c04187eba2fec2dd7ac0ed9ad3b2e1d3eb9aea5ee4c53ba31c76e1763f6",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/code_checks.py",
+      "sha256": "28507f9ced23a5dfb0aca6624178e9bffa0c3d27879616bb40fd957f79b29a01",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/confirm.py",
+      "sha256": "a8334b88c8108f9806d2e2318d54628ec77f12a8e3ee3e5b593acccb6fb90e2c",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/echo.py",
+      "sha256": "e63af72cef93a4f0d9e4d0c18a5f021ab2c3e036c391177cf6277817afd8ec5b",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/gemini.py",
+      "sha256": "8f8c2e5c6d31d1753c48ab5472ba897fab10c75d5512752b6d41f34fcbbd90bb",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/hotkey.py",
+      "sha256": "97cc6f7096a3536785e1499a7b26b3f2793a89322fe2241e0001241c09c0d7c0",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/installer.py",
+      "sha256": "ab591b58cb3c52544870c6c67236bdd229b7cd6ca36973a783f72c647e797fe5",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/lazyimport.py",
+      "sha256": "e155517558c616381dca8204ce4e4eda35a2459959205eb9d086a4afe3065bb2",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/llm_client.py",
+      "sha256": "bfce47154765f61c3135eb76913e503ab4dc810c753fec10d3cf585c262479ad",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/outcome.py",
+      "sha256": "cfceec76ad8ae2415e9352eb1b2e934ead68b1425c82b6d251d51260e931c47f",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/platform_support.py",
+      "sha256": "6ab442458dab80873ef8b56125ad867b1d8c8330d46cb9fc8e49e349cb72a1ed",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/plugin_loader.py",
+      "sha256": "61fc59e2acd1075ca171ed2d2283779e51d0972588f9976aa4e92e2233716683",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/routines/__init__.py",
+      "sha256": "34ed6b06869537405f858df1285c104ba3441db803317ab07b489ea935fbfceb",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/routines/desktop.py",
+      "sha256": "d7fc619f5690192828df2096b37a233a1b5efe5eecc3f4ead33540c1b0decaba",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/routines/engine.py",
+      "sha256": "41ba8ff259f3f1b023432b05a8247f3ab6992a8eecd71657fc37fafbff3d258e",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/routines/rules.py",
+      "sha256": "e9d565c864c2001fef76d77ade7d45105dee66fdb2f54071593197a7f833ea22",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/screenact.py",
+      "sha256": "423303fe830891b95a2104affd2b98d643bb30dd5cfa961a29ec4ab13afed445",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/screenview.py",
+      "sha256": "89940abf1a684f3dadeff8e9290e2d4a7d34fd1e9ec76ecdc1c031d8cee5b702",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/stt.py",
+      "sha256": "f529d21c49331a151f5810e8d471e0e6f0e010217d83b2063dfca8671611df32",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tasks/__init__.py",
+      "sha256": "34205b63804b21816f2f5b71c9d3f4e325d4054c70cb30ea59f675ad4050ead1",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tasks/agents.py",
+      "sha256": "dfa438ac0a9fc73ab320fa2b100323a8b7a2ab58d422cafb64a9d443d4336d14",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tasks/brain.py",
+      "sha256": "bc0131df3bd42c6035a080d51b4e454894a96c574185166cbb8a61777066cd3f",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tasks/desktop.py",
+      "sha256": "f201b4dedd0a0d4a9f281f60f9a006ef64e4bcba0ab6f89277389973da751796",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tasks/engine.py",
+      "sha256": "c3b3dd32ff3acf12a7bc83e6458458e6356298c98e53245cece64c17b08d0675",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tasks/research.py",
+      "sha256": "04b4280f3a2a3a2131a3ed26afa1691a4b67ccfa656e5b5b107ef588af2b1e5f",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tasks/store.py",
+      "sha256": "eba554771e86fb4e2f441073aaa91f542071f3944c0ed883af9ef789c33f8072",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tasks/tools.py",
+      "sha256": "ec3e51809d5abbaf4f9f49ed2b1ddaf92688b56f84847dfe32d479c05437453c",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tasks/web.py",
+      "sha256": "b265d179df2aa4468e30308059bfa8c868cb4bc70023ca347e1e1ca4d979b924",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tls.py",
+      "sha256": "7353e05f9455b83c28d4e9f5367c77da40b9f2f2cdd9fe0b7f2d84b9a21c9986",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/tts.py",
+      "sha256": "8f342b4f9d6ba02d8954e9ed1c34241c05e55b045d629b80ad5d8d9acc6243b3",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/undo.py",
+      "sha256": "786ead0da002d3f33c21f66677ec4e431923e2498f2742283092e699944d7276",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/viseme.py",
+      "sha256": "1bd7a9739b4eee6ce780a488f5a7cfeddbd866bfbdaa6f02e436e488e60fa8fa",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "core/wake_word.py",
+      "sha256": "a483be68b9e181ec1c7d8a0247d9da48228c3f06ce0f76e2348fede2fb480416",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "dashboard/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "dashboard/server.py",
+      "sha256": "5355d250a0364c7dab38dc254aa21cb81ccd8ff18200dca61d05069416ca3fdb",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "gui/__init__.py",
+      "sha256": "1311f4dd1f2e60184d4e589b5485e38b68acff94c2b56c82e47d3b0c3a4fe6a7",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "gui/hud.py",
+      "sha256": "f4175652a88de897375ad53ff2d54dc9b2801cef3899109347c89567dbdd634a",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "gui/metrics.py",
+      "sha256": "c8a1aa8c45f8c6215753209288bce008d0b582cbeca3ebffc5696c5b9573c765",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "gui/overlays.py",
+      "sha256": "124226140a129196c084f2a820bbeb9fda7761ce2f711cbe1312fd878f99a5d5",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "gui/providers_panel.py",
+      "sha256": "777c9e51d0cf4816c26f0e3eb3a2be0ef7a472d900508ebee8146947e7676275",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "gui/reactor.py",
+      "sha256": "3f110389b1ca3e310ad4f1e8b41e3518908f2ac40c34a1eb6750e004b1ef8465",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "gui/style.py",
+      "sha256": "f2804ba2e71b43decbeb6a295e1251ada8385638094ffa98c95b2a4abb13eec9",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "gui/theme.py",
+      "sha256": "dfa6e96f1c5a88c4d0876cdd220e7e1ec73320f9adb31869bce3febe12b42638",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "gui/widgets.py",
+      "sha256": "7f8ae0f15577b8031753c2d477a5aeac240a4cd3af26c2602ac85deb0b277c6c",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "gui/window.py",
+      "sha256": "a92f6ae7697b306c12d3630f01ae5661baad8fc7269ef5e4ee324d999561a254",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "main.py",
+      "sha256": "86d91b4af3f04a36431ad99f1231684f78abacd653e5b850f3f9187aa9267d70",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "memory/__init__.py",
+      "sha256": "1a53be42e3bb5daa658eac29b1df3568bbdd3f294d4a495f9f09c0e9d0e361c8",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "memory/config_manager.py",
+      "sha256": "e0301bb17b2d733def5d1a15b77a2abd4a2e32986981a4b2e8b196b0fce1d528",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "memory/memory_manager.py",
+      "sha256": "3ecf5a9d80484bec73eef67e54c7d7e2880c726e4bfac58d05b1a14b6e1988ce",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "plugins/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "plugins/_template.py",
+      "sha256": "bfb5bac5dca3473434b5774be6d655151824ccb85001ca95bdfb4b82bd0bece2",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "PROJECT-POLICY.md",
+      "sha256": "5cd687ff9a76754abf8224df6ebeaccfd2b03faa90f6764a093dcb7fa01b057e",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/__init__.py",
+      "sha256": "aed0b4cfe9962cd736c4f3264223a5c2cc06a262c73debb62b50886f17d09a42",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/_tests.py",
+      "sha256": "b4a8a1ea4bc373efb97d036cb61b6c49dae2786758bd9afd4812592edb49fcda",
+      "status": "UNKNOWN",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "UNKNOWN",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/audio.py",
+      "sha256": "e00b22a1c249419c5983da5e0fdc6d1728867a7b705dc59b9c77aa913d01008d",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/base.py",
+      "sha256": "bb4f999f2d4042c201fe5029a6cb07bfd4e21a2de56eba22e32099f923b5b709",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/engine_pipeline.py",
+      "sha256": "164f267b0b3ba9d996989fb951a6675cadda1170a566b6126350e0534ac83ff0",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/llm_openai.py",
+      "sha256": "09c8efe3ec28e3628e8d68125cd0fa196f68dcad24583ebbf6d484070805a433",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/registry.py",
+      "sha256": "1eee923c761f412cc79b426a02dea3475159597b55a087797eb27a5ad55833f3",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/schema.py",
+      "sha256": "4d5f2c06aa52d89813f8a730649ead57ed8e37eeb42471e876fbeacb6cc85b81",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/stt_whisper.py",
+      "sha256": "42db4b9d88118de91a1e1876af63c32159d76b2e4d7cc53c502610ad7167f08f",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/tts_elevenlabs.py",
+      "sha256": "c842022bab5e4c947766a8dc1165627d585da41879b06e1954bfe0a1ff105f42",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/tts_piper.py",
+      "sha256": "e7ca234abafb73807651b60f5026aac631906b3a1b7d9e93b568394017407ccd",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "providers/tts_system.py",
+      "sha256": "6083d6f9a15ef61c4148bba4832e1a31ecc8b1e80f92640d24fd7911a33abb33",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "readme.md",
+      "sha256": "2529f75d0fdf6c3805b00828be8a7da65321aee870f10c23752446df51e5dcf4",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "1ca35b1d79ecfe78726476fb17c58df999b0021ab34135b0bd7779879430063e",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "setup.py",
+      "sha256": "c0d70adf085e5f9f9486f0631c68c6ffce6967a1bb619794f914131176ef6906",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "tests/test_dev_agent_vscode.py",
+      "sha256": "e87a0e53312e8c12073d87642e268b936445b3ff74cd38aa5194dd425a0885ce",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    },
+    {
+      "path": "ui.py",
+      "sha256": "c76cee3d2fd0870ed78f8fbb375c7718e78a6e1634726b567b411577b2fc47c4",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "method": "BOM signature/strict payload decoding; strict UTF-8 when no BOM",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "No BOM does not establish author intent or a legacy codepage; not an approved editing baseline."
+    }
+  ],
+  "syntax_errors": [],
+  "changed_since_baseline": [
+    "actions/dev_agent.py"
+  ],
+  "added_to_inventory": [
+    "CHANGELOG.md",
+    "PROJECT-POLICY.md",
+    "tests/test_dev_agent_vscode.py"
+  ],
+  "tracked_runtime_artifact_count": 24,
+  "limits": "No personal-data content, imports of product, model/service calls, GUI or tests executed in this refresh; AST is syntax only."
+}

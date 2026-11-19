@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "change_id": "change-001",
+  "project_mode": "EXISTING",
+  "context_reference": "após analise do CONTEXT-REVISION-002.md\\\n&#x20;considero aprovado",
+  "evidence_refs": [
+    ".ai/changes/change-001/CLOSE-EVIDENCE.md",
+    ".ai/changes/change-001/CONTEXT.md",
+    ".ai/changes/change-001/REVIEW-REVISION-002.md",
+    ".ai/changes/change-001/DEVELOP-REVISION-002.md",
+    ".ai/changes/change-001/CLOSE-BOOTSTRAP-PROPOSAL.md"
+  ],
+  "unresolved_unknowns": [
+    {
+      "description": "Intenção histórica de encoding sem BOM não comprovada; preservação verificada.",
+      "material": false
+    }
+  ],
+  "unresolved_conflicts": [],
+  "risks": [
+    "Sem teste manual do editor ou integração completa; revisão não isolada.",
+    "Títulos sem caminho completo e perfis sem observação permanecem não verificados."
+  ],
+  "material_decision_required": true,
+  "proposed_version": null,
+  "versioning": {
+    "status": "PROPOSED",
+    "strategy": "KEEP_CURRENT_IDENTIFIER",
+    "strategy_target": "PROJECT-POLICY.md",
+    "evidence_refs": [
+      ".ai/changes/change-001/CLOSE-BOOTSTRAP-PROPOSAL.md",
+      ".ai/changes/change-001/proposals/PROJECT-POLICY.md"
+    ]
+  },
+  "knowledge": {
+    "reason": "Contratos e limites técnicos duradouros, com evidência de revisão e encoding.",
+    "targets": [],
+    "evidence_refs": [
+      ".ai/changes/change-001/CLOSE-EVIDENCE.md",
+      ".ai/changes/change-001/CONTEXT.md",
+      ".ai/changes/change-001/REVIEW-REVISION-002.md",
+      ".ai/changes/change-001/DEVELOP-REVISION-002.md"
+    ],
+    "records": [
+      {
+        "id": "KR-change-001-001",
+        "statement": "O fluxo VS Code confirma sucesso somente após observar janela com caminho completo; captura CLI/probe usa buffers fixos de 65536 bytes por stream, com excesso conservador e cleanup limitado.",
+        "classification": "CONFIRMED",
+        "evidence_refs": [
+          ".ai/changes/change-001/REVIEW-REVISION-002.md",
+          "actions/dev_agent.py",
+          "tests/test_dev_agent_vscode.py"
+        ],
+        "context_reference": "após analise do CONTEXT-REVISION-002.md\\\n&#x20;considero aprovado",
+        "traceability": {
+          "review": ".ai/changes/change-001/REVIEW-REVISION-002.md",
+          "requirements": [
+            "D006",
+            "R001"
+          ],
+          "change_id": "change-001"
+        }
+      },
+      {
+        "id": "KR-change-001-002",
+        "statement": "Os alvos desta mudança preservam UTF-8 sem BOM e seus finais de linha; a intenção histórica do encoding sem BOM não foi estabelecida.",
+        "classification": "UNKNOWN",
+        "evidence_refs": [
+          ".ai/changes/change-001/ENCODING-BASELINE.json",
+          ".ai/changes/change-001/ENCODING-REVIEW.json"
+        ],
+        "context_reference": "após analise do CONTEXT-REVISION-002.md\\\n&#x20;considero aprovado",
+        "traceability": {
+          "limitation": "UNKNOWN da intenção histórica; bytes válidos e preservados conforme revisão.",
+          "change_id": "change-001"
+        }
+      }
+    ],
+    "impact": "YES"
+  },
+  "user_docs": {
+    "reason": "Correção interna e de diagnóstico do agente; README não descreve este helper e CONTEXT não prevê consolidação adicional de manual.",
+    "targets": [],
+    "evidence_refs": [
+      "readme.md",
+      ".ai/changes/change-001/CONTEXT.md",
+      ".ai/changes/change-001/CLOSE-EVIDENCE.md"
+    ],
+    "impact": "NO"
+  },
+  "changelog": {
+    "impact": "YES",
+    "reason": "Registrar change-001 por identificador, segundo a política proposta aceita em abordagem pelo usuário.",
+    "targets": [
+      {
+        "path": "CHANGELOG.md",
+        "kind": "UPDATE",
+        "change_id": "change-001",
+        "sha256": "b8ddd0143d5b73f128ad15d22418b95170491a1742d53c938a1126f9fd201b07",
+        "evidence_refs": [
+          ".ai/changes/change-001/CLOSE-BOOTSTRAP-PROPOSAL.md",
+          ".ai/changes/change-001/proposals/CHANGELOG.md"
+        ]
+      }
+    ],
+    "evidence_refs": [
+      ".ai/changes/change-001/CLOSE-BOOTSTRAP-PROPOSAL.md",
+      ".ai/changes/change-001/proposals/CHANGELOG.md"
+    ],
+    "strategy_target": "PROJECT-POLICY.md"
+  },
+  "project_spec": {
+    "reason": "Nenhum novo requisito proposto além da correção D006/R001 já aprovada; sem alvo de especificação a alterar em CLOSE.",
+    "targets": [],
+    "evidence_refs": [
+      ".ai/changes/change-001/CONTEXT.md",
+      ".ai/changes/change-001/REVIEW-REVISION-002.md"
+    ],
+    "material": false,
+    "impact": "NO"
+  },
+  "close_policy_bootstrap": {
+    "change_id": "change-001",
+    "versioning_decision": {
+      "strategy": "KEEP_CURRENT_IDENTIFIER",
+      "current_identifier": "Mark LVII",
+      "proposed_version": null
+    },
+    "targets": [
+      {
+        "path": "PROJECT-POLICY.md",
+        "role": "PROJECT_POLICY",
+        "proposal": ".ai/changes/change-001/proposals/PROJECT-POLICY.md",
+        "sha256": "5cd687ff9a76754abf8224df6ebeaccfd2b03faa90f6764a093dcb7fa01b057e",
+        "before_sha256": null
+      },
+      {
+        "path": "CHANGELOG.md",
+        "role": "CHANGELOG",
+        "proposal": ".ai/changes/change-001/proposals/CHANGELOG.md",
+        "sha256": "b8ddd0143d5b73f128ad15d22418b95170491a1742d53c938a1126f9fd201b07",
+        "before_sha256": null
+      }
+    ]
+  },
+  "human_decision_required": false,
+  "close_ready": true,
+  "blockers": []
+}

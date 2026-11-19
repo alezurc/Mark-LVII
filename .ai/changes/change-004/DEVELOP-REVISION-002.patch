@@ -1,0 +1,435 @@
+--- before/gui/i18n.py
++++ after/gui/i18n.py
+@@ -12,7 +12,10 @@
+ _language = "en"
+ _bindings = weakref.WeakKeyDictionary()
+ _listeners = []
+-PT_BR = {'The test itself failed: {error}': 'O teste falhou: {error}', '   (optional)': '   (opcional)',
++PT_BR = {'FILE': 'ARQUIVO', 'FOLDER': 'PASTA',
++ '{count}{limit} file': '{count}{limit} arquivo',
++ '{count}{limit} files': '{count}{limit} arquivos',
++ 'The test itself failed: {error}': 'O teste falhou: {error}', '   (optional)': '   (opcional)',
+  '   ★ recommended': '   ★ recomendado',
+  ' and ': ' e ',
+  ' under Windows Defender Firewall → Inbound Rules.': ' no Windows Defender Firewall → Regras de '
+--- before/gui/widgets.py
++++ after/gui/widgets.py
+@@ -459,10 +459,12 @@
+             size_str = _fmt_size(path.stat().st_size)
+         except OSError:
+             size_str = "?"
+-        ext_str = path.suffix.upper().lstrip(".") or "FILE"
++        ext_str = path.suffix.upper().lstrip(".") or tr("FILE")
+         if cat == "folder":
+             n = self._z._folder_files
+-            ext_str, size_str = "FOLDER", f"{n}{'+' if n >= 5000 else ''} files"
++            ext_str = tr("FOLDER")
++            size_str = tr("{count}{limit} file" if n == 1 else "{count}{limit} files",
++                          count=n, limit="+" if n >= 5000 else "")
+ 
+         p.setFont(QFont("Segoe UI Emoji", 13) if _OS == "Windows" else QFont("Arial", 13))
+         p.setPen(QPen(qcol(icon_col)))
+@@ -477,7 +479,7 @@
+         p.setFont(px_font(10, mono=True))
+         p.setPen(QPen(qcol(C.TEXT_DIM)))
+         p.drawText(QRectF(40, H / 2 + 1, tw, H / 2 - 3),
+-                   Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop, render(f"{ext_str}  ·  {size_str}"))
++                   Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop, render(tr("{label}  ·  {size}", label=ext_str, size=size_str)))
+ 
+         # the ✕ that clears it (mousePressEvent treats the last 34 px as this)
+         p.setPen(QPen(with_alpha(C.RED, 0.8), 1.6))
+--- before/gui/window.py
++++ after/gui/window.py
+@@ -1871,37 +1871,57 @@
+         scroll = bar.value()
+         cursor = display.textCursor()
+         anchor, position = cursor.anchor(), cursor.position()
++        old_text = display.toPlainText()
+         mode, args = payload
+         if mode == "plain":
+-            self._show_content(*args)
++            self._show_content(*args, present=False)
+         elif mode == "review":
+-            self._show_review(*args)
++            self._show_review(*args, present=False)
+         else:
+-            self._show_code_job(*args)
++            self._show_code_job(*args, present=False)
++        new_text = display.toPlainText()
++        # Cursor offsets use UTF-16 units in Qt. Map unchanged text across the
++        # translated labels instead of selecting the old numeric offsets.
++        from difflib import SequenceMatcher
++        changes = SequenceMatcher(None, old_text, new_text).get_opcodes()
++
++        def relocated(qt_position):
++            before = old_text.encode("utf-16-le")[:qt_position * 2]
++            old_position = len(before.decode("utf-16-le", errors="ignore"))
++            new_position = len(new_text)
++            for kind, a, b, c, d in changes:
++                if a <= old_position < b:
++                    new_position = c + min(old_position - a, d - c)
++                    break
++            return len(new_text[:new_position].encode("utf-16-le")) // 2
++
+         cursor = display.textCursor()
+-        cursor.setPosition(min(anchor, display.document().characterCount() - 1))
+-        cursor.setPosition(min(position, display.document().characterCount() - 1), cursor.MoveMode.KeepAnchor)
++        cursor.setPosition(relocated(anchor))
++        cursor.setPosition(relocated(position), cursor.MoveMode.KeepAnchor)
+         display.setTextCursor(cursor)
+         bar.setValue(scroll)
+ 
+-    def _show_content(self, title: str, text: str):
++    def _show_content(self, title: str, text: str, *, present: bool = True):
+         """Slot — runs on Qt main thread. Updates and shows the content panel."""
+         import time as _time
+         self._localized_content = ("plain", (title, text))
+         # The panel opens below the head, so the head looks down at it. It is a
+         # tiny thing that answers "did that land?" before you read a word.
+-        self.hud.glance(0.0, -0.85, hold=1.3)
++        if present:
++            self.hud.glance(0.0, -0.85, hold=1.3)
+         # Only the app's own label is upper-cased ("NEWS — …"); what follows the
+         # dash is a search or a name in the user's language, and str.upper()
+         # applies English rules to it (Turkish "istanbul" -> "ISTANBUL").
+         label, dash, rest = str(render(title) or "").partition(" — ")
+         self._content_title_lbl.setText((label.upper() + dash + rest)[:48])
+-        self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
++        if present:
++            self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
+         self._content_display.setPlainText(render(text))
+-        self._content_display.moveCursor(
+-            self._content_display.textCursor().MoveOperation.Start
+-        )
+-        self._reveal_below_hud(self._content_panel, 220)
++        if present:
++            self._content_display.moveCursor(
++                self._content_display.textCursor().MoveOperation.Start)
++        if present:
++            self._reveal_below_hud(self._content_panel, 220)
+ 
+     # ── the coding agent, live ───────────────────────────────────────────────
+     # The panel under the head shows a coding job while it runs: what was asked,
+@@ -1916,7 +1936,7 @@
+     }
+     _JOB_PHASES = ("reading", "planning", "writing", "checking", "testing")
+ 
+-    def _show_code_job(self, job: dict):
++    def _show_code_job(self, job: dict, *, present: bool = True):
+         """Slot — Qt main thread. Draws the coding agent's progress."""
+         import time as _time
+         if not job:
+@@ -1977,15 +1997,17 @@
+         title = (f"{render(tr('CODE AGENT'))} — {job.get('folder', '')} · {job.get('model', '')}")[:48]
+         first = self._content_title_lbl.text() != title
+         self._content_title_lbl.setText(title)
+-        self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
++        if present:
++            self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
+         bar = self._content_display.verticalScrollBar()
+-        keep = 0 if first else bar.value()
++        keep = 0 if first and present else bar.value()
+         self._content_display.setHtml("".join(parts))
+         # setHtml jumps to the top; put the reader back where they were.
+         bar.setValue(keep)
+-        if first:
++        if first and present:
+             self.hud.glance(0.0, -0.85, hold=1.3)
+-        self._reveal_below_hud(self._content_panel, 260)
++        if present:
++            self._reveal_below_hud(self._content_panel, 260)
+ 
+     # ── document review ──────────────────────────────────────────────────────
+     # Rendered as rich text into the content panel that already exists, rather
+@@ -2009,7 +2031,7 @@
+         return (str(s or "").replace("&", "&amp;").replace("<", "&lt;")
+                 .replace(">", "&gt;").replace("\n", "<br>"))
+ 
+-    def _show_review(self, title: str, summary: str, findings, unclear):
++    def _show_review(self, title: str, summary: str, findings, unclear, *, present: bool = True):
+         self._localized_content = ("review", (title, summary, findings, unclear))
+         """Slot — Qt main thread. Lays a document review into the content panel."""
+         e = self._esc
+@@ -2055,7 +2077,8 @@
+         parts.append('</div>')
+ 
+         import time as _time
+-        self.hud.glance(0.0, -0.85, hold=1.3)
++        if present:
++            self.hud.glance(0.0, -0.85, hold=1.3)
+         # Left as written, not upper-cased. The other content-panel titles are
+         # the app's own English labels, but this one is the document's name in
+         # the user's language, and str.upper() applies English casing rules to
+@@ -2063,11 +2086,14 @@
+         # dotted capital İ. Python has no locale-aware upper to reach for, and
+         # imposing one language's rules on all of them is the bug, not the fix.
+         self._content_title_lbl.setText((title or tr('Document'))[:48])
+-        self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
++        if present:
++            self._content_ts_lbl.setText(_time.strftime("%H:%M:%S"))
+         self._content_display.setHtml("".join(parts))
+-        self._content_display.moveCursor(
+-            self._content_display.textCursor().MoveOperation.Start)
+-        self._reveal_below_hud(self._content_panel, 260)
++        if present:
++            self._content_display.moveCursor(
++                self._content_display.textCursor().MoveOperation.Start)
++        if present:
++            self._reveal_below_hud(self._content_panel, 260)
+ 
+     # ── quiz panel ───────────────────────────────────────────────────────────
+     # An interactive twin of the content panel. The plugin only ever hands over
+@@ -2192,7 +2218,7 @@
+                 QLineEdit:focus {{ border-color: {C.PRI_DIM}; }}
+             """)
+             send = self._quiz_btn(tr('ANSWER'), primary=True)
+-            send.setFixedWidth(90)
++            send.setMinimumWidth(110)
+             field.returnPressed.connect(lambda: self._quiz_submit(field.text()))
+             send.clicked.connect(lambda: self._quiz_submit(field.text()))
+             h.addWidget(field, stretch=1)
+--- before/tests/test_ui_language_qt.py
++++ after/tests/test_ui_language_qt.py
+@@ -16,7 +16,7 @@
+ from providers._tests import install_child_guard
+ root = Path.cwd()
+ violations = install_child_guard(root)
+-with patch.object(threading.Thread, 'start'):
++with patch.object(threading.Thread, 'start'), patch('platform.system', return_value='Windows'):
+     import ui
+ from memory import config_manager as config
+ config.update_config(local_only=True, os_system='windows', assistant_name='JARVIS', ui_language='pt-BR')
+@@ -168,6 +168,187 @@
+ 
+ 
+ class QtLanguageTests(unittest.TestCase):
++    def run_regression(self, scenario):
++        with isolated_project() as (root, env):
++            env['QT_SCALE_FACTOR'] = '1'
++            result = subprocess.run([sys.executable, '-c', REGRESSION_SETUP + scenario],
++                                    cwd=root, env=env, capture_output=True, text=True,
++                                    encoding='utf-8', timeout=60,
++                                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
++            self.assertEqual(result.returncode, 0, result.stdout + '\n' + result.stderr)
++            output = os.environ.get('JARVIS_LANGUAGE_RENDER_DIR')
++            if output:
++                folder = Path(output)
++                folder.mkdir(parents=True, exist_ok=True)
++                for path in root.glob('rev2-*.png'):
++                    shutil.copyfile(path, folder / path.name)
++
++    def test_dismissed_content_stays_dismissed_for_all_payloads(self):
++        self.run_regression(r'''
++for kind in ('plain', 'code', 'review'):
++    i18n.set_language('en')
++    show_payload(kind)
++    win._content_panel.hide()
++    app.processEvents()
++    before = win._center_split.sizes()
++    with patch.object(win.hud, 'glance') as glance, patch.object(win, '_reveal_below_hud', wraps=win._reveal_below_hud) as reveal:
++        for language in ('pt-BR', 'en'):
++            win._apply_ui_language(language)
++            app.processEvents()
++            assert win._content_panel.isHidden(), (kind, language, 'dismissed panel reopened')
++            assert win._center_split.sizes() == before, (kind, language, 'splitter moved')
++        glance.assert_not_called()
++        reveal.assert_not_called()
++    # A genuinely new result must still open the panel normally.
++    show_payload(kind)
++    app.processEvents()
++    assert not win._content_panel.isHidden()
++    assert win._center_split.sizes()[1] > 0
++assert not violations, violations
++print('DISMISSED_CONTENT_PRESERVED_ALL_PAYLOADS')
++''')
++
++    def test_active_quiz_keeps_space_question_and_typed_answer(self):
++        self.run_regression(r'''
++from copy import deepcopy
++from gui.i18n import QLineEdit
++for kind in ('plain', 'code', 'review'):
++    i18n.set_language('en')
++    show_payload(kind)
++    grader = Mock(return_value=True)
++    win._show_quiz('CLOSE', [
++        {'question': 'first CLOSE', 'options': [], 'answer': 'CLOSE'},
++        {'question': 'second FOLDER', 'options': [], 'answer': 'FOLDER'}], grader)
++    win._quiz_submit('CLOSE')
++    win._quiz_next()
++    row = win._quiz_answers_lay.itemAt(0).widget()
++    field = row.findChild(QLineEdit)
++    field.setText(sentinel)
++    app.processEvents()
++    before = win._center_split.sizes()
++    before_hidden = (win._content_panel.isHidden(), win._quiz_panel.isHidden())
++    before_quiz = deepcopy({k: v for k, v in win._quiz.items() if k != 'grader'})
++    assert before[1] == 0 and before[2] > 0
++    assert before_quiz['i'] == 1 and len(before_quiz['results']) == 1
++    grader.reset_mock()
++    command, voice = Mock(), Mock()
++    win.on_text_command, win.on_voice_change = command, voice
++    with patch.object(win.hud, 'glance') as glance, patch.object(win, '_reveal_below_hud', wraps=win._reveal_below_hud) as reveal:
++        for language in ('pt-BR', 'en'):
++            win._apply_ui_language(language)
++            app.processEvents()
++            assert win._center_split.sizes() == before, (kind, language, 'quiz lost its space')
++            assert (win._content_panel.isHidden(), win._quiz_panel.isHidden()) == before_hidden
++            assert {k: v for k, v in win._quiz.items() if k != 'grader'} == before_quiz
++            assert row.findChild(QLineEdit) is field and field.text() == sentinel
++            assert win._quiz_q_lbl.text() == 'second FOLDER'
++            if kind == 'plain':
++                assert sentinel in win._content_display.toPlainText()
++            elif kind == 'code':
++                assert ('PEDIDO' if language == 'pt-BR' else 'REQUEST') in win._content_display.toPlainText()
++            else:
++                assert ('O documento não esclarece:' if language == 'pt-BR' else 'The document does not settle:') in win._content_display.toPlainText()
++            from PyQt6.QtTest import QTest
++            QTest.qWait(50)
++            win.repaint()
++            app.processEvents()
++            assert win.grab().save(str(root / ('rev2-quiz-' + kind + '-' + language + '.png')))
++        glance.assert_not_called()
++        reveal.assert_not_called()
++    grader.assert_not_called(); command.assert_not_called(); voice.assert_not_called()
++    win._hide_quiz()
++assert not violations, violations
++print('QUIZ_STATE_AND_SPLITTER_PRESERVED_ALL_PAYLOADS')
++''')
++
++    def test_visible_content_keeps_selection_and_scroll_while_retranslating(self):
++        self.run_regression(r'''
++for kind in ('plain', 'code', 'review'):
++    i18n.set_language('en')
++    show_payload(kind)
++    app.processEvents()
++    display = win._content_display
++    plain = display.toPlainText()
++    start = plain.index(sentinel)
++    cursor = display.textCursor()
++    # Model a real selection using Qt's UTF-16 offsets, including the emoji.
++    position = len(plain[:start].encode('utf-16-le')) // 2
++    cursor.setPosition(position)
++    cursor.setPosition(position + len(sentinel.encode('utf-16-le')) // 2, cursor.MoveMode.KeepAnchor)
++    display.setTextCursor(cursor)
++    bar = display.verticalScrollBar()
++    assert bar.maximum() > 25, (kind, 'fixture must exercise real scrolling')
++    bar.setValue(25)
++    before_scroll, before_sizes = bar.value(), win._center_split.sizes()
++    with patch.object(win.hud, 'glance') as glance, patch.object(win, '_reveal_below_hud', wraps=win._reveal_below_hud) as reveal:
++        for language in ('pt-BR', 'en'):
++            win._apply_ui_language(language)
++            app.processEvents()
++            assert not win._content_panel.isHidden()
++            assert win._center_split.sizes() == before_sizes
++            assert display.textCursor().selectedText() == sentinel, (kind, language, display.textCursor().selectedText())
++            assert bar.value() == before_scroll, (kind, language, 'scroll changed')
++            if kind == 'code':
++                assert ('PEDIDO' if language == 'pt-BR' else 'REQUEST') in display.toPlainText()
++            if kind == 'review':
++                assert ('O documento não esclarece:' if language == 'pt-BR' else 'The document does not settle:') in display.toPlainText()
++        glance.assert_not_called()
++        reveal.assert_not_called()
++assert not violations, violations
++print('VISIBLE_CONTENT_RETRANSLATED_SELECTION_AND_SCROLL_PRESERVED')
++''')
++
++    def test_loaded_file_and_folder_paint_localizes_only_own_labels(self):
++        self.run_regression(r'''
++from types import SimpleNamespace
++from gui.widgets import _DropCanvas, FileDropZone
++class CapturePainter:
++    def __init__(self): self.texts = []
++    def setFont(self, *args): pass
++    def setPen(self, *args): pass
++    def drawText(self, *args): self.texts.append(str(args[-1]))
++    def drawLine(self, *args): pass
++    def fontMetrics(self): return self
++    def elidedText(self, text, *args): return text
++folder = root / 'FOLDER'
++folder.mkdir()
++no_extension, with_extension = root / 'FILE', root / 'CLOSE.CLOSE'
++no_extension.write_text('synthetic', encoding='utf-8')
++with_extension.write_text('synthetic', encoding='utf-8')
++loaded = FileDropZone(win)
++loaded.resize(500, 46)
++loaded._current_file, loaded._folder_files = str(folder), 5000
++loaded.show()
++for language in ('en', 'pt-BR', 'en'):
++    with patch('gui.widgets._count_files', side_effect=AssertionError('unexpected reload')):
++        i18n.set_language(language)
++        app.processEvents()
++    for count in (0, 1, 2, 5000):
++        painter = CapturePainter()
++        zone = SimpleNamespace(_current_file=str(folder), _folder_files=count)
++        _DropCanvas._paint_file(SimpleNamespace(_z=zone), painter, 500, 60)
++        noun = ('file' if count == 1 else 'files') if language == 'en' else ('arquivo' if count == 1 else 'arquivos')
++        expected = ('FOLDER' if language == 'en' else 'PASTA') + '  ·  ' + str(count) + ('+' if count >= 5000 else '') + ' ' + noun
++        assert painter.texts[1] == 'FOLDER'
++        assert painter.texts[2] == expected, (language, count, painter.texts)
++    for path, expected_label in ((no_extension, 'FILE' if language == 'en' else 'ARQUIVO'), (with_extension, 'CLOSE')):
++        painter = CapturePainter()
++        _DropCanvas._paint_file(SimpleNamespace(_z=SimpleNamespace(_current_file=str(path))), painter, 500, 60)
++        assert painter.texts[1] == path.name
++        assert painter.texts[2].startswith(expected_label + '  ·  '), (language, path.name, painter.texts)
++    # Repaint a real loaded widget; the language switch must not enumerate/reload it.
++    with patch('gui.widgets._count_files', side_effect=AssertionError('unexpected reload')):
++        app.processEvents()
++        assert loaded.grab().save(str(root / ('rev2-folder-' + language + '.png')))
++        assert loaded.current_file() == str(folder) and loaded._folder_files == 5000
++        loaded._current_file = str(no_extension)
++        assert loaded.grab().save(str(root / ('rev2-file-' + language + '.png')))
++        loaded._current_file = str(folder)
++loaded.hide()
++assert not violations, violations
++print('LOADED_LABELS_COUNTS_AND_OPAQUE_NAMES_OK')
++''')
++
+     def test_window_switch_persistence_and_user_content(self):
+         with isolated_project() as (root, env):
+             env['QT_SCALE_FACTOR'] = '1'
+@@ -185,5 +366,45 @@
+                     shutil.copyfile(root / name, folder / name)
+ 
+ 
++REGRESSION_SETUP = r'''
++from pathlib import Path
++from unittest.mock import Mock, patch
++import threading
++from providers._tests import install_child_guard
++root = Path.cwd()
++violations = install_child_guard(root)
++with patch.object(threading.Thread, 'start'), patch('platform.system', return_value='Windows'):
++    import ui
++from memory import config_manager as config
++config.update_config(local_only=True, os_system='windows', ui_language='en')
++from PyQt6.QtCore import QTimer
++from PyQt6.QtWidgets import QApplication
++from PyQt6.QtGui import QFontDatabase
++from gui import i18n
++app = QApplication.instance() or QApplication([])
++font = Path(__import__('os').environ['WINDIR']) / 'Fonts' / 'segoeui.ttf'
++assert QFontDatabase.addApplicationFont(str(font)) >= 0
++patch.object(QTimer, 'start').start()
++patch.object(ui.MainWindow, '_update_metrics').start()
++patch.object(ui.MainWindow, '_on_clipboard_changed').start()
++player = ui.JarvisUI(str(root / 'missing-face.png'))
++win = player._win
++win.resize(1280, 900)
++win.show()
++app.processEvents()
++sentinel = 'KEEP 📁 CLOSE FOLDER coração'
++body = '\n'.join('synthetic line ' + str(i) for i in range(80)) + '\n' + sentinel
++def show_payload(kind):
++    if kind == 'plain':
++        win._show_content('CLOSE', body)
++    elif kind == 'code':
++        win._show_code_job({'request': body, 'status': 'reading', 'folder': 'CLOSE',
++                            'model': 'FOLDER', 'started': 1, 'finished': 2,
++                            'steps': [(i, 'synthetic step') for i in range(4)]})
++    else:
++        win._show_review('CLOSE', '', [], [body])
++'''
++
++
+ if __name__ == '__main__':
+     unittest.main()

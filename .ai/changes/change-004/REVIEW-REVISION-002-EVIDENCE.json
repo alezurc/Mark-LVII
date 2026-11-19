@@ -1,0 +1,22 @@
+[
+  {
+    "path": "REVIEW-REVISION-002.md",
+    "sha256": "681e1c39ae6bfa51e17f4e637ad029b15f24d61cafdfa5baec20cb447298765e"
+  },
+  {
+    "path": "REVIEW-REVISION-002-UNITTEST.log",
+    "sha256": "9ba4b0e0f75ac5aa4d8d0cb4241e628c48fe5cfbd7e4f9ea8832e866735ac3b5"
+  },
+  {
+    "path": "REVIEW-REVISION-002-PROVIDERS.log",
+    "sha256": "704a151e7b04c3e83570dce54f75956d3b0e0e04a5dd3f29a55bd05438d86013"
+  },
+  {
+    "path": "REVIEW-REVISION-002-ENCODING-CHECK.json",
+    "sha256": "b53425cd15e2b92a62d02a435e1fc91fbcd73a1e98c6dee90a0f559afcf3393d"
+  },
+  {
+    "path": "DEVELOP-REVISION-002-EVIDENCE.json",
+    "sha256": "a461f16cf36e9623978f9eb3fea6b6bd5c72202002ddc874a0d60e6a3fa28ac0"
+  }
+]

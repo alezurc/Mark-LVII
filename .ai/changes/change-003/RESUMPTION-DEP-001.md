@@ -1,0 +1,11 @@
+# Retomada autorizada de DEP-001
+
+Autor: usuário humano responsável pelo projeto nesta conversa. Data: 2026-11-18, America/Sao_Paulo. Referência humana literal de abertura: `Autorizo explicitamente a retomada do DEVELOP da change-003, com o seguinte escopo:`. Evidência primária: mensagem humana desta sessão, posterior à parada DEP-001.
+
+O humano autorizou: verificar declarações de google-genai/httpx/numpy/PyQt6; identificar/preparar ambiente virtual apropriado; instalar dependências necessárias somente nele e nas versões declaradas; reexecutar FAIL/SKIP e verificações para concluir DEVELOP; atualizar DEVELOP.md com autorização/evidências. Proibiu alterações nos arquivos de dependências, atualizações indiscriminadas, instalação global e expansão da change. Mandou reaplicar BOUNDARY em novo impedimento e não avançar para VERIFY.
+
+Este registro reabre somente BOUNDARY-STOP-DEP-001.md, que permanece preservado como histórico. Limite da retomada: esta execução de preparação e validação local, até concluir DEVELOP ou encontrar novo impedimento fora dessa autorização; nenhum downstream automático. Evidência esperada: ambiente virtual isolado, dependências/versões e declaração original verificáveis, logs/retornos dos testes pendentes e verificações finais. A autorização não constitui PASS nem decisão de REVIEW.
+
+Lease fresco: 2e8e68e9-1bf1-4a92-b00e-f4cec2314cc1. Roteamento autorizado pelo runtime; checagem retornou VALID. Runtime e approved scope não foram editados manualmente. A autorização humana mais recente permite preparar o ambiente apesar da proibição anterior no CONTEXT, sem ampliar alvos de produto.
+
+Inventário: requirements.txt é o arquivo de dependências encontrado; declara google-genai>=2.8.0,<3, httpx>=0.27,<1, numpy>=1.24,<3, PyQt6>=6.6,<7 e psutil>=5.9,<8 (necessário ao painel). Sem ambiente virtual prévio no diretório do projeto. py -0p não listou instalações. Python do PATH, consultado com permissão oficial após Acesso negado no sandbox: Python 3.15.2, AMD64. setup.py exige >=3.11 e permite versões posteriores a 3.13 com aviso; 3.15 fica registrado como perfil ainda não incluído na faixa historicamente testada. Ambiente escolhido: .venv, criado com python -m venv .venv; sem system-site-packages e sem instalar novo Python global.

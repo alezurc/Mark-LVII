@@ -1,0 +1,9 @@
+{
+  "change_id": "change-001",
+  "approval_reference": "após analise do CONTEXT.md considero aprovado",
+  "paths": [
+    "actions/dev_agent.py",
+    "tests/test_dev_agent_vscode.py"
+  ],
+  "encoding_sha256": "8f65b8a62fe9a3df1c0f23d1a6530b33d6efec898050c2d785b41ad03aa21443"
+}

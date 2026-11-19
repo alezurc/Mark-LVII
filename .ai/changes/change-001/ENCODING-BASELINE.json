@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "change_id": "change-001",
+  "context_reference": "após analise do CONTEXT-REVISION-002.md\\\n&#x20;considero aprovado",
+  "entries": [
+    {
+      "path": "actions/dev_agent.py",
+      "evidence": "actions/dev_agent.py",
+      "sha256": "3d48b90554a97c7903774a404da94c831d8f607b507d3e08b5e5aab367f88c85",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "status": "TEXT",
+      "method": "strict-utf8",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "Bytes do not establish author intent or a legacy codepage."
+    },
+    {
+      "path": "tests/test_dev_agent_vscode.py",
+      "evidence": "tests/test_dev_agent_vscode.py",
+      "sha256": "3c9e22694e1d20f7dfb9379c6ae2b7bc44b5f059ec72c0e9375716963d8c921a",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "status": "TEXT",
+      "method": "strict-utf8",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "Bytes do not establish author intent or a legacy codepage."
+    }
+  ],
+  "policy": {
+    "migrations": [],
+    "unknown_decisions": []
+  }
+}

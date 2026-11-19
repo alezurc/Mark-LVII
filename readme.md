@@ -1007,6 +1007,51 @@ Your voice is streamed to Google's Gemini Live API while a session is open; that
 
 ---
 
+## Local verification
+
+From the project root, using a Python environment with the dependencies in
+`requirements.txt` already available:
+
+```text
+python -m unittest discover -s tests -p "test_source_encoding.py" -v
+python -m unittest discover -s tests -p "test_provider_test_isolation.py" -v
+python -m unittest discover -s tests -p "test_smoke_harness.py" -v
+python -m providers._tests
+```
+
+The providers runner copies Python sources into a disposable project before
+importing product modules. Settings, caches and synthetic voice fixtures stay in
+temporary directories; it does not copy personal configuration or downloaded
+models. Qt uses the offscreen platform on the test process's main thread. HTTP
+tests use a loopback mock server, and speech uses synthetic PCM. No API key,
+external service, model download or physical audio device is needed. The internal
+`--isolated-child` option is reserved for the temporary-project runner.
+
+The runner reports PASS, FAIL and SKIP separately and returns a nonzero exit
+code on a failed assertion, exception or subprocess timeout. Missing mandatory
+dependencies are failures; optional Piper checks may be skipped, with a reason.
+The focused unittest suites also report unavailable Qt coverage as SKIP. These
+commands do not install dependencies. Read the counts and skipped scenarios
+before treating a run as evidence.
+
+The smoke harness tests execute only synthetic plugins in temporary projects,
+using the real loader and harness. They check import/run failures, worker-thread
+dispatch, reports and timeouts. The harness is not a security sandbox and these
+tests do not execute the installed plugins or start the voice application.
+
+For the existing isolated regressions:
+
+```text
+python -m unittest discover -s tests -p "test_dev_agent_vscode.py" -v
+python -m unittest discover -s tests -p "test_memory_persistence.py" -v
+```
+
+This evidence covers local synthetic scenarios. It does not establish audible
+speech, real microphone recognition, interactive display behavior, hosted service
+availability, crash recovery or behavior on other platforms. The source encoding
+check preserves the PCM fixture while rejecting literal control characters;
+UTF-8 validity does not establish historical encoding intent.
+
 ## ⚠️ License
 
 Personal and non-commercial use only.
@@ -1023,3 +1068,9 @@ Engineered by a developer building a real-world JARVIS-style assistant.
 | --- | --- |
 | YouTube | [@FatihMakes](https://www.youtube.com/@FatihMakes) |
 | Instagram | [@fatihmakes](https://www.instagram.com/fatihmakes) |
+
+## Interface language / Idioma da interface
+
+Open **Setup → Customise Assistant → Interface language** to choose **English** or **Português (Brasil)**, then select **Apply changes**. The desktop interface updates immediately and remembers the choice after restart. English is the default when no valid preference is saved. Cancel leaves the language unchanged.
+
+Em **Configuração → Personalizar assistente → Idioma da interface**, escolha **English** ou **Português (Brasil)** e clique em **Aplicar alterações**. A troca é imediata e fica salva para a próxima inicialização. O idioma da interface é independente do idioma da conversa e da voz. Conteúdo do usuário, respostas geradas, nomes de provedores/modelos e textos fornecidos por plugins/serviços permanecem como recebidos; diálogos nativos seguem o sistema.

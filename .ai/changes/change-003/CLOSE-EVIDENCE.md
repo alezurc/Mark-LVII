@@ -1,0 +1,13 @@
+# Evidência de consolidação — change-003
+
+Revisão técnica em REVIEW.md e decisão humana explícita registrada pelo runtime: `Após analisar o REVIEW\.md autorizo a execução do review`. Estado de entrada REVIEW_APPROVED, evidência complete. Lease CLOSE desta sessão: a3a9a731-a22e-4809-979b-5d585afc1e5e.
+
+Consolidar somente o registro de change-003 em CHANGELOG.md, alvo aprovado no CONTEXT/APPROVED-SCOPE. README.md já contém instruções de validação e limites, foi revisado e não requer nova edição no CLOSE. Não há requisito novo ou mudança de especificação: a change trata D007/D011 no perfil sintético local. A política PROJECT-POLICY.md define histórico por change-id e preserva Mark LVII, sem versão nova, commit, tag ou release; não é necessário bootstrap de política nem decisão nova de versionamento.
+
+Evidência comportamental aprovada: 55 unittest PASS e suíte providers 98 PASS, zero FAIL, dois SKIPs opcionais por Piper ausente, reexecutados em REVIEW. Ver review-unittest.log, review-providers.log, REVIEW-EVIDENCE.json e ENCODING-REVIEW.json. Ambiente: .venv, Python 3.15.2 AMD64; versões declaradas respeitadas e requirements.txt inalterado, conforme FINAL-VALIDATION.json. Restrições de Python até 3.13 historicamente testado e NON_ISOLATED_REVIEW foram expostas e a decisão humana da revisão é posterior.
+
+D007: controles literais no teste substituídos por escapes equivalentes; PCM demonstrado idêntico, UTF-8 sem BOM/CRLF preservados. A intenção histórica sem BOM continua UNKNOWN. D011: testes de integração sintética e isolamento adicionados; não há prova de áudio físico, UI interativa, serviços reais, crash ou outras plataformas. Esses limites não são requisitos materiais do perfil aprovado e não devem ser promovidos a PASS geral.
+
+DEP-001 original preservado; retomada humana delimitada em RESUMPTION-DEP-001.md e resultado em DEVELOP.md. Nenhum novo ramo externo foi aberto para CLOSE. Nenhuma alteração de produto/testes é necessária. Conhecimento duradouro será consolidado exclusivamente pelo runtime no Knowledge Register canônico com três novos IDs, sem substituir registros históricos: fatos locais CONFIRMED e limites UNKNOWN separados.
+
+O plano registra hashes dos alvos previstos. Antes da publicação do changelog: check-close e check-stage devem passar; comparar os bytes anteriores com a baseline/revisão e publicar exatamente CHANGELOG-PROPOSED.md. Depois: conferir hash final, encoding/BOM/finais de linha e seis alvos aprovados, registrar em CLOSE-FINAL-EVIDENCE.json e completar CLOSE pelo launcher com este execution_id. O runtime revalida encoding e consolida KR/auditoria antes de CLOSED. Esta evidência não é autorização humana nova nem afirma que CLOSED já ocorreu.

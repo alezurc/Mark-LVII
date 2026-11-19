@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI-SDD"
+  short_description: "Roteia identidades canônicas ai-sdd:<comando>"
+  default_prompt: "Use $ai-sdd <comando>; o adapter mapeará para ai-sdd:<comando>."

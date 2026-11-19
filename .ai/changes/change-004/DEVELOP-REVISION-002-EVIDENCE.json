@@ -1,0 +1,82 @@
+[
+  {
+    "path": "DEVELOP-REVISION-002.md",
+    "sha256": "15fc7a85f31e47f64a25c69bf36dd2c590f37328e6d75cb4e63c2062c3384538"
+  },
+  {
+    "path": "DEVELOP-REVISION-002-RED.log",
+    "sha256": "7898df311b610ce0b0307a6c5ab34e38f573ec09ff3da795709229abd9d783fc"
+  },
+  {
+    "path": "DEVELOP-REVISION-002-RED-PRESENTATION.log",
+    "sha256": "b36900dbb86a9d51e73a34c63d237bde89880cc65add39cdb9d253d20b00f1ae"
+  },
+  {
+    "path": "DEVELOP-REVISION-002-FOCAL-INITIAL.log",
+    "sha256": "97ef6eb29b328fffd4d8e657fd709f1f94edc019218312aed16b92769363f57f"
+  },
+  {
+    "path": "DEVELOP-REVISION-002-FOCAL-GUARD.log",
+    "sha256": "4cf8ce67cf4173a5f90636ca2a396bcfabe8297f686ab15a3c8b4901015f80ca"
+  },
+  {
+    "path": "DEVELOP-REVISION-002-UNITTEST-FINAL.log",
+    "sha256": "af49bda54a9c509279518b99e20f3a0150e36551dd835fc5f7dd08fb2ec1b6a7"
+  },
+  {
+    "path": "DEVELOP-REVISION-002-QT-FINAL.log",
+    "sha256": "f53f4958a74d62655b20eb8d56540b91901699312221e88d4738435b31c3243b"
+  },
+  {
+    "path": "DEVELOP-REVISION-002-PROVIDERS.log",
+    "sha256": "2ea566f4c9b93a0f02cc550ea34e4f85b76dd79820e0b8426b5d5efbbffcd4d5"
+  },
+  {
+    "path": "DEVELOP-REVISION-002-ENCODING.json",
+    "sha256": "9106fa2470dadff48e3681b84705bd03e93524779f3604b0d61cac52ed9e3056"
+  },
+  {
+    "path": "DEVELOP-REVISION-002.patch",
+    "sha256": "fdc177d4bf7fc26fa2f5a4f4b1c8e000762c7519b1f42212deb8d35a0cea22e7"
+  },
+  {
+    "path": "renders-revision-002/rev2-file-en.png",
+    "sha256": "41e6adf2132e0334bc266263f585f5c446cf3f9577648e109422b442468d9b42"
+  },
+  {
+    "path": "renders-revision-002/rev2-file-pt-BR.png",
+    "sha256": "15038f9d1bccb56416b277af4252005f99d42ae55f35f219f810b026027f26f4"
+  },
+  {
+    "path": "renders-revision-002/rev2-folder-en.png",
+    "sha256": "769e0beb2a7819784a6b3eb5e4233be82e0d648945559511a31cdc5d4fa29f56"
+  },
+  {
+    "path": "renders-revision-002/rev2-folder-pt-BR.png",
+    "sha256": "f04fc54b922e1590f2ab1c9b4e65135d935130e752b43aaf1f238b213260e08f"
+  },
+  {
+    "path": "renders-revision-002/rev2-quiz-code-en.png",
+    "sha256": "096926be0aa47c4f5c525c74941c9976d76569f8c5edec39047584cfd463f3ca"
+  },
+  {
+    "path": "renders-revision-002/rev2-quiz-code-pt-BR.png",
+    "sha256": "b1733b9ccafc669fd0b458faa19335f854bf7d39c71ebc1e7ee9b01bef00f4b2"
+  },
+  {
+    "path": "renders-revision-002/rev2-quiz-plain-en.png",
+    "sha256": "20e85cb025c0dd3ccd1bb006f3bb42f8a0d60e703fd1b4861046c5d6ca11d86d"
+  },
+  {
+    "path": "renders-revision-002/rev2-quiz-plain-pt-BR.png",
+    "sha256": "b1733b9ccafc669fd0b458faa19335f854bf7d39c71ebc1e7ee9b01bef00f4b2"
+  },
+  {
+    "path": "renders-revision-002/rev2-quiz-review-en.png",
+    "sha256": "096926be0aa47c4f5c525c74941c9976d76569f8c5edec39047584cfd463f3ca"
+  },
+  {
+    "path": "renders-revision-002/rev2-quiz-review-pt-BR.png",
+    "sha256": "6ba2abde51f9d50d56aac1b6cb05b6c5c4157b45cee375ca653b9858be199c4f"
+  }
+]

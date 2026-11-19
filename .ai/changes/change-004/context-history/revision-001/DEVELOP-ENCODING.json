@@ -1,0 +1,147 @@
+{
+  "change_id": "change-004",
+  "approved_baseline_sha256": "6e4c5afbb2d659177a40a52ed777989d50f28560cb7e179f4d40c12d40931aab",
+  "entries": [
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "bf35b6e884a554329e09c5eb141e7e4e4fc7fb0b68cb1305a44fea33a5cec843",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 0,
+      "lf": 33,
+      "historical_intent": "UNKNOWN",
+      "preservation": "ORIGINAL_UTF8_NO_BOM_NEWLINE_STYLE_PRESERVED",
+      "approved_before_sha256": "bf35b6e884a554329e09c5eb141e7e4e4fc7fb0b68cb1305a44fea33a5cec843"
+    },
+    {
+      "path": "gui/hud.py",
+      "sha256": "acfd1c0005bce432cbdc782fc695a8cf10b94f0c37d531e29078884583d94030",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 690,
+      "lf": 0,
+      "historical_intent": "UNKNOWN",
+      "preservation": "ORIGINAL_UTF8_NO_BOM_NEWLINE_STYLE_PRESERVED",
+      "approved_before_sha256": "f4175652a88de897375ad53ff2d54dc9b2801cef3899109347c89567dbdd634a"
+    },
+    {
+      "path": "gui/i18n.py",
+      "sha256": "943db68da3ec60572b2aa79d645a05fb0e66e05641f97dcbfebf5bc1e57761c5",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 0,
+      "lf": 867,
+      "historical_intent": "UNKNOWN",
+      "preservation": "NEW_UTF8_NO_BOM_LF"
+    },
+    {
+      "path": "gui/overlays.py",
+      "sha256": "5d2d4d8582ff7dc487801ba4445af8cfb1a7bcf7a10e25732c947b46a1f4b2b2",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 1948,
+      "lf": 0,
+      "historical_intent": "UNKNOWN",
+      "preservation": "ORIGINAL_UTF8_NO_BOM_NEWLINE_STYLE_PRESERVED",
+      "approved_before_sha256": "124226140a129196c084f2a820bbeb9fda7761ce2f711cbe1312fd878f99a5d5"
+    },
+    {
+      "path": "gui/providers_panel.py",
+      "sha256": "ef7e8469b01201b68d852814b2c0c0f552200b51de0b7826194c3394d066d563",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 1179,
+      "lf": 0,
+      "historical_intent": "UNKNOWN",
+      "preservation": "ORIGINAL_UTF8_NO_BOM_NEWLINE_STYLE_PRESERVED",
+      "approved_before_sha256": "777c9e51d0cf4816c26f0e3eb3a2be0ef7a472d900508ebee8146947e7676275"
+    },
+    {
+      "path": "gui/widgets.py",
+      "sha256": "e884bf7bd4c083c7aa6585b93be39102b830d7dea4cd2d97ffcc73983e96fcea",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 1307,
+      "lf": 0,
+      "historical_intent": "UNKNOWN",
+      "preservation": "ORIGINAL_UTF8_NO_BOM_NEWLINE_STYLE_PRESERVED",
+      "approved_before_sha256": "7f8ae0f15577b8031753c2d477a5aeac240a4cd3af26c2602ac85deb0b277c6c"
+    },
+    {
+      "path": "gui/window.py",
+      "sha256": "f149b24b26dd9397e7dc427801a59db97f658b6dbf1022e1a19cf802956485fa",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 2991,
+      "lf": 0,
+      "historical_intent": "UNKNOWN",
+      "preservation": "ORIGINAL_UTF8_NO_BOM_NEWLINE_STYLE_PRESERVED",
+      "approved_before_sha256": "a92f6ae7697b306c12d3630f01ae5661baad8fc7269ef5e4ee324d999561a254"
+    },
+    {
+      "path": "memory/config_manager.py",
+      "sha256": "7082e9eaea93264435811bc22f4260b6b1d86ab3f912a296a24b5bc46fbda69e",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 682,
+      "lf": 0,
+      "historical_intent": "UNKNOWN",
+      "preservation": "ORIGINAL_UTF8_NO_BOM_NEWLINE_STYLE_PRESERVED",
+      "approved_before_sha256": "e0301bb17b2d733def5d1a15b77a2abd4a2e32986981a4b2e8b196b0fce1d528"
+    },
+    {
+      "path": "readme.md",
+      "sha256": "371962dfdee1141379b6fc46ff6b3eae418067e55d337554c4e2ce03cb71df1e",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 1076,
+      "lf": 0,
+      "historical_intent": "UNKNOWN",
+      "preservation": "ORIGINAL_UTF8_NO_BOM_NEWLINE_STYLE_PRESERVED",
+      "approved_before_sha256": "24f31ebfee49168a12a1d4331d3b75549f6d5d703911370711d788e6c4462a04"
+    },
+    {
+      "path": "tests/test_ui_language.py",
+      "sha256": "a26df206b38a012c064b702abd215abb9ce9725c75333087b30fae12d24325ba",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 0,
+      "lf": 86,
+      "historical_intent": "UNKNOWN",
+      "preservation": "NEW_UTF8_NO_BOM_LF"
+    },
+    {
+      "path": "tests/test_ui_language_qt.py",
+      "sha256": "02752f2440ccb5b2bda55116ef203d45104e2505d9f5c9887480269e2e2373f7",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 0,
+      "lf": 189,
+      "historical_intent": "UNKNOWN",
+      "preservation": "NEW_UTF8_NO_BOM_LF"
+    },
+    {
+      "path": "ui.py",
+      "sha256": "a4ee2954881343d4aa06da9e0d3cb43219cfa91df8930663fa411e6e66f34294",
+      "status": "TEXT",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "crlf": 386,
+      "lf": 0,
+      "historical_intent": "UNKNOWN",
+      "preservation": "ORIGINAL_UTF8_NO_BOM_NEWLINE_STYLE_PRESERVED",
+      "approved_before_sha256": "c76cee3d2fd0870ed78f8fbb375c7718e78a6e1634726b567b411577b2fc47c4"
+    }
+  ]
+}

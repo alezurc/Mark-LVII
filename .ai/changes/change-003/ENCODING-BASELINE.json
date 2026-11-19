@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "change_id": "change-003",
+  "context_reference": "Aprovo a pós revisar o CONTEXT.md",
+  "entries": [
+    {
+      "path": "CHANGELOG.md",
+      "evidence": "CHANGELOG.md",
+      "sha256": "fdd512f84650edce0d074b9b4debef932d63ef699d23bd4c0b93391ee6fed768",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "status": "TEXT",
+      "method": "strict-utf8",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "Bytes do not establish author intent or a legacy codepage."
+    },
+    {
+      "path": "README.md",
+      "evidence": "README.md",
+      "sha256": "2529f75d0fdf6c3805b00828be8a7da65321aee870f10c23752446df51e5dcf4",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "status": "TEXT",
+      "method": "strict-utf8",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "Bytes do not establish author intent or a legacy codepage."
+    },
+    {
+      "path": "providers/_tests.py",
+      "evidence": "providers/_tests.py",
+      "sha256": "b4a8a1ea4bc373efb97d036cb61b6c49dae2786758bd9afd4812592edb49fcda",
+      "encoding": "UNKNOWN",
+      "bom": "NONE",
+      "status": "UNKNOWN",
+      "method": "BINARY_OR_UNKNOWN",
+      "confidence": "UNKNOWN",
+      "limitation": "Bytes do not establish author intent or a legacy codepage."
+    },
+    {
+      "path": "tests/test_provider_test_isolation.py",
+      "evidence": "tests/test_provider_test_isolation.py",
+      "status": "MISSING",
+      "encoding": "UNKNOWN",
+      "bom": "NONE",
+      "sha256": null,
+      "method": "absent-at-context",
+      "confidence": "UNKNOWN",
+      "limitation": "New file; no prior bytes."
+    },
+    {
+      "path": "tests/test_smoke_harness.py",
+      "evidence": "tests/test_smoke_harness.py",
+      "status": "MISSING",
+      "encoding": "UNKNOWN",
+      "bom": "NONE",
+      "sha256": null,
+      "method": "absent-at-context",
+      "confidence": "UNKNOWN",
+      "limitation": "New file; no prior bytes."
+    },
+    {
+      "path": "tests/test_source_encoding.py",
+      "evidence": "tests/test_source_encoding.py",
+      "status": "MISSING",
+      "encoding": "UNKNOWN",
+      "bom": "NONE",
+      "sha256": null,
+      "method": "absent-at-context",
+      "confidence": "UNKNOWN",
+      "limitation": "New file; no prior bytes."
+    }
+  ],
+  "policy": {
+    "migrations": [
+      {
+        "path": "providers/_tests.py",
+        "encoding": "utf-8",
+        "bom": "NONE",
+        "reason": "Proposta sujeita à aprovação humana deste CONTEXT: estabelecer UTF-8 sem BOM prospectivamente e substituir somente os controles literais U+0001/U+0002 por escapes Python equivalentes, preservando CRLF e os demais bytes fora das edições localizadas. O encoding histórico permanece UNKNOWN; nenhuma codepage anterior é presumida."
+      }
+    ],
+    "unknown_decisions": []
+  }
+}

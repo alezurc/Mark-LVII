@@ -666,3 +666,17 @@ def save_providers(mode: str = None, pipeline: dict = None, creds: dict = None,
 
     data["providers"] = block
     _write_config(data)
+
+
+# Interface language is independent from the speech/model language.
+def get_ui_language() -> str:
+    value = load_api_keys().get("ui_language", "en")
+    return value if isinstance(value, str) and value in ("en", "pt-BR") else "en"
+
+
+@_locked
+def save_ui_language(language: str) -> None:
+    value = language if isinstance(language, str) and language in ("en", "pt-BR") else "en"
+    data = _read_for_write()
+    data["ui_language"] = value
+    _write_config(data)

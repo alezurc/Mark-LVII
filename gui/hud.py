@@ -39,6 +39,8 @@ from gui.theme import (
     qcol,
 )
 
+from gui.i18n import tr, render, get_language, QLabel, QPushButton, QLineEdit, QComboBox
+
 from gui.style import blend, chamfer, px_font, with_alpha
 
 try:
@@ -284,7 +286,7 @@ class HudCanvas(QWidget):
             p.drawLine(QLineF(x0, y0 + sy * cut, x0 + sx * cut, y0))
         p.setFont(px_font(10, QFont.Weight.DemiBold, spacing=2.2))
         p.setPen(QPen(blend(C.PRI, 0.55)))
-        p.drawText(QRectF(m + 24, m + 8, 260, 16), Qt.AlignmentFlag.AlignVCenter, "VOICE INTERFACE")
+        p.drawText(QRectF(m + 24, m + 8, 260, 16), Qt.AlignmentFlag.AlignVCenter, render(tr('VOICE INTERFACE')))
         p.end()
         return pm
 
@@ -585,7 +587,7 @@ class HudCanvas(QWidget):
             p.setFont(f)
             p.setPen(QPen(blend(qcol(C.WHITE), 0.6 + 0.4 * min(1.0, amp * 2)), 1))
             p.drawText(QRectF(cx - r, cy - fsz, r * 2, fsz * 2),
-                       Qt.AlignmentFlag.AlignCenter, name)
+                       Qt.AlignmentFlag.AlignCenter, render(name))
 
     def paintEvent(self, _):
         p = QPainter(self)
@@ -596,7 +598,7 @@ class HudCanvas(QWidget):
 
         # The backdrop is one cached pixmap, rebuilt only when the size or the
         # theme changes — so live re-theming still repaints it.
-        key = (W, H, C.PRI, C.BG, C.WHITE)
+        key = (get_language(), W, H, C.PRI, C.BG, C.WHITE)
         if self._grid_cache is None or self._grid_key != key:
             self._grid_cache = self._make_grid(W, H)
             self._grid_key = key
@@ -647,9 +649,10 @@ class HudCanvas(QWidget):
         else:
             txt, col = str(self.state), qcol(C.PRI)
         p.setFont(px_font(13, QFont.Weight.DemiBold, spacing=5))
+        txt = render(tr(txt))
         tw = p.fontMetrics().horizontalAdvance(txt)
         p.setPen(QPen(col))
-        p.drawText(QRectF(0, sy, W, 22), Qt.AlignmentFlag.AlignCenter, txt)
+        p.drawText(QRectF(0, sy, W, 22), Qt.AlignmentFlag.AlignCenter, render(txt))
         pulse = 0.85 if (self._blink or self.speaking or self.muted) else 0.40
         rule = min(110.0, W * 0.12)
         for sgn in (-1, 1):

@@ -1,0 +1,186 @@
+{
+  "run_id": "discovery-2026-11-17-01",
+  "project_scope": "Mark-LVII / whole-project static discovery",
+  "baseline": null,
+  "baseline_reason": "Primeiro relatório canônico: .ai/DISCOVERY.md ausente antes desta execução.",
+  "comparison_mode": "FIRST_BASELINE",
+  "findings": [
+    {
+      "subject": "architecture.qt-worker-boundary",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "main.py:1727 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "main.py:3052 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "ui.py:103 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "ui.py:265 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "gui/window.py:398 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "Qt fica no thread principal; a sessão asyncio roda em thread dedicado; ações/plugins são despachados ao executor. JarvisUI emite sinais para a janela.",
+      "implication": "Mudanças de UI devem preservar os sinais e a única QApplication; ferramentas não podem construir widgets.",
+      "material": "Qt fica no thread principal; a sessão asyncio roda em thread dedicado; ações/plugins são despachados ao executor. JarvisUI emite sinais para a janela. Mudanças de UI devem preservar os sinais e a única QApplication; ferramentas não podem construir widgets.",
+      "id": "D001",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "automation.background-policy",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "core/tasks/tools.py:87 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "core/tasks/tools.py:96 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "core/tasks/engine.py:268 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "TaskEngine agenda workers e TaskTools filtra ferramentas, separa web de recall_memory e restringe caminhos à pasta da tarefa.",
+      "implication": "Trabalho longo pertence ao motor de tarefas; isto confirma controles estáticos, não isolamento completo demonstrado.",
+      "material": "TaskEngine agenda workers e TaskTools filtra ferramentas, separa web de recall_memory e restringe caminhos à pasta da tarefa. Trabalho longo pertence ao motor de tarefas; isto confirma controles estáticos, não isolamento completo demonstrado.",
+      "id": "D002",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "automation.routines-and-research",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "core/routines/engine.py:114 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "core/tasks/research.py:111 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "core/tasks/research.py:342 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "main.py:726 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "Rotinas usam armazenamento compartilhado de JSON; pesquisa registra fontes e verifica trechos contra páginas salvas.",
+      "implication": "A verificação textual de citações não demonstra verdade factual nem qualidade global do relatório.",
+      "material": "Rotinas usam armazenamento compartilhado de JSON; pesquisa registra fontes e verifica trechos contra páginas salvas. A verificação textual de citações não demonstra verdade factual nem qualidade global do relatório.",
+      "id": "D003",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "configuration.atomic-settings",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "memory/config_manager.py:38 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "memory/config_manager.py:52 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "memory/config_manager.py:69 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "Configuração usa RLock, arquivo temporário e os.replace, com tratamento de arquivo corrompido.",
+      "implication": "Usar config_manager; serialização dentro do processo não prova coordenação entre processos ou durabilidade após perda de energia.",
+      "material": "Configuração usa RLock, arquivo temporário e os.replace, com tratamento de arquivo corrompido. Usar config_manager; serialização dentro do processo não prova coordenação entre processos ou durabilidade após perda de energia.",
+      "id": "D004",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "dashboard.transport-fallback",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "dashboard/server.py:1248 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "dashboard/server.py:1276 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "dashboard/server.py:750 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "Dashboard usa pareamento/tokens e pode servir HTTP em 0.0.0.0 quando TLS não está disponível, com aviso explícito.",
+      "implication": "Exposição real depende da configuração/rede; não foi verificada. Requisito de TLS obrigatório exigiria contexto específico.",
+      "material": "Dashboard usa pareamento/tokens e pode servir HTTP em 0.0.0.0 quando TLS não está disponível, com aviso explícito. Exposição real depende da configuração/rede; não foi verificada. Requisito de TLS obrigatório exigiria contexto específico.",
+      "id": "D005",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "developer.vscode-success-claim",
+      "classification": "CONFLICT",
+      "evidence": [
+        "AGENTS.md @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "actions/dev_agent.py:299 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "_open_vscode descarta stdout/stderr com DEVNULL, espera 1,5 s e anuncia VSCode opened sem verificar janela/processo; conflita com a regra geral do AGENTS.md.",
+      "implication": "Uma tentativa pode ser anunciada como sucesso. Corrigir apenas em change com contexto e aprovação próprios.",
+      "material": "_open_vscode descarta stdout/stderr com DEVNULL, espera 1,5 s e anuncia VSCode opened sem verificar janela/processo; conflita com a regra geral do AGENTS.md. Uma tentativa pode ser anunciada como sucesso. Corrigir apenas em change com contexto e aprovação próprios.",
+      "id": "D006",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "encoding.intent-not-established",
+      "classification": "UNKNOWN",
+      "evidence": [
+        ".ai/DISCOVERY-EVIDENCE.json @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "O inventário registra hash, BOM e decodificação estrita por arquivo; a intenção de encoding sem BOM permanece desconhecida.",
+      "implication": "Antes de aprovação de CONTEXT, preparar SCOPE.json com arquivos exatos e política de encoding quando necessária; preservar bytes no DEVELOP.",
+      "material": "O inventário registra hash, BOM e decodificação estrita por arquivo; a intenção de encoding sem BOM permanece desconhecida. Antes de aprovação de CONTEXT, preparar SCOPE.json com arquivos exatos e política de encoding quando necessária; preservar bytes no DEVELOP.",
+      "id": "D007",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "memory.persistence-risk",
+      "classification": "INFERRED",
+      "evidence": [
+        "memory/memory_manager.py:118 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "core/tasks/store.py:31 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "save_memory grava o arquivo diretamente; o store de tarefas usa temporário e replace. Interrupção durante gravação pode afetar a memória de forma diferente.",
+      "implication": "Risco de truncamento inferido da estratégia de escrita; nenhum crash ou perda de dados foi reproduzido.",
+      "material": "save_memory grava o arquivo diretamente; o store de tarefas usa temporário e replace. Interrupção durante gravação pode afetar a memória de forma diferente. Risco de truncamento inferido da estratégia de escrita; nenhum crash ou perda de dados foi reproduzido.",
+      "id": "D008",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "models.shared-ladder-coupling",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "core/gemini.py:714 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "core/gemini.py:814 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "core/tasks/brain.py:142 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "core.gemini concentra deadlines/fallback; o motor de tarefas usa a ladder e helpers privados para chamadas com ferramentas.",
+      "implication": "Mudanças na ladder afetam voz, chamadas avulsas e tarefas; preservar compatibilidade dos caminhos com tool-calling.",
+      "material": "core.gemini concentra deadlines/fallback; o motor de tarefas usa a ladder e helpers privados para chamadas com ferramentas. Mudanças na ladder afetam voz, chamadas avulsas e tarefas; preservar compatibilidade dos caminhos com tool-calling.",
+      "id": "D009",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "repository.runtime-artifacts-tracked",
+      "classification": "CONFIRMED",
+      "evidence": [
+        ".gitignore @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "git ls-files memory/tasks reports @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "O índice Git contém checkpoints, páginas de pesquisa e um relatório gerado; .gitignore não exclui memory/tasks nem reports.",
+      "implication": "Revisar política de dados antes de futuras publicações. O conteúdo desses artefatos não foi lido nem classificado como segredo.",
+      "material": "O índice Git contém checkpoints, páginas de pesquisa e um relatório gerado; .gitignore não exclui memory/tasks nem reports. Revisar política de dados antes de futuras publicações. O conteúdo desses artefatos não foi lido nem classificado como segredo.",
+      "id": "D010",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "tests.end-to-end-evidence",
+      "classification": "UNKNOWN",
+      "evidence": [
+        "providers/_tests.py:1 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "core/_smoke_harness.py:1 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "Existem autotestes de providers e harness de smoke, mas esta execução não validou UI, áudio real, serviços externos, recuperação após crash ou plataformas alternativas.",
+      "implication": "Evidência mínima depende da futura change: testes focais e observação do fluxo afetado. Não declarar funcionamento integrado com base em parsing.",
+      "material": "Existem autotestes de providers e harness de smoke, mas esta execução não validou UI, áudio real, serviços externos, recuperação após crash ou plataformas alternativas. Evidência mínima depende da futura change: testes focais e observação do fluxo afetado. Não declarar funcionamento integrado com base em parsing.",
+      "id": "D011",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    },
+    {
+      "subject": "web.dns-rebinding-limitation",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "core/tasks/web.py:21 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "core/tasks/web.py:52 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+        "core/tasks/web.py:128 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+      ],
+      "description": "Fetch valida IPs públicos e redirects, mas documenta limitação quando o hostname resolve de modo diferente entre validação e conexão.",
+      "implication": "Não apresentar o filtro como sandbox completo; exploração e eficácia em execução não foram testadas.",
+      "material": "Fetch valida IPs públicos e redirects, mas documenta limitação quando o hostname resolve de modo diferente entre validação e conexão. Não apresentar o filtro como sandbox completo; exploração e eficácia em execução não foram testadas.",
+      "id": "D012",
+      "comparison_status": "NEW",
+      "last_observed": "discovery-2026-11-17-01"
+    }
+  ]
+}

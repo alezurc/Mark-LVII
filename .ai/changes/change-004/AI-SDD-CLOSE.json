@@ -1,0 +1,9 @@
+{
+  "change_id": "change-004",
+  "closed_at": "2026-11-19T11:17:40.399286+00:00",
+  "reviewer_reference": "Considero como aprovado após analisar o REVIEW-REVISION-002.md",
+  "review_evidence_status": "complete",
+  "review_waiver_reference": null,
+  "plan_sha256": "31face2bd73fe444eeb3c4c36237ee62444d66807c301db3d713395419c8a681",
+  "knowledge_sha256": "8a07435c52cdb9949ac611c61aa40add09ef6b6b123049d3560b474d23c016bf"
+}

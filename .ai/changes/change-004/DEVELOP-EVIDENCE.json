@@ -1,0 +1,42 @@
+[
+  {
+    "path": "DEVELOP.md",
+    "sha256": "dbd2d3053562251a06a657d4956e3425ad7e4c67b34db9f1805c831b6c56feea"
+  },
+  {
+    "path": "DEVELOP-ENCODING.json",
+    "sha256": "8e3409e0a3e406b3eb0e88fb06709bbb3abe685d6ca84e396752c960d2a6ea44"
+  },
+  {
+    "path": "unittest.log",
+    "sha256": "801b8a3093901451c54b40bc5f6eefd3002cbfd6c96330c4109076674266c349"
+  },
+  {
+    "path": "providers.log",
+    "sha256": "e2a16b49eb481aa1e3ecbd16011e705b5068b585e0b59fdc7828e5d9eabb7d9e"
+  },
+  {
+    "path": "renders/language-en.png",
+    "sha256": "429daa319da2444d4ff0248c9dc3a73792187815c1338856c64e5c6a64471153"
+  },
+  {
+    "path": "renders/language-pt-BR.png",
+    "sha256": "f362f04385fb9384769d763b41961edd6b7c4aa89d9f737b41c84cb8bc09c596"
+  },
+  {
+    "path": "renders/customize-en.png",
+    "sha256": "b67df0da095ebc5e68bdcf20e7183310cf6091f7009cbcbb738f53d468fdfe30"
+  },
+  {
+    "path": "renders/customize-pt-BR.png",
+    "sha256": "143ec84e52b3a26a6ea260ed9c3925d0d3dbefc0af107000be790306f050ac8c"
+  },
+  {
+    "path": "renders/providers-en.png",
+    "sha256": "ef3221e7bfbab27ebb304e071680a5504efe58c64f0a2bcef0c1cf020d435133"
+  },
+  {
+    "path": "renders/providers-pt-BR.png",
+    "sha256": "1d83b6bba3af4206d7b6390944445a005b3ce4acab8d85385755146cbb6aa507"
+  }
+]

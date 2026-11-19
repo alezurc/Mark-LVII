@@ -43,6 +43,8 @@ from collections import deque
 
 from PyQt6.QtGui import QPolygonF, QTextBlockFormat, QTextCharFormat
 
+from gui.i18n import tr, render, _Localized, QLabel, QPushButton, QLineEdit, QComboBox
+
 from gui.style import (blend, chamfer, hud_font, px_font, scroll_css, with_alpha)
 
 
@@ -99,11 +101,11 @@ class MetricBar(QWidget):
 
         p.setFont(hud_font(7, QFont.Weight.Bold))
         p.setPen(QPen(qcol(C.TEXT_DIM), 1))
-        p.drawText(QRectF(8, 5, 50, 14), Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter, self._label)
+        p.drawText(QRectF(8, 5, 50, 14), Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter, render(self._label))
 
         p.setFont(hud_font(9, QFont.Weight.Bold))
         p.setPen(QPen(bar_col if self._text != "--" else qcol(C.TEXT_DIM), 1))
-        p.drawText(QRectF(0, 4, W - 6, 16), Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter, self._text)
+        p.drawText(QRectF(0, 4, W - 6, 16), Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter, render(self._text))
 
         p.end()
 
@@ -363,8 +365,8 @@ class FileDropZone(QWidget):
             f"border: 1px solid {C.BORDER_B}; }}"
             f"QMenu::item {{ padding: 6px 18px; }}"
             f"QMenu::item:selected {{ background: {C.PRI_GHO}; }}")
-        pick_file = menu.addAction("📄  Choose a file…")
-        pick_dir = menu.addAction("📁  Choose a folder…  (for coding)")
+        pick_file = menu.addAction(tr('📄  Choose a file…'))
+        pick_dir = menu.addAction(tr('📁  Choose a folder…  (for coding)'))
         chosen = menu.exec(QCursor.pos())
         if chosen is pick_dir:
             path = QFileDialog.getExistingDirectory(
@@ -441,13 +443,13 @@ class _DropCanvas(QWidget):
         p.setFont(px_font(11, QFont.Weight.DemiBold, spacing=1.4))
         p.setPen(QPen(qcol(C.TEXT) if hover else qcol(C.TEXT_MED)))
         p.drawText(QRectF(36, 0, W - 44, H), Qt.AlignmentFlag.AlignVCenter,
-                   p.fontMetrics().elidedText("DROP A FILE OR FOLDER  ·  OR CLICK",
+                   p.fontMetrics().elidedText(render(tr('DROP A FILE OR FOLDER  ·  OR CLICK')),
                                               Qt.TextElideMode.ElideRight, int(W - 44)))
 
     def _paint_drag_over(self, p, W, H):
         p.setFont(px_font(12, QFont.Weight.DemiBold, spacing=2))
         p.setPen(QPen(qcol(C.PRI)))
-        p.drawText(QRectF(0, 0, W, H), Qt.AlignmentFlag.AlignCenter, "RELEASE TO LOAD")
+        p.drawText(QRectF(0, 0, W, H), Qt.AlignmentFlag.AlignCenter, render(tr('RELEASE TO LOAD')))
 
     def _paint_file(self, p, W, H):
         path = Path(self._z._current_file)
@@ -457,25 +459,27 @@ class _DropCanvas(QWidget):
             size_str = _fmt_size(path.stat().st_size)
         except OSError:
             size_str = "?"
-        ext_str = path.suffix.upper().lstrip(".") or "FILE"
+        ext_str = path.suffix.upper().lstrip(".") or tr("FILE")
         if cat == "folder":
             n = self._z._folder_files
-            ext_str, size_str = "FOLDER", f"{n}{'+' if n >= 5000 else ''} files"
+            ext_str = tr("FOLDER")
+            size_str = tr("{count}{limit} file" if n == 1 else "{count}{limit} files",
+                          count=n, limit="+" if n >= 5000 else "")
 
         p.setFont(QFont("Segoe UI Emoji", 13) if _OS == "Windows" else QFont("Arial", 13))
         p.setPen(QPen(qcol(icon_col)))
-        p.drawText(QRectF(8, 0, 26, H), Qt.AlignmentFlag.AlignCenter, icon)
+        p.drawText(QRectF(8, 0, 26, H), Qt.AlignmentFlag.AlignCenter, render(icon))
 
         tw = W - 40 - 34
         p.setFont(px_font(12, QFont.Weight.DemiBold))
         p.setPen(QPen(qcol(C.WHITE)))
-        name = p.fontMetrics().elidedText(path.name, Qt.TextElideMode.ElideMiddle, int(tw))
+        name = p.fontMetrics().elidedText(render(path.name), Qt.TextElideMode.ElideMiddle, int(tw))
         p.drawText(QRectF(40, 2, tw, H / 2 - 1),
-                   Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignBottom, name)
+                   Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignBottom, render(name))
         p.setFont(px_font(10, mono=True))
         p.setPen(QPen(qcol(C.TEXT_DIM)))
         p.drawText(QRectF(40, H / 2 + 1, tw, H / 2 - 3),
-                   Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop, f"{ext_str}  ·  {size_str}")
+                   Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop, render(tr("{label}  ·  {size}", label=ext_str, size=size_str)))
 
         # the ✕ that clears it (mousePressEvent treats the last 34 px as this)
         p.setPen(QPen(with_alpha(C.RED, 0.8), 1.6))
@@ -513,7 +517,7 @@ class _CameraPreview(QWidget):
         lay.setSpacing(4)
 
         hdr = QHBoxLayout()
-        title = QLabel("◈  VISUAL INPUT")
+        title = QLabel(tr('◈  VISUAL INPUT'))
         title.setFont(hud_font(7, QFont.Weight.Bold))
         title.setStyleSheet(f"color: {C.PRI}; background: transparent;")
         hdr.addWidget(title)
@@ -574,7 +578,7 @@ class HoloPanel(QWidget):
 
     def __init__(self, title: str = "", code: str = "", parent=None, pad: int = 10):
         super().__init__(parent)
-        self._title, self._code = str(title or ""), str(code or "")
+        self._title, self._code = title or "", code or ""
         self._header_widgets: list[QWidget] = []
         self.body = QVBoxLayout(self)
         top = self.HEADER + 5 if title else pad
@@ -582,11 +586,11 @@ class HoloPanel(QWidget):
         self.body.setSpacing(6)
 
     def set_title(self, text: str) -> None:
-        self._title = str(text or "")
+        self._title = text or ""
         self.update()
 
     def set_code(self, text: str) -> None:
-        self._code = str(text or "")
+        self._code = text or ""
         self.update()
 
     def add_header_widget(self, w: QWidget) -> None:
@@ -643,15 +647,15 @@ class HoloPanel(QWidget):
             code_w = 0.0
             if self._code:
                 p.setFont(px_font(10, mono=True))
-                code_w = p.fontMetrics().horizontalAdvance(self._code) + 8
+                code_w = p.fontMetrics().horizontalAdvance(render(self._code)) + 8
                 p.setPen(QPen(blend(C.PRI, 0.5)))
                 p.drawText(QRectF(right - code_w, 6, code_w, 20),
-                           Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignRight, self._code)
+                           Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignRight, render(self._code))
             p.setFont(px_font(11, QFont.Weight.DemiBold, spacing=1.8))
             p.setPen(QPen(qcol(C.PRI)))
             room = max(10.0, right - code_w - 26)
             p.drawText(QRectF(21, 6, room, 20), Qt.AlignmentFlag.AlignVCenter,
-                       p.fontMetrics().elidedText(self._title, Qt.TextElideMode.ElideRight, int(room)))
+                       p.fontMetrics().elidedText(render(self._title), Qt.TextElideMode.ElideRight, int(room)))
             lg = QLinearGradient(12, 0, W - 12, 0)
             lg.setColorAt(0.0, with_alpha(C.PRI, 0.55))
             lg.setColorAt(0.6, with_alpha(C.PRI, 0.12))
@@ -742,10 +746,10 @@ class RingGauge(QWidget):
         p.drawEllipse(QRectF(cx - ir, cy - ir, ir * 2, ir * 2))
         p.setFont(px_font(max(10, r * 0.30), QFont.Weight.DemiBold, mono=True))
         p.setPen(QPen(qcol(C.TEXT_DIM) if na else qcol(C.WHITE)))
-        p.drawText(QRectF(cx - r, cy - r * 0.24, r * 2, r * 0.46), Qt.AlignmentFlag.AlignCenter, self._text)
+        p.drawText(QRectF(cx - r, cy - r * 0.24, r * 2, r * 0.46), Qt.AlignmentFlag.AlignCenter, render(self._text))
         p.setFont(px_font(max(8, r * 0.16), QFont.Weight.DemiBold, spacing=1.4))
         p.setPen(QPen(blend(col, 0.9)))
-        p.drawText(QRectF(cx - r, cy + r * 0.66, r * 2, r * 0.3), Qt.AlignmentFlag.AlignCenter, self._label)
+        p.drawText(QRectF(cx - r, cy + r * 0.66, r * 2, r * 0.3), Qt.AlignmentFlag.AlignCenter, render(self._label))
         p.end()
 
 
@@ -823,14 +827,14 @@ class DataRow(QWidget):
         W, H = self.width(), self.height()
         p.setFont(px_font(10, QFont.Weight.DemiBold, spacing=1.2))
         p.setPen(QPen(qcol(C.TEXT_DIM)))
-        kw = p.fontMetrics().horizontalAdvance(self._key) + 6
-        p.drawText(QRectF(0, 0, W, H), Qt.AlignmentFlag.AlignVCenter, self._key)
+        kw = p.fontMetrics().horizontalAdvance(render(self._key)) + 6
+        p.drawText(QRectF(0, 0, W, H), Qt.AlignmentFlag.AlignVCenter, render(self._key))
         p.setFont(px_font(11, QFont.Weight.Medium, mono=True))
         room = max(10, int(W - kw - 12))
-        value = p.fontMetrics().elidedText(self._value, Qt.TextElideMode.ElideRight, room)
+        value = p.fontMetrics().elidedText(render(self._value), Qt.TextElideMode.ElideRight, room)
         vw = p.fontMetrics().horizontalAdvance(value) + 6
         p.setPen(QPen(qcol(_pal(self._colour) or C.TEXT)))
-        p.drawText(QRectF(0, 0, W, H), Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignRight, value)
+        p.drawText(QRectF(0, 0, W, H), Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignRight, render(value))
         p.setPen(QPen(blend(C.PRI, 0.22), 1, Qt.PenStyle.DotLine))
         if W - vw > kw:
             p.drawLine(QLineF(kw, H / 2 + 3, W - vw, H / 2 + 3))
@@ -903,7 +907,7 @@ class IconButton(QPushButton):
     def __init__(self, kind: str, size: int = 32, text: str = "", colour: str | None = None,
                  parent=None):
         super().__init__(parent)
-        self._kind, self._label, self._colour = kind, str(text or ""), colour
+        self._kind, self._label, self._colour = kind, text or "", colour
         self._compact = not text
         self.setCursor(Qt.CursorShape.PointingHandCursor)
         self.setFocusPolicy(Qt.FocusPolicy.NoFocus)
@@ -919,16 +923,16 @@ class IconButton(QPushButton):
         if kind is not None:
             self._kind = kind
         if text is not None:
-            self._label = str(text)
+            self._label = text
         self._colour = colour
         self.update()
 
     def setText(self, text) -> None:          # noqa: N802 - Qt naming
-        self._label = str(text or "")
+        self._label = text or ""
         self.update()
 
     def text(self) -> str:
-        return self._label
+        return render(self._label)
 
     def enterEvent(self, e):
         super().enterEvent(e)
@@ -959,7 +963,7 @@ class IconButton(QPushButton):
             p.setPen(QPen(col))
             room = max(10, W - 44)
             p.drawText(QRectF(34, 0, room, H), Qt.AlignmentFlag.AlignVCenter,
-                       p.fontMetrics().elidedText(self._label, Qt.TextElideMode.ElideRight, room))
+                       p.fontMetrics().elidedText(render(self._label), Qt.TextElideMode.ElideRight, room))
         p.end()
 
 
@@ -1005,7 +1009,7 @@ class StateChip(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self._state = "INITIALISING"
-        self.setFixedSize(196, 34)
+        self.setFixedSize(220, 34)
 
     def set_state(self, state: str) -> None:
         state = str(state or "").upper()
@@ -1034,7 +1038,7 @@ class StateChip(QWidget):
         p.setFont(px_font(12, QFont.Weight.DemiBold, spacing=2.6))
         p.setPen(QPen(col))
         p.drawText(QRectF(38, 0, W - 44, H), Qt.AlignmentFlag.AlignVCenter,
-                   p.fontMetrics().elidedText(self._state, Qt.TextElideMode.ElideRight, int(W - 44)))
+                   p.fontMetrics().elidedText(render(tr(self._state)), Qt.TextElideMode.ElideRight, int(W - 44)))
         p.end()
 
 
@@ -1072,13 +1076,13 @@ class StatusStrip(QWidget):
         self._right = ""
 
     def set_items(self, items) -> None:
-        items = [(str(a), str(b)) for a, b in items]
+        items = [(a, str(b)) for a, b in items]
         if items != self._items:
             self._items = items
             self.update()
 
     def set_right(self, text: str) -> None:
-        self._right = str(text or "")
+        self._right = text or ""
         self.update()
 
     def paintEvent(self, _):
@@ -1092,21 +1096,21 @@ class StatusStrip(QWidget):
         p.drawLine(QLineF(0, 0.5, W, 0.5))
         p.setFont(px_font(9.5, QFont.Weight.DemiBold, spacing=1.4))
         fm = p.fontMetrics()
-        right_w = fm.horizontalAdvance(self._right) + 14
+        right_w = fm.horizontalAdvance(render(self._right)) + 14
         x = 14.0
         for label, colour in self._items:
-            w = fm.horizontalAdvance(label)
+            w = fm.horizontalAdvance(render(label))
             if x + w + 11 > W - right_w - 10:
                 break
             p.setPen(Qt.PenStyle.NoPen)
             p.setBrush(QBrush(qcol(_pal(colour) or C.PRI)))
             p.drawEllipse(QPointF(x + 3, H / 2), 2.6, 2.6)
             p.setPen(QPen(qcol(C.TEXT_MED)))
-            p.drawText(QRectF(x + 11, 0, w + 4, H), Qt.AlignmentFlag.AlignVCenter, label)
+            p.drawText(QRectF(x + 11, 0, w + 4, H), Qt.AlignmentFlag.AlignVCenter, render(label))
             x += w + 34
         p.setPen(QPen(qcol(C.TEXT_DIM)))
         p.drawText(QRectF(0, 0, W - 14, H), Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignRight,
-                   self._right)
+                   render(self._right))
         p.end()
 
 
@@ -1212,12 +1216,12 @@ class RoutineRow(QWidget):
         p.setPen(QPen(qcol(C.WHITE if on else C.TEXT_DIM)))
         room = max(10, int(W - 14 - self.SWITCH_W - 8))
         p.drawText(QRectF(14, 1, room, 20), Qt.AlignmentFlag.AlignVCenter,
-                   p.fontMetrics().elidedText(r.get("name") or "", Qt.TextElideMode.ElideRight, room))
+                   p.fontMetrics().elidedText(render(r.get("name") or ""), Qt.TextElideMode.ElideRight, room))
 
         p.setFont(px_font(10))
         p.setPen(QPen(qcol(C.TEXT_DIM)))
         p.drawText(QRectF(14, 21, W - 14, 16), Qt.AlignmentFlag.AlignVCenter,
-                   p.fontMetrics().elidedText(r.get("_when") or "", Qt.TextElideMode.ElideRight, int(W - 14)))
+                   p.fontMetrics().elidedText(render(r.get("_when") or ""), Qt.TextElideMode.ElideRight, int(W - 14)))
         p.end()
 
 
@@ -1276,16 +1280,16 @@ class TaskRow(QWidget):
         p.drawEllipse(QPointF(5, 10), 3, 3)
 
         p.setFont(px_font(10, mono=True))
-        state = self._state_text(t)
+        state = render(tr(self._state_text(t)))
         sw = p.fontMetrics().horizontalAdvance(state) + 4
         p.setPen(QPen(col))
-        p.drawText(QRectF(W - sw, 1, sw, 18), Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter, state)
+        p.drawText(QRectF(W - sw, 1, sw, 18), Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter, render(state))
 
         p.setFont(px_font(11, QFont.Weight.DemiBold))
         p.setPen(QPen(qcol(C.WHITE)))
         room = max(10, int(W - 16 - sw - 6))
         p.drawText(QRectF(14, 1, room, 18), Qt.AlignmentFlag.AlignVCenter,
-                   p.fontMetrics().elidedText(t.get("title") or "", Qt.TextElideMode.ElideRight, room))
+                   p.fontMetrics().elidedText(render(t.get("title") or ""), Qt.TextElideMode.ElideRight, room))
 
         budget = max(1.0, t["budget"]["minutes"] * 60.0)
         frac = 1.0 if t["status"] == "done" else min(1.0, t["used"]["seconds"] / budget)
@@ -1301,5 +1305,5 @@ class TaskRow(QWidget):
         p.setFont(px_font(10))
         p.setPen(QPen(qcol(C.TEXT_DIM)))
         p.drawText(QRectF(14, 27, W - 14, 16), Qt.AlignmentFlag.AlignVCenter,
-                   p.fontMetrics().elidedText(last, Qt.TextElideMode.ElideRight, int(W - 14)))
+                   p.fontMetrics().elidedText(render(last), Qt.TextElideMode.ElideRight, int(W - 14)))
         p.end()

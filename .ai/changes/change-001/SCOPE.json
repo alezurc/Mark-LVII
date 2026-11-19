@@ -1,0 +1,6 @@
+{
+  "paths": [
+    "actions/dev_agent.py",
+    "tests/test_dev_agent_vscode.py"
+  ]
+}

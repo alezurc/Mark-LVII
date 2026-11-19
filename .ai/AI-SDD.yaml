@@ -1,0 +1,16 @@
+# AI-SDD project state. Managed by the v0.1 runtime.
+protocol: "AI-SDD"
+version: "0.2.0"
+runtime_root: "D:\\Trabalho_PT\\Repositorios\\ai-sdd"
+current_state: "CLOSED"
+develop_authorized: false
+last_completed_stage: "CLOSE"
+approval_reference: "Aprovo o CONTEXT revisão 002 da change-004"
+reviewer_reference: "Considero como aprovado após analisar o REVIEW-REVISION-002.md"
+review_evidence_status: "complete"
+review_waiver_reference: null
+scope_expansion_reference: null
+active_change_id: null
+last_closed_change_id: "change-004"
+allowed_next: ["DISCOVERY", "CONTEXT"]
+updated_at: "2026-11-19T11:17:40.402780+00:00"

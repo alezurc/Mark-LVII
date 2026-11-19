@@ -1,0 +1,10 @@
+{
+  "paths": [
+    "providers/_tests.py",
+    "tests/test_source_encoding.py",
+    "tests/test_smoke_harness.py",
+    "tests/test_provider_test_isolation.py",
+    "README.md",
+    "CHANGELOG.md"
+  ]
+}

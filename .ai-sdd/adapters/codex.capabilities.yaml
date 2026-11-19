@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "adapter": {
+    "id": "codex",
+    "version": "1.0.0",
+    "core_compatibility": [
+      "v0.2.x"
+    ]
+  },
+  "capabilities": {
+    "agent.spawn": {
+      "declared": false,
+      "detection": "none",
+      "evidence": [],
+      "status": "unavailable",
+      "limitations": [
+        "FUTURE"
+      ]
+    },
+    "context.exclude": {
+      "declared": true,
+      "detection": "static",
+      "evidence": [
+        "mapping:codex:context.exclude"
+      ],
+      "status": "available",
+      "limitations": []
+    },
+    "context.isolate": {
+      "declared": false,
+      "detection": "none",
+      "evidence": [],
+      "status": "unavailable",
+      "limitations": [
+        "FUTURE"
+      ]
+    },
+    "extension.consume": {
+      "declared": true,
+      "detection": "static",
+      "evidence": [
+        "mapping:codex:extension.consume"
+      ],
+      "status": "available",
+      "limitations": []
+    },
+    "file.read": {
+      "declared": true,
+      "detection": "static",
+      "evidence": [
+        "mapping:codex:file.read"
+      ],
+      "status": "available",
+      "limitations": []
+    },
+    "file.write": {
+      "declared": true,
+      "detection": "static",
+      "evidence": [
+        "mapping:codex:file.write"
+      ],
+      "status": "available",
+      "limitations": []
+    },
+    "hooks.post": {
+      "declared": false,
+      "detection": "none",
+      "evidence": [],
+      "status": "unavailable",
+      "limitations": [
+        "FUTURE"
+      ]
+    },
+    "hooks.pre": {
+      "declared": false,
+      "detection": "none",
+      "evidence": [],
+      "status": "unavailable",
+      "limitations": [
+        "FUTURE"
+      ]
+    },
+    "shell.exec": {
+      "declared": true,
+      "detection": "static",
+      "evidence": [
+        "mapping:codex:shell.exec"
+      ],
+      "status": "available",
+      "limitations": []
+    },
+    "test.exec": {
+      "declared": true,
+      "detection": "static",
+      "evidence": [
+        "mapping:codex:test.exec"
+      ],
+      "status": "available",
+      "limitations": []
+    }
+  }
+}

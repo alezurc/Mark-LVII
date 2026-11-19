@@ -1,0 +1,16 @@
+{
+  "paths": [
+    "gui/i18n.py",
+    "gui/window.py",
+    "gui/overlays.py",
+    "gui/providers_panel.py",
+    "gui/widgets.py",
+    "gui/hud.py",
+    "ui.py",
+    "memory/config_manager.py",
+    "tests/test_ui_language.py",
+    "tests/test_ui_language_qt.py",
+    "readme.md",
+    "CHANGELOG.md"
+  ]
+}

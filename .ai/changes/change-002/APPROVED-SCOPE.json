@@ -1,0 +1,10 @@
+{
+  "change_id": "change-002",
+  "approval_reference": "Após analisar o CONTEXT.md eu autorizo a execução.",
+  "paths": [
+    "memory/memory_manager.py",
+    "tests/test_memory_persistence.py",
+    "CHANGELOG.md"
+  ],
+  "encoding_sha256": "e48847c7c0251aca73ad59a6299bd6f8e8413b976e850bb4c6a6583b3ddd0d15"
+}

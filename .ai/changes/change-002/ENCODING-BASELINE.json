@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "change_id": "change-002",
+  "context_reference": "Após analisar o CONTEXT.md eu autorizo a execução.",
+  "entries": [
+    {
+      "path": "CHANGELOG.md",
+      "evidence": "CHANGELOG.md",
+      "sha256": "b8ddd0143d5b73f128ad15d22418b95170491a1742d53c938a1126f9fd201b07",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "status": "TEXT",
+      "method": "strict-utf8",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "Bytes do not establish author intent or a legacy codepage."
+    },
+    {
+      "path": "memory/memory_manager.py",
+      "evidence": "memory/memory_manager.py",
+      "sha256": "3ecf5a9d80484bec73eef67e54c7d7e2880c726e4bfac58d05b1a14b6e1988ce",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "status": "TEXT",
+      "method": "strict-utf8",
+      "confidence": "VALID_BYTES_ONLY",
+      "limitation": "Bytes do not establish author intent or a legacy codepage."
+    },
+    {
+      "path": "tests/test_memory_persistence.py",
+      "evidence": "tests/test_memory_persistence.py",
+      "status": "MISSING",
+      "encoding": "UNKNOWN",
+      "bom": "NONE",
+      "sha256": null,
+      "method": "absent-at-context",
+      "confidence": "UNKNOWN",
+      "limitation": "New file; no prior bytes."
+    }
+  ],
+  "policy": {
+    "migrations": [],
+    "unknown_decisions": []
+  }
+}

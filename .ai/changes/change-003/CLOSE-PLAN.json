@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "change_id": "change-003",
+  "project_mode": "EXISTING",
+  "context_reference": "Aprovo a pós revisar o CONTEXT.md",
+  "evidence_refs": [
+    ".ai/changes/change-003/CONTEXT.md",
+    ".ai/changes/change-003/DEVELOP.md",
+    ".ai/changes/change-003/REVIEW.md",
+    ".ai/changes/change-003/CLOSE-EVIDENCE.md"
+  ],
+  "unresolved_unknowns": [
+    {
+      "description": "Intenção histórica de encoding sem BOM não estabelecida; migração prospectiva e preservação validadas.",
+      "material": false
+    },
+    {
+      "description": "Áudio físico, UI interativa, serviços reais, crash, outras plataformas e síntese Piper não demonstrados; fora do perfil sintético aprovado.",
+      "material": false
+    }
+  ],
+  "unresolved_conflicts": [],
+  "risks": [
+    "NON_ISOLATED_REVIEW exposto e submetido a decisão humana explícita.",
+    "Python 3.15.2 além da faixa historicamente testada até 3.13; prova restrita ao ambiente executado.",
+    "Harness/guard não isolam plugins arbitrários como sandbox de segurança."
+  ],
+  "material_decision_required": false,
+  "proposed_version": null,
+  "versioning": {
+    "status": "EXISTING",
+    "strategy": "KEEP_CURRENT_IDENTIFIER",
+    "strategy_target": "PROJECT-POLICY.md",
+    "evidence_refs": [
+      "PROJECT-POLICY.md"
+    ]
+  },
+  "knowledge": {
+    "impact": "YES",
+    "reason": "Consolidar contratos locais de testes/encoding e preservar limites UNKNOWN no KR canônico.",
+    "targets": [],
+    "evidence_refs": [
+      ".ai/changes/change-003/CONTEXT.md",
+      ".ai/changes/change-003/DEVELOP.md",
+      ".ai/changes/change-003/REVIEW.md",
+      ".ai/changes/change-003/CLOSE-EVIDENCE.md"
+    ],
+    "records": [
+      {
+        "id": "KR-change-003-001",
+        "statement": "providers/_tests.py executa a suíte em cópia temporária de fontes com configuração/cache/vozes sintéticos, separa PASS/FAIL/SKIP e retorna falha quando testes ou subprocessos falham; não é sandbox de segurança.",
+        "classification": "CONFIRMED",
+        "evidence_refs": [
+          "providers/_tests.py",
+          "tests/test_provider_test_isolation.py",
+          ".ai/changes/change-003/REVIEW.md"
+        ],
+        "context_reference": "Aprovo a pós revisar o CONTEXT.md",
+        "traceability": {
+          "change_id": "change-003",
+          "requirements": [
+            "D011",
+            "AC3",
+            "AC4",
+            "AC5",
+            "AC7"
+          ],
+          "review": ".ai/changes/change-003/REVIEW.md"
+        }
+      },
+      {
+        "id": "KR-change-003-002",
+        "statement": "Os controles literais 0x01/0x02 do áudio sintético foram substituídos por escapes equivalentes sem alterar o PCM; a política prospectiva aprovada estabelece UTF-8 sem BOM nesse arquivo e preserva CRLF.",
+        "classification": "CONFIRMED",
+        "evidence_refs": [
+          "tests/test_source_encoding.py",
+          ".ai/changes/change-003/ENCODING-BASELINE.json",
+          ".ai/changes/change-003/ENCODING-REVIEW.json",
+          ".ai/changes/change-003/REVIEW.md"
+        ],
+        "context_reference": "Aprovo a pós revisar o CONTEXT.md",
+        "traceability": {
+          "change_id": "change-003",
+          "requirements": [
+            "D007",
+            "AC1",
+            "AC2"
+          ],
+          "review": ".ai/changes/change-003/REVIEW.md"
+        }
+      },
+      {
+        "id": "KR-change-003-003",
+        "statement": "Intenção histórica de encoding sem BOM, áudio físico, UI interativa, serviços reais, recuperação de crash e outras plataformas continuam não demonstrados; evidência de change-003 limita-se a testes sintéticos locais e mantém SKIPs opcionais de Piper.",
+        "classification": "UNKNOWN",
+        "evidence_refs": [
+          ".ai/changes/change-003/CONTEXT.md",
+          ".ai/changes/change-003/REVIEW.md",
+          ".ai/changes/change-003/ENCODING-REVIEW.json"
+        ],
+        "context_reference": "Aprovo a pós revisar o CONTEXT.md",
+        "traceability": {
+          "change_id": "change-003",
+          "requirements": [
+            "D007",
+            "D011"
+          ],
+          "limitation": "Não promover UNKNOWN por validade UTF-8, mocks, testes locais ou decisão humana."
+        }
+      }
+    ]
+  },
+  "user_docs": {
+    "impact": "YES",
+    "reason": "README já atualizado e revisado com execução isolada e limites; nenhuma nova edição no CLOSE.",
+    "targets": [
+      {
+        "path": "README.md",
+        "kind": "UPDATE",
+        "change_id": "change-003",
+        "sha256": "24f31ebfee49168a12a1d4331d3b75549f6d5d703911370711d788e6c4462a04",
+        "evidence_refs": [
+          ".ai/changes/change-003/REVIEW.md",
+          "README.md"
+        ]
+      }
+    ],
+    "evidence_refs": [
+      "README.md",
+      ".ai/changes/change-003/REVIEW.md"
+    ]
+  },
+  "changelog": {
+    "impact": "YES",
+    "reason": "Registrar change-003 conforme estratégia existente e alvo aprovado.",
+    "targets": [
+      {
+        "path": "CHANGELOG.md",
+        "kind": "UPDATE",
+        "change_id": "change-003",
+        "sha256": "bf35b6e884a554329e09c5eb141e7e4e4fc7fb0b68cb1305a44fea33a5cec843",
+        "evidence_refs": [
+          ".ai/changes/change-003/CHANGELOG-PROPOSED.md",
+          ".ai/changes/change-003/REVIEW.md"
+        ]
+      }
+    ],
+    "evidence_refs": [
+      "PROJECT-POLICY.md",
+      ".ai/changes/change-003/CHANGELOG-PROPOSED.md"
+    ],
+    "strategy_target": "PROJECT-POLICY.md"
+  },
+  "project_spec": {
+    "impact": "NO",
+    "reason": "Sem requisito novo ou alvo de especificação; consolidação de D007/D011 nos limites do CONTEXT e REVIEW aprovados.",
+    "targets": [],
+    "evidence_refs": [
+      ".ai/changes/change-003/CONTEXT.md",
+      ".ai/changes/change-003/REVIEW.md"
+    ],
+    "material": false
+  },
+  "human_decision_required": false,
+  "close_ready": true,
+  "blockers": []
+}

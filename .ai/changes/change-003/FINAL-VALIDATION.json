@@ -1,0 +1,68 @@
+{
+  "change_id": "change-003",
+  "python": "3.15.2 (tags/v3.15.2:5e58eaa, Oct 25 2026, 17:27:03) [MSC v.1951 64 bit (AMD64)]",
+  "executable": "D:\\Trabalho_Pessoal\\Mark-LVII\\.venv\\Scripts\\python.exe",
+  "virtual_environment": "D:\\Trabalho_Pessoal\\Mark-LVII\\.venv",
+  "system_site_packages": false,
+  "installed_project_requirements_checked": {
+    "PyQt6": "6.12.1",
+    "numpy": "2.5.5",
+    "google-genai": "2.34.0",
+    "httpx": "0.28.1",
+    "requests": "2.34.2",
+    "certifi": "2026.10.23",
+    "psutil": "7.2.2",
+    "cryptography": "49.0.0"
+  },
+  "entries": [
+    {
+      "path": "providers/_tests.py",
+      "sha256": "e62506ed8280670ef58bbe66eea99bf51711a8a24e8d22f8e8537e5f13ad4ca5",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "unchanged_since_pause": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "24f31ebfee49168a12a1d4331d3b75549f6d5d703911370711d788e6c4462a04",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "unchanged_since_pause": true
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "fdd512f84650edce0d074b9b4debef932d63ef699d23bd4c0b93391ee6fed768",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "unchanged_since_pause": true
+    },
+    {
+      "path": "tests/test_source_encoding.py",
+      "sha256": "a0cc60f6018cabc7404eebbcfaabe00724e4954d442f4fba941a1a8a536d18a5",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "unchanged_since_pause": true
+    },
+    {
+      "path": "tests/test_smoke_harness.py",
+      "sha256": "2e7b0e65fdb24229c1db2931aaa4e0624148d29c6c00da570e5eeeab176366d4",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "unchanged_since_pause": true
+    },
+    {
+      "path": "tests/test_provider_test_isolation.py",
+      "sha256": "ab05cfed8bbfa69c966db843f332588a11d9809f5ce7837b1e712973f19d7dda",
+      "encoding": "utf-8",
+      "bom": "NONE",
+      "unchanged_since_pause": true
+    }
+  ],
+  "requirements_sha256": "1ca35b1d79ecfe78726476fb17c58df999b0021ab34135b0bd7779879430063e",
+  "evidence_hashes": {
+    "providers-resumed.log": "dfb88c6ddb82e6ee9156069726cdac9e8dc7c28d4469bbc46303b2a9324c74ce",
+    "unittest-resumed.log": "3a8c2db4abe07708c7a453591aa3b639ecc5cf45c61a2e529de51fc7a70ecf15",
+    "venv-packages.json": "2308d50081140114f246326b5058d994147e3d483c434659ac4944a02fd85d2e",
+    "RESUMPTION-DEP-001.md": "25f7415352b92e76718f9ff61dfaea6e41226ee26cd804e0615b359749a823b7"
+  }
+}

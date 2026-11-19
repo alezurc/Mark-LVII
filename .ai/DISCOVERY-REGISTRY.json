@@ -1,0 +1,337 @@
+{
+  "run_id": "discovery-2026-11-18-02",
+  "project_scope": "Mark-LVII / whole-project static discovery",
+  "baseline": {
+    "source": ".ai/discovery-history/discovery-2026-11-18-01/DISCOVERY.md",
+    "sha256": "9361d0d3e0ca734710661efb7272eeb3315ff181544c6e3626b55770a2afa3e5",
+    "run_id": "discovery-2026-11-18-01",
+    "revision": "f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+    "project_scope": "Mark-LVII / whole-project static discovery"
+  },
+  "comparison_mode": "COMPARED",
+  "findings": [
+    {
+      "subject": "architecture.qt-worker-boundary",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "main.py:1727 @ working-tree sha256:86d91b4af3f04a36431ad99f1231684f78abacd653e5b850f3f9187aa9267d70",
+        "main.py:3052 @ working-tree sha256:86d91b4af3f04a36431ad99f1231684f78abacd653e5b850f3f9187aa9267d70",
+        "ui.py:103 @ working-tree sha256:c76cee3d2fd0870ed78f8fbb375c7718e78a6e1634726b567b411577b2fc47c4",
+        "ui.py:265 @ working-tree sha256:c76cee3d2fd0870ed78f8fbb375c7718e78a6e1634726b567b411577b2fc47c4",
+        "gui/window.py:398 @ working-tree sha256:a92f6ae7697b306c12d3630f01ae5661baad8fc7269ef5e4ee324d999561a254"
+      ],
+      "description": "Qt fica no thread principal; a sessão asyncio roda em thread dedicado; ações/plugins são despachados ao executor. JarvisUI emite sinais para a janela.",
+      "implication": "Mudanças de UI devem preservar os sinais e a única QApplication; ferramentas não podem construir widgets.",
+      "material": "Qt fica no thread principal; a sessão asyncio roda em thread dedicado; ações/plugins são despachados ao executor. JarvisUI emite sinais para a janela. Mudanças de UI devem preservar os sinais e a única QApplication; ferramentas não podem construir widgets.",
+      "id": "D001",
+      "comparison_status": "SAME_FINDING",
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "automation.background-policy",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "core/tasks/tools.py:87 @ working-tree sha256:ec3e51809d5abbaf4f9f49ed2b1ddaf92688b56f84847dfe32d479c05437453c",
+        "core/tasks/tools.py:96 @ working-tree sha256:ec3e51809d5abbaf4f9f49ed2b1ddaf92688b56f84847dfe32d479c05437453c",
+        "core/tasks/engine.py:268 @ working-tree sha256:c3b3dd32ff3acf12a7bc83e6458458e6356298c98e53245cece64c17b08d0675"
+      ],
+      "description": "TaskEngine agenda workers e TaskTools filtra ferramentas, separa web de recall_memory e restringe caminhos à pasta da tarefa.",
+      "implication": "Trabalho longo pertence ao motor de tarefas; isto confirma controles estáticos, não isolamento completo demonstrado.",
+      "material": "TaskEngine agenda workers e TaskTools filtra ferramentas, separa web de recall_memory e restringe caminhos à pasta da tarefa. Trabalho longo pertence ao motor de tarefas; isto confirma controles estáticos, não isolamento completo demonstrado.",
+      "id": "D002",
+      "comparison_status": "SAME_FINDING",
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "automation.routines-and-research",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "core/routines/engine.py:114 @ working-tree sha256:41ba8ff259f3f1b023432b05a8247f3ab6992a8eecd71657fc37fafbff3d258e",
+        "core/tasks/research.py:111 @ working-tree sha256:04b4280f3a2a3a2131a3ed26afa1691a4b67ccfa656e5b5b107ef588af2b1e5f",
+        "core/tasks/research.py:342 @ working-tree sha256:04b4280f3a2a3a2131a3ed26afa1691a4b67ccfa656e5b5b107ef588af2b1e5f",
+        "main.py:726 @ working-tree sha256:86d91b4af3f04a36431ad99f1231684f78abacd653e5b850f3f9187aa9267d70"
+      ],
+      "description": "Rotinas usam armazenamento compartilhado de JSON; pesquisa registra fontes e verifica trechos contra páginas salvas.",
+      "implication": "A verificação textual de citações não demonstra verdade factual nem qualidade global do relatório.",
+      "material": "Rotinas usam armazenamento compartilhado de JSON; pesquisa registra fontes e verifica trechos contra páginas salvas. A verificação textual de citações não demonstra verdade factual nem qualidade global do relatório.",
+      "id": "D003",
+      "comparison_status": "SAME_FINDING",
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "configuration.atomic-settings",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "memory/config_manager.py:38 @ working-tree sha256:e0301bb17b2d733def5d1a15b77a2abd4a2e32986981a4b2e8b196b0fce1d528",
+        "memory/config_manager.py:52 @ working-tree sha256:e0301bb17b2d733def5d1a15b77a2abd4a2e32986981a4b2e8b196b0fce1d528",
+        "memory/config_manager.py:69 @ working-tree sha256:e0301bb17b2d733def5d1a15b77a2abd4a2e32986981a4b2e8b196b0fce1d528"
+      ],
+      "description": "Configuração usa RLock, arquivo temporário e os.replace, com tratamento de arquivo corrompido.",
+      "implication": "Usar config_manager; serialização dentro do processo não prova coordenação entre processos ou durabilidade após perda de energia.",
+      "material": "Configuração usa RLock, arquivo temporário e os.replace, com tratamento de arquivo corrompido. Usar config_manager; serialização dentro do processo não prova coordenação entre processos ou durabilidade após perda de energia.",
+      "id": "D004",
+      "comparison_status": "SAME_FINDING",
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "dashboard.transport-fallback",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "dashboard/server.py:1248 @ working-tree sha256:5355d250a0364c7dab38dc254aa21cb81ccd8ff18200dca61d05069416ca3fdb",
+        "dashboard/server.py:1276 @ working-tree sha256:5355d250a0364c7dab38dc254aa21cb81ccd8ff18200dca61d05069416ca3fdb",
+        "dashboard/server.py:750 @ working-tree sha256:5355d250a0364c7dab38dc254aa21cb81ccd8ff18200dca61d05069416ca3fdb"
+      ],
+      "description": "Dashboard usa pareamento/tokens e pode servir HTTP em 0.0.0.0 quando TLS não está disponível, com aviso explícito.",
+      "implication": "Exposição real depende da configuração/rede; não foi verificada. Requisito de TLS obrigatório exigiria contexto específico.",
+      "material": "Dashboard usa pareamento/tokens e pode servir HTTP em 0.0.0.0 quando TLS não está disponível, com aviso explícito. Exposição real depende da configuração/rede; não foi verificada. Requisito de TLS obrigatório exigiria contexto específico.",
+      "id": "D005",
+      "comparison_status": "SAME_FINDING",
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "developer.vscode-success-claim",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "actions/dev_agent.py:333 @ working-tree sha256:a037c36d50dac943fe18168fe9a3e278f7c94e4d159ae8c0554ee31ace344d8c",
+        "actions/dev_agent.py:364 @ working-tree sha256:a037c36d50dac943fe18168fe9a3e278f7c94e4d159ae8c0554ee31ace344d8c",
+        "actions/dev_agent.py:456 @ working-tree sha256:a037c36d50dac943fe18168fe9a3e278f7c94e4d159ae8c0554ee31ace344d8c",
+        "tests/test_dev_agent_vscode.py @ working-tree sha256:e87a0e53312e8c12073d87642e268b936445b3ff74cd38aa5194dd425a0885ce",
+        ".ai/changes/change-001/REVIEW-REVISION-002.md",
+        ".ai/changes/change-001/AI-SDD-CLOSE.json"
+      ],
+      "description": "Mudança material desde a baseline: change-001 substituiu o sucesso presumido por observação de janela com caminho completo, captura limitada a 64 KiB por stream e resultado conservador. A revisão registrou 29 testes PASS; a mudança está CLOSED.",
+      "implication": "D006 tratado (RESOLVED), preservando o conflito histórico em previous. Títulos sem caminho completo continuam não verificados; não há teste manual do editor nem prova integrada.",
+      "material": "Mudança material desde a baseline: change-001 substituiu o sucesso presumido por observação de janela com caminho completo, captura limitada a 64 KiB por stream e resultado conservador. A revisão registrou 29 testes PASS; a mudança está CLOSED. D006 tratado (RESOLVED), preservando o conflito histórico em previous. Títulos sem caminho completo continuam não verificados; não há teste manual do editor nem prova integrada.",
+      "treatment_status": "RESOLVED",
+      "id": "D006",
+      "comparison_status": "SAME_FINDING",
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "encoding.intent-not-established",
+      "classification": "UNKNOWN",
+      "evidence": [
+        "providers/_tests.py",
+        "tests/test_source_encoding.py",
+        ".ai/changes/change-003/ENCODING-REVIEW.json",
+        ".ai/changes/change-003/REVIEW.md",
+        ".ai/knowledge/KNOWLEDGE-REGISTER.json",
+        ".ai/discovery-runs/discovery-2026-11-18-02/EVIDENCE.json"
+      ],
+      "description": "Mudança material de evidência após change-003 CLOSED: os controles literais U+0001/U+0002 de providers/_tests.py foram substituídos por escapes equivalentes, com PCM preservado e política prospectiva UTF-8 sem BOM. O inventário atual não contém arquivo com status de bytes UNKNOWN; intenção histórica sem BOM continua UNKNOWN.",
+      "implication": "O problema localizado dos controles foi tratado; não inferir intenção histórica/codepage a partir de UTF-8 válido. Futuras edições continuam exigindo SCOPE e política de encoding quando necessária. Não converter UNKNOWN histórico em CONFIRMED.",
+      "material": "Mudança material de evidência após change-003 CLOSED: os controles literais U+0001/U+0002 de providers/_tests.py foram substituídos por escapes equivalentes, com PCM preservado e política prospectiva UTF-8 sem BOM. O inventário atual não contém arquivo com status de bytes UNKNOWN; intenção histórica sem BOM continua UNKNOWN. O problema localizado dos controles foi tratado; não inferir intenção histórica/codepage a partir de UTF-8 válido. Futuras edições continuam exigindo SCOPE e política de encoding quando necessária. Não converter UNKNOWN histórico em CONFIRMED.",
+      "treatment_status": "PARTIALLY_RESOLVED",
+      "id": "D007",
+      "comparison_status": "CHANGED",
+      "previous": {
+        "subject": "encoding.intent-not-established",
+        "classification": "UNKNOWN",
+        "evidence": [
+          ".ai/discovery-runs/discovery-2026-11-18-01/EVIDENCE.json",
+          "providers/_tests.py"
+        ],
+        "description": "Evidência ampliada pelo detector conservador: além da intenção histórica sem BOM continuar desconhecida, providers/_tests.py contém os controles preexistentes U+0001 e U+0002. Seus bytes são UTF-8 válidos, mas o perfil conservador registra status UNKNOWN; não houve mudança desses bytes desde a baseline.",
+        "implication": "Não inferir codepage nem converter esses bytes automaticamente. Uma futura edição desse alvo exige SCOPE exato e decisão/política apropriada antes da aprovação de CONTEXT. A classificação refinada não reescreve a evidência histórica anterior.",
+        "material": "Evidência ampliada pelo detector conservador: além da intenção histórica sem BOM continuar desconhecida, providers/_tests.py contém os controles preexistentes U+0001 e U+0002. Seus bytes são UTF-8 válidos, mas o perfil conservador registra status UNKNOWN; não houve mudança desses bytes desde a baseline. Não inferir codepage nem converter esses bytes automaticamente. Uma futura edição desse alvo exige SCOPE exato e decisão/política apropriada antes da aprovação de CONTEXT. A classificação refinada não reescreve a evidência histórica anterior.",
+        "id": "D007",
+        "comparison_status": "CHANGED",
+        "previous": {
+          "subject": "encoding.intent-not-established",
+          "classification": "UNKNOWN",
+          "evidence": [
+            ".ai/DISCOVERY-EVIDENCE.json @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+          ],
+          "description": "O inventário registra hash, BOM e decodificação estrita por arquivo; a intenção de encoding sem BOM permanece desconhecida.",
+          "implication": "Antes de aprovação de CONTEXT, preparar SCOPE.json com arquivos exatos e política de encoding quando necessária; preservar bytes no DEVELOP.",
+          "material": "O inventário registra hash, BOM e decodificação estrita por arquivo; a intenção de encoding sem BOM permanece desconhecida. Antes de aprovação de CONTEXT, preparar SCOPE.json com arquivos exatos e política de encoding quando necessária; preservar bytes no DEVELOP.",
+          "id": "D007",
+          "comparison_status": "NEW",
+          "last_observed": "discovery-2026-11-17-01"
+        },
+        "last_observed": "discovery-2026-11-18-01"
+      },
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "memory.persistence-risk",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "memory/memory_manager.py:120",
+        "memory/memory_manager.py:178",
+        "memory/memory_manager.py:433",
+        "memory/memory_manager.py:453",
+        "memory/memory_manager.py:475",
+        "tests/test_memory_persistence.py",
+        ".ai/changes/change-002/REVIEW.md",
+        ".ai/changes/change-002/AI-SDD-CLOSE.json",
+        ".ai/changes/change-003/REVIEW.md"
+      ],
+      "description": "Mudança material após change-002 CLOSED: memória e sessões publicam JSON completo por temporário exclusivo e os.replace após fechamento; RLock cobre mutadores internos read-modify-write. A revisão documenta 13 testes focais; change-003 reexecutou essas regressões entre os 55 unittest PASS.",
+      "implication": "Risco original de truncamento por escrita direta tratado no escopo local; durabilidade física, processos concorrentes e recuperação de corrupção anterior continuam fora da garantia. Não inferir proteção universal de filesystem/crash.",
+      "material": "Mudança material após change-002 CLOSED: memória e sessões publicam JSON completo por temporário exclusivo e os.replace após fechamento; RLock cobre mutadores internos read-modify-write. A revisão documenta 13 testes focais; change-003 reexecutou essas regressões entre os 55 unittest PASS. Risco original de truncamento por escrita direta tratado no escopo local; durabilidade física, processos concorrentes e recuperação de corrupção anterior continuam fora da garantia. Não inferir proteção universal de filesystem/crash.",
+      "treatment_status": "RESOLVED_FOR_APPROVED_SCOPE",
+      "id": "D008",
+      "comparison_status": "CHANGED",
+      "previous": {
+        "subject": "memory.persistence-risk",
+        "classification": "INFERRED",
+        "evidence": [
+          "memory/memory_manager.py:118 @ working-tree sha256:3ecf5a9d80484bec73eef67e54c7d7e2880c726e4bfac58d05b1a14b6e1988ce",
+          "core/tasks/store.py:31 @ working-tree sha256:eba554771e86fb4e2f441073aaa91f542071f3944c0ed883af9ef789c33f8072"
+        ],
+        "description": "save_memory grava o arquivo diretamente; o store de tarefas usa temporário e replace. Interrupção durante gravação pode afetar a memória de forma diferente.",
+        "implication": "Risco de truncamento inferido da estratégia de escrita; nenhum crash ou perda de dados foi reproduzido.",
+        "material": "save_memory grava o arquivo diretamente; o store de tarefas usa temporário e replace. Interrupção durante gravação pode afetar a memória de forma diferente. Risco de truncamento inferido da estratégia de escrita; nenhum crash ou perda de dados foi reproduzido.",
+        "id": "D008",
+        "comparison_status": "SAME_FINDING",
+        "last_observed": "discovery-2026-11-18-01"
+      },
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "models.shared-ladder-coupling",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "core/gemini.py:714 @ working-tree sha256:8f8c2e5c6d31d1753c48ab5472ba897fab10c75d5512752b6d41f34fcbbd90bb",
+        "core/gemini.py:814 @ working-tree sha256:8f8c2e5c6d31d1753c48ab5472ba897fab10c75d5512752b6d41f34fcbbd90bb",
+        "core/tasks/brain.py:142 @ working-tree sha256:bc0131df3bd42c6035a080d51b4e454894a96c574185166cbb8a61777066cd3f"
+      ],
+      "description": "core.gemini concentra deadlines/fallback; o motor de tarefas usa a ladder e helpers privados para chamadas com ferramentas.",
+      "implication": "Mudanças na ladder afetam voz, chamadas avulsas e tarefas; preservar compatibilidade dos caminhos com tool-calling.",
+      "material": "core.gemini concentra deadlines/fallback; o motor de tarefas usa a ladder e helpers privados para chamadas com ferramentas. Mudanças na ladder afetam voz, chamadas avulsas e tarefas; preservar compatibilidade dos caminhos com tool-calling.",
+      "id": "D009",
+      "comparison_status": "SAME_FINDING",
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "repository.runtime-artifacts-tracked",
+      "classification": "CONFIRMED",
+      "evidence": [
+        ".gitignore @ working-tree sha256:4358a2cb0ca9d46ee6997e4e1847ec144c6fdda9ff6c921ed669c9a6001bdf9f",
+        ".ai/discovery-runs/discovery-2026-11-18-02/EVIDENCE.json / tracked_runtime_artifact_count=24"
+      ],
+      "description": "O índice Git contém checkpoints, páginas de pesquisa e um relatório gerado; .gitignore não exclui memory/tasks nem reports.",
+      "implication": "Revisar política de dados antes de futuras publicações. O conteúdo desses artefatos não foi lido nem classificado como segredo.",
+      "material": "O índice Git contém checkpoints, páginas de pesquisa e um relatório gerado; .gitignore não exclui memory/tasks nem reports. Revisar política de dados antes de futuras publicações. O conteúdo desses artefatos não foi lido nem classificado como segredo.",
+      "id": "D010",
+      "comparison_status": "SAME_FINDING",
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "tests.end-to-end-evidence",
+      "classification": "UNKNOWN",
+      "evidence": [
+        "providers/_tests.py",
+        "core/_smoke_harness.py",
+        "tests/test_provider_test_isolation.py",
+        "tests/test_smoke_harness.py",
+        "tests/test_memory_persistence.py",
+        ".ai/changes/change-003/REVIEW.md",
+        ".ai/changes/change-003/REVIEW-EVIDENCE.json",
+        ".ai/changes/change-003/AI-SDD-CLOSE.json"
+      ],
+      "description": "Mudança material após changes 002/003: evidência revisada de 55 unittest PASS e providers com 98 PASS, zero FAIL, dois SKIPs opcionais de Piper. Há integração sintética local com types.Blob/TaskGroup, streaming HTTP loopback, resampling, painel Qt offscreen e harness com plugins sintéticos. Esses resultados foram documentados nas revisões fechadas, não reexecutados neste DISCOVERY.",
+      "implication": "Cobertura local ampliada e testes isolados; áudio físico, UI interativa, serviços reais, crash e outras plataformas permanecem UNKNOWN. NON_ISOLATED_REVIEW e Python 3.15.2 além da faixa historicamente testada até 3.13 foram explicitados. Não afirmar validação integrada universal nem contar SKIP como PASS.",
+      "material": "Mudança material após changes 002/003: evidência revisada de 55 unittest PASS e providers com 98 PASS, zero FAIL, dois SKIPs opcionais de Piper. Há integração sintética local com types.Blob/TaskGroup, streaming HTTP loopback, resampling, painel Qt offscreen e harness com plugins sintéticos. Esses resultados foram documentados nas revisões fechadas, não reexecutados neste DISCOVERY. Cobertura local ampliada e testes isolados; áudio físico, UI interativa, serviços reais, crash e outras plataformas permanecem UNKNOWN. NON_ISOLATED_REVIEW e Python 3.15.2 além da faixa historicamente testada até 3.13 foram explicitados. Não afirmar validação integrada universal nem contar SKIP como PASS.",
+      "treatment_status": "PARTIALLY_RESOLVED",
+      "id": "D011",
+      "comparison_status": "CHANGED",
+      "previous": {
+        "subject": "tests.end-to-end-evidence",
+        "classification": "UNKNOWN",
+        "evidence": [
+          "providers/_tests.py:1",
+          "core/_smoke_harness.py:1",
+          "tests/test_dev_agent_vscode.py",
+          ".ai/changes/change-001/REVIEW-REVISION-002.md"
+        ],
+        "description": "Mudança de evidência: além dos autotestes de providers e do harness, há 29 testes focais documentados e aprovados para VS Code, incluindo fixtures locais. UI, áudio real, serviços externos, recuperação após crash e outras plataformas continuam sem validação integrada nesta inspeção.",
+        "implication": "Evidência mínima depende da futura change: testes focais e observação do fluxo afetado. Não declarar funcionamento integrado com base em parsing.",
+        "material": "Mudança de evidência: além dos autotestes de providers e do harness, há 29 testes focais documentados e aprovados para VS Code, incluindo fixtures locais. UI, áudio real, serviços externos, recuperação após crash e outras plataformas continuam sem validação integrada nesta inspeção. Evidência mínima depende da futura change: testes focais e observação do fluxo afetado. Não declarar funcionamento integrado com base em parsing.",
+        "id": "D011",
+        "comparison_status": "CHANGED",
+        "previous": {
+          "subject": "tests.end-to-end-evidence",
+          "classification": "UNKNOWN",
+          "evidence": [
+            "providers/_tests.py:1 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00",
+            "core/_smoke_harness.py:1 @ f1a560b6073479990d92d3d34a90d7f41cdbfa00"
+          ],
+          "description": "Existem autotestes de providers e harness de smoke, mas esta execução não validou UI, áudio real, serviços externos, recuperação após crash ou plataformas alternativas.",
+          "implication": "Evidência mínima depende da futura change: testes focais e observação do fluxo afetado. Não declarar funcionamento integrado com base em parsing.",
+          "material": "Existem autotestes de providers e harness de smoke, mas esta execução não validou UI, áudio real, serviços externos, recuperação após crash ou plataformas alternativas. Evidência mínima depende da futura change: testes focais e observação do fluxo afetado. Não declarar funcionamento integrado com base em parsing.",
+          "id": "D011",
+          "comparison_status": "NEW",
+          "last_observed": "discovery-2026-11-17-01"
+        },
+        "last_observed": "discovery-2026-11-18-01"
+      },
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "web.dns-rebinding-limitation",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "core/tasks/web.py:21 @ working-tree sha256:b265d179df2aa4468e30308059bfa8c868cb4bc70023ca347e1e1ca4d979b924",
+        "core/tasks/web.py:52 @ working-tree sha256:b265d179df2aa4468e30308059bfa8c868cb4bc70023ca347e1e1ca4d979b924",
+        "core/tasks/web.py:128 @ working-tree sha256:b265d179df2aa4468e30308059bfa8c868cb4bc70023ca347e1e1ca4d979b924"
+      ],
+      "description": "Fetch valida IPs públicos e redirects, mas documenta limitação quando o hostname resolve de modo diferente entre validação e conexão.",
+      "implication": "Não apresentar o filtro como sandbox completo; exploração e eficácia em execução não foram testadas.",
+      "material": "Fetch valida IPs públicos e redirects, mas documenta limitação quando o hostname resolve de modo diferente entre validação e conexão. Não apresentar o filtro como sandbox completo; exploração e eficácia em execução não foram testadas.",
+      "id": "D012",
+      "comparison_status": "SAME_FINDING",
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "governance.closed-change-knowledge",
+      "classification": "CONFIRMED",
+      "evidence": [
+        ".ai/changes/change-001/AI-SDD-CLOSE.json",
+        ".ai/changes/change-002/AI-SDD-CLOSE.json",
+        ".ai/changes/change-003/AI-SDD-CLOSE.json",
+        ".ai/changes/change-003/BOUNDARY-STOP-DEP-001.md",
+        ".ai/changes/change-003/RESUMPTION-DEP-001.md",
+        ".ai/knowledge/KNOWLEDGE-REGISTER.json",
+        ".ai/AI-SDD.yaml"
+      ],
+      "description": "Mudança material de governança: changes 001, 002 e 003 encerradas pelo runtime, com auditorias e sete registros no Knowledge Register canônico, mantendo CONFIRMED e UNKNOWN separados. A preparação de ambiente da change-003 teve parada e retomada humana delimitada preservadas.",
+      "implication": "Reutilizar evidência duradoura de VS Code, persistência e testes/encoding sem promover UNKNOWN ou apagar histórico. O projeto está sem change ativa e sem autorização de desenvolvimento; DISCOVERY não aprova novo contexto.",
+      "material": "Mudança material de governança: changes 001, 002 e 003 encerradas pelo runtime, com auditorias e sete registros no Knowledge Register canônico, mantendo CONFIRMED e UNKNOWN separados. A preparação de ambiente da change-003 teve parada e retomada humana delimitada preservadas. Reutilizar evidência duradoura de VS Code, persistência e testes/encoding sem promover UNKNOWN ou apagar histórico. O projeto está sem change ativa e sem autorização de desenvolvimento; DISCOVERY não aprova novo contexto.",
+      "id": "D013",
+      "comparison_status": "CHANGED",
+      "previous": {
+        "subject": "governance.closed-change-knowledge",
+        "classification": "CONFIRMED",
+        "evidence": [
+          ".ai/changes/change-001/AI-SDD-CLOSE.json",
+          ".ai/knowledge/KNOWLEDGE-REGISTER.json",
+          ".ai/AI-SDD.yaml"
+        ],
+        "description": "change-001 foi encerrada pelo runtime, com auditoria, bootstrap documental autorizado e dois registros no Knowledge Register canônico (CONFIRMED e UNKNOWN).",
+        "implication": "Reutilizar a evidência duradoura, sem promover UNKNOWN ou reclassificar retrospectivamente o finding aberto original; não há autorização ativa de desenvolvimento.",
+        "material": "change-001 foi encerrada pelo runtime, com auditoria, bootstrap documental autorizado e dois registros no Knowledge Register canônico (CONFIRMED e UNKNOWN). Reutilizar a evidência duradoura, sem promover UNKNOWN ou reclassificar retrospectivamente o finding aberto original; não há autorização ativa de desenvolvimento.",
+        "id": "D013",
+        "comparison_status": "NEW",
+        "last_observed": "discovery-2026-11-18-01"
+      },
+      "last_observed": "discovery-2026-11-18-02"
+    },
+    {
+      "subject": "governance.documentation-policy",
+      "classification": "CONFIRMED",
+      "evidence": [
+        "PROJECT-POLICY.md @ working-tree sha256:5cd687ff9a76754abf8224df6ebeaccfd2b03faa90f6764a093dcb7fa01b057e",
+        "CHANGELOG.md @ working-tree sha256:bf35b6e884a554329e09c5eb141e7e4e4fc7fb0b68cb1305a44fea33a5cec843",
+        ".ai/changes/change-001/CLOSE-POLICY-BOOTSTRAP-EVIDENCE.json"
+      ],
+      "description": "Política publicada em PROJECT-POLICY.md: changelog por change-id, documentação atualizada quando instruções forem afetadas, identificação Mark LVII preservada e versão futura por decisão humana.",
+      "implication": "Novas mudanças devem avaliar documentação e registrar histórico; a política não cria automaticamente versão, commit, tag ou release.",
+      "material": "Política publicada em PROJECT-POLICY.md: changelog por change-id, documentação atualizada quando instruções forem afetadas, identificação Mark LVII preservada e versão futura por decisão humana. Novas mudanças devem avaliar documentação e registrar histórico; a política não cria automaticamente versão, commit, tag ou release.",
+      "id": "D014",
+      "comparison_status": "SAME_FINDING",
+      "last_observed": "discovery-2026-11-18-02"
+    }
+  ]
+}

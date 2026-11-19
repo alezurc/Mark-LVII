@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "change_id": "change-002",
+  "context_reference": "Após analisar o CONTEXT.md eu autorizo a execução.",
+  "baseline_sha256": "e48847c7c0251aca73ad59a6299bd6f8e8413b976e850bb4c6a6583b3ddd0d15",
+  "status": "PASS",
+  "changes": [
+    {
+      "path": "CHANGELOG.md",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "memory/memory_manager.py",
+      "result": "PRESERVED"
+    },
+    {
+      "path": "tests/test_memory_persistence.py",
+      "result": "PRESERVED"
+    }
+  ]
+}

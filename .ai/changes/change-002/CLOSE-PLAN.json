@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "change_id": "change-002",
+  "project_mode": "EXISTING",
+  "context_reference": "Após analisar o CONTEXT.md eu autorizo a execução.",
+  "evidence_refs": [
+    ".ai/changes/change-002/CONTEXT.md",
+    ".ai/changes/change-002/DEVELOP.md",
+    ".ai/changes/change-002/REVIEW.md",
+    ".ai/changes/change-002/CLOSE-EVIDENCE.md"
+  ],
+  "unresolved_unknowns": [
+    {
+      "description": "Intenção histórica do encoding sem BOM não estabelecida; preservação validada.",
+      "material": false
+    },
+    {
+      "description": "Durabilidade após queda de energia e comportamento de hardware/filesystem não demonstrados; fora da garantia aprovada.",
+      "material": false
+    }
+  ],
+  "unresolved_conflicts": [],
+  "risks": [
+    "Revisão não isolada; sem teste integrado da aplicação ou crash real.",
+    "Sem coordenação entre processos, merge de snapshots externos ou recuperação de corrupção anterior."
+  ],
+  "material_decision_required": false,
+  "proposed_version": null,
+  "versioning": {
+    "evidence_refs": [
+      "PROJECT-POLICY.md"
+    ],
+    "strategy": "KEEP_CURRENT_IDENTIFIER",
+    "status": "EXISTING",
+    "strategy_target": "PROJECT-POLICY.md"
+  },
+  "knowledge": {
+    "reason": "Consolidar contrato de persistência e limites duradouros mantendo UNKNOWN.",
+    "evidence_refs": [
+      ".ai/changes/change-002/CONTEXT.md",
+      ".ai/changes/change-002/DEVELOP.md",
+      ".ai/changes/change-002/REVIEW.md",
+      ".ai/changes/change-002/CLOSE-EVIDENCE.md"
+    ],
+    "targets": [],
+    "impact": "YES",
+    "records": [
+      {
+        "evidence_refs": [
+          "memory/memory_manager.py",
+          "tests/test_memory_persistence.py",
+          ".ai/changes/change-002/REVIEW.md"
+        ],
+        "traceability": {
+          "review": ".ai/changes/change-002/REVIEW.md",
+          "requirements": [
+            "D008",
+            "AC1",
+            "AC2",
+            "AC3",
+            "AC4"
+          ],
+          "change_id": "change-002"
+        },
+        "id": "KR-change-002-001",
+        "statement": "Memória e sessões publicam JSON completo por temporário exclusivo no mesmo diretório e os.replace após fechamento; mutadores internos serializam leitura/modificação/gravação por RLock dentro do processo.",
+        "classification": "CONFIRMED",
+        "context_reference": "Após analisar o CONTEXT.md eu autorizo a execução."
+      },
+      {
+        "evidence_refs": [
+          ".ai/changes/change-002/CONTEXT.md",
+          ".ai/changes/change-002/REVIEW.md",
+          ".ai/changes/change-002/ENCODING-BASELINE.json",
+          ".ai/changes/change-002/ENCODING-REVIEW.json"
+        ],
+        "traceability": {
+          "change_id": "change-002",
+          "limitation": "Limites preservados sem promover UNKNOWN nem inferir durabilidade física."
+        },
+        "id": "KR-change-002-002",
+        "statement": "Durabilidade física após queda de energia e intenção histórica de encoding sem BOM não foram estabelecidas nesta mudança; preservação de UTF-8/BOM/finais de linha foi validada. Não há garantia entre processos ou recuperação de corrupção anterior.",
+        "classification": "UNKNOWN",
+        "context_reference": "Após analisar o CONTEXT.md eu autorizo a execução."
+      }
+    ]
+  },
+  "user_docs": {
+    "reason": "Correção interna mantém armazenamento, funcionalidades e instruções do README; justificativa aprovada em CONTEXT e REVIEW.",
+    "evidence_refs": [
+      "readme.md",
+      ".ai/changes/change-002/CONTEXT.md",
+      ".ai/changes/change-002/REVIEW.md"
+    ],
+    "targets": [],
+    "impact": "NO"
+  },
+  "changelog": {
+    "reason": "Registrar change-002 conforme política existente e alvo aprovado em CONTEXT.",
+    "strategy_target": "PROJECT-POLICY.md",
+    "evidence_refs": [
+      "PROJECT-POLICY.md",
+      ".ai/changes/change-002/CHANGELOG-PROPOSED.md"
+    ],
+    "impact": "YES",
+    "targets": [
+      {
+        "evidence_refs": [
+          ".ai/changes/change-002/CHANGELOG-PROPOSED.md",
+          ".ai/changes/change-002/REVIEW.md"
+        ],
+        "sha256": "fdd512f84650edce0d074b9b4debef932d63ef699d23bd4c0b93391ee6fed768",
+        "kind": "UPDATE",
+        "change_id": "change-002",
+        "path": "CHANGELOG.md"
+      }
+    ]
+  },
+  "project_spec": {
+    "reason": "Sem novos requisitos ou alvo de especificação no CLOSE; somente consolidação da correção D008 já aprovada.",
+    "evidence_refs": [
+      ".ai/changes/change-002/CONTEXT.md",
+      ".ai/changes/change-002/REVIEW.md"
+    ],
+    "material": false,
+    "impact": "NO",
+    "targets": []
+  },
+  "human_decision_required": false,
+  "close_ready": true,
+  "blockers": []
+}

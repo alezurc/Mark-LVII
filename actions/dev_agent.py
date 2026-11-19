@@ -297,26 +297,232 @@ def _install_dependencies(dependencies: list[str], project_dir: Path) -> str:
     except Exception as e:
         return f"Install error (non-fatal): {e}"
 
-def _open_vscode(project_dir: Path) -> bool:
-    vscode_candidates = [
-        "code",
-        rf"C:\Users\{Path.home().name}\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd",
-        r"C:\Program Files\Microsoft VS Code\bin\code.cmd",
-    ]
-    for cmd in vscode_candidates:
-        try:
-            subprocess.Popen(
-                [cmd, str(project_dir)],
-                shell=True,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL
-            )
-            time.sleep(1.5)
-            print(f"[DevAgent] 💻 VSCode opened: {project_dir}")
-            return True
-        except Exception:
+def _vscode_launchers():
+    """Native argv only; never feed a project path to cmd.exe."""
+    import os
+    candidates = [shutil.which("code")]
+    if sys.platform == "win32":
+        for key, tail in (("LOCALAPPDATA", "Programs/Microsoft VS Code/Code.exe"),
+                          ("ProgramFiles", "Microsoft VS Code/Code.exe")):
+            base = os.environ.get(key)
+            if base:
+                candidates.append(str(Path(base) / tail))
+    seen = set()
+    for candidate in candidates:
+        if not candidate:
             continue
+        path = Path(candidate)
+        if sys.platform == "win32":
+            # code.cmd normally runs Code.exe as Node with the bundled CLI.
+            # Reproduce that argv without interpreting the .cmd wrapper.
+            home = path.parent.parent if path.suffix.lower() in (".cmd", ".bat") else path.parent
+            exe, cli = home / "Code.exe", home / "resources/app/out/cli.js"
+            if not exe.is_file() or not cli.is_file():
+                continue
+            argv = [str(exe), str(cli)]
+        else:
+            if not path.is_file():
+                continue
+            argv = [str(path)]
+        key = tuple(argv)
+        if key not in seen:
+            seen.add(key)
+            yield argv
+
+
+def _vscode_read_ready(stream, size):
+    """One nonblocking read, including Python 3.11 Windows anonymous pipes."""
+    import os
+    if sys.platform == "win32":
+        import ctypes
+        from ctypes import wintypes
+        import msvcrt
+        kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+        peek = kernel.PeekNamedPipe
+        peek.argtypes = (wintypes.HANDLE, wintypes.LPVOID, wintypes.DWORD,
+                         ctypes.POINTER(wintypes.DWORD), ctypes.POINTER(wintypes.DWORD),
+                         ctypes.POINTER(wintypes.DWORD))
+        peek.restype = wintypes.BOOL
+        available = wintypes.DWORD()
+        if not peek(msvcrt.get_osfhandle(stream.fileno()), None, 0, None,
+                    ctypes.byref(available), None):
+            error = ctypes.get_last_error()
+            if error in (109, 232, 233):  # broken/closing/disconnected pipe
+                return b""
+            raise ctypes.WinError(error)
+        if not available.value:
+            return None
+        size = min(size, available.value)
+    else:
+        os.set_blocking(stream.fileno(), False)
+    try:
+        return os.read(stream.fileno(), size)
+    except BlockingIOError:
+        return None
+
+
+def _vscode_capture(argv, timeout, **kwargs):
+    """Capture at most 64 KiB per pipe, without reader threads or spooling.
+
+    Fixed buffers also back result/exception views: no full-output copies.
+    Reserve part of the caller's deadline for killing/reaping this child only.
+    """
+    limit = 65_536
+    deadline = time.monotonic() + timeout
+    read_deadline = deadline - min(0.25, timeout / 4)
+    buffers = {name: bytearray(limit) for name in ("stdout", "stderr")}
+    counts = {name: 0 for name in buffers}
+    kwargs.setdefault("shell", False)
+    proc = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                            bufsize=0, **kwargs)
+    streams = {"stdout": proc.stdout, "stderr": proc.stderr}
+
+    def output(name):
+        return memoryview(buffers[name])[:counts[name]]
+
+    try:
+        while streams or proc.poll() is None:
+            if time.monotonic() >= read_deadline:
+                raise subprocess.TimeoutExpired(argv, timeout, output=output("stdout"),
+                                                stderr=output("stderr"))
+            progressed = False
+            for name, stream in list(streams.items()):
+                # At the limit, read one byte to distinguish overflow from EOF.
+                room = limit - counts[name]
+                chunk = _vscode_read_ready(stream, min(8_192, room + 1))
+                if chunk is None:
+                    continue
+                progressed = True
+                if not chunk:
+                    del streams[name]
+                    continue
+                if len(chunk) > room:
+                    error = OverflowError(name)
+                    error.stdout, error.stderr = output("stdout"), output("stderr")
+                    raise error
+                buffers[name][counts[name]:counts[name] + len(chunk)] = chunk
+                counts[name] += len(chunk)
+                del chunk
+            if not progressed:
+                time.sleep(min(0.01, max(0, read_deadline - time.monotonic())))
+        return subprocess.CompletedProcess(argv, proc.returncode,
+                                           output("stdout"), output("stderr"))
+    finally:
+        try:
+            if proc.poll() is None:
+                proc.kill()  # Never kill the editor GUI or an existing instance.
+            proc.wait(timeout=max(0.001, deadline - time.monotonic()))
+        finally:
+            proc.stdout.close()
+            proc.stderr.close()
+
+
+def _vscode_output(label, value, log):
+    if value:
+        # CLI output is untrusted and may contain project contents or tokens.
+        # Record receipt/size, not arbitrary content in the conversation log.
+        log(f"VS Code {label}: captured {len(value)} bytes/chars (content withheld).")
+
+
+def _vscode_observe(project_dir: Path, timeout: float) -> bool:
+    """Bound the native window/process snapshot in a disposable non-GUI child.
+
+    Only a full-path title field counts. Default basename-only VS Code titles
+    cannot establish which of two homonymous projects is open.
+    """
+    if getattr(sys, "frozen", False):
+        return False  # The packaged GUI executable is not a Python CLI.
+    probe = r'''
+import os, re, sys
+from core import appidentity
+target = os.path.normcase(os.path.normpath(sys.argv[1]))
+for match in appidentity.running("visual studio code", include_self=True):
+    if match.name.lower() not in ("code", "code.exe"):
+        continue
+    for title in match.titles:
+        fields = re.split(r"\s+[\u2014\u2013|]\s+|\s+-\s+", title)
+        if any(os.path.normcase(os.path.normpath(f.strip().strip('"'))) == target for f in fields):
+            sys.exit(0)
+sys.exit(1)
+'''
+    result = _vscode_capture(
+        [sys.executable, "-c", probe, str(project_dir)], cwd=str(BASE_DIR),
+        timeout=timeout,
+        creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+    )
+    return result.returncode == 0
+
+
+def _open_vscode(project_dir: Path, log=print) -> bool:
+    """Best effort, eight seconds total; True means a matching window was seen."""
+    import os
+    deadline = time.monotonic() + 8.0
+
+    def remaining():
+        left = deadline - time.monotonic()
+        if left <= 0:
+            raise TimeoutError("VS Code deadline")
+        return left
+
+    try:
+        project_dir = Path(project_dir).resolve(strict=True)
+        if not project_dir.is_dir():
+            raise ValueError("not a project directory")
+        launchers = list(_vscode_launchers())[:3]
+        if not launchers:
+            log("VS Code failed: launcher not found; project files are saved.")
+            return False
+        env = os.environ.copy()
+        if sys.platform == "win32":
+            env["ELECTRON_RUN_AS_NODE"] = "1"
+        for index, argv in enumerate(launchers, 1):
+            try:
+                result = _vscode_capture(
+                    argv + ["--folder-uri", project_dir.as_uri()],
+                    shell=False, timeout=min(3.0, remaining()),
+                    env=env, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+                )
+                _vscode_output("stdout", result.stdout, log)
+                _vscode_output("stderr", result.stderr, log)
+                if result.returncode:
+                    log(f"VS Code candidate {index} failed: exit code {result.returncode}.")
+                    continue
+                break
+            except subprocess.TimeoutExpired as exc:
+                _vscode_output("stdout", exc.output, log)
+                _vscode_output("stderr", exc.stderr, log)
+                log(f"VS Code candidate {index} failed: launcher timeout.")
+            except OSError:
+                log(f"VS Code candidate {index} failed: launcher could not start.")
+        else:
+            log("VS Code failed: no launcher completed; project files are saved.")
+            return False
+        while True:
+            try:
+                if _vscode_observe(project_dir, min(1.0, remaining())):
+                    log("VS Code opened: matching project window verified.")
+                    return True
+            except subprocess.TimeoutExpired:
+                pass
+            except TimeoutError:
+                raise
+            except OSError:
+                break
+            time.sleep(min(0.2, remaining()))
+    except OverflowError as exc:
+        _vscode_output("stdout", exc.stdout, log)
+        _vscode_output("stderr", exc.stderr, log)
+        log(f"VS Code not verified: {exc} exceeded 65536 bytes; output truncated; attempt stopped.")
+        return False
+    except (TimeoutError, subprocess.TimeoutExpired):
+        log("VS Code not verified: observation deadline reached; project files are saved.")
+        return False
+    except Exception:
+        log("VS Code failed: opening or observation unavailable; project files are saved.")
+        return False
+    log("VS Code not verified: window observation unavailable; project files are saved.")
     return False
+
 
 def _run_project(run_command: str, project_dir: Path, timeout: int = 30) -> str:
     print(f"[DevAgent] 🚀 Running: {run_command}")
@@ -563,7 +769,8 @@ def _build_project(
         install_result = _install_dependencies(dependencies, project_dir)
         log(install_result)
 
-    _open_vscode(project_dir)
+    editor_opened = _open_vscode(project_dir, log=log)
+    log("Editor: verified open." if editor_opened else "Editor: opening not confirmed; code work continues.")
 
     last_output   = ""
     auto_installs = 0  
@@ -1480,7 +1687,8 @@ def _improve_folder(folder: Path, instruction: str, player=None) -> str:
     # and pay for it again on the next request.
     _refresh_brief(folder)
 
-    _open_vscode(folder)
+    editor_opened = _open_vscode(folder, log=lambda text: _log(player, text))
+    _log(player, "Editor: verified open." if editor_opened else "Editor: opening not confirmed; code work is saved.")
     took = time.monotonic() - started
     parts = []
     if edited:

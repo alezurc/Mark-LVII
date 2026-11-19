@@ -1,0 +1,58 @@
+{
+  "change_id": "change-003",
+  "recorded_at": "2026-11-19T02:25:46.2552596Z",
+  "execution_id": "a3a9a731-a22e-4809-979b-5d585afc1e5e",
+  "changelog_before_sha256": "fdd512f84650edce0d074b9b4debef932d63ef699d23bd4c0b93391ee6fed768",
+  "entries": [
+    {
+      "path": "providers/_tests.py",
+      "sha256": "e62506ed8280670ef58bbe66eea99bf51711a8a24e8d22f8e8537e5f13ad4ca5",
+      "utf8_valid": true,
+      "bom": "NONE",
+      "crlf": 1253,
+      "lf_only": 0
+    },
+    {
+      "path": "README.md",
+      "sha256": "24f31ebfee49168a12a1d4331d3b75549f6d5d703911370711d788e6c4462a04",
+      "utf8_valid": true,
+      "bom": "NONE",
+      "crlf": 1070,
+      "lf_only": 0
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "bf35b6e884a554329e09c5eb141e7e4e4fc7fb0b68cb1305a44fea33a5cec843",
+      "utf8_valid": true,
+      "bom": "NONE",
+      "crlf": 0,
+      "lf_only": 33
+    },
+    {
+      "path": "tests/test_source_encoding.py",
+      "sha256": "a0cc60f6018cabc7404eebbcfaabe00724e4954d442f4fba941a1a8a536d18a5",
+      "utf8_valid": true,
+      "bom": "NONE",
+      "crlf": 0,
+      "lf_only": 53
+    },
+    {
+      "path": "tests/test_smoke_harness.py",
+      "sha256": "2e7b0e65fdb24229c1db2931aaa4e0624148d29c6c00da570e5eeeab176366d4",
+      "utf8_valid": true,
+      "bom": "NONE",
+      "crlf": 0,
+      "lf_only": 122
+    },
+    {
+      "path": "tests/test_provider_test_isolation.py",
+      "sha256": "ab05cfed8bbfa69c966db843f332588a11d9809f5ce7837b1e712973f19d7dda",
+      "utf8_valid": true,
+      "bom": "NONE",
+      "crlf": 0,
+      "lf_only": 167
+    }
+  ],
+  "test_basis": ".ai/changes/change-003/REVIEW.md",
+  "product_code_changed_in_close": false
+}
